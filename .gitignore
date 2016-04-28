@@ -6,3 +6,5 @@ vendor/
 .ruby-version
 _site/
 node_modules/
+.vagrant
+.idea
