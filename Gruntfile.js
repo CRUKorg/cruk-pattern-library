@@ -9,11 +9,18 @@ module.exports = function(grunt) {
       options: {
         precision: 6,
         sourceComments: false,
-        outputStyle: 'compressed'
+        outputStyle: 'compressed',
+        includePaths: [
+          'assets/scss',
+          'docs/assets/scss',
+          'docs/bower_components/bootstrap-sass/assets/stylesheets',
+          'docs/bower_components/bootstrap-sass/assets/stylesheets/bootstrap'
+        ]
       },
       dist: {
         files: {
-          'assets/css/cruk-base.css': 'assets/scss/cruk-base.scss'
+          'assets/css/cruk-base.css': 'assets/scss/cruk-base.scss',
+          'docs/assets/css/docs.css': 'docs/assets/scss/docs.scss'
         }
       }
     },

@@ -1,8 +1,3 @@
----
-# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
-# only main files contain this front matter, not partials.
----
-
 /*
  * CRUK Pattern Library documentation styles
  * http://cruk.org
@@ -10,18 +5,24 @@
  * Released under MIT license. Copyright 2016 Cancer Research UK.
  */
 
-//
-// Import CRUK base.
-//
+/**
+ * Import the CRUK pattern library.
+ */
 
-@import "bower_components/primer-markdown/components/user-content";
-@import "../assets/scss/cruk-base";
-@import "assets/scss/anchor";
-@import "assets/scss/syntax";
+@import "cruk-base";
 
-//
-// Overrides
-//
+/**
+ * Now import the other bits.
+ */
+
+@import "docs/bower_components/primer-markdown/components/user-content";
+@import "anchor";
+@import "syntax";
+
+
+/**
+ * What follows is messy, and to be sorted!
+ */
 
 
 body.example {
@@ -50,11 +51,6 @@ body.example {
   .masthead-logo {
     display: inline-block;
     font-size: 1.5rem;
-
-    .mega-octicon {
-      float: left;
-      margin-right: .5rem;
-    }
   }
 
   @media (min-width: 34em) {
@@ -262,3 +258,6 @@ body.example {
 }
 
 
+.quaaack {
+  display: block;
+}
