@@ -30,8 +30,12 @@ if [ ! -e /usr/bin/nodejs ]; then
     update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
 fi
 
-if [ ! -e /usr/local/bin/grunt ]; then
+if [ ! -e /usr/bin/grunt ]; then
     npm install -g grunt-cli
+fi
+
+if [ ! -e /usr/bin/bower ]; then
+    npm install -g bower
 fi
 
 su - vagrant -c "cd /vagrant && bundle install"

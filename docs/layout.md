@@ -28,12 +28,22 @@ The container applies `width: 980px;` and uses horizontal `margin`s to center it
 
 ### How it works
 
-The grid is pretty standard—you create rows with `.columns` and individual columns with a column class and fraction class. Here's how it works:
+For a detailed explanation of the grid system, please refer to the [Bootstrap documentation](http://getbootstrap.com/css/#grid)
 
-- Add a `.container` to encapsulate everything and provide ample horizontal gutter space.
-- Create your outer row to clear the floated columns with `<div class="columns">`.
-- Add your columns with individual `<div class="column">`s.
-- Add your fractional width classes to set the width of the columns (e.g., `.one-fourth`).
+### How it works here for
+
+#### Forms
+
+The main layout of forms should be a container of 3 + 6 + 3 with a fallback to 12 at the `@screen-sm-min` breakpoint
+
+{% example html %}
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    <h1>I am a form!</h1>
+  </div>
+</div>
+{% endexample %}
+
 
 ### Demo
 
