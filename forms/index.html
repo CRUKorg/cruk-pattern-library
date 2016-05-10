@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>
-      Getting Started | CRUK Pattern Library
+      Forms | CRUK Pattern Library
     </title>
 
     <link rel="stylesheet" href="/cruk-pattern-library/assets/css/docs.css">
@@ -41,7 +41,7 @@
       <div class="row docs-layout">
   <div class="col-sm-3">
     <nav class="list-group docs-menu" role="navigation" aria-label="Secondary">
-  <a class="list-group-item active" href="/cruk-pattern-library/">
+  <a class="list-group-item " href="/cruk-pattern-library/">
     Getting started
   </a>
   <a class="list-group-item " href="/cruk-pattern-library/guidelines/">
@@ -62,7 +62,7 @@
   <a class="list-group-item " href="/cruk-pattern-library/scaffolding/">
     Scaffolding
   </a>
-  <a class="list-group-item " href="/cruk-pattern-library/forms/">
+  <a class="list-group-item active" href="/cruk-pattern-library/forms/">
     Forms
   </a>
   <a class="list-group-item " href="/cruk-pattern-library/type/">
@@ -76,20 +76,42 @@
   </div>
   <div class="col-sm-9" role="main">
     <h1 class="page-title">
-      Getting Started
+      Forms
     </h1>
     <div class="markdown-body">
-      <p>Welcome to the home of the <a href="http://www.cancerresearchuk.org/">Cancer Research UK</a> Pattern Library!</p>
+      <p>To be expanded!</p>
 
-<p>The aim of this project is to provide a componentised approach to how we create interfaces in a consistent and efficient manner.</p>
+<p>Whilst the markup matches Bootstrap as of now, we include examples to give a sense of what our customised form elements look like.</p>
 
-<p>This documentation details the different components that are available for use in our Digital projects.</p>
+<p>Mostly achieved through configuration of variables, further changes are within <code class="highlighter-rouge">partials/_forms.scss</code>.</p>
 
-<p>This work is Open Source, we care about the wider community and are grateful to be part of it. We both benefit from Open Source and wish to give back by sharing the sum of our research and work in crafting carefully thought out solutions (UX, Design and Implementation).</p>
+<h2 id="contents">Contents</h2>
 
-<p>The work itself can be <a href="https://github.com/CRUKorg/cruk-pattern-library">forked over on GitHub</a>.</p>
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#basic-inputs" id="markdown-toc-basic-inputs">Basic inputs</a>    <ul>
+      <li><a href="#text" id="markdown-toc-text">Text</a></li>
+    </ul>
+  </li>
+</ul>
 
-<p>More words to come…</p>
+<h2 id="basic-inputs">Basic inputs</h2>
+
+<h3 id="text">Text</h3>
+
+<div class="docs-example clearfix"><form>
+  <div class="form-group">
+    <label for="example_text_input">Example!</label>
+    <input type="text" class="form-control" id="example_text_input" placeholder="Enter a value..." />
+  </div>
+</form></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"example_text_input"</span><span class="nt">&gt;</span>Example!<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"example_text_input"</span> <span class="na">placeholder=</span><span class="s">"Enter a value..."</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
 
     </div>
   </div>
