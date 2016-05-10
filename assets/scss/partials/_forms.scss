@@ -1,0 +1,17 @@
+
+label {
+  font-size: 16px;
+}
+
+.form-control {
+  @extend .form-control;
+
+  border-width: 2px;
+  box-shadow: none;
+  font-size: 16px;
+  transition: border-color 100ms linear;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
