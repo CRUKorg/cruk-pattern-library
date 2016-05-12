@@ -1,0 +1,263 @@
+/*
+ * CRUK Pattern Library documentation styles
+ * http://cruk.org
+ *
+ * Released under MIT license. Copyright 2016 Cancer Research UK.
+ */
+
+/**
+ * Import the CRUK pattern library.
+ */
+
+@import "cruk-base";
+
+/**
+ * Now import the other bits.
+ */
+
+@import "docs/bower_components/primer-markdown/components/user-content";
+@import "anchor";
+@import "syntax";
+
+
+/**
+ * What follows is messy, and to be sorted!
+ */
+
+
+body.example {
+  background-color: white;
+}
+
+//
+// Site header
+//
+
+.masthead {
+  padding-top:    1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  background-color: white;
+  border-bottom: 1px solid rgba(0,0,0,0.075);
+
+  a {
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .masthead-logo {
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 34em) {
+    text-align: left;
+
+    .masthead-logo {
+      float: left;
+    }
+  }
+}
+
+.masthead-nav {
+  margin-top: 1rem;
+  font-size: 1rem;
+
+  a {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 1.25rem;
+    }
+  }
+
+  .active {
+    font-weight: 600;
+  }
+
+  @media (max-width: 34em) {
+    padding-top: 1rem;
+    border-top: .075rem solid rgba(255, 255, 255, 0.25);
+  }
+
+  @media (min-width: 34em) {
+    float: right;
+    margin-top: .5rem;
+  }
+}
+
+
+
+//
+// Layout
+//
+
+
+
+//
+// Footer
+//
+
+.footer {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
+  line-height: 1.75;
+  color: #7a7a7a;
+  border-top: 1px solid #eee;
+
+  strong {
+    color: #333;
+  }
+}
+
+
+//
+// Side menu
+//
+
+.docs-menu {
+  margin-bottom: 1.5rem;
+  font-size: 14px;
+
+  @media (min-width: 34em) {
+    margin-right: 1rem;
+  }
+
+  .list-group-item.active {
+    border-left-width: 4px;
+    border-color: $list-group-border;
+    border-left-color: $list-group-active-border;
+  }
+}
+
+/**
+ * Override the styling from primer-markdown including the font which is hard
+ * set :C
+ */
+.docs-layout .markdown-body {
+  code,
+  pre,
+  .highlight pre {
+    background-color: $pre-bg;
+  }
+}
+
+.markdown-body {
+  font-family: $font-family-base;
+
+  h2 {
+    font-size: $font-size-h2;
+  }
+
+  h3 {
+    font-size: $font-size-h3;
+  }
+}
+
+//
+// Examples
+//
+
+.cr-pattern-library-code-example {
+  border: 0;
+  width: 100%;
+}
+
+.docs-example {
+  position: relative;
+  margin-bottom: 15px;
+  padding: 15px;
+  font-size: 13px;
+  line-height: 1.4;
+  border: 1px solid $pre-border-color;
+  border-radius: $border-radius-base;
+  background-color: $pre-bg;
+
+  + .highlight {
+    margin-top: -1px;
+  }
+
+  > p:last-child,
+  > .menu:last-child,
+  > .tabnav:last-child,
+  > blockquote:last-child {
+    margin-bottom: 0;
+  }
+
+  .menu,
+  .filter-list,
+  .sunken-menu {
+    max-width: 200px;
+  }
+
+
+  // Override Markdown styles to restore values from `_type.scss`
+  ul,
+  ol {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  dl.form {
+    margin: 15px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    > dt {
+      margin: 0 0 6px;
+      font-style: normal;
+    }
+
+    > dd {
+      padding: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  // Flex table
+  .flex-table-item > .btn {
+    margin-left: 10px;
+  }
+}
+
+.page-title + .markdown-body > p:first-child {
+  @extend .lead;
+}
+
+
+//
+// Markdown generated ToC
+//
+
+// Hide the first child li because it's always going to be "Contents".
+#markdown-toc > li:first-child {
+  display: none;
+}
+
+
+//
+// Branding colors
+//
+
+.swatch {
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  border-radius: .25rem;
+}
+
+
+.quaaack {
+  display: block;
+}
