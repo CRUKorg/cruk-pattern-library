@@ -13,7 +13,7 @@ jQuery(function() {
       var $iframe = $('<iframe class="cr-pattern-library-code-example" height="100%" />').appendTo($(this));
       //$iframe.src = "javascript:'"+full_html+"'";
       $iframe[0].contentWindow.document.write(full_html);
-      $iframe.attr('height', $iframe[0].contentWindow.document.body.scrollHeight + 'px');
+      $iframe.attr('width', '1024px').attr('height', $iframe[0].contentWindow.document.body.scrollHeight + 'px');
     });
   }
 });

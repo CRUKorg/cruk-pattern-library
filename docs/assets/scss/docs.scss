@@ -176,6 +176,7 @@ body.example {
   border: 1px solid $pre-border-color;
   border-radius: $border-radius-base;
   background-color: $pre-bg;
+  overflow: scroll;
 
   + .highlight {
     margin-top: -1px;
