@@ -47,7 +47,7 @@ Textfields (i.e. not text areas) should use proper [HTML 5 input types](https://
 </form>
 {% endexample %}
 
-#### Restricting form item widths
+## Restricting form item widths
 
 Depending on the situation the width of inputs should be restricted, this should be done using the [Bootstrap grid](http://getbootstrap.com/css/#forms-horizontal). What follows are examples of "small", "medium" and "large" widths.
 
