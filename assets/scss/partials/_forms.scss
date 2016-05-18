@@ -1,6 +1,10 @@
 
+/**
+ * Basic form styling.
+ */
+
 label {
-  font-size: 16px;
+  font-size: $form-font-size;
 }
 
 .form-control {
@@ -9,9 +13,74 @@ label {
   border-width: 2px;
   box-shadow: none;
   font-size: 16px;
-  transition: border-color 100ms linear;
+  @include transition(border-color 100ms linear);
 
   &:focus {
     box-shadow: none;
+  }
+}
+
+/**
+ * Input groups.
+ */
+
+.cr-input-group {
+  background: $input-bg;
+  border: 2px solid $input-border;
+  border-radius: $input-border-radius;
+  @include transition(border-color 100ms linear);
+
+  &.cr-input-group--focused {
+    border-color: $input-border-focus;
+  }
+
+  .cr-input-group__input {
+    border: 0;
+    background: transparent;
+    height: $input-height-base - 4;
+  }
+
+  .cr-input-group__button {
+    @extend .input-group-btn;
+  }
+}
+
+/**
+ * Search pattern.
+ */
+
+.cr-search-input {
+  @extend .input-group;
+
+  label {
+    @extend .sr-only;
+  }
+
+  .cr-search-input__input {
+    @extend .form-control;
+  }
+
+  .cr-search-input__button .btn {
+    border: 0;
+    background: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  .cr-input-group__icon {
+    top: 3px;
+    color: #C8C9C7;
+    font-size: $form-font-size;
+    @include transition(color 100ms linear);
+  }
+
+  &.cr-input-group--focused .glyphicon-search {
+    color: $brand-secondary;
   }
 }
