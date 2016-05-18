@@ -6,6 +6,15 @@
  */
 
 /**
+ * Set any variables.
+ */
+
+/**
+ * Override the fonts path.
+ */
+$cruk-base-icon-font-path: '../../bower_components/bootstrap-sass/assets/fonts/bootstrap/';
+
+/**
  * Import the CRUK pattern library.
  */
 
@@ -95,7 +104,17 @@ body.example {
 // Layout
 //
 
+.panel-heading > h4 {
+  margin: 0;
+}
 
+.panel-title > a {
+  color: $link-color;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
 
 //
 // Footer
