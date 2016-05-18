@@ -52,20 +52,21 @@ Textfields (i.e. not text areas) should use proper [HTML 5 input types](https://
 Depending on the situation the width of inputs should be restricted, this should be done using the [Bootstrap grid](http://getbootstrap.com/css/#forms-horizontal). What follows are examples of "small", "medium" and "large" widths.
 
 {% example html %}
-<div class="container">
+<div class="container-fluid">
   <form>
     <div class="form-group">
       <div class="row">
         <div class="col-sm-12">
-          <label for="input-id-2">Label goes here</label>
+          <label for="input-id-4">Label goes here</label>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-4">
-          <input placeholder="Small width" class="form-control" type="text" id="input-id-2" name="input-id-2">
+        <div class="col-sm-12">
+          <input placeholder="Large width" class="form-control" type="text" id="input-id-4" name="input-id-4">
         </div>
       </div>
     </div>
+
     <div class="form-group">
       <div class="row">
         <div class="col-sm-12">
@@ -78,11 +79,16 @@ Depending on the situation the width of inputs should be restricted, this should
         </div>
       </div>
     </div>
+
     <div class="form-group">
-      <label for="input-id-4">Label goes here</label>
       <div class="row">
         <div class="col-sm-12">
-          <input placeholder="Large width" class="form-control" type="text" id="input-id-4" name="input-id-4">
+          <label for="input-id-2">Label goes here</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <input placeholder="Small width" class="form-control" type="text" id="input-id-2" name="input-id-2">
         </div>
       </div>
     </div>
