@@ -10,10 +10,10 @@ module Jekyll
           <div class=\"panel panel-default\">
             <div class=\"panel-heading\" role=\"tab\">
               <h4 class=\"panel-title\">
-                <a role=\"button\" data-toggle=\"collapse\" data-parent=\"#{id}\" href=\"#{id}-1\">View pattern rationale</a>
+                <a role=\"button\" data-toggle=\"collapse\" data-parent=\"#{id}\" href=\"##{id}-1\">View pattern rationale</a>
               </h4>
             </div>
-            <div id=\"#{}{id}-1\" class=\"panel-collapse collapse\" role=\"tabpanel\">
+            <div id=\"#{id}-1\" class=\"panel-collapse collapse\" role=\"tabpanel\">
               <div class=\"panel-body\">"
         suffix = "</div>
                 </div>
