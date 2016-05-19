@@ -19,8 +19,13 @@ Patterns and guidelines for creating usable search functionality.
 Anywhere that a chance is presented to interact with search functionality you'll likely want an input. The search input is a combination of two fields, the input and the submit button which is represented by an icon.
 
 {% rationale %}
-<p>User testing has been conducted for this component to check that the absence of a text submit button isn't an issue (it's not). When a user has submitted the form/field if appropriate the search icon can change into an X which is only available on touch devices. This is because not one person used it on desktop.</p>
-<p>Testing has also been conducted with a submit button which has text versus an icon, in all tests both on Desktop and touch devices the magnifying glass icon was understood. In most instances users hit enter or submit on their keyboard to execute the search.</p>
+<p>User testing has been conducted to check...</p>
+<ul>
+  <li>That the absence of a text submit button isn't an issue (it's not). When a user has submitted the form/field if appropriate the search icon can change into an X which is only available on touch devices. This is because not one person used it on desktop.</li>
+  <li>A submit button which has text versus an icon would be understood. In most instances users hit enter or submit on their keyboard to execute the search.</li>
+  <li>Screen readers can interpret the pattern and relay useful guidance.</li>
+  <li>The colour change of icons within the combined search pattern is visible to those with colour blindness.</li>
+</ul>
 {% endrationale %}
 
 <div class="alert alert-warning" role="alert">When using forms with search, don't forget to set the <code>role</code> attribute to <code>search</code>.</div>
