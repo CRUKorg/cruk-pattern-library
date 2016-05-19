@@ -16,12 +16,11 @@ jQuery(function() {
       $iframe.attr('height', iframe_height + 'px');
     });*/
 
-    var selector = '.markdown-body h2, .markdown-body h3';
     anchors.options = {
       placement: 'left',
       class: 'anchor-link'
     };
-    anchors.add(selector);
+    anchors.add('.markdown-body h2, .markdown-body h3');
 
     /**
      * Supporting JavaScript for examples.
