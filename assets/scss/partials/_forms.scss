@@ -137,7 +137,7 @@ label {
 
   .cr-input-group__icon {
     top: 3px;
-    color: #C8C9C7;
+    color: $brand-grey-medium;
     @include transition(color 100ms linear);
   }
 
