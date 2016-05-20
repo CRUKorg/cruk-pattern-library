@@ -14,6 +14,8 @@
     this.last_search = null
     // Has a search been submitted?
     this.active      = false
+    // Store the aria label value for the submit button.
+    this.submit_aria_label = this.$element.find('button').attr('aria-label');
 
     /**
      * Bind the events.
@@ -61,8 +63,9 @@
      * 2. The input doesn't match the previous search
      */
     if ((input_value === '' || this.isNewSearch(input_value)) && this.$icon.hasClass('glyphicon-remove')) {
+      var button_aria_label = this.submit_aria_label
       this.$icon.fadeOut('fast', function(){
-        $(this).removeClass('glyphicon-remove').addClass('glyphicon-search').fadeIn('fast')
+        $(this).removeClass('glyphicon-remove').addClass('glyphicon-search').fadeIn('fast').parent().attr('aria-label', button_aria_label)
       })
     }
 
@@ -72,7 +75,7 @@
      */
     if (this.active && this.$icon.hasClass('glyphicon-search')) {
       this.$icon.fadeOut('fast', function(){
-        $(this).removeClass('glyphicon-search').addClass('glyphicon-remove').fadeIn('fast')
+        $(this).removeClass('glyphicon-search').addClass('glyphicon-remove').fadeIn('fast').parent().attr('aria-label', 'Clear your current search')
       })
     }
   }
