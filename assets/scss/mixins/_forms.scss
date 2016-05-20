@@ -1,0 +1,19 @@
+@mixin fieldset-no-border-bottom($border-color) {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
+
+  .panel-body:after {
+    border-bottom: 1px solid $border-color;
+    content: "";
+    display: block;
+    padding-top: 1rem;
+  }
+}
+
+@mixin fieldset-no-border-top() {
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
