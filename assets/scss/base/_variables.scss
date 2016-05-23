@@ -129,6 +129,7 @@ $headings-font-weight:    700;
 // [converter] If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.
 // [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
 // $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/")
+$icon-font-path: if(variable-exists(cruk-base-icon-font-path), $cruk-base-icon-font-path, '../../../bootstrap-sass/assets/fonts/bootstrap/');
 
 //** File name for all font files.
 // $icon-font-name:          "glyphicons-halflings-regular"
@@ -246,6 +247,11 @@ $input-color:                    $text-color;
 //** `<input>` border color
 $input-border:                   $brand-grey-medium;
 
+// CRUK Specific variable for defining font sizes for labels and inputs. This
+// is basically the baseline is currently screwy which we're levelling with
+// design.
+$form-font-size: 16px;
+
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
 // This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
@@ -265,7 +271,7 @@ $input-color-placeholder:        #a7a8aa;
 // $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2)
 $input-height-base:              40px;
 //** Large `.form-control` height
-// $input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2)
+$input-height-large:             50px;
 //** Small `.form-control` height
 // $input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2)
 
@@ -763,7 +769,7 @@ $list-group-active-border:      $brand-primary;
 //
 //##
 
-// $panel-bg:                    #fff
+$panel-bg:                    #fff;
 // $panel-body-padding:          15px
 // $panel-heading-padding:       10px 15px
 // $panel-footer-padding:        $panel-heading-padding
@@ -775,7 +781,7 @@ $list-group-active-border:      $brand-primary;
 
 // $panel-default-text:          $gray-dark
 // $panel-default-border:        #ddd
-// $panel-default-heading-bg:    #f5f5f5
+$panel-default-heading-bg:    #fff;
 
 // $panel-primary-text:          #fff
 // $panel-primary-border:        $brand-primary

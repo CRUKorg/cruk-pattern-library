@@ -19,7 +19,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'assets/css/cruk-base.css': 'assets/scss/cruk-base.scss',
+          'assets/css/cruk-base.min.css': 'assets/scss/cruk-base.scss',
           'docs/assets/css/docs.css': 'docs/assets/scss/docs.scss'
         }
       }
@@ -73,6 +73,13 @@ module.exports = function(grunt) {
       sass: {
         files: ['assets/scss/**/*.scss', 'docs/assets/scss/docs.scss'],
         tasks: ['sass', 'postcss', 'parker']
+      },
+      scripts: {
+        files: ['assets/js/cruk-base.js', 'assets/js/cruk-base/search_cip.js'],
+        tasks: ['jshint', 'concat', 'uglify', 'copy'],
+        options: {
+          spawn: false,
+        }
       }
     },
 
@@ -97,12 +104,52 @@ module.exports = function(grunt) {
           branch: 'gh-pages'
         }
       }
+    },
+
+    jshint: {
+      files: ['<%= watch.scripts.files %>'],
+      options: {
+        jshintrc: true,
+        reporter: require('jshint-stylish')
+      }
+    },
+
+    concat: {
+      options: {
+        separator: ';'
+      },
+      dist: {
+        src: ['<%= watch.scripts.files %>'],
+        dest: 'assets/js/cruk-base.min.js'
+      }
+    },
+
+    uglify: {
+      options: {
+        mangle: false
+      },
+      dist: {
+        files: {
+          '<%= concat.dist.dest %>': '<%= concat.dist.dest %>'
+        }
+      }
+    },
+
+    copy: {
+      main: {
+        src: 'assets/js/cruk-base.min.js',
+        dest: 'docs/assets/js/cruk-base.min.js'
+      }
     }
   });
 
   // Load dependencies.
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-build-control');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-parker');

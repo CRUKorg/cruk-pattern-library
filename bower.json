@@ -11,7 +11,8 @@
     "Gruntfile.js"
   ],
   "main": [
-    "assets/css/cruk-base.css"
+    "assets/css/cruk-base.min.css",
+    "assets/js/cruk-base.min.js"
   ],
   "dependencies": {
     "bootstrap-sass": "~3.3.6",
