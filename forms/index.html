@@ -9,9 +9,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
 
-    <title>
-      Forms | CRUK Pattern Library
-    </title>
+    <title>Forms | CRUK Pattern Library</title>
 
     <link rel="stylesheet" href="/cruk-pattern-library/assets/css/docs.css">
 
@@ -68,6 +66,9 @@
   <a class="list-group-item " href="/cruk-pattern-library/type/">
     Type
   </a>
+  <a class="list-group-item " href="/cruk-pattern-library/search/">
+    Search
+  </a>
   <a class="list-group-item " href="/cruk-pattern-library/pattern-library/">
     Pattern Library
   </a>
@@ -85,30 +86,273 @@
 
 <p>Mostly achieved through configuration of variables, further changes are within <code class="highlighter-rouge">partials/_forms.scss</code>.</p>
 
+<p><em>NOTE</em> In the examples, widths are controlled by using <a href="http://getbootstrap.com/css/#grid">bootstrap’s col-sm-* grid system</a>. This means that it is <em>relative to the parent container</em>. The examples below are assuming that the the fields are contained within the pattern library’s <a href="#layout">standard form layout</a> (col-sm-6, col-sm-offset-3) and have been scaled accordingly. If you want to use these code snippets outside of the standard col-sm-6 panel then you will need to use different values!</p>
+
 <h2 id="contents">Contents</h2>
 
 <ul id="markdown-toc">
   <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#layout" id="markdown-toc-layout">Layout</a></li>
   <li><a href="#basic-inputs" id="markdown-toc-basic-inputs">Basic inputs</a>    <ul>
-      <li><a href="#text" id="markdown-toc-text">Text</a></li>
+      <li><a href="#textfields" id="markdown-toc-textfields">Textfields</a></li>
+    </ul>
+  </li>
+  <li><a href="#restricting-form-item-widths" id="markdown-toc-restricting-form-item-widths">Restricting form item widths</a>    <ul>
+      <li><a href="#radio-buttons" id="markdown-toc-radio-buttons">Radio buttons</a></li>
+      <li><a href="#checkboxes" id="markdown-toc-checkboxes">Checkboxes</a></li>
     </ul>
   </li>
 </ul>
 
+<h2 id="layout">Layout</h2>
+
+<p>Forms should be contained within a central 6 grid width box with an offset of 3.</p>
+
+<div class="docs-example clearfix"><form>
+  <fieldset class="panel panel-default">
+    <div class="panel-body col-sm-6 col-sm-offset-3">
+
+      <h2>Form goes here</h2>
+
+    </div>
+  </fieldset>
+</form></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"panel panel-default"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body col-sm-6 col-sm-offset-3"</span><span class="nt">&gt;</span>
+
+      <span class="nt">&lt;h2&gt;</span>Form goes here<span class="nt">&lt;/h2&gt;</span>
+
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
 <h2 id="basic-inputs">Basic inputs</h2>
 
-<h3 id="text">Text</h3>
+<h3 id="textfields">Textfields</h3>
+
+<p>Textfields (i.e. not text areas) should use proper <a href="https://robertnyman.com/html5/forms/input-types.html">HTML 5 input types</a> where applicable. The examples below are just for single line inputs.</p>
 
 <div class="docs-example clearfix"><form>
   <div class="form-group">
-    <label for="example_text_input">Example!</label>
-    <input type="text" class="form-control" id="example_text_input" placeholder="Enter a value..." />
+    <label for="input-id-1">Label goes here</label>
+    <input placeholder="Useful example" class="form-control" type="text" id="input-id-1" name="input-id-1" />
   </div>
 </form></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"example_text_input"</span><span class="nt">&gt;</span>Example!<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"example_text_input"</span> <span class="na">placeholder=</span><span class="s">"Enter a value..."</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-id-1"</span><span class="nt">&gt;</span>Label goes here<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Useful example"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-id-1"</span> <span class="na">name=</span><span class="s">"input-id-1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
+<h2 id="restricting-form-item-widths">Restricting form item widths</h2>
+
+<p>Depending on the situation the width of inputs should be restricted, this should be done using the <a href="http://getbootstrap.com/css/#forms-horizontal">Bootstrap grid</a>. What follows are examples of “small”, “medium” and “large” widths.</p>
+
+<div class="docs-example clearfix"><div class="container-fluid">
+  <form>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-12">
+          <label for="input-id-4">Label goes here</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <input placeholder="Large width" class="form-control" type="text" id="input-id-4" name="input-id-4" />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-12">
+          <label for="input-id-3">Label goes here</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <input placeholder="Medium width" class="form-control" type="text" id="input-id-3" name="input-id-3" />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-12">
+          <label for="input-id-2">Label goes here</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <input placeholder="Small width" class="form-control" type="text" id="input-id-2" name="input-id-2" />
+        </div>
+      </div>
+    </div>
+  </form>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;form&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-12"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-id-4"</span><span class="nt">&gt;</span>Label goes here<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-12"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Large width"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-id-4"</span> <span class="na">name=</span><span class="s">"input-id-4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-12"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-id-3"</span><span class="nt">&gt;</span>Label goes here<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Medium width"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-id-3"</span> <span class="na">name=</span><span class="s">"input-id-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-12"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-id-2"</span><span class="nt">&gt;</span>Label goes here<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Small width"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-id-2"</span> <span class="na">name=</span><span class="s">"input-id-2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/form&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h3 id="radio-buttons">Radio buttons</h3>
+
+<p>Radio buttons are a little more complex as they require some javascript to be running in order to get their styles
+to change when they are clicked</p>
+
+<div class="docs-example clearfix"><form>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-12">
+        <label class="control-label" for="radio-id-1">Are radio buttons?</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <div id="radio-id-1" class="form-radios">
+          <div class="radio">
+            <label>
+              <input type="radio" id="radio-id-1-yes" name="answer" value="1" />Yes
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" id="radio-id-1-no" name="answer" value="0" />No
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-12"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"radio-id-1"</span><span class="nt">&gt;</span>Are radio buttons?<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"radio-id-1"</span> <span class="na">class=</span><span class="s">"form-radios"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-id-1-yes"</span> <span class="na">name=</span><span class="s">"answer"</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Yes
+            <span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-id-1-no"</span> <span class="na">name=</span><span class="s">"answer"</span> <span class="na">value=</span><span class="s">"0"</span><span class="nt">&gt;</span>No
+            <span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
+<h3 id="checkboxes">Checkboxes</h3>
+
+<p>Much the same as radio buttons, checkboxes also require the javascript to run.</p>
+
+<div class="docs-example clearfix"><form>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-12">
+        <label class="control-label" for="radio-id-1">Which of the following is an Oxbow lake?</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <div id="radio-id-1" class="form-radios">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="radio-id-1-yes" name="radio-id-1-dunno" />Dunno
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="radio-id-1-no" name="radio-id-1-u" />A u-shaped lake
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="radio-id-1-no" name="radio-id-1-man-u" />Manchester United Football Club
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-12"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"radio-id-1"</span><span class="nt">&gt;</span>Which of the following is an Oxbow lake?<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"radio-id-1"</span> <span class="na">class=</span><span class="s">"form-radios"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"radio-id-1-yes"</span> <span class="na">name=</span><span class="s">"radio-id-1-dunno"</span><span class="nt">&gt;</span>Dunno
+            <span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"radio-id-1-no"</span> <span class="na">name=</span><span class="s">"radio-id-1-u"</span><span class="nt">&gt;</span>A u-shaped lake
+            <span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"radio-id-1-no"</span> <span class="na">name=</span><span class="s">"radio-id-1-man-u"</span><span class="nt">&gt;</span>Manchester United Football Club
+            <span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
@@ -125,15 +369,9 @@
     </div>
 
     <script src="/cruk-pattern-library/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/cruk-pattern-library/assets/js/docs.js"></script>
+    <script src="/cruk-pattern-library/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="/cruk-pattern-library/assets/js/cruk-base.min.js"></script>
     <script src="/cruk-pattern-library/assets/js/anchor.min.js"></script>
-    <script>
-      var selector = '.markdown-body h2, .markdown-body h3';
-      anchors.options = {
-        placement: 'left',
-        class: 'anchor-link'
-      };
-      anchors.add(selector);
-    </script>
+    <script src="/cruk-pattern-library/assets/js/docs.js"></script>
   </body>
 </html>

@@ -9,9 +9,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
 
-    <title>
-      Pattern Library | CRUK Pattern Library
-    </title>
+    <title>Pattern Library | CRUK Pattern Library</title>
 
     <link rel="stylesheet" href="/cruk-pattern-library/assets/css/docs.css">
 
@@ -68,6 +66,9 @@
   <a class="list-group-item " href="/cruk-pattern-library/type/">
     Type
   </a>
+  <a class="list-group-item " href="/cruk-pattern-library/search/">
+    Search
+  </a>
   <a class="list-group-item active" href="/cruk-pattern-library/pattern-library/">
     Pattern Library
   </a>
@@ -79,7 +80,42 @@
       Pattern Library
     </h1>
     <div class="markdown-body">
-      <p>Quaaaack</p>
+      <p>The pattern library itself uses some patterns, here they are!</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#colour-swatch" id="markdown-toc-colour-swatch">Colour swatch</a></li>
+</ul>
+
+<h2 id="colour-swatch">Colour swatch</h2>
+
+<p>A colour swatch represents one of the <a href="colours/">brand or grey colours</a> that sit within the pattern library. The swatches use the grid to sit together on a single line.</p>
+
+<div class="docs-example clearfix"><div class="container">
+  <div class="row text-center">
+    <div class="col-xs-3 cr-pattern-library-swatch cr-pattern-library-swatch--primary">
+      <div class="cr-pattern-library-swatch__colour">Dark Blue</div>
+
+      <code>$brand-primary</code>
+      <code>#2E008B</code>
+      <code>rgb(46, 0, 139)</code>
+    </div>
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row text-center"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-3 cr-pattern-library-swatch cr-pattern-library-swatch--primary"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-pattern-library-swatch__colour"</span><span class="nt">&gt;</span>Dark Blue<span class="nt">&lt;/div&gt;</span>
+
+      <span class="nt">&lt;code&gt;</span>$brand-primary<span class="nt">&lt;/code&gt;</span>
+      <span class="nt">&lt;code&gt;</span>#2E008B<span class="nt">&lt;/code&gt;</span>
+      <span class="nt">&lt;code&gt;</span>rgb(46, 0, 139)<span class="nt">&lt;/code&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
 
     </div>
   </div>
@@ -93,15 +129,9 @@
     </div>
 
     <script src="/cruk-pattern-library/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/cruk-pattern-library/assets/js/docs.js"></script>
+    <script src="/cruk-pattern-library/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="/cruk-pattern-library/assets/js/cruk-base.min.js"></script>
     <script src="/cruk-pattern-library/assets/js/anchor.min.js"></script>
-    <script>
-      var selector = '.markdown-body h2, .markdown-body h3';
-      anchors.options = {
-        placement: 'left',
-        class: 'anchor-link'
-      };
-      anchors.add(selector);
-    </script>
+    <script src="/cruk-pattern-library/assets/js/docs.js"></script>
   </body>
 </html>
