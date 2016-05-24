@@ -1,6 +1,7 @@
 {
   "expr": true,
   "asi": true,
+  "validthis": true,
   "globals": {
     "jQuery": true
   }

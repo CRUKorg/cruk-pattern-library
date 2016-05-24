@@ -78,7 +78,7 @@ module.exports = function(grunt) {
         files: ['assets/js/cruk-base.js', 'assets/js/cruk-base/*.js'],
         tasks: ['jshint', 'concat', 'uglify', 'copy'],
         options: {
-          spawn: false,
+          spawn: false
         }
       }
     },
