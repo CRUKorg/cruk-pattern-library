@@ -153,3 +153,24 @@ label {
     top: 1px;
   }
 }
+
+/**
+ * Radio buttons and Checkboxes
+ */
+
+.radio, .checkbox {
+  @extend .form-control;
+
+  label {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.radio-selected, .checkbox-selected {
+  border: 2px solid $brand-primary;
+
+  label {
+    font-weight: bold;
+  }
+}
