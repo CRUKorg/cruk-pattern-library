@@ -32,6 +32,42 @@ Forms should be contained within a central 6 grid width box with an offset of 3.
 </form>
 {% endexample %}
 
+## Labels
+
+All forms inputs should have labels. They're great.
+
+### Required fields
+
+It is important to note that instead of marking form elements as 'required' we actually mark optional fields as 'Optional'
+
+{% example html %}
+<form>
+  <div class="form-group">
+    <label for="input-id-1">Madatory field</label>
+    <input placeholder="Useful example" class="form-control" type="text" id="input-id-1" name="input-id-1">
+  </div>
+
+  <div class="form-group">
+    <label for="input-id-2">Optional one <span class="input-optional">(Optional)</span></label>
+    <input placeholder="Useful example" class="form-control" type="text" id="input-id-2" name="input-id-2">
+  </div>
+</form>
+{% endexample %}
+
+### Help text
+
+Where possible/sensible you should use help text. It should be positioned between the Label and the Input.
+
+{% example html %}
+<form>
+  <div class="form-group">
+    <label for="input-id-shoe">Shoe size</label>
+    <p class="help-block">Example block-level help text here.</p>
+    <input placeholder="Useful example" class="form-control" type="text" id="input-id-shoe" name="input-id-shoe">
+  </div>
+</form>
+{% endexample %}
+
 ## Basic inputs
 
 ### Textfields
@@ -41,8 +77,8 @@ Textfields (i.e. not text areas) should use proper [HTML 5 input types](https://
 {% example html %}
 <form>
   <div class="form-group">
-    <label for="input-id-1">Label goes here</label>
-    <input placeholder="Useful example" class="form-control" type="text" id="input-id-1" name="input-id-1">
+    <label for="input-id-3">Label goes here</label>
+    <input placeholder="Useful example" class="form-control" type="text" id="input-id-3" name="input-id-3">
   </div>
 </form>
 {% endexample %}
