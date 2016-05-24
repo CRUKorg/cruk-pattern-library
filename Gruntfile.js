@@ -75,7 +75,7 @@ module.exports = function(grunt) {
         tasks: ['sass', 'postcss', 'parker']
       },
       scripts: {
-        files: ['assets/js/cruk-base.js', 'assets/js/cruk-base/search_cip.js'],
+        files: ['assets/js/cruk-base.js', 'assets/js/cruk-base/*.js'],
         tasks: ['jshint', 'concat', 'uglify', 'copy'],
         options: {
           spawn: false,
@@ -156,7 +156,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
 
   // Generate and format the CSS.
-  grunt.registerTask('default', ['sass', 'jekyll', 'postcss', 'parker']);
+  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'copy', 'sass', 'jekyll', 'postcss', 'parker']);
 
   // Publish to GitHub
   grunt.registerTask('publish', ['jekyll', 'postcss:docs', 'buildcontrol:pages']);

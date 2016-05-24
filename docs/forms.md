@@ -96,3 +96,73 @@ Depending on the situation the width of inputs should be restricted, this should
 </div>
 {% endexample %}
 
+### Radio buttons
+
+Radio buttons are a little more complex as they require some javascript to be running in order to get their styles
+to change when they are clicked
+
+{% example html %}
+<form>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-12">
+        <label class="control-label" for="radio-id-1">Are radio buttons?</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <div id="radio-id-1" class="form-radios">
+          <div class="radio">
+            <label>
+              <input type="radio" id="radio-id-1-yes" name="answer" value="1">Yes
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" id="radio-id-1-no" name="answer" value="0">No
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+{% endexample %}
+
+### Checkboxes
+
+Much the same as radio buttons, checkboxes also require the javascript to run.
+
+{% example html %}
+<form>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-12">
+        <label class="control-label" for="radio-id-1">Which of the following is an Oxbow lake?</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <div id="radio-id-1" class="form-radios">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="radio-id-1-yes" name="radio-id-1-dunno">Dunno
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="radio-id-1-no" name="radio-id-1-u">A u-shaped lake
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="radio-id-1-no" name="radio-id-1-man-u">Manchester United Football Club
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+{% endexample %}
+
