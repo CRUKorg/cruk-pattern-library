@@ -34,70 +34,9 @@ Forms should be contained within a central 6 grid width box with an offset of 3.
 
 ## Basic inputs
 
-### Text lines
+### Textfields
 
-All text line input (i.e. not text areas) should use proper [HTML 5 input types](https://robertnyman.com/html5/forms/input-types.html) where applicable. The examples below are just for text lines. I can adjust these to your needs.
-
-#### Small
-
-{% example html %}
-<form>
-  <div class="form-group">
-    <div class="row">
-      <div class="col-sm-12">
-        <label for="input-id-1">Label goes here</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-4">
-        <input placeholder="Useful example" class="form-control" type="text" id="input-id-1" name="input-id-1">
-      </div>
-    </div>
-  </div>
-</form>
-{% endexample %}
-
-#### Medium
-
-This is the default size for all text boxes
-
-{% example html %}
-<form>
-  <div class="form-group">
-    <div class="row">
-      <div class="col-sm-12">
-        <label for="input-id-1">Label goes here</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-8">
-        <input placeholder="Useful example" class="form-control" type="text" id="input-id-1" name="input-id-1">
-      </div>
-    </div>
-  </div>
-</form>
-{% endexample %}
-
-#### Large
-
-{% example html %}
-<form>
-  <div class="form-group">
-    <div class="row">
-      <div class="col-sm-12">
-        <label for="input-id-1">Label goes here</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <input placeholder="Useful example" class="form-control" type="text" id="input-id-1" name="input-id-1">
-      </div>
-    </div>
-  </div>
-</form>
-{% endexample %}
-
-or, if you want to make things a little 'leaner', you can use less markup for a full width text input
+Textfields (i.e. not text areas) should use proper [HTML 5 input types](https://robertnyman.com/html5/forms/input-types.html) where applicable. The examples below are just for single line inputs.
 
 {% example html %}
 <form>
@@ -107,3 +46,53 @@ or, if you want to make things a little 'leaner', you can use less markup for a 
   </div>
 </form>
 {% endexample %}
+
+## Restricting form item widths
+
+Depending on the situation the width of inputs should be restricted, this should be done using the [Bootstrap grid](http://getbootstrap.com/css/#forms-horizontal). What follows are examples of "small", "medium" and "large" widths.
+
+{% example html %}
+<div class="container-fluid">
+  <form>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-12">
+          <label for="input-id-4">Label goes here</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <input placeholder="Large width" class="form-control" type="text" id="input-id-4" name="input-id-4">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-12">
+          <label for="input-id-3">Label goes here</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <input placeholder="Medium width" class="form-control" type="text" id="input-id-3" name="input-id-3">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-12">
+          <label for="input-id-2">Label goes here</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <input placeholder="Small width" class="form-control" type="text" id="input-id-2" name="input-id-2">
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+{% endexample %}
+

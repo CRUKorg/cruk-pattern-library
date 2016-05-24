@@ -1,0 +1,7 @@
+{
+  "expr": true,
+  "asi": true,
+  "globals": {
+    "jQuery": true
+  }
+}

@@ -19,3 +19,5 @@ timezone: Europe/London
 
 github:
   repo: https://github.com/CRUKorg/cruk-pattern-library
+
+host: 0.0.0.0

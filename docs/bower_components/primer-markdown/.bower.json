@@ -24,7 +24,7 @@
     "tag": "v2.5.1",
     "commit": "9f136835634d6869960f6cad946846d07dd4acb6"
   },
-  "_source": "git://github.com/primer/markdown.git",
+  "_source": "https://github.com/primer/markdown.git",
   "_target": "~2.5.1",
   "_originalSource": "primer-markdown"
 }

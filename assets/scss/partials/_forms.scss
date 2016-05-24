@@ -1,6 +1,10 @@
 
+/**
+ * Basic form styling.
+ */
+
 label {
-  font-size: 16px;
+  font-size: $form-font-size;
 }
 
 .form-control {
@@ -8,10 +12,144 @@ label {
 
   border-width: 2px;
   box-shadow: none;
-  font-size: 16px;
-  transition: border-color 100ms linear;
+  font-size: $form-font-size;
+  @include transition(border-color 100ms linear);
 
   &:focus {
     box-shadow: none;
+  }
+}
+
+/**
+ * Input groups.
+ */
+
+.cr-input-group {
+  @extend .input-group;
+
+  background: $input-bg;
+  border: 2px solid $input-border;
+  border-radius: $input-border-radius;
+  @include transition(border-color 100ms linear);
+
+  &.cr-input-group--primary {
+    border-color: $brand-primary;
+  }
+
+  &.cr-input-group--masthead {
+    border-color: #ebebeb;
+  }
+
+  &.cr-input-group--focused {
+    border-color: $input-border-focus;
+  }
+
+  .cr-input-group__input {
+    border: 0;
+    background: transparent;
+    height: $input-height-base - 4;
+  }
+
+  .cr-input-group__button {
+    @extend .input-group-btn;
+  }
+
+  .cr-input-group__icon {
+    font-size: $form-font-size;
+  }
+}
+
+/**
+ * Input groups sizing, we need to redfine as we've altered the names of
+ * components, so the original Bootstrap definitions won't @extend over.
+ */
+
+.cr-input-group--lg > .cr-input-group__input,
+.cr-input-group--lg > .cr-input-group__addon,
+.cr-input-group--lg > .cr-input-group__button > .btn {
+  @extend .input-lg;
+}
+.cr-input-group--sm > .cr-input-group__input,
+.cr-input-group--sm > .cr-input-group__addon,
+.cr-input-group--sm > .cr-input-group__button > .btn {
+  @extend .input-sm;
+}
+
+.cr-input-group--lg {
+  .cr-input-group__input {
+    height: $input-height-large - 4;
+    padding: 11px 16px 9px;
+    font-size: ceil(($form-font-size * 1.25));
+    line-height: $line-height-large;
+  }
+
+  .cr-input-group__button > .btn {
+    height: $input-height-large - 4;
+    font-size: ceil(($form-font-size * 1.25));
+  }
+
+  .cr-input-group__icon {
+    font-size: ceil(($form-font-size * 1.25));
+  }
+}
+
+.cr-input-group--sm {
+  .cr-input-group__input {
+    height: $input-height-small - 4;
+    font-size: ceil(($form-font-size * 0.85));
+    line-height: $line-height-small;
+  }
+
+  .cr-input-group__button > .btn {
+    height: $input-height-small - 4;
+  }
+
+  .cr-input-group__icon {
+    font-size: ceil(($form-font-size * 0.85));
+  }
+}
+
+/**
+ * Search pattern.
+ */
+
+.cr-search-input {
+  label {
+    @extend .sr-only;
+  }
+
+  .cr-search-input__input {
+    @extend .form-control;
+  }
+
+  .cr-search-input__button .btn {
+    border: 0;
+    background: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  .cr-input-group__icon {
+    top: 3px;
+    color: $brand-grey-medium;
+    @include transition(color 100ms linear);
+  }
+
+  &.cr-input-group--focused .glyphicon-search {
+    color: $brand-primary;
+  }
+
+  &.cr-input-group--lg .cr-input-group__icon {
+    top: 4px;
+  }
+
+  &.cr-input-group--sm .cr-input-group__icon {
+    top: 1px;
   }
 }
