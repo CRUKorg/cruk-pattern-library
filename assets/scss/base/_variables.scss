@@ -101,12 +101,12 @@ $font-size-base:          14px;
 // $font-size-large:         ceil(($font-size-base * 1.25)) // ~18px
 // $font-size-small:         ceil(($font-size-base * 0.85)) // ~12px
 
-$font-size-h1:            28px;
-$font-size-h2:            21px;
-// $font-size-h3:            ceil(($font-size-base * 1.7)) // ~24px
-// $font-size-h4:            ceil(($font-size-base * 1.25)) // ~18px
-// $font-size-h5:            $font-size-base
-// $font-size-h6:            ceil(($font-size-base * 0.85)) // ~12px
+$font-size-h1: 1.7rem;
+$font-size-h2: 1.4rem;
+$font-size-h3: 1.4rem;
+$font-size-h4: 1.4rem;
+$font-size-h5: 1.4rem;
+$font-size-h6: 1.4rem;
 
 //** Unit-less `line-height` for use in components like buttons.
 // $line-height-base:        1.428571429 // 20/14
@@ -114,7 +114,7 @@ $font-size-h2:            21px;
 // $line-height-computed:    floor(($font-size-base * $line-height-base)) // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:    'MuseoSans-700', 'museo-sans-rounded', 'Museo Sans', Arial, sans-serif;
+$headings-font-family:    'MuseoSans-700', 'museo-sans-rounded', 'Museo Sans', Calibri, Arial, sans-serif;
 $headings-font-weight:    700;
 // $headings-line-height:    1.1
 // $headings-color:          inherit
