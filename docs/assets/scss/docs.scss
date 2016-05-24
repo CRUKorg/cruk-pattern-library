@@ -1,8 +1,3 @@
----
-# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
-# only main files contain this front matter, not partials.
----
-
 /*
  * CRUK Pattern Library documentation styles
  * http://cruk.org
@@ -10,22 +5,45 @@
  * Released under MIT license. Copyright 2016 Cancer Research UK.
  */
 
-//
-// Import CRUK base.
-//
+/**
+ * Set any variables.
+ */
 
-@import "bower_components/primer-markdown/components/user-content";
-@import "../assets/scss/cruk-base";
-@import "assets/scss/anchor";
-@import "assets/scss/syntax";
+/**
+ * Override the fonts path.
+ */
+$cruk-base-icon-font-path: '../../bower_components/bootstrap-sass/assets/fonts/bootstrap/';
 
-//
-// Overrides
-//
+/**
+ * Import the CRUK pattern library.
+ */
+
+@import "cruk-base";
+
+/**
+ * Now import the other bits.
+ */
+
+@import "docs/bower_components/primer-markdown/components/user-content";
+@import "anchor";
+@import "syntax";
+
+
+/**
+ * What follows is messy, and to be sorted!
+ */
 
 
 body.example {
   background-color: white;
+}
+
+body.example form {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 //
@@ -50,11 +68,6 @@ body.example {
   .masthead-logo {
     display: inline-block;
     font-size: 1.5rem;
-
-    .mega-octicon {
-      float: left;
-      margin-right: .5rem;
-    }
   }
 
   @media (min-width: 34em) {
@@ -99,7 +112,17 @@ body.example {
 // Layout
 //
 
+.panel-heading > h4 {
+  margin: 0;
+}
 
+.panel-title > a {
+  color: $link-color;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
 
 //
 // Footer
@@ -168,7 +191,6 @@ body.example {
 
 .cr-pattern-library-code-example {
   border: 0;
-  width: 100%;
 }
 
 .docs-example {
@@ -180,6 +202,7 @@ body.example {
   border: 1px solid $pre-border-color;
   border-radius: $border-radius-base;
   background-color: $pre-bg;
+  overflow: scroll;
 
   + .highlight {
     margin-top: -1px;
@@ -233,6 +256,11 @@ body.example {
   .flex-table-item > .btn {
     margin-left: 10px;
   }
+
+  #search-field-combined-example-2,
+  #search-field-combined-example-4 {
+    margin-bottom: 20px;
+  }
 }
 
 .page-title + .markdown-body > p:first-child {
@@ -260,5 +288,3 @@ body.example {
   height: 6rem;
   border-radius: .25rem;
 }
-
-
