@@ -16,6 +16,10 @@ label {
   margin-bottom: 20px;
 }
 
+.help-block {
+  color: $text-color;
+}
+
 .form-control {
   @extend .form-control;
 
