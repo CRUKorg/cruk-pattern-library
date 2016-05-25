@@ -6,22 +6,22 @@ jQuery( document ).ready(function( $ ) {
    * If you wish to use JS to handle pagination, take note that this is not intended for use on production sites.
    */
 
-  // Total number of pages.
-  var pageCount = $('.is-last-page').find('a').data('targetPage');
+  // Total number of items.
+  var itemCount = $('.is-last-item').find('a').data('targetItem');
 
-  // Maximum number of adjacent pages before & after current page.
+  // Maximum number of adjacent items before & after current item.
   var maximumRange = 2;
 
-  // Minimum number of adjacent pages before & after current page.
+  // Minimum number of adjacent items before & after current item.
   var minimumRange = 1;
 
-  // Starting page, if no page specified.
-  var defaultPage = Math.ceil(pageCount / 2);
+  // Starting item, if no item specified.
+  var defaultItem = Math.ceil(itemCount / 2);
 
-  var currentPage = parseInt(getQueryParameter('page'), 10);
+  var currentItem = parseInt(getQueryParameter('page'), 10);
 
-  if (currentPage === false || isNaN(currentPage)) {
-    currentPage = defaultPage;
+  if (currentItem === false || isNaN(currentItem)) {
+    currentItem = defaultItem;
   }
 
   var $firstEllipsis = $('.thread-pagination__ellipsis--first');
@@ -30,33 +30,33 @@ jQuery( document ).ready(function( $ ) {
   var $previousLink = $('.thread-pagination__previous');
   var $nextLink = $('.thread-pagination__next');
 
-  goToPage(currentPage);
+  goToItem(currentItem);
 
   // Bind each link to point to the appropriate page.
-  $('.js-thread-pagination-page').click(function () {
-    goToPage($(this).data('targetPage'));
+  $('.js-thread-pagination-item').click(function () {
+    goToItem($(this).data('targetItem'));
 
     // Return false to avoid appending unwanted href "#".
     return false;
   });
 
-  $previousLink.click(goToPreviousPage);
-  $nextLink.click(goToNextPage);
+  $previousLink.click(goToPreviousItem);
+  $nextLink.click(goToNextItem);
 
   /**
-   * Go to the next page.
+   * Go to the next item.
    *
-   * Will do nothing if there are no pages to go to.
+   * Will do nothing if there are no items to go to.
    *
    * @return {boolean}
    *   This always returns false so it can be used in lieu of anchor tags href.
    */
-  function goToNextPage() {
-    if (currentPage >= pageCount) {
+  function goToNextItem() {
+    if (currentItem >= itemCount) {
       return false;
     }
 
-    goToPage(currentPage + 1);
+    goToItem(currentItem + 1);
 
     return false;
   }
@@ -69,12 +69,12 @@ jQuery( document ).ready(function( $ ) {
    * @return {boolean}
    *   This always returns false so it can be used in lieu of anchor tags href.
    */
-  function goToPreviousPage() {
-    if (currentPage <= 1) {
+  function goToPreviousItem() {
+    if (currentItem <= 1) {
       return false;
     }
 
-    goToPage(currentPage - 1);
+    goToItem(currentItem - 1);
 
     return false;
   }
@@ -82,54 +82,51 @@ jQuery( document ).ready(function( $ ) {
   /**
    * Go to a target page.
    *
-   * @param {int} targetPage
+   * @param {int} targetItem
    *   The destination page.
    */
-  function goToPage(targetPage) {
-    var $currentPage = $('.thread-pagination__page--current');
+  function goToItem(targetItem) {
+    var $currentItem = $('.thread-pagination__item--current');
 
-    // If targetPage is invalid or the page is already active, bail early.
-    if (typeof targetPage !== 'number' || $currentPage.find('a').data('targetPage') === targetPage) {
+    // If targetItem is invalid or the page is already active, bail early.
+    if (typeof targetItem !== 'number' || $currentItem.find('a').data('targetItem') === targetItem) {
       return false;
     }
 
     // Reset any 'far' links.
-    $('.thread-pagination__page--far').removeClass('thread-pagination__page--far').addClass('thread-pagination__page');
+    $('.thread-pagination__item--far').removeClass('thread-pagination__item--far').addClass('thread-pagination__item');
 
     // Update the page URL to allow for easy direct linking.
-    window.history.replaceState({'page': targetPage}, 'Page ' + targetPage, '?page=' + targetPage);
+    window.history.replaceState({'page': targetItem}, 'Page ' + targetItem, '?page=' + targetItem);
 
     // Update the current page.
-    $currentPage.removeClass('thread-pagination__page--current').addClass('thread-pagination__page');
-    $('[data-target-page=' + targetPage + ']').parent('.thread-pagination__page').removeClass('thread-pagination__page').addClass('thread-pagination__page--current');
+    $currentItem.removeClass('thread-pagination__item--current').addClass('thread-pagination__item');
+    $('[data-target-item=' + targetItem + ']').parent('.thread-pagination__item').removeClass('thread-pagination__item').addClass('thread-pagination__item--current');
 
     // Hide all pages and reveal the adjacent ones.
-    $('.thread-pagination__page').hide();
+    $('.thread-pagination__item').hide();
 
-    getAdjacentPages(targetPage).forEach(function(element) {
-      // Unless near either side of pagination, add a class to some of the outlier links.
-      // Then cry.
+    getAdjacentItems(targetItem).forEach(function(element) {
+      var adjacentItemNumber = $(element).find('a').data('targetItem');
 
-      var adjacentPageNumber = $(element).find('a').data('targetPage');
-
-      if (isFarNeighbour(adjacentPageNumber, targetPage) && adjacentPageNumber > 2 && adjacentPageNumber < pageCount - 1) {
-        $(element).removeClass('thread-pagination__page').addClass('thread-pagination__page--far');
+      if (isFarNeighbour(adjacentItemNumber, targetItem) && adjacentItemNumber > 2 && adjacentItemNumber < itemCount - 1) {
+        $(element).removeClass('thread-pagination__item').addClass('thread-pagination__item--far');
       }
 
       $(element).show();
     });
 
-    $previousLink.toggleClass('is-disabled', targetPage === 1);
-    $nextLink.toggleClass('is-disabled', targetPage === pageCount);
+    $previousLink.toggleClass('is-disabled', targetItem === 1);
+    $nextLink.toggleClass('is-disabled', targetItem === itemCount);
 
     // If we need to hide an ellipsis, do so!
-    if (isNearPaginationStart(targetPage, maximumRange + 1)) {
+    if (isNearPaginationStart(targetItem, maximumRange + 1)) {
       $firstEllipsis.hide();
 
-      if (!isNearPaginationEnd(targetPage, maximumRange + 1)) {
+      if (!isNearPaginationEnd(targetItem, maximumRange + 1)) {
         $lastEllipsis.show();
       }
-    } else if (isNearPaginationEnd(targetPage, maximumRange + 1)) {
+    } else if (isNearPaginationEnd(targetItem, maximumRange + 1)) {
       $lastEllipsis.hide();
       $firstEllipsis.show();
     } else {
@@ -137,111 +134,112 @@ jQuery( document ).ready(function( $ ) {
     }
 
     // First and last pages must always be visible.
-    $('.thread-pagination').find('.is-first-page, .is-last-page').show();
+    $('.thread-pagination').find('.is-first-item, .is-last-item').show();
 
-    currentPage = targetPage;
+    currentItem = targetItem;
   }
 
   /**
-   * Determines if a page is close to the start of the pagination.
+   * Determines if an item is close to the start of the pagination.
    *
    * For a definition of 'close', refer to the optional range variable.
    * This is useful for determining whether the first ellipsis and/or 'Previous' links need to be disabled.
    *
-   * @param {int} page
-   *   The page to find.
+   * @param {int} item
+   *   The item to find.
    * @param {int} [range]
-   *   (Optional) The maximum distance from the first page.
+   *   (Optional) The maximum distance from the first item.
    * @returns {boolean}
-   *   Flag indicating that the given page is close to the start of the pagination.
+   *   Flag indicating that the given item is close to the start of the pagination.
    */
-  function isNearPaginationStart(page, range) {
+  function isNearPaginationStart(item, range) {
     range = range || maximumRange;
-    return page <= 1 + range;
+    return item <= 1 + range;
   }
 
   /**
-   * Determines if a page is close to the end of the pagination.
+   * Determines if an item is close to the end of the pagination.
    *
    * For a definition of 'close', refer to the optional range variable.
    * This is useful for determining whether the last ellipsis and/or 'Next' links need to be disabled.
    *
-   * @param {int} page
-   *   The page to find.
+   * @param {int} item
+   *   The item to find.
    * @param {int} [range]
    *   (Optional) The maximum distance from the last page.
    * @returns {boolean}
    *   Flag indicating that the given page is close to the end of the pagination (TRUE) or not (FALSE).
    */
-  function isNearPaginationEnd(page, range) {
+  function isNearPaginationEnd(item, range) {
     range = range || maximumRange;
-    return page + range >= pageCount;
+    return item + range >= itemCount;
   }
 
   /**
-   * Determines if a page number is 'far' from a page.
+   * Determines if an item is 'far' from another item.
    *
    * 'Far' is defined as greater than the minimum range setting.
    *
-   * @param {int} neighbouringPage
-   *   The page under consideration to determine whether it is 'far'.
+   * @param {int} neighbouringItem
+   *   The item under consideration to determine whether it is 'far'.
    *
-   * @param {int} relativePage
-   *   The page that neighbouringPage is to be considered a neighbour of.
+   * @param {int} relativeItem
+   *   The page that neighbouringItem is to be considered a neighbour of.
    *
    * @return {boolean}
-   *   Flag indicating that the neighbouringPage is 'far' (TRUE) or not (FALSE).
+   *   Flag indicating that the neighbouringItem is 'far' (TRUE) or not (FALSE).
    */
-  function isFarNeighbour(neighbouringPage, relativePage) {
-    if (neighbouringPage > relativePage) {
-      return neighbouringPage - relativePage > minimumRange;
+  function isFarNeighbour(neighbouringItem, relativeItem) {
+    if (neighbouringItem > relativeItem) {
+      return neighbouringItem - relativeItem > minimumRange;
     }
 
-    return relativePage - neighbouringPage > minimumRange;
+    return relativeItem - neighbouringItem > minimumRange;
   }
 
   /**
-   * Fetches the links to neighbouring pages.
-   * @param {int} page
+   * Fetches the links to neighbouring items.
+   *
+   * @param {int} item
    *   The page that the links are neighbours of.
    *
    * @return {jQuery[]}
-   *   A list of jQuery objects referencing the links that neighbour the requested page.
+   *   A list of jQuery objects referencing the links that neighbour the requested item.
    */
-  function getAdjacentPages(page) {
-    var adjacentPages = [];
+  function getAdjacentItems(item) {
+    var adjacentItems = [];
     var offset;
 
-    if (typeof page !== 'number' || page < 1) {
-      return adjacentPages;
+    if (typeof item !== 'number' || item < 1) {
+      return adjacentItems;
     }
 
-    var minimumPage = isNearPaginationStart(page) ? 1 : page - maximumRange;
-    var maximumPage = isNearPaginationEnd(page) ? pageCount : page + maximumRange;
+    var minimumItem = isNearPaginationStart(item) ? 1 : item - maximumRange;
+    var maximumItem = isNearPaginationEnd(item) ? itemCount : item + maximumRange;
 
-    if (pageCount - page <= maximumRange) {
-      offset = 1 + maximumRange - (pageCount - page);
-      minimumPage = minimumPage - offset < 1 ? 1 : minimumPage - offset;
-    } else if (page <= maximumRange + 2) {
-      // Count the pages between the minimum page & the current page.
-      offset = (maximumRange + 2) - page;
-      maximumPage = maximumPage + offset > pageCount ? pageCount : maximumPage + offset;
+    if (itemCount - item <= maximumRange) {
+      offset = 1 + maximumRange - (itemCount - item);
+      minimumItem = minimumItem - offset < 1 ? 1 : minimumItem - offset;
+    } else if (item <= maximumRange + 2) {
+      // Count the pages between the minimum item & the current item.
+      offset = (maximumRange + 2) - item;
+      maximumItem = maximumItem + offset > itemCount ? itemCount : maximumItem + offset;
     }
 
-    for (var count = minimumPage; count <= maximumPage; count++) {
-      // Only fetch the neighbours; skip the current page.
-      if (count === page) {
+    for (var count = minimumItem; count <= maximumItem; count++) {
+      // Only fetch the neighbours; skip the current item.
+      if (count === item) {
         continue;
       }
 
-      var adjacentPage = $('[data-target-page=' + count + ']').parent('.thread-pagination__page');
+      var adjacentPage = $('[data-target-item=' + count + ']').parent('.thread-pagination__item');
 
       if (adjacentPage.length) {
-        adjacentPages.push(adjacentPage);
+        adjacentItems.push(adjacentPage);
       }
     }
 
-    return adjacentPages;
+    return adjacentItems;
   }
 
   /**

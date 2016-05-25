@@ -15,8 +15,8 @@
   }
 }
 
-// Links to numbered pages.
-.thread-pagination__page {
+// Links to numbered items.
+.thread-pagination__item {
   display: inline;
 
   a {
@@ -34,7 +34,7 @@
 
   // Modifications.
   &--current, &--far {
-    @extend .thread-pagination__page;
+    @extend .thread-pagination__item;
   }
 
   &--far {
