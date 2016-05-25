@@ -1,0 +1,81 @@
+/**
+ * Thread Pagination
+ */
+.thread-pagination {
+  text-align: center;
+
+  .is-disabled {
+    color: $brand-grey-dark;
+
+    &:hover, &:focus {
+      cursor: default;
+      text-decoration: none;
+      color: $brand-grey-dark;
+    }
+  }
+}
+
+// Links to numbered pages.
+.thread-pagination__page {
+  display: inline;
+
+  a {
+    @extend .btn;
+    border-radius: 0;
+
+    background-color: $brand-primary;
+    color: white;
+    &:hover, &:focus {
+      background-color: $brand-primary-gloss;
+      color: white;
+      text-decoration: underline;
+    }
+  }
+
+  // Modifications.
+  &--current, &--far {
+    @extend .thread-pagination__page;
+  }
+
+  &--far {
+    @media screen and (max-width: $screen-xs) {
+      // Note: Important is here for purpose of demonstration due to jQuery's .hide() inlining a style rule.
+      display: none !important;
+    }
+  }
+
+  &--current {
+    a {
+      background-color: $brand-grey-medium;
+      color: $brand-grey-dark;
+
+      &:hover, &:focus {
+        background-color: $brand-grey-medium;
+        color: $brand-grey-dark;
+        text-decoration: none;
+        cursor: default;
+      }
+      &:active {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+%thread-pagination__text {
+  font-weight: bold;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+}
+
+.thread-pagination__previous, .thread-pagination__next, .thread-pagination__ellipsis--first, .thread-pagination__ellipsis--last {
+  @extend %thread-pagination__text;
+}
+
+.thread-pagination__previous {
+  margin-right: 10px;
+}
+
+.thread-pagination__next {
+  margin-left: 10px;
+}
