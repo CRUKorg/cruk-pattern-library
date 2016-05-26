@@ -19,12 +19,11 @@ jQuery( document ).ready(function( $ ) {
    * @constructor
    */
   var Pagination = function (element, options) {
-    var self = this;
     this.$element = $(element);
-    this.$firstEllipsis = this.$element.find('.thread-pagination__ellipsis--first');
-    this.$lastEllipsis = this.$element.find('.thread-pagination__ellipsis--last');
-    this.$previousLink = this.$element.find('.thread-pagination__previous');
-    this.$nextLink = this.$element.find('.thread-pagination__next');
+    this.$firstEllipsis = this.$element.find('.cr-pagination__ellipsis--first');
+    this.$lastEllipsis = this.$element.find('.cr-pagination__ellipsis--last');
+    this.$previousLink = this.$element.find('.cr-pagination__previous');
+    this.$nextLink = this.$element.find('.cr-pagination__next');
 
     // Total number of items.
     this.itemCount = this.$element.find('.is-last-item a').data('targetItem');
@@ -46,12 +45,12 @@ jQuery( document ).ready(function( $ ) {
     this.goToItem(this.currentItem);
 
     // Bind each link to point to the appropriate page.
-    this.$element.find('.js-thread-pagination-item').click(function () {
+    this.$element.find('.js-pagination-item').on('click', $.proxy(function () {
       self.goToItem($(this).data('targetItem'));
 
       // Return false to avoid appending unwanted href "#".
       return false;
-    });
+    }, this));
 
     this.$previousLink.on('click', $.proxy(this.goToPreviousItem, this));
     this.$nextLink.on('click', $.proxy(this.goToNextItem, this));
@@ -108,7 +107,7 @@ jQuery( document ).ready(function( $ ) {
    */
   Pagination.prototype.goToItem = function(targetItem) {
     var self = this;
-    var $currentItem = this.$element.find('.thread-pagination__item--current');
+    var $currentItem = this.$element.find('.cr-pagination__item--current');
 
     // If targetItem is invalid or the page is already active, bail early.
     if (typeof targetItem !== 'number' || $currentItem.find('a').data('targetItem') === targetItem) {
@@ -116,23 +115,23 @@ jQuery( document ).ready(function( $ ) {
     }
 
     // Reset any 'far' links.
-    this.$element.find('.thread-pagination__item--far').removeClass('thread-pagination__item--far').addClass('thread-pagination__item');
+    this.$element.find('.cr-pagination__item--far').removeClass('cr-pagination__item--far').addClass('cr-pagination__item');
 
     // Update the page URL to allow for easy direct linking.
     window.history.replaceState({'page': targetItem}, 'Page ' + targetItem, '?page=' + targetItem);
 
     // Update the current item.
-    $currentItem.removeClass('thread-pagination__item--current').addClass('thread-pagination__item');
-    this.$element.find('[data-target-item=' + targetItem + ']').parent('.thread-pagination__item').removeClass('thread-pagination__item').addClass('thread-pagination__item--current');
+    $currentItem.removeClass('cr-pagination__item--current').addClass('cr-pagination__item');
+    this.$element.find('[data-target-item=' + targetItem + ']').parent('.cr-pagination__item').removeClass('cr-pagination__item').addClass('cr-pagination__item--current');
 
     // Hide all pages and reveal the adjacent ones.
-    this.$element.find('.thread-pagination__item').hide();
+    this.$element.find('.cr-pagination__item').hide();
 
     this.getAdjacentItems(targetItem).forEach(function(element) {
       var adjacentItemNumber = self.$element.find(element).find('a').data('targetItem');
 
       if (self.isFarNeighbour(adjacentItemNumber, targetItem) && adjacentItemNumber > 2 && adjacentItemNumber < self.itemCount - 1) {
-        $(element).removeClass('thread-pagination__item').addClass('thread-pagination__item--far');
+        $(element).removeClass('cr-pagination__item').addClass('cr-pagination__item--far');
       }
 
       $(element).show();
@@ -152,7 +151,7 @@ jQuery( document ).ready(function( $ ) {
       this.$lastEllipsis.hide();
       this.$firstEllipsis.show();
     } else {
-      this.$element.find('.thread-pagination__ellipsis--first, .thread-pagination__ellipsis--last').show();
+      this.$element.find('.cr-pagination__ellipsis--first, .cr-pagination__ellipsis--last').show();
     }
 
     // First and last pages must always be visible.
@@ -254,7 +253,7 @@ jQuery( document ).ready(function( $ ) {
         continue;
       }
 
-      var adjacentPage = this.$element.find('[data-target-item=' + count + ']').parent('.thread-pagination__item');
+      var adjacentPage = this.$element.find('[data-target-item=' + count + ']').parent('.cr-pagination__item');
 
       if (adjacentPage.length) {
         adjacentItems.push(adjacentPage);
@@ -308,7 +307,7 @@ jQuery( document ).ready(function( $ ) {
   };
 
   $(window).on('load', function () {
-    $('.thread-pagination').each(function () {
+    $('.cr-pagination').each(function () {
       var $pagination = $(this);
       Plugin.call($pagination, $pagination.data())
     });

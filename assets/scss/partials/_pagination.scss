@@ -1,7 +1,7 @@
 /**
- * Thread Pagination
+ * Pagination
  */
-.thread-pagination {
+.cr-pagination {
   text-align: center;
 
   .is-disabled {
@@ -16,7 +16,7 @@
 }
 
 // Links to numbered items.
-.thread-pagination__item {
+.cr-pagination__item {
   display: inline;
 
   a {
@@ -38,7 +38,7 @@
 
   // Modifications.
   &--current, &--far {
-    @extend .thread-pagination__item;
+    @extend .cr-pagination__item;
   }
 
   &--far {
@@ -66,22 +66,22 @@
   }
 }
 
-%thread-pagination__text {
+%cr-pagination__text {
   font-weight: bold;
   font-family: $font-family-base;
   font-size: $font-size-base;
 }
 
-.thread-pagination__previous, .thread-pagination__next, .thread-pagination__ellipsis--first, .thread-pagination__ellipsis--last {
-  @extend %thread-pagination__text;
+.cr-pagination__previous, .cr-pagination__next, .cr-pagination__ellipsis--first, .cr-pagination__ellipsis--last {
+  @extend %cr-pagination__text;
 }
 
 @media screen and (min-width: $screen-xs + 1) {
-  .thread-pagination__previous {
+  .cr-pagination__previous {
     margin-right: 10px;
   }
 
-  .thread-pagination__next {
+  .cr-pagination__next {
     margin-left: 10px;
   }
 }
