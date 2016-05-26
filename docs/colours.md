@@ -35,6 +35,34 @@ Whilst we match the Bootstrap variable names `primary`, `secondary` and our own 
   </div>
 </div>
 
+#### Hover States
+<div class="row text-center">
+  <div class="col-xs-6 col-sm-3 cr-pattern-library-swatch cr-pattern-library-swatch--primary-hover">
+    <div class="cr-pattern-library-swatch__colour">Dark Blue</div>
+
+    <code>$brand-primary-hover</code>
+    <code>#6C5C99</code>
+    <code>rgb(108,92,153)</code>
+  </div>
+
+  <div class="col-xs-6 col-sm-3 cr-pattern-library-swatch cr-pattern-library-swatch--secondary-hover">
+    <div class="cr-pattern-library-swatch__colour">Magenta</div>
+
+    <code>$brand-secondary-hover</code>
+    <code>#EF32A2</code>
+    <code>rgb(239,50,162)</code>
+  </div>
+
+  <div class="col-xs-6 col-sm-3 cr-pattern-library-swatch cr-pattern-library-swatch--tertiary-hover">
+    <div class="cr-pattern-library-swatch__colour">Light Blue</div>
+
+    <code>$brand-tertiary-hover</code>
+    <code>#32C4F0</code>
+    <code>rgb(50,196,240)</code>
+  </div>
+</div>
+
+
 ### Greyscale
 
 <div class="row text-center">
@@ -45,6 +73,14 @@ Whilst we match the Bootstrap variable names `primary`, `secondary` and our own 
     <code>#E3E3E3</code>
     <code>rgb(227, 227, 227)</code>
   </div>
+
+  <div class="col-xs-6 col-sm-3 cr-pattern-library-swatch cr-pattern-library-swatch--grey-light-hover">
+      <div class="cr-pattern-library-swatch__colour">Hovered Grey</div>
+
+      <code>$brand-grey-light-hover</code>
+      <code>#d2d3d1</code>
+      <code>rgb(227, 227, 227)</code>
+    </div>
 
   <div class="col-xs-6 col-sm-3 cr-pattern-library-swatch cr-pattern-library-swatch--grey-medium">
     <div class="cr-pattern-library-swatch__colour">Medium Grey</div>
