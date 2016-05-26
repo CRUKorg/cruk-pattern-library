@@ -30,6 +30,10 @@
       color: white;
       text-decoration: underline;
     }
+
+    @media screen and (max-width: $screen-xs) {
+      padding: 6px 11px;
+    }
   }
 
   // Modifications.
@@ -72,10 +76,12 @@
   @extend %thread-pagination__text;
 }
 
-.thread-pagination__previous {
-  margin-right: 10px;
-}
+@media screen and (min-width: $screen-xs + 1) {
+  .thread-pagination__previous {
+    margin-right: 10px;
+  }
 
-.thread-pagination__next {
-  margin-left: 10px;
+  .thread-pagination__next {
+    margin-left: 10px;
+  }
 }
