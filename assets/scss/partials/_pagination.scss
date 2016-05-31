@@ -13,6 +13,10 @@
       color: $brand-grey-dark;
     }
   }
+
+  &__previous, &__next, &__ellipsis--first, &__ellipsis--last {
+    display: inline;
+  }
 }
 
 // Links to numbered items.
