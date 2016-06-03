@@ -13,7 +13,7 @@ Full pagination features Previous/Next controls and shows First/Last items in a 
 ### Implementation
 Below is a fully interactive pagination widget for some imaginary thread of 9 pages.
 
-Note that the items that are hidden via inline styles should not be rendered into the pages markup if possible and are only used for the purpose of making this interactive via JavaScript. JavaScript for this makes use of the [History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API) and thus does not support IE9.
+Note that the logic for this widget should be done on the backend to avoid unneeded markup. This demonstration widget requires &gt;IE9 due to use of the history API.
 
 {% example html %}
 <nav class="cr-pagination">
