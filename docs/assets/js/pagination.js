@@ -20,13 +20,13 @@ jQuery( document ).ready(function( $ ) {
    */
   var Pagination = function (element, options) {
     this.$element = $(element);
-    this.$firstEllipsis = this.$element.find('.cr-pagination__ellipsis--first');
-    this.$lastEllipsis = this.$element.find('.cr-pagination__ellipsis--last');
+    this.$firstEllipsis = this.$element.find('.cr-pagination__ellipsis:first');
+    this.$lastEllipsis = this.$element.find('.cr-pagination__ellipsis:last');
     this.$previousLink = this.$element.find('.cr-pagination__previous');
     this.$nextLink = this.$element.find('.cr-pagination__next');
 
     // Total number of items.
-    this.itemCount = this.$element.find('.is-last-item a').data('targetItem');
+    this.itemCount = this.$element.find('.cr-pagination__item').length;
 
     // Maximum number of adjacent items before & after current item.
     this.maximumRange = options.maximumRange;
@@ -42,10 +42,13 @@ jQuery( document ).ready(function( $ ) {
       this.currentItem = defaultItem;
     }
 
-    this.goToItem(this.currentItem);
+    // Set the page links.
+    this.$element.find('.cr-pagination__item').each(function (index) {
+      $('a', this).data('targetItem', index + 1);
+    });
 
     // Bind each link to point to the appropriate page.
-    this.$element.find('.js-cr-pagination-item').on('click', $.proxy(function (e) {
+    this.$element.find('.cr-pagination__item').on('click', $.proxy(function (e) {
       this.goToItem($(e.target).data('targetItem'));
 
       // Return false to avoid appending unwanted href "#".
@@ -54,6 +57,9 @@ jQuery( document ).ready(function( $ ) {
 
     this.$previousLink.on('click', $.proxy(this.goToPreviousItem, this));
     this.$nextLink.on('click', $.proxy(this.goToNextItem, this));
+
+    // Start things off at the right page!
+    this.goToItem(this.currentItem);
   };
 
   Pagination.VERSION = '0.0.1';
@@ -121,7 +127,7 @@ jQuery( document ).ready(function( $ ) {
 
     // Update the current item.
     $currentItem.removeClass('cr-pagination__item--current').addClass('cr-pagination__item');
-    this.$element.find('[data-target-item=' + targetItem + ']').parent('.cr-pagination__item').removeClass('cr-pagination__item').addClass('cr-pagination__item--current');
+    this.$element.find('a').eq(targetItem).parent('.cr-pagination__item').removeClass('cr-pagination__item').addClass('cr-pagination__item--current');
 
     // Hide all pages and reveal the adjacent ones.
     this.$element.find('.cr-pagination__item').hide();
@@ -150,11 +156,11 @@ jQuery( document ).ready(function( $ ) {
       this.$lastEllipsis.hide();
       this.$firstEllipsis.show();
     } else {
-      this.$element.find('.cr-pagination__ellipsis--first, .cr-pagination__ellipsis--last').show();
+      this.$element.find('.cr-pagination__ellipsis').show();
     }
 
     // First and last pages must always be visible.
-    this.$element.find('.is-first-item, .is-last-item').show();
+    this.$element.find('.cr-pagination__item:first, .cr-pagination__item:last').show();
 
     this.currentItem = targetItem;
   };
@@ -252,7 +258,7 @@ jQuery( document ).ready(function( $ ) {
         continue;
       }
 
-      var adjacentPage = this.$element.find('[data-target-item=' + count + ']').parent('.cr-pagination__item');
+      var adjacentPage = this.$element.find('a').eq(count).parent('.cr-pagination__item');
 
       if (adjacentPage.length) {
         adjacentItems.push(adjacentPage);

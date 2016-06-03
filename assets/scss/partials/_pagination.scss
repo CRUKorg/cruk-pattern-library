@@ -14,7 +14,7 @@
     }
   }
 
-  &__previous, &__next, &__ellipsis--first, &__ellipsis--last {
+  &__previous, &__next, &__ellipsis {
     display: inline;
   }
 }
@@ -76,7 +76,7 @@
   font-size: $font-size-base;
 }
 
-.cr-pagination__previous, .cr-pagination__next, .cr-pagination__ellipsis--first, .cr-pagination__ellipsis--last {
+.cr-pagination__previous, .cr-pagination__next, .cr-pagination__ellipsis {
   @extend %cr-pagination__text;
 }
 

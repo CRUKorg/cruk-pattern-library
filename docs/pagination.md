@@ -17,17 +17,17 @@ Note that the items that are hidden via inline styles should not be rendered int
 
 <nav class="cr-pagination">
   <li class="cr-pagination__previous"><a href="#" aria-label="Previous page">Prev</a></li>
-  <li class="cr-pagination__item is-first-item"><a href="#" class="js-pagination-item" data-target-item="1" aria-label="First page">1</a></li>
-  <li class="cr-pagination__item"><a href="#" class="js-cr-pagination-item" data-target-item="2"><span class="sr-only">Page </span>2</a></li>
-  <li class="cr-pagination__ellipsis--first" aria-hidden="true"><span>...</span></li>
-  <li class="cr-pagination__item"><a href="#" class="js-cr-pagination-item" data-target-item="3"><span class="sr-only">Page </span>3</a></li>
-  <li class="cr-pagination__item"><a href="#" class="js-cr-pagination-item" data-target-item="4"><span class="sr-only">Page </span>4</a></li>
-  <li class="cr-pagination__item"><a href="#" class="js-cr-pagination-item" data-target-item="5"><span class="sr-only">Page </span>5</a></li>
-  <li class="cr-pagination__item"><a href="#" class="js-cr-pagination-item" data-target-item="6"><span class="sr-only">Page </span>6</a></li>
-  <li class="cr-pagination__item"><a href="#" class="js-cr-pagination-item" data-target-item="7"><span class="sr-only">Page </span>7</a></li>
-  <li class="cr-pagination__ellipsis--last" aria-hidden="true"><span>...</span></li>
-  <li class="cr-pagination__item"><a href="#" class="js-cr-pagination-item" data-target-item="8"><span class="sr-only">Page </span>8</a></li>
-  <li class="cr-pagination__item is-last-item"><a href="#" class="js-cr-pagination-item" data-target-item="9" aria-label="Last page">9</a></li>
+  <li class="cr-pagination__item is-first-item"><a href="#" aria-label="First page">1</a></li>
+  <li class="cr-pagination__item"><a href="#"><span class="sr-only">Page </span>2</a></li>
+  <li class="cr-pagination__ellipsis" aria-hidden="true"><span>...</span></li>
+  <li class="cr-pagination__item"><a href="#"><span class="sr-only">Page </span>3</a></li>
+  <li class="cr-pagination__item"><a href="#"><span class="sr-only">Page </span>4</a></li>
+  <li class="cr-pagination__item"><a href="#"><span class="sr-only">Page </span>5</a></li>
+  <li class="cr-pagination__item"><a href="#"><span class="sr-only">Page </span>6</a></li>
+  <li class="cr-pagination__item"><a href="#"><span class="sr-only">Page </span>7</a></li>
+  <li class="cr-pagination__ellipsis" aria-hidden="true"><span>...</span></li>
+  <li class="cr-pagination__item"><a href="#"><span class="sr-only">Page </span>8</a></li>
+  <li class="cr-pagination__item is-last-item"><a href="#" aria-label="Last page">9</a></li>
   <li class="cr-pagination__next"><a href="#" aria-label="Next page">Next</a></li>
 </nav>
 <br />
