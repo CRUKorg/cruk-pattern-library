@@ -137,8 +137,8 @@ jQuery( document ).ready(function( $ ) {
       $(element).show();
     });
 
-    this.$previousLink.toggleClass('is-disabled', targetItem === 1);
-    this.$nextLink.toggleClass('is-disabled', targetItem === this.itemCount);
+    this.$previousLink.toggle(targetItem !== 1);
+    this.$nextLink.toggle(targetItem !== this.itemCount);
 
     // If we need to hide an ellipsis, do so!
     if (this.isNearPaginationStart(targetItem, this.maximumRange + 1)) {
