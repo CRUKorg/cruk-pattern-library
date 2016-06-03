@@ -45,8 +45,8 @@ jQuery( document ).ready(function( $ ) {
     this.goToItem(this.currentItem);
 
     // Bind each link to point to the appropriate page.
-    this.$element.find('.js-pagination-item').on('click', $.proxy(function () {
-      self.goToItem($(this).data('targetItem'));
+    this.$element.find('.js-cr-pagination-item').on('click', $.proxy(function (e) {
+      this.goToItem($(e.target).data('targetItem'));
 
       // Return false to avoid appending unwanted href "#".
       return false;
@@ -106,7 +106,6 @@ jQuery( document ).ready(function( $ ) {
    *   The destination page.
    */
   Pagination.prototype.goToItem = function(targetItem) {
-    var self = this;
     var $currentItem = this.$element.find('.cr-pagination__item--current');
 
     // If targetItem is invalid or the page is already active, bail early.
@@ -128,14 +127,14 @@ jQuery( document ).ready(function( $ ) {
     this.$element.find('.cr-pagination__item').hide();
 
     this.getAdjacentItems(targetItem).forEach(function(element) {
-      var adjacentItemNumber = self.$element.find(element).find('a').data('targetItem');
+      var adjacentItemNumber = this.$element.find(element).find('a').data('targetItem');
 
-      if (self.isFarNeighbour(adjacentItemNumber, targetItem) && adjacentItemNumber > 2 && adjacentItemNumber < self.itemCount - 1) {
+      if (this.isFarNeighbour(adjacentItemNumber, targetItem) && adjacentItemNumber > 2 && adjacentItemNumber < this.itemCount - 1) {
         $(element).removeClass('cr-pagination__item').addClass('cr-pagination__item--far');
       }
 
       $(element).show();
-    });
+    }, this);
 
     this.$previousLink.toggle(targetItem !== 1);
     this.$nextLink.toggle(targetItem !== this.itemCount);
