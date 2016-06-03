@@ -5,6 +5,21 @@
 
 label {
   font-size: $form-font-size;
+  margin-bottom: 10px;
+
+  .input-optional {
+    font-weight: normal;
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.help-block {
+  color: $text-color;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .form-control {
