@@ -69,9 +69,6 @@
   <a class="list-group-item " href="/cruk-pattern-library/search/">
     Search
   </a>
-  <a class="list-group-item " href="/cruk-pattern-library/pagination/">
-    Pagination
-  </a>
   <a class="list-group-item " href="/cruk-pattern-library/pattern-library/">
     Pattern Library
   </a>
@@ -98,13 +95,11 @@
   <li><a href="#layout" id="markdown-toc-layout">Layout</a></li>
   <li><a href="#basic-inputs" id="markdown-toc-basic-inputs">Basic inputs</a>    <ul>
       <li><a href="#textfields" id="markdown-toc-textfields">Textfields</a></li>
-    </ul>
-  </li>
-  <li><a href="#restricting-form-item-widths" id="markdown-toc-restricting-form-item-widths">Restricting form item widths</a>    <ul>
       <li><a href="#radio-buttons" id="markdown-toc-radio-buttons">Radio buttons</a></li>
       <li><a href="#checkboxes" id="markdown-toc-checkboxes">Checkboxes</a></li>
     </ul>
   </li>
+  <li><a href="#restricting-form-item-widths" id="markdown-toc-restricting-form-item-widths">Restricting form item widths</a></li>
 </ul>
 
 <h2 id="layout">Layout</h2>
@@ -148,95 +143,6 @@
     <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Useful example"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-id-1"</span> <span class="na">name=</span><span class="s">"input-id-1"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
-
-<h2 id="restricting-form-item-widths">Restricting form item widths</h2>
-
-<p>Depending on the situation the width of inputs should be restricted, this should be done using the <a href="http://getbootstrap.com/css/#forms-horizontal">Bootstrap grid</a>. What follows are examples of “small”, “medium” and “large” widths.</p>
-
-<div class="docs-example clearfix"><div class="container-fluid">
-  <form>
-    <div class="form-group">
-      <div class="row">
-        <div class="col-sm-12">
-          <label for="input-id-4">Label goes here</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <input placeholder="Large width" class="form-control" type="text" id="input-id-4" name="input-id-4" />
-        </div>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="row">
-        <div class="col-sm-12">
-          <label for="input-id-3">Label goes here</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-8">
-          <input placeholder="Medium width" class="form-control" type="text" id="input-id-3" name="input-id-3" />
-        </div>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="row">
-        <div class="col-sm-12">
-          <label for="input-id-2">Label goes here</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <input placeholder="Small width" class="form-control" type="text" id="input-id-2" name="input-id-2" />
-        </div>
-      </div>
-    </div>
-  </form>
-</div></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;form&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-12"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-id-4"</span><span class="nt">&gt;</span>Label goes here<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-12"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Large width"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-id-4"</span> <span class="na">name=</span><span class="s">"input-id-4"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-12"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-id-3"</span><span class="nt">&gt;</span>Label goes here<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Medium width"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-id-3"</span> <span class="na">name=</span><span class="s">"input-id-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-12"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-id-2"</span><span class="nt">&gt;</span>Label goes here<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Small width"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-id-2"</span> <span class="na">name=</span><span class="s">"input-id-2"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/form&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 <h3 id="radio-buttons">Radio buttons</h3>
 
@@ -359,6 +265,95 @@ to change when they are clicked</p>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
+<h2 id="restricting-form-item-widths">Restricting form item widths</h2>
+
+<p>Depending on the situation the width of inputs should be restricted, this should be done using the <a href="http://getbootstrap.com/css/#forms-horizontal">Bootstrap grid</a>. What follows are examples of “small”, “medium” and “large” widths.</p>
+
+<div class="docs-example clearfix"><div class="container-fluid">
+  <form>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-12">
+          <label for="input-id-4">Label goes here</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <input placeholder="Large width" class="form-control" type="text" id="input-id-4" name="input-id-4" />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-12">
+          <label for="input-id-3">Label goes here</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <input placeholder="Medium width" class="form-control" type="text" id="input-id-3" name="input-id-3" />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-12">
+          <label for="input-id-2">Label goes here</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <input placeholder="Small width" class="form-control" type="text" id="input-id-2" name="input-id-2" />
+        </div>
+      </div>
+    </div>
+  </form>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;form&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-12"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-id-4"</span><span class="nt">&gt;</span>Label goes here<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-12"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Large width"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-id-4"</span> <span class="na">name=</span><span class="s">"input-id-4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-12"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-id-3"</span><span class="nt">&gt;</span>Label goes here<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Medium width"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-id-3"</span> <span class="na">name=</span><span class="s">"input-id-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-12"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-id-2"</span><span class="nt">&gt;</span>Label goes here<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Small width"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-id-2"</span> <span class="na">name=</span><span class="s">"input-id-2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/form&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
 
     </div>
   </div>
@@ -376,6 +371,5 @@ to change when they are clicked</p>
     <script src="/cruk-pattern-library/assets/js/cruk-base.min.js"></script>
     <script src="/cruk-pattern-library/assets/js/anchor.min.js"></script>
     <script src="/cruk-pattern-library/assets/js/docs.js"></script>
-    
   </body>
 </html>
