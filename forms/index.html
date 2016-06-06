@@ -69,6 +69,9 @@
   <a class="list-group-item " href="/cruk-pattern-library/search/">
     Search
   </a>
+  <a class="list-group-item " href="/cruk-pattern-library/pagination/">
+    Pagination
+  </a>
   <a class="list-group-item " href="/cruk-pattern-library/pattern-library/">
     Pattern Library
   </a>
@@ -93,16 +96,15 @@
 <ul id="markdown-toc">
   <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
   <li><a href="#layout" id="markdown-toc-layout">Layout</a></li>
-  <li><a href="#labels" id="markdown-toc-labels">Labels</a>    <ul>
-      <li><a href="#required-fields" id="markdown-toc-required-fields">Required fields</a></li>
-      <li><a href="#help-text" id="markdown-toc-help-text">Help text</a></li>
-    </ul>
-  </li>
   <li><a href="#basic-inputs" id="markdown-toc-basic-inputs">Basic inputs</a>    <ul>
       <li><a href="#textfields" id="markdown-toc-textfields">Textfields</a></li>
     </ul>
   </li>
-  <li><a href="#restricting-form-item-widths" id="markdown-toc-restricting-form-item-widths">Restricting form item widths</a></li>
+  <li><a href="#restricting-form-item-widths" id="markdown-toc-restricting-form-item-widths">Restricting form item widths</a>    <ul>
+      <li><a href="#radio-buttons" id="markdown-toc-radio-buttons">Radio buttons</a></li>
+      <li><a href="#checkboxes" id="markdown-toc-checkboxes">Checkboxes</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="layout">Layout</h2>
@@ -128,56 +130,6 @@
   <span class="nt">&lt;/fieldset&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
-<h2 id="labels">Labels</h2>
-
-<p>All forms inputs should have labels. They’re great.</p>
-
-<h3 id="required-fields">Required fields</h3>
-
-<p>It is important to note that instead of marking form elements as ‘required’ we actually mark optional fields as ‘Optional’</p>
-
-<div class="docs-example clearfix"><form>
-  <div class="form-group">
-    <label for="input-id-1">Madatory field</label>
-    <input placeholder="Useful example" class="form-control" type="text" id="input-id-1" name="input-id-1" />
-  </div>
-
-  <div class="form-group">
-    <label for="input-id-2">Optional one <span class="input-optional">(Optional)</span></label>
-    <input placeholder="Useful example" class="form-control" type="text" id="input-id-2" name="input-id-2" />
-  </div>
-</form></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-id-1"</span><span class="nt">&gt;</span>Madatory field<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Useful example"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-id-1"</span> <span class="na">name=</span><span class="s">"input-id-1"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-id-2"</span><span class="nt">&gt;</span>Optional one <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-optional"</span><span class="nt">&gt;</span>(Optional)<span class="nt">&lt;/span&gt;&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Useful example"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-id-2"</span> <span class="na">name=</span><span class="s">"input-id-2"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
-
-<h3 id="help-text">Help text</h3>
-
-<p>Where possible/sensible you should use help text. It should be positioned between the Label and the Input.</p>
-
-<div class="docs-example clearfix"><form>
-  <div class="form-group">
-    <label for="input-id-shoe">Shoe size</label>
-    <p class="help-block">Example block-level help text here.</p>
-    <input placeholder="Useful example" class="form-control" type="text" id="input-id-shoe" name="input-id-shoe" />
-  </div>
-</form></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-id-shoe"</span><span class="nt">&gt;</span>Shoe size<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"help-block"</span><span class="nt">&gt;</span>Example block-level help text here.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Useful example"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-id-shoe"</span> <span class="na">name=</span><span class="s">"input-id-shoe"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
-
 <h2 id="basic-inputs">Basic inputs</h2>
 
 <h3 id="textfields">Textfields</h3>
@@ -186,14 +138,14 @@
 
 <div class="docs-example clearfix"><form>
   <div class="form-group">
-    <label for="input-id-3">Label goes here</label>
-    <input placeholder="Useful example" class="form-control" type="text" id="input-id-3" name="input-id-3" />
+    <label for="input-id-1">Label goes here</label>
+    <input placeholder="Useful example" class="form-control" type="text" id="input-id-1" name="input-id-1" />
   </div>
 </form></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-id-3"</span><span class="nt">&gt;</span>Label goes here<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Useful example"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-id-3"</span> <span class="na">name=</span><span class="s">"input-id-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-id-1"</span><span class="nt">&gt;</span>Label goes here<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">placeholder=</span><span class="s">"Useful example"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input-id-1"</span> <span class="na">name=</span><span class="s">"input-id-1"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
@@ -286,6 +238,127 @@
   <span class="nt">&lt;/form&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
+<h3 id="radio-buttons">Radio buttons</h3>
+
+<p>Radio buttons are a little more complex as they require some javascript to be running in order to get their styles
+to change when they are clicked</p>
+
+<div class="docs-example clearfix"><form>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-12">
+        <label class="control-label" for="radio-id-1">Are radio buttons?</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <div id="radio-id-1" class="form-radios">
+          <div class="radio">
+            <label>
+              <input type="radio" id="radio-id-1-yes" name="answer" value="1" />Yes
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" id="radio-id-1-no" name="answer" value="0" />No
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-12"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"radio-id-1"</span><span class="nt">&gt;</span>Are radio buttons?<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"radio-id-1"</span> <span class="na">class=</span><span class="s">"form-radios"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-id-1-yes"</span> <span class="na">name=</span><span class="s">"answer"</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Yes
+            <span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio-id-1-no"</span> <span class="na">name=</span><span class="s">"answer"</span> <span class="na">value=</span><span class="s">"0"</span><span class="nt">&gt;</span>No
+            <span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
+<h3 id="checkboxes">Checkboxes</h3>
+
+<p>Much the same as radio buttons, checkboxes also require the javascript to run.</p>
+
+<div class="docs-example clearfix"><form>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-12">
+        <label class="control-label" for="radio-id-1">Which of the following is an Oxbow lake?</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <div id="radio-id-1" class="form-radios">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="radio-id-1-yes" name="radio-id-1-dunno" />Dunno
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="radio-id-1-no" name="radio-id-1-u" />A u-shaped lake
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="radio-id-1-no" name="radio-id-1-man-u" />Manchester United Football Club
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-12"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"radio-id-1"</span><span class="nt">&gt;</span>Which of the following is an Oxbow lake?<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"radio-id-1"</span> <span class="na">class=</span><span class="s">"form-radios"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"radio-id-1-yes"</span> <span class="na">name=</span><span class="s">"radio-id-1-dunno"</span><span class="nt">&gt;</span>Dunno
+            <span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"radio-id-1-no"</span> <span class="na">name=</span><span class="s">"radio-id-1-u"</span><span class="nt">&gt;</span>A u-shaped lake
+            <span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"radio-id-1-no"</span> <span class="na">name=</span><span class="s">"radio-id-1-man-u"</span><span class="nt">&gt;</span>Manchester United Football Club
+            <span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
 
     </div>
   </div>
@@ -303,5 +376,6 @@
     <script src="/cruk-pattern-library/assets/js/cruk-base.min.js"></script>
     <script src="/cruk-pattern-library/assets/js/anchor.min.js"></script>
     <script src="/cruk-pattern-library/assets/js/docs.js"></script>
+    
   </body>
 </html>
