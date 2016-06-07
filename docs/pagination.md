@@ -20,13 +20,13 @@ Note that the logic for this widget should be done on the backend to avoid unnee
   <li class="cr-pagination__previous"><a href="#" aria-label="Previous page">Prev</a></li>
   <li class="cr-pagination__item"><a href="#" aria-label="First page">1</a></li>
   <li class="cr-pagination__item"><a href="#"><span class="sr-only">Page </span>2</a></li>
-  <li class="cr-pagination__ellipsis" aria-hidden="true"><span>...</span></li>
+  <li class="cr-pagination__ellipsis" aria-hidden="true"><span>&hellip;</span></li>
   <li class="cr-pagination__item"><a href="#"><span class="sr-only">Page </span>3</a></li>
   <li class="cr-pagination__item"><a href="#"><span class="sr-only">Page </span>4</a></li>
   <li class="cr-pagination__item"><a href="#"><span class="sr-only">Page </span>5</a></li>
   <li class="cr-pagination__item"><a href="#"><span class="sr-only">Page </span>6</a></li>
   <li class="cr-pagination__item"><a href="#"><span class="sr-only">Page </span>7</a></li>
-  <li class="cr-pagination__ellipsis" aria-hidden="true"><span>...</span></li>
+  <li class="cr-pagination__ellipsis" aria-hidden="true"><span>&hellip;</span></li>
   <li class="cr-pagination__item"><a href="#"><span class="sr-only">Page </span>8</a></li>
   <li class="cr-pagination__item"><a href="#" aria-label="Last page">9</a></li>
   <li class="cr-pagination__next"><a href="#" aria-label="Next page">Next</a></li>
