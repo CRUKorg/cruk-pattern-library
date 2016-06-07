@@ -1,0 +1,91 @@
+/**
+ * Pagination
+ */
+.cr-pagination {
+  text-align: center;
+
+  .is-disabled {
+    color: $brand-grey-dark;
+
+    &:hover, &:focus {
+      cursor: default;
+      text-decoration: none;
+      color: $brand-grey-dark;
+    }
+  }
+
+  &__previous, &__next, &__ellipsis {
+    display: inline;
+  }
+}
+
+// Links to numbered items.
+.cr-pagination__item {
+  display: inline;
+
+  a {
+    @extend .btn;
+    border-radius: 0;
+
+    background-color: $brand-primary;
+    color: white;
+    &:hover, &:focus {
+      background-color: $brand-primary-hover;
+      color: white;
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: $screen-xs) {
+      padding: 6px 11px;
+    }
+  }
+
+  // Modifications.
+  &--current, &--far {
+    @extend .cr-pagination__item;
+  }
+
+  &--far {
+    @media screen and (max-width: $screen-xs) {
+      // Note: Important is here for purpose of demonstration due to jQuery's .hide() inlining a style rule.
+      display: none !important;
+    }
+  }
+
+  &--current {
+    a {
+      background-color: $brand-grey-medium;
+      color: $brand-grey-dark;
+
+      &:hover, &:focus {
+        background-color: $brand-grey-medium;
+        color: $brand-grey-dark;
+        text-decoration: none;
+        cursor: default;
+      }
+      &:active {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+%cr-pagination__text {
+  font-weight: bold;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+}
+
+.cr-pagination__previous, .cr-pagination__next, .cr-pagination__ellipsis {
+  @extend %cr-pagination__text;
+}
+
+@media screen and (min-width: $screen-xs + 1) {
+  .cr-pagination__previous {
+    margin-right: 10px;
+  }
+
+  .cr-pagination__next {
+    margin-left: 10px;
+  }
+}

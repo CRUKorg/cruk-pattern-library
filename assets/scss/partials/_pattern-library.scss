@@ -39,8 +39,24 @@ body.cr-pattern-library {
     background-color: $brand-tertiary;
   }
 
+  &.cr-pattern-library-swatch--primary-hover .cr-pattern-library-swatch__colour {
+    background-color: $brand-primary-hover;
+  }
+
+  &.cr-pattern-library-swatch--secondary-hover .cr-pattern-library-swatch__colour {
+    background-color: $brand-secondary-hover;
+  }
+
+  &.cr-pattern-library-swatch--tertiary-hover .cr-pattern-library-swatch__colour {
+    background-color: $brand-tertiary-hover;
+  }
+
   &.cr-pattern-library-swatch--grey-light .cr-pattern-library-swatch__colour {
     background-color: $brand-grey-light;
+  }
+
+  &.cr-pattern-library-swatch--grey-light-hover .cr-pattern-library-swatch__colour {
+    background-color: $brand-grey-light-hover;
   }
 
   &.cr-pattern-library-swatch--grey-medium .cr-pattern-library-swatch__colour {

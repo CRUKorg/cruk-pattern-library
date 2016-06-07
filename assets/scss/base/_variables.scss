@@ -58,19 +58,23 @@ $repo-private-icon: #e9dba5;
 // $gray-lighter:           lighten($gray-base, 93.5%) // #eee
 
 // Blue.
-$brand-primary:         #2e008b;
+$brand-primary:         #2E008B;
+$brand-primary-hover:   #6C5C99;
 // Pink.
-$brand-secondary:       #ec008c;
+$brand-secondary:       #EC008C;
+$brand-secondary-hover: #EF32A2;
 // Sky blue.
-$brand-tertiary:        #00b6ed;
+$brand-tertiary:        #00b6Ed;
+$brand-tertiary-hover:  #32C4F0;
+
 // $brand-success:         #5cb85c
 // $brand-info:            #5bc0de
 // $brand-warning:         #f0ad4e
 // $brand-danger:          #d9534f
 $brand-grey-light: #e3e3e3;
+$brand-grey-light-hover: #d2d3d1;
 $brand-grey-medium: #c8c9c7;
 $brand-grey-dark: #666;
-
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
