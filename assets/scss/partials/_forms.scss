@@ -189,3 +189,133 @@ label {
     font-weight: bold;
   }
 }
+
+/**
+ * Progress bar
+ */
+$progress-bar-icon-width: 20px;
+$progress-bar-icon-height: $progress-bar-icon-width;
+$progress-bar-bar-height: 3px;
+$progress-bar-ball-border: 3px;
+
+// .progress-bar-fieldset {
+//   margin-bottom: -1px;
+//   border-bottom-left-radius: 0;
+//   border-bottom-right-radius: 0;
+// }
+
+// .justgiving-form .progress-bar-fieldset {
+//   padding: 1em;
+
+//   .webform-component--progress-bar-login-fieldset--progress-bar-login,
+//   .webform-component--progress-bar-page-info-fieldset--progress-bar-page-info {
+//     margin-bottom: 0;
+//   }
+// }
+
+// .progress-bar-fieldset + fieldset {
+//   border-top-left-radius: 0;
+//   border-top-right-radius: 0;
+// }
+
+div.progress-bar-container {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+ol.progress-bar-list {
+  display: inline-block;
+  text-align: center;
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+
+  li {
+    /* NOTE: The width of these items is set using progress-bar.js so that it can take into account the size that
+       they should be depending on how many of them there are */
+    float: left;
+    position: relative;
+    font-family: $headings-font-family;
+
+    div {
+      text-align: center;
+    }
+
+    div.progress-bar-title {
+      /* font-family: $base-font-family; */
+      padding-top: 0.5em;
+    }
+
+    div.progress-bar-step {
+      display: none;
+      /* font-family: $base-font-family; */
+      padding-bottom: 0.5em;
+    }
+
+    div.progress-bar-gfx {
+      /* NOTE, although Chrome works by not having to specify the pseudo selector :after, IE isn't so forgiving so
+         the gfx-icon span doesn't actually contain anything. It's just a line in the sand after which we drop in the
+         Victoria line station icon. ;-) */
+      span.gfx-icon:after {
+        display: inline-block;
+        vertical-align: middle;
+        width: $progress-bar-icon-width;
+        height: $progress-bar-icon-height;
+        z-index: 50;
+        content: "";
+        border: $progress-bar-ball-border solid $brand-grey-light;
+        border-radius: ceil($progress-bar-icon-width / 2);
+      }
+
+      hr {
+        padding: 0;
+        margin: (($progress-bar-icon-height - $progress-bar-bar-height) / 2) 0 0 0;
+        width: 50%;
+        height: $progress-bar-bar-height;
+        display: inline-block;
+        border: none;
+        background-color: $brand-grey-light;
+        position: absolute;
+      }
+
+      hr:first-child {
+        left: 0;
+        margin-left: -$progress-bar-icon-width / 2 + 1px;
+      }
+    }
+  }
+
+  li.done div.progress-bar-gfx span.gfx-icon:after {
+    border-color: $brand-tertiary;
+    background-color: $brand-tertiary;
+    color: white;
+    content: "";
+    font: normal normal normal 1rem/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  li.current div.progress-bar-gfx span.gfx-icon:after {
+    border-color: $brand-tertiary;
+  }
+
+  li.done div.progress-bar-gfx hr {
+    background-color: $brand-tertiary;
+  }
+
+  li.current div.progress-bar-gfx hr:first-child {
+    background-color: $brand-tertiary;
+  }
+
+  /* Remove the HR from the first item */
+  li:first-child div.progress-bar-gfx hr:first-child {
+    visibility: hidden;
+  }
+
+  li:last-child div.progress-bar-gfx hr:last-child {
+    visibility: hidden;
+  }
+}

@@ -202,3 +202,33 @@ Depending on the situation the width of inputs should be restricted, this should
   </form>
 </div>
 {% endexample %}
+
+## Progress bar
+
+Uses Javscript to calculate the number of steps and the width of each step required to fit the progress bar in the parent container.
+
+{% example html %}
+<form>
+  <div class="row">
+    <div class="progress-bar-container col-sm-12">
+      <ol class="progress-bar-list">
+        <li class="done">
+          <div class="progress-bar-gfx"><hr><span class="gfx-icon"></span><hr></div>
+          <div class="progress-bar-title">Details</div>
+          <div class="progress-bar-step">Step 1 of 2</div>
+        </li>
+        <li class="current">
+          <div class="progress-bar-gfx"><hr><span class="gfx-icon"></span><hr></div>
+          <div class="progress-bar-title">Fundraise</div>
+          <div class="progress-bar-step">Step 2 of 2</div>
+        </li>
+        <li class="todo">
+          <div class="progress-bar-gfx"><hr><span class="gfx-icon"></span><hr></div>
+          <div class="progress-bar-title">Pay</div>
+          <div class="progress-bar-step">Step 2 of 2</div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</form>
+{% endexample %}
