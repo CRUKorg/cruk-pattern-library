@@ -198,32 +198,12 @@ $progress-bar-icon-height: $progress-bar-icon-width;
 $progress-bar-bar-height: 3px;
 $progress-bar-ball-border: 3px;
 
-// .progress-bar-fieldset {
-//   margin-bottom: -1px;
-//   border-bottom-left-radius: 0;
-//   border-bottom-right-radius: 0;
-// }
-
-// .justgiving-form .progress-bar-fieldset {
-//   padding: 1em;
-
-//   .webform-component--progress-bar-login-fieldset--progress-bar-login,
-//   .webform-component--progress-bar-page-info-fieldset--progress-bar-page-info {
-//     margin-bottom: 0;
-//   }
-// }
-
-// .progress-bar-fieldset + fieldset {
-//   border-top-left-radius: 0;
-//   border-top-right-radius: 0;
-// }
-
-div.progress-bar-container {
+.progress-bar-container {
   margin-top: 1rem;
   text-align: center;
 }
 
-ol.progress-bar-list {
+.progress-bar-list {
   display: inline-block;
   text-align: center;
   list-style: none;
@@ -243,21 +223,18 @@ ol.progress-bar-list {
       text-align: center;
     }
 
-    div.progress-bar-title {
+    .progress-bar-title {
       /* font-family: $base-font-family; */
       padding-top: 0.5em;
     }
 
-    div.progress-bar-step {
+    .progress-bar-step {
       display: none;
       /* font-family: $base-font-family; */
       padding-bottom: 0.5em;
     }
 
-    div.progress-bar-gfx {
-      /* NOTE, although Chrome works by not having to specify the pseudo selector :after, IE isn't so forgiving so
-         the gfx-icon span doesn't actually contain anything. It's just a line in the sand after which we drop in the
-         Victoria line station icon. ;-) */
+    .progress-bar-gfx {
       span.gfx-icon:after {
         display: inline-block;
         vertical-align: middle;
