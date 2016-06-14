@@ -75,7 +75,7 @@ module.exports = function(grunt) {
         tasks: ['sass', 'postcss', 'parker']
       },
       scripts: {
-        files: ['assets/js/cruk-base.js', 'assets/js/cruk-base/*.js'],
+        files: ['assets/js/cruk-base/*.js', 'assets/js/cruk-base.js'],
         tasks: ['jshint', 'concat', 'uglify', 'copy'],
         options: {
           spawn: false,

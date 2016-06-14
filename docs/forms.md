@@ -210,22 +210,25 @@ Uses Javscript to calculate the number of steps and the width of each step requi
 {% example html %}
 <form>
   <div class="row">
-    <div class="progress-bar-container col-sm-12">
-      <ol class="progress-bar-list">
-        <li class="done">
-          <div class="progress-bar-gfx"><hr><span class="gfx-icon"></span><hr></div>
-          <div class="progress-bar-title">Details</div>
-          <div class="progress-bar-step">Step 1 of 2</div>
+    <div class="col-xs-12">
+      <ol class="cr-progress-bar">
+        <li class="cr-progress-bar__step">
+          <div class="cr-progress-bar__step__graphic done">
+            <hr><i class="cr-progress-bar__step__graphic__icon done"></i><hr>
+          </div>
+          <div class="cr-progress-bar__step__title">Details</div>
         </li>
-        <li class="current">
-          <div class="progress-bar-gfx"><hr><span class="gfx-icon"></span><hr></div>
-          <div class="progress-bar-title">Fundraise</div>
-          <div class="progress-bar-step">Step 2 of 2</div>
+        <li class="cr-progress-bar__step">
+          <div class="cr-progress-bar__step__graphic current">
+            <hr><i class="cr-progress-bar__step__graphic__icon current"></i><hr>
+          </div>
+          <div class="cr-progress-bar__step__title">Fundraise</div>
         </li>
-        <li class="todo">
-          <div class="progress-bar-gfx"><hr><span class="gfx-icon"></span><hr></div>
-          <div class="progress-bar-title">Pay</div>
-          <div class="progress-bar-step">Step 2 of 2</div>
+        <li class="cr-progress-bar__step">
+          <div class="cr-progress-bar__step__graphic">
+            <hr><i class="cr-progress-bar__step__graphic__icon"></i><hr>
+          </div>
+          <div class="cr-progress-bar__step__title">Party</div>
         </li>
       </ol>
     </div>
@@ -236,23 +239,17 @@ Uses Javscript to calculate the number of steps and the width of each step requi
 _`assets/js/cruk-base/plugin-progress-bar.js`_
 
 ``` js
-var barSelector = 'ol.progress-bar-list';
+(function ($) {
+  $.fn.crukProgressBar = function crukProgressBar() {
+    var steps = $('li', this);
 
-// Function to calculate the required width of each step
-var progress_bar_resize = function() {
-  var steps     = $(barSelector + ' li');
-  var stepWidth = Math.floor(100 / steps.length) + '%';
-  steps.width(stepWidth);
-}
+    steps.width(Math.floor(100 / steps.length) + '%');
+    this.css('visibility', 'visible');
 
-// Calculate te initial width of each step
-progress_bar_resize();
+    return this;
+  };
+})(jQuery);
 
-// Remove the horizontal bar from the last step
-$(barSelector).find('li > div').last().find('hr').last().remove();
-
-// Handle window resize events
-$(window).resize(function() {
-  progress_bar_resize();
-});
+// Call the plugin function to set the widths of the step <li> elements.
+$('.cr-progress-bar').crukProgressBar();
 ```
