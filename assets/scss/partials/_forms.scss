@@ -284,3 +284,14 @@ $progress-bar-ball-border: 3px;
 .cr-progress-bar__step__title {
   padding-top: 0.5em;
 }
+
+.cr-form-page {
+  .page-header {
+    @extend .panel;
+    @extend .panel-body;
+    @extend .panel-default;
+    margin-bottom: 0 !important;
+    border-bottom: 0 !important;
+    text-align: center;
+  }
+}
