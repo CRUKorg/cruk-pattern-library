@@ -200,9 +200,9 @@ $btn-border-width: 0;
 
 // $btn-font-weight:                normal
 
-// $btn-default-color:              #333
-// $btn-default-bg:                 #fff
-// $btn-default-border:             #ccc
+$btn-default-color:              #333;
+$btn-default-bg:                 $brand-secondary;
+$btn-default-border:             #ccc;
 
 // $btn-primary-color:              #fff
 $btn-primary-bg:                 $brand-secondary;
