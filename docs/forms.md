@@ -153,6 +153,27 @@ Much the same as radio buttons, checkboxes also require the javascript to run.
 </form>
 {% endexample %}
 
+## Buttons
+
+Press them. They are great
+
+{% example html %}
+<div class="row">
+  <a class="btn btn-default col-xs-6" href="#" role="button">Link</a>
+</div>
+<div class="row">
+  <button class="btn btn-default col-xs-6" type="submit">Button</button>
+</div>
+<div class="row">
+  <input class="btn btn-default col-xs-6" type="button" value="Input">
+</div>
+<div class="row">
+  <input class="btn btn-default col-xs-6" type="submit" value="Submit">
+</div>
+<div class="row">
+  <input class="btn btn-default col-xs-6" type="submit" value="Disabled" disabled="disabled">
+</div>
+{% endexample %}
 
 ## Restricting form item widths
 
