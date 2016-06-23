@@ -170,6 +170,9 @@ Press them. They are great
 <div class="row">
   <input class="btn btn-default col-xs-6" type="submit" value="Submit">
 </div>
+<div class="row">
+  <input class="btn btn-default col-xs-6" type="submit" value="Disabled" disabled="disabled">
+</div>
 {% endexample %}
 
 ## Restricting form item widths

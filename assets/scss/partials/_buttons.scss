@@ -2,6 +2,43 @@
 .btn {
   border-width: $btn-border-width;
   font-family: $headings-font-family;
-  font-weight: bold;
-  color: #fff;
+  font-weight: $btn-font-weight;
+}
+
+.btn-default {
+
+  &:focus,
+  &.focus {
+    background-color: $btn-default-bg-focus;
+    border-color: $btn-default-bg-focus;
+  }
+  &:hover {
+    background-color: $btn-default-bg-hover;
+    border-color: $btn-default-bg-hover;
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-color: $btn-default-bg-active;
+    border-color: $btn-default-bg-active;
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: $btn-default-bg-disabled;
+    border-color: $btn-default-bg-disabled;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $btn-default-bg-disabled;
+      border-color: $btn-default-bg-disabled;
+    }
+  }
+
 }

@@ -198,11 +198,16 @@ $border-radius-large:       4px;
 
 $btn-border-width: 0;
 
-// $btn-font-weight:                normal
+$btn-font-weight:                bold;
 
-$btn-default-color:              #333;
+$btn-default-color:              #fff;
 $btn-default-bg:                 $brand-secondary;
-$btn-default-border:             #ccc;
+$btn-default-border:             $brand-secondary;
+$btn-default-bg-focus:           $brand-secondary;
+$btn-default-bg-hover:           $brand-secondary;
+$btn-default-bg-active:          #ef32a2;
+$btn-default-bg-disabled:        #929496;
+
 
 // $btn-primary-color:              #fff
 $btn-primary-bg:                 $brand-secondary;
