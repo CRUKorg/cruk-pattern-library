@@ -191,6 +191,37 @@ label {
 }
 
 /**
+ * Validation messages.
+ */
+
+@media (min-width: $screen-sm-min) {
+  .error {
+    color: #ff0000;
+  }
+
+  .error.form-control {
+    border-color: #ff0000;
+    color: $text-color;
+  }
+
+  .col-sm-4 .error {
+    width: 300%;
+
+    &.form-control {
+      width: 100%;
+    }
+  }
+
+  .col-sm-8 .error {
+    width: 150%;
+
+    &.form-control {
+      width: 100%;
+    }
+  }
+}
+
+/**
  * Progress bar
  */
 $progress-bar-icon-width: 20px;
