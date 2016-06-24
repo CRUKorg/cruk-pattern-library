@@ -12,3 +12,8 @@ legend {
 .collapsible legend {
   border: none;
 }
+
+/* Horrible hack to override some Drupal styling */
+html.js fieldset.collapsed {
+  height: auto !important;
+}
