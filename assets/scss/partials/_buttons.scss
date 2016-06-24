@@ -21,6 +21,14 @@
   .open > &.dropdown-toggle {
     background-color: $btn-default-bg-active;
     border-color: $btn-default-bg-active;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $btn-default-bg-active;
+      border-color: $btn-default-bg-active;
+    }
+
   }
   &:active,
   &.active,
