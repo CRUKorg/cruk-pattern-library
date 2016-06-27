@@ -1,4 +1,5 @@
-/*$container-width: 980px !default;
+/*
+$container-width: 980px !default;
 $grid-gutter:     10px !default;
 
 // Brand colors
@@ -7,7 +8,9 @@ $brand-gray-light: #999    !default;
 $brand-gray:       #767676 !default;
 $brand-gray-dark:  #333    !default;
 $brand-green:      #6cc644 !default;
-$brand-red:        #bd2c00 !default;
+*/
+$brand-red:        #f00    !default;
+/*
 $brand-orange:     #c9510c !default;
 $brand-purple:     #6e5494 !default;
 
@@ -81,6 +84,7 @@ $disabled-grey: #929496;
 $body-bg:               #f5f5f5;
 //** Global text color on `<body>`.
 $text-color:            #333;
+$text-color-error:      $brand-red;
 
 //** Global textual link color.
 $link-color:            $brand-primary;
@@ -253,6 +257,7 @@ $input-bg:                       #fff;
 $input-color:                    $text-color;
 //** `<input>` border color
 $input-border:                   $brand-grey-medium;
+$input-border-error:             $brand-red;
 
 // CRUK Specific variable for defining font sizes for labels and inputs. This
 // is basically the baseline is currently screwy which we're levelling with

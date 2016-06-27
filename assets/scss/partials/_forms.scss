@@ -196,11 +196,11 @@ label {
 
 @media (min-width: $screen-sm-min) {
   .error {
-    color: #ff0000;
+    color: $text-color-error;
   }
 
   .error.form-control {
-    border-color: #ff0000;
+    border-color: $input-border-error;
     color: $text-color;
   }
 
