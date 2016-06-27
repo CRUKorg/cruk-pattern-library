@@ -194,16 +194,16 @@ label {
  * Validation messages.
  */
 
+.error {
+  color: $text-color-error;
+}
+
+.error.form-control {
+  border-color: $input-border-error;
+  color: $text-color;
+}
+
 @media (min-width: $screen-sm-min) {
-  .error {
-    color: $text-color-error;
-  }
-
-  .error.form-control {
-    border-color: $input-border-error;
-    color: $text-color;
-  }
-
   .col-sm-4 .error {
     width: 300%;
 
