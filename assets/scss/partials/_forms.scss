@@ -191,6 +191,44 @@ label {
 }
 
 /**
+ * Validation messages.
+ */
+
+.error {
+  color: $text-color-error;
+}
+
+.error.form-control {
+  border-color: $input-border-error;
+  color: $text-color;
+}
+
+@media (min-width: $screen-sm-min) {
+  .col-sm-4 .error {
+    width: 300%;
+
+    &.form-control {
+      width: 100%;
+    }
+  }
+
+  .col-sm-8 .error {
+    width: 150%;
+
+    &.form-control {
+      width: 100%;
+    }
+  }
+
+  .col-sm-4,
+  .col-sm-8 {
+    .form-radio.error {
+      width: 1rem;
+    }
+  }
+}
+
+/**
  * Progress bar
  */
 $progress-bar-icon-width: 20px;
@@ -208,7 +246,6 @@ $progress-bar-ball-border: 3px;
   padding: 0;
   margin: 0;
   width: 100%;
-  text-align: center;
 }
 
 .cr-progress-bar__step {
@@ -293,4 +330,12 @@ $progress-bar-ball-border: 3px;
     border-bottom: 0 !important;
     text-align: center;
   }
+}
+
+/* Bootstrap/drupal uses panels for fieldsets which have some interesting side effects. So, for all panel-headings in
+ * forms, we want to ensure that panelyness is not in effect
+ */
+form .panel-heading {
+  border: none;
+  margin-bottom: 0;
 }

@@ -14,7 +14,7 @@ module.exports = function(grunt) {
           'assets/scss',
           'docs/assets/scss',
           'docs/bower_components/bootstrap-sass/assets/stylesheets',
-          'docs/bower_components/bootstrap-sass/assets/stylesheets/bootstrap'
+          'docs/bower_components/font-awesome/scss'
         ]
       },
       dist: {
