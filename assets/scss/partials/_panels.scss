@@ -1,3 +1,23 @@
+.accordion {
+  .panel-title {
+    color: $brand-primary;
+    text-decoration: none;
+    :hover {
+      text-decoration: none;
+    }
+
+    i {
+      color: $brand-tertiary;
+      padding-right: 10px;
+    }
+
+    .add-details {
+      font-size: $font-size-base;
+      vertical-align: middle;
+    }
+  }
+}
+
 legend {
   border-bottom: none;
 }
@@ -13,7 +33,6 @@ legend {
   border: none;
 }
 
-/* Horrible hack to override some Drupal styling */
 html.js fieldset.collapsed {
   height: auto !important;
 }
