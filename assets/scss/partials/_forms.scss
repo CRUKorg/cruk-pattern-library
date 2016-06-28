@@ -293,3 +293,11 @@ $progress-bar-ball-border: 3px;
     text-align: center;
   }
 }
+
+/* Bootstrap/drupal uses panels for fieldsets which have some interesting side effects. So, for all panel-headings in
+ * forms, we want to ensure that panelyness is not in effect
+ */
+form .panel-heading {
+  border: none;
+  margin-bottom: 0;
+}
