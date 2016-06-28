@@ -1,19 +1,21 @@
 .accordion {
-  .panel-title {
-    color: $brand-primary;
-    text-decoration: none;
-    :hover {
+  > .panel-heading {
+    > .panel-title {
+      color: $brand-primary;
       text-decoration: none;
-    }
+      :hover {
+        text-decoration: none;
+      }
 
-    i {
-      color: $brand-tertiary;
-      padding-right: 10px;
-    }
+      i {
+        color: $brand-tertiary;
+        padding-right: 10px;
+      }
 
-    .add-details {
-      font-size: $font-size-base;
-      vertical-align: middle;
+      .add-details {
+        font-size: $font-size-base;
+        vertical-align: middle;
+      }
     }
   }
 }
@@ -22,9 +24,13 @@ legend {
   border-bottom: none;
 }
 
+/*
+ * The style below is used to allow use to have panels within panels that don't get too padded. It's only been
+ * tested with accordion behaviour
+ */
 .panel .panel {
   border: none;
-  .panel-body {
+  .panel-body:nth-child(odd) {
     padding: 0;
   }
 }
