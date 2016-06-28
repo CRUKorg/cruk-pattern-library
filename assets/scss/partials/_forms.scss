@@ -219,6 +219,13 @@ label {
       width: 100%;
     }
   }
+
+  .col-sm-4,
+  .col-sm-8 {
+    .form-radio.error {
+      width: 1rem;
+    }
+  }
 }
 
 /**
