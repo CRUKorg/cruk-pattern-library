@@ -18,11 +18,13 @@
       }
     }
   }
+
+  legend {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
 }
 
-legend {
-  border-bottom: none;
-}
 
 /*
  * The style below is used to allow use to have panels within panels that don't get too padded. It's only been
