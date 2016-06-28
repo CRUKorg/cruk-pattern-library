@@ -31,6 +31,8 @@
  */
 .panel .panel {
   border: none;
+  box-shadow: none;
+  margin-bottom: 0;
   .panel-body:nth-child(odd) {
     padding: 0;
   }
