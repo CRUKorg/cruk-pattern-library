@@ -8,24 +8,17 @@
       }
 
       h2 {
-        line-height: 26px;
-        display: table;
-        vertical-align: middle;
-
         i {
           color: $brand-tertiary;
           padding-right: 10px;
           font-size: 25px;
-          display: table-cell;
-          vertical-align: middle;
         }
 
         .add-details {
           font-family: $font-family-sans-serif;
           font-weight: bold;
           font-size: $font-size-base;
-          display: table-cell;
-          vertical-align: middle;
+          margin-top: 10px;
         }
       }
     }
