@@ -73,6 +73,7 @@ $brand-grey-dark: #666;
 
 $disabled-grey: #929496;
 $error-color: #f00;
+$light-secondary: lighten(desaturate(adjust-hue(#ec008c, 0.0377), 14.4796), 10.3922);
 
 //== Scaffolding
 //
@@ -207,16 +208,18 @@ $btn-font-weight:                bold;
 $btn-default-color:              #fff;
 $btn-default-bg:                 $brand-secondary;
 $btn-default-border:             $brand-secondary;
-$btn-default-bg-focus:           $brand-secondary;
-$btn-default-bg-hover:           #ef32a2;
-$btn-default-bg-active:          #ef32a2;
+$btn-default-bg-focus:           $light-secondary;
+$btn-default-bg-hover:           $light-secondary;
+$btn-default-bg-active:          $light-secondary;
 $btn-default-bg-disabled:        $disabled-grey;
 
 
 // $btn-primary-color:              #fff
 $btn-primary-bg:                 $brand-secondary;
-$btn-primary-bg-hover:           #ef33a3;
-$btn-primary-border:             $btn-primary-bg;
+$btn-primary-border:             $brand-secondary;
+$btn-primary-bg-focus:           $light-secondary;
+$btn-primary-bg-hover:           $light-secondary;
+$btn-primary-bg-active:          $light-secondary;
 
 // $btn-success-color:              #fff
 // $btn-success-bg:                 $brand-success
