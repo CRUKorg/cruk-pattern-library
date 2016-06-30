@@ -257,6 +257,32 @@ Uses Javscript to calculate the number of steps and the width of each step requi
 </form>
 {% endexample %}
 
+## Date of birth
+
+Three column row.
+
+{% example html %}
+<form>
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="row">
+        <div class="datepicker">
+          <div class="col-xs-4 ">
+            <input placeholder="mm" class="form-control" type="tel">
+          </div>
+          <div class="col-xs-4">
+            <input placeholder="dd" class="form-control" type="tel">
+          </div>
+          <div class="col-xs-4">
+            <input placeholder="yyyy" class="form-control" type="tel">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+{% endexample %}
+
 _`assets/js/cruk-base/plugin-progress-bar.js`_
 
 ``` js
