@@ -6,13 +6,13 @@
 }
 
 .btn-default {
-
   &:focus,
   &.focus {
     background-color: $btn-default-bg-focus;
     border-color: $btn-default-bg-focus;
   }
-  &:hover {
+  &:hover,
+  &.hover {
     background-color: $btn-default-bg-hover;
     border-color: $btn-default-bg-hover;
   }
@@ -48,5 +48,4 @@
       border-color: $btn-default-bg-disabled;
     }
   }
-
 }

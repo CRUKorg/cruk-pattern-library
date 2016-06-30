@@ -158,22 +158,42 @@ Much the same as radio buttons, checkboxes also require the javascript to run.
 Press them. They are great
 
 {% example html %}
-<div class="row">
-  <a class="btn btn-default col-xs-6" href="#" role="button">Link</a>
-</div>
-<div class="row">
-  <button class="btn btn-default col-xs-6" type="submit">Button</button>
-</div>
-<div class="row">
-  <input class="btn btn-default col-xs-6" type="button" value="Input">
-</div>
-<div class="row">
-  <input class="btn btn-default col-xs-6" type="submit" value="Submit">
-</div>
-<div class="row">
-  <input class="btn btn-default col-xs-6" type="submit" value="Disabled" disabled="disabled">
+<div class="container-fluid">
+  <div class="row">
+    <a class="btn btn-default col-sm-6 col-xs-12" href="#" role="button">Link</a>
+  </div>
+  <br/>
+  <div class="row">
+    <button class="btn btn-default col-sm-6 col-xs-12" type="submit">Button</button>
+  </div>
+  <br/>
+  <div class="row">
+    <input class="btn btn-default col-sm-6 col-xs-12" type="button" value="Input">
+  </div>
+  <br/>
+  <div class="row">
+    <input class="btn btn-default col-sm-6 col-xs-12" type="submit" value="Submit">
+  </div>
+  <br/>
+  <div class="row">
+    <input class="btn btn-default col-sm-6 col-xs-12" type="submit" value="Disabled" disabled="disabled">
+  </div>
 </div>
 {% endexample %}
+
+### Button with inline link
+
+Press me too!
+
+{% example html %}
+<div class="container-fluid">
+  <div class="row">
+    <button class="btn btn-default col-sm-6 col-xs-12" type="submit">Primary action button</button>
+    <a class="btn btn-link col-sm-6 col-xs-12" href="#" role="button">Secondary action link</a>
+  </div>
+</div>
+{% endexample %}
+
 
 ## Restricting form item widths
 
