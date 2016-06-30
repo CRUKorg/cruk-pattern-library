@@ -20,5 +20,7 @@
     $(this).parent().removeClass('cr-input-group--focused');
   });
 
-  $('.cr-progress-bar').crukProgressBar();
+  $(document).ready(function () {
+    $('.cr-progress-bar').crukProgressBar();
+  });
 }(jQuery);

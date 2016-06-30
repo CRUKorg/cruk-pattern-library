@@ -13,7 +13,7 @@ label {
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: $form-group-margin-bottom;
 }
 
 .help-block {
@@ -338,4 +338,32 @@ $progress-bar-ball-border: 3px;
 form .panel-heading {
   border: none;
   margin-bottom: 0;
+}
+
+
+/*
+ *Date field.
+ */
+.datepicker div {
+  &:first-of-type {
+    padding: 0px 0px 0px 15px;
+  }
+
+  &:nth-child(2) {
+    padding: 0px 7px 0px 7px;
+  }
+
+  &:last-child {
+    padding: 0px 15px 0px 0px;
+  }
+
+  input {
+    text-align: center;
+    width: 100% !important;
+  }
+}
+
+.date-row .error {
+  padding: 0px 0px 0px 15px;
+  float: left;
 }
