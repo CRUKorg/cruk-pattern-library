@@ -367,3 +367,33 @@ form .panel-heading {
   padding: 0px 0px 0px 15px;
   float: left;
 }
+
+$feedback-icon-width: 20px;
+$feedback-icon-height: $feedback-icon-width;
+$feedback-bar-height: 3px;
+$feedback-ball-border: 3px;
+
+.form-control-feedback {
+  right: 1rem;
+
+  &:before {
+    position: relative;
+    top: 0.9rem;
+    color: #fff;
+  }
+
+  &:after {
+    display: inline-block;
+    content: '';
+    width: $feedback-icon-width;
+    height: $feedback-icon-height;
+    border: $feedback-icon-width / 2 solid $brand-tertiary;
+    border-radius: $feedback-icon-width / 2;
+    position: absolute;
+    top: $feedback-icon-width / 2;
+    left: $feedback-icon-width / 2;
+    z-index: -1;
+  }
+}
+
+/* <span class="fa fa-check form-control-feedback"></span> */
