@@ -44,6 +44,11 @@
 .has-feedback .form-control-feedback {
   top: 8px;
   right: 12px;
+
+  &.fa {
+    /* FontAwesome icon is pushed down too much. */
+    top: 0;
+  }
 }
 
 .has-feedback label ~ .form-control-feedback {
