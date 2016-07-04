@@ -361,6 +361,10 @@ form .panel-heading {
     text-align: center;
     width: 100% !important;
   }
+
+  .form-text.error {
+    padding: 0;
+  }
 }
 
 .date-row .error {
@@ -397,3 +401,39 @@ $feedback-ball-border: 3px;
 }
 
 /* <span class="fa fa-check form-control-feedback"></span> */
+
+/*
+ * Fundrais step progress bar and page header.
+ */
+.webform-client-form div {
+  .progress-bar-fieldset {
+    margin-bottom: 0;
+    border-style: solid solid none solid;
+    border-width: 0 1px 0 1px;
+    border-radius: 0px;
+    padding-top: 5px;
+
+    .col-sm-6.col-sm-offset-3 {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+  .webform-component-fieldset {
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+section.col-sm-12 .page-header {
+  background-color: #fff;
+  margin-bottom: 0;
+  border-color: #ddd;
+  border-style: solid solid none solid;
+  border-width: 1px 1px 0 1px;
+  text-align: center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding-top: 15px;
+}

@@ -56,7 +56,7 @@ DOCUMENTATION TO FOLLOW. SORRY!
 
 {% example html %}
 <form>
-  <div class="form-group">
+  <div class="form-group has-feedback">
       <div class="row">
         <div class="col-sm-12">
           <label for="input-id-3">Label goes here</label>
