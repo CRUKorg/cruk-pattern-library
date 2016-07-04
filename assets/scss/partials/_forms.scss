@@ -375,12 +375,17 @@ form .panel-heading {
 /*
  * Fundrais step progress bar and page header.
  */
- .webform-client-form div {
+.webform-client-form div {
   .progress-bar-fieldset {
     margin-bottom: 0;
     border-style: solid solid none solid;
     border-width: 0 1px 0 1px;
     border-radius: 0px;
+
+    .col-sm-6.col-sm-offset-3 {
+      margin-left: 0%;
+      width: 100%;
+    }
   }
 
   .webform-component-fieldset {
