@@ -400,7 +400,14 @@ $feedback-ball-border: 3px;
   }
 }
 
-/* <span class="fa fa-check form-control-feedback"></span> */
+.form-type-date-fields .form-control-feedback {
+  right: -1.6em;
+
+  @media (max-width: $screen-sm) {
+    right: 1rem;
+    top: -2.5rem;
+  }
+}
 
 /*
  * Fundrais step progress bar and page header.
