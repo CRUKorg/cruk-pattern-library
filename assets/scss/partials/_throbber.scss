@@ -41,11 +41,11 @@
   40% { opacity: 1; }
 }
 
-.form-control-feedback > .sk-fading-circle {
-  top: 15px;
+.has-feedback .form-control-feedback {
+  top: 8px;
+  right: 12px;
 }
 
-.form-group .row .form-control-feedback > .sk-fading-circle {
-  top: 7px;
-  left: -12px;
+.has-feedback label ~ .form-control-feedback {
+  top: 39px;
 }
