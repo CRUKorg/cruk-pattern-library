@@ -361,6 +361,10 @@ form .panel-heading {
     text-align: center;
     width: 100% !important;
   }
+
+  .form-text.error {
+    padding: 0;
+  }
 }
 
 .date-row .error {
