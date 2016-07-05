@@ -133,7 +133,7 @@ Much the same as radio buttons, checkboxes also require the javascript to run.
         <div id="radio-id-1" class="form-radios">
           <div class="checkbox">
             <label>
-              <input type="checkbox" id="radio-id-1-yes" name="radio-id-1-dunno">Dunno
+              <input type="checkbox" id="radio-id-1-yes" name="radio-id-1-dunno" checked="checked">Dunno
             </label>
           </div>
           <div class="checkbox">
