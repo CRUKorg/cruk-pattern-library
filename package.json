@@ -1,6 +1,6 @@
 {
   "name": "cruk-pattern-library",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://github.com/CRUKorg/cruk-pattern-library",
   "author": "heylookalive",
   "scss": "./assets/scss/cruk-base.scss",
