@@ -1,0 +1,56 @@
+.sk-fading-circle {
+  $circleCount: 12;
+  $animationDuration: 1.2s;
+
+  position: relative;
+  width: $spinkit-size;
+  height: $spinkit-size;
+  margin: $spinkit-spinner-margin;
+
+  .sk-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .sk-circle::before {
+    display: block;
+    width: 15%;
+    height: 15%;
+    margin: 0 auto;
+    content: "";
+    background-color: $spinkit-spinner-color;
+    border-radius: 100%;
+    animation: sk-circleFadeDelay $animationDuration infinite ease-in-out both;
+  }
+
+  @for $i from 2 through $circleCount {
+    .sk-circle#{$i} { transform: rotate(360deg / $circleCount * ($i - 1)); }
+  }
+
+  @for $i from 2 through $circleCount {
+    .sk-circle#{$i}:before { animation-delay: - $animationDuration + $animationDuration / $circleCount * ($i - 1); }
+  }
+
+}
+
+@keyframes sk-circleFadeDelay {
+  0%, 39%, 100% { opacity: 0; }
+  40% { opacity: 1; }
+}
+
+.has-feedback .form-control-feedback {
+  top: 8px;
+  right: 12px;
+
+  &.fa {
+    /* FontAwesome icon is pushed down too much. */
+    top: 0;
+  }
+}
+
+.has-feedback label ~ .form-control-feedback {
+  top: 39px;
+}

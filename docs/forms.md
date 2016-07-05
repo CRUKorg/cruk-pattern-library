@@ -32,6 +32,42 @@ Forms should be contained within a central 6 grid width box with an offset of 3.
 </form>
 {% endexample %}
 
+## Labels
+
+All forms inputs should have labels. They're great.
+
+### Required fields
+
+It is important to note that instead of marking form elements as 'required' we actually mark optional fields as 'Optional'
+
+{% example html %}
+<form>
+  <div class="form-group">
+    <label for="input-id-1">Madatory field</label>
+    <input placeholder="Useful example" class="form-control" type="text" id="input-id-1" name="input-id-1">
+  </div>
+
+  <div class="form-group">
+    <label for="input-id-2">Optional one <span class="input-optional">(Optional)</span></label>
+    <input placeholder="Useful example" class="form-control" type="text" id="input-id-2" name="input-id-2">
+  </div>
+</form>
+{% endexample %}
+
+### Help text
+
+Where possible/sensible you should use help text. It should be positioned between the Label and the Input.
+
+{% example html %}
+<form>
+  <div class="form-group">
+    <label for="input-id-shoe">Shoe size</label>
+    <p class="help-block">Example block-level help text here.</p>
+    <input placeholder="Useful example" class="form-control" type="text" id="input-id-shoe" name="input-id-shoe">
+  </div>
+</form>
+{% endexample %}
+
 ## Basic inputs
 
 ### Textfields
@@ -41,8 +77,8 @@ Textfields (i.e. not text areas) should use proper [HTML 5 input types](https://
 {% example html %}
 <form>
   <div class="form-group">
-    <label for="input-id-1">Label goes here</label>
-    <input placeholder="Useful example" class="form-control" type="text" id="input-id-1" name="input-id-1">
+    <label for="input-id-3">Label goes here</label>
+    <input placeholder="Useful example" class="form-control" type="text" id="input-id-3" name="input-id-3">
   </div>
 </form>
 {% endexample %}
@@ -117,6 +153,47 @@ Much the same as radio buttons, checkboxes also require the javascript to run.
 </form>
 {% endexample %}
 
+## Buttons
+
+Press them. They are great
+
+{% example html %}
+<div class="container-fluid">
+  <div class="row">
+    <a class="btn btn-default col-sm-6 col-xs-12" href="#" role="button">Link</a>
+  </div>
+  <br/>
+  <div class="row">
+    <button class="btn btn-default col-sm-6 col-xs-12" type="submit">Button</button>
+  </div>
+  <br/>
+  <div class="row">
+    <input class="btn btn-default col-sm-6 col-xs-12" type="button" value="Input">
+  </div>
+  <br/>
+  <div class="row">
+    <input class="btn btn-default col-sm-6 col-xs-12" type="submit" value="Submit">
+  </div>
+  <br/>
+  <div class="row">
+    <input class="btn btn-default col-sm-6 col-xs-12" type="submit" value="Disabled" disabled="disabled">
+  </div>
+</div>
+{% endexample %}
+
+### Button with inline link
+
+Press me too!
+
+{% example html %}
+<div class="container-fluid">
+  <div class="row">
+    <button class="btn btn-default col-sm-6 col-xs-12" type="submit">Primary action button</button>
+    <a class="btn btn-link col-sm-6 col-xs-12" href="#" role="button">Secondary action link</a>
+  </div>
+</div>
+{% endexample %}
+
 
 ## Restricting form item widths
 
@@ -166,3 +243,80 @@ Depending on the situation the width of inputs should be restricted, this should
   </form>
 </div>
 {% endexample %}
+
+## Progress bar
+
+Uses Javscript to calculate the number of steps and the width of each step required to fit the progress bar in the parent container.
+
+{% example html %}
+<form>
+  <div class="row">
+    <div class="col-xs-12">
+      <ol class="cr-progress-bar">
+        <li class="cr-progress-bar__step">
+          <div class="cr-progress-bar__step__graphic done">
+            <hr><i class="cr-progress-bar__step__graphic__icon done"></i><hr>
+          </div>
+          <div class="cr-progress-bar__step__title">Details</div>
+        </li>
+        <li class="cr-progress-bar__step">
+          <div class="cr-progress-bar__step__graphic current">
+            <hr><i class="cr-progress-bar__step__graphic__icon current"></i><hr>
+          </div>
+          <div class="cr-progress-bar__step__title">Fundraise</div>
+        </li>
+        <li class="cr-progress-bar__step">
+          <div class="cr-progress-bar__step__graphic">
+            <hr><i class="cr-progress-bar__step__graphic__icon"></i><hr>
+          </div>
+          <div class="cr-progress-bar__step__title">Party</div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</form>
+{% endexample %}
+
+## Date of birth
+
+Three column row.
+
+{% example html %}
+<form>
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="row">
+        <div class="datepicker">
+          <div class="col-xs-4 ">
+            <input placeholder="mm" class="form-control" type="tel">
+          </div>
+          <div class="col-xs-4">
+            <input placeholder="dd" class="form-control" type="tel">
+          </div>
+          <div class="col-xs-4">
+            <input placeholder="yyyy" class="form-control" type="tel">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+{% endexample %}
+
+_`assets/js/cruk-base/plugin-progress-bar.js`_
+
+``` js
+(function ($) {
+  $.fn.crukProgressBar = function crukProgressBar() {
+    var steps = $('li', this);
+
+    steps.width(Math.floor(100 / steps.length) + '%');
+    this.css('visibility', 'visible');
+
+    return this;
+  };
+})(jQuery);
+
+// Call the plugin function to set the widths of the step <li> elements.
+$('.cr-progress-bar').crukProgressBar();
+```

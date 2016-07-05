@@ -20,4 +20,7 @@
     $(this).parent().removeClass('cr-input-group--focused');
   });
 
+  $(document).ready(function () {
+    $('.cr-progress-bar').crukProgressBar();
+  });
 }(jQuery);

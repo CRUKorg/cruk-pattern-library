@@ -1,0 +1,52 @@
+.accordion {
+  > .panel-heading {
+    > .panel-title {
+      color: $brand-primary;
+      text-decoration: none;
+      :hover {
+        text-decoration: none;
+      }
+
+      h2 {
+        i {
+          color: $brand-tertiary;
+          padding-right: 10px;
+          font-size: 25px;
+        }
+
+        .add-details {
+          font-family: $font-family-sans-serif;
+          font-weight: bold;
+          font-size: $font-size-base;
+          margin-top: 7px;
+        }
+      }
+    }
+  }
+
+  legend {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+.accordion-row {
+  border-top: 1px solid $panel-default-border;
+}
+
+/*
+ * The style below is used to allow use to have panels within panels that don't get too padded. It's only been
+ * tested with accordion behaviour
+ */
+.panel .panel {
+  border: none;
+  box-shadow: none;
+  margin-bottom: 0;
+  .panel-body:nth-child(odd) {
+    padding: 0;
+  }
+}
+
+html.js fieldset.collapsed {
+  height: auto !important;
+}

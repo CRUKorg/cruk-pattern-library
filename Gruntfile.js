@@ -14,7 +14,7 @@ module.exports = function(grunt) {
           'assets/scss',
           'docs/assets/scss',
           'docs/bower_components/bootstrap-sass/assets/stylesheets',
-          'docs/bower_components/bootstrap-sass/assets/stylesheets/bootstrap'
+          'docs/bower_components/font-awesome/scss'
         ]
       },
       dist: {
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
         tasks: ['sass', 'postcss', 'parker']
       },
       scripts: {
-        files: ['assets/js/cruk-base.js', 'assets/js/cruk-base/*.js'],
+        files: ['assets/js/cruk-base/*.js', 'assets/js/cruk-base.js'],
         tasks: ['jshint', 'concat', 'uglify', 'copy'],
         options: {
           spawn: false
