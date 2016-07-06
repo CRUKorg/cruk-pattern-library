@@ -378,7 +378,7 @@ $feedback-icon-height: $feedback-icon-width;
 $feedback-bar-height: 3px;
 $feedback-ball-border: 3px;
 
-.form-control-feedback {
+.fa.form-control-feedback {
   right: 1rem;
 
   &:before {
@@ -401,7 +401,7 @@ $feedback-ball-border: 3px;
   }
 }
 
-.form-type-date-fields .form-control-feedback {
+.form-type-date-fields .fa.form-control-feedback {
   right: -1.6em;
 
   @media (max-width: $screen-sm) {
