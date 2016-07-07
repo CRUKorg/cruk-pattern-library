@@ -1,13 +1,13 @@
 .navbar {
   background-color: #fff;
-  border: none;
+  border: 0;
 }
 
 .navbar--tagline {
+  padding-right: 200px; /* Must match width of logo image. */
   margin-top: 45px;
-  padding-right: 200px;
-  font-size: 1.5rem;
   font-family: $headings-font-family-light;
+  font-size: 1.5rem;
   color: $brand-primary;
 
   @media (max-width: $screen-sm) {
