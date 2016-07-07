@@ -119,8 +119,10 @@ $font-size-h6: 1.4rem;
 // $line-height-computed:    floor(($font-size-base * $line-height-base)) // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:    'MuseoSans-700', 'museo-sans-rounded', 'Museo Sans', Calibri, Arial, sans-serif;
-$headings-font-weight:    400;
+$headings-font-family:        'MuseoSans-700', 'museo-sans-rounded', 'Museo Sans', Calibri, Arial, sans-serif;
+$headings-font-family-light:  'MuseoSans-300', 'museo-sans-rounded', 'Museo Sans', Calibri, Arial, sans-serif;
+$headings-font-weight:        400;
+
 // $headings-line-height:    1.1
 // $headings-color:          inherit
 
