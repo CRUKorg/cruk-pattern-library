@@ -327,6 +327,7 @@ $progress-bar-ball-border: 3px;
     @extend .panel;
     @extend .panel-body;
     @extend .panel-default;
+    margin-top: 0 !important;
     margin-bottom: 0 !important;
     border-bottom: 0 !important;
     text-align: center;

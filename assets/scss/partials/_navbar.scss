@@ -1,0 +1,20 @@
+.navbar {
+  background-color: #fff;
+  border: none;
+}
+
+.navbar--tagline {
+  margin-top: 45px;
+  padding-right: 200px;
+  font-size: 1.5rem;
+  font-family: "MuseoSans-300","museo-sans-rounded","Museo Sans",Calibri,Arial,sans-serif;
+  color: $brand-primary;
+
+  @media (max-width: $screen-sm) {
+    display: none;
+  }
+}
+
+.navbar--tagline--last-word {
+  color: $brand-secondary;
+}
