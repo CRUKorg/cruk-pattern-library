@@ -119,7 +119,15 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['<%= watch.scripts.files %>'],
+        src: [
+          'docs/bower_components/jquery/dist/core.js',
+          'docs/bower_components/bootstrap/dist/js/bootstrap.js',
+          'docs/bower_components/jquery.inputmask/dist/jquery.inputmask.bundle.js',
+          'docs/bower_components/spin.js/spin.js',
+          'docs/bower_components/spin.js/jquery.spin.js',
+          'docs/bower_components/ladda-bootstrap/dist/ladda.js',
+          '<%= watch.scripts.files %>'
+        ],
         dest: 'assets/js/cruk-base.min.js'
       }
     },

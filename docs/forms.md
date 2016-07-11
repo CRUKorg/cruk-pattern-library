@@ -42,7 +42,7 @@ It is important to note that instead of marking form elements as 'required' we a
 
 {% example html %}
 <form>
-  <div class="form-group">
+  <div class="form-group has-feedback">
     <label for="input-id-1">Madatory field</label>
     <input placeholder="Useful example" class="form-control" type="text" id="input-id-1" name="input-id-1">
   </div>
@@ -82,6 +82,8 @@ Textfields (i.e. not text areas) should use proper [HTML 5 input types](https://
   </div>
 </form>
 {% endexample %}
+
+NOTE: The mark up above does not take into account [Dynamic Feedback](dynamic-feedback/). Please look at that section if you require it.
 
 ### Radio buttons
 
@@ -164,7 +166,7 @@ Press them. They are great
   </div>
   <br/>
   <div class="row">
-    <button class="btn btn-default col-sm-6 col-xs-12" type="submit">Button</button>
+    <button class="btn btn-default col-sm-6 col-xs-12 ladda-button" data-style="zoom-out" type="submit">Button</button>
   </div>
   <br/>
   <div class="row">
@@ -279,27 +281,11 @@ Uses Javscript to calculate the number of steps and the width of each step requi
 
 ## Date of birth
 
-Three column row.
+A single text input with an input mask applied
 
 {% example html %}
 <form>
-  <div class="row">
-    <div class="col-sm-8">
-      <div class="row">
-        <div class="datepicker">
-          <div class="col-xs-4 ">
-            <input placeholder="mm" class="form-control" type="tel">
-          </div>
-          <div class="col-xs-4">
-            <input placeholder="dd" class="form-control" type="tel">
-          </div>
-          <div class="col-xs-4">
-            <input placeholder="yyyy" class="form-control" type="tel">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <input class="datepicker form-control" data-inputmask-mask="d/m/y" data-inputmask-placeholder="DD/MM/YYYY" placeholder="DD/MM/YYYY" type="text">
 </form>
 {% endexample %}
 
