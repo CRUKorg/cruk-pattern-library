@@ -344,38 +344,6 @@ form .panel-heading {
   margin-bottom: 0;
 }
 
-
-/*
- *Date field.
- */
-.datepicker div {
-  &:first-of-type {
-    padding: 0px 0px 0px 15px;
-  }
-
-  &:nth-child(2) {
-    padding: 0px 7px 0px 7px;
-  }
-
-  &:last-child {
-    padding: 0px 15px 0px 0px;
-  }
-
-  input {
-    text-align: center;
-    width: 100% !important;
-  }
-
-  .form-text.error {
-    padding: 0;
-  }
-}
-
-.date-row .error {
-  padding: 0px 0px 0px 15px;
-  float: left;
-}
-
 $feedback-icon-width: 20px;
 $feedback-icon-height: $feedback-icon-width;
 $feedback-bar-height: 3px;
@@ -414,7 +382,7 @@ $feedback-ball-border: 3px;
 }
 
 /*
- * Fundrais step progress bar and page header.
+ * Fundraise step progress bar and page header.
  */
 .webform-client-form div {
   .progress-bar-fieldset {

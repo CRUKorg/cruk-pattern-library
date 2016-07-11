@@ -21,8 +21,7 @@
                 $(this).siblings('span.sr-only').text('');
             } else {
                 // It may well be that we need to clear a throbber... so, just in case...
-
-                $(this).crukInputDynamicSpin(false);
+                $(this).crukInputDynamicClear();
 
                 // Now tick away!
 
@@ -55,6 +54,9 @@
                 $(this).siblings('span.form-control-feedback').spin(false);
                 $(this).siblings('span.sr-only').text('');
             } else {
+                // Remove any ticks we may have
+                $(this).crukInputDynamicClear();
+
                 $(this).siblings('span.form-control-feedback').spin(opts);
                 $(this).siblings('span.sr-only').text('(checking)');
             }
