@@ -160,6 +160,7 @@ Much the same as radio buttons, checkboxes also require the javascript to run.
 Press them. They are great
 
 {% example html %}
+<form>
 <div class="container-fluid">
   <div class="row">
     <a class="btn btn-default col-sm-6 col-xs-12" href="#" role="button">Link</a>
@@ -181,6 +182,7 @@ Press them. They are great
     <input class="btn btn-default col-sm-6 col-xs-12" type="submit" value="Disabled" disabled="disabled">
   </div>
 </div>
+</form>
 {% endexample %}
 
 ### Button with inline link
