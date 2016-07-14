@@ -167,7 +167,7 @@ Press them. They are great
   </div>
   <br/>
   <div class="row">
-    <button class="btn btn-default col-sm-6 col-xs-12 ladda-button" data-style="zoom-out" type="submit">Button</button>
+    <button class="btn btn-default col-sm-6 col-xs-12" type="submit">Button</button>
   </div>
   <br/>
   <div class="row">
