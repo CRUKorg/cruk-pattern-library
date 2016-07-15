@@ -22,7 +22,7 @@ jQuery( document ).ready(function( $ ) {
 
         var name = $input.attr('name');
         var id = $input.attr('id');
-        $('input[name=' + name + ']').not('#' + id).parents('.radio').removeClass('radio-selected');
+        $('input[name="' + name + '"]').not('#' + id).parents('.radio').removeClass('radio-selected');
 
         // Now apply it to the current one
         $input.parents('.radio').addClass('radio-selected');
