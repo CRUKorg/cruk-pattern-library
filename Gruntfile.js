@@ -125,7 +125,6 @@ module.exports = function(grunt) {
           'docs/bower_components/jquery.inputmask/dist/jquery.inputmask.bundle.js',
           'docs/bower_components/spin.js/spin.js',
           'docs/bower_components/spin.js/jquery.spin.js',
-          'docs/bower_components/ladda-bootstrap/dist/ladda.js',
           '<%= watch.scripts.files %>'
         ],
         dest: 'assets/js/cruk-base.min.js'
