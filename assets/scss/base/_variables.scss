@@ -80,7 +80,7 @@ $light-secondary: lighten(desaturate(adjust-hue(#ec008c, 0.0377), 14.4796), 10.3
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff;
+$body-bg:               #f5f5f5;
 //** Global text color on `<body>`.
 $text-color:            #333;
 $text-color-error:      $error-color;
