@@ -183,7 +183,13 @@ body.example form {
   h3 {
     font-size: $font-size-h3;
   }
+
+  dl dt + dt {
+    margin-top: 0;
+  }
 }
+
+
 
 //
 // Examples
