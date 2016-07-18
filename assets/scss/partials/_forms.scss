@@ -350,9 +350,9 @@ $feedback-icon-height: $feedback-icon-width;
 $feedback-bar-height: 3px;
 $feedback-ball-border: 3px;
 
-.fa.form-control-feedback {
-  right: 1rem;
+@include make-form-control-feedback-adjustment();
 
+.fa.form-control-feedback {
   &:before {
     position: relative;
     top: 0.9rem;

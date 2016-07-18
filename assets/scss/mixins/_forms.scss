@@ -17,3 +17,22 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+// Because of the mark up we use to allow us to have form inputs that do not stretch all the way to the end of a
+// containing div, we also have to apply this little 'hack' to position the .form-control-feedback box in the right
+// place... But only where we have a .row > .col-*-* > .form-control-feedback construct
+@mixin make-form-control-feedback-adjustment($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
+  //.row > .col-sm-8 > .form-control-feedback
+
+  $sizes: col-xs col-sm col-md col-lg;
+
+  @each $size in $sizes {
+    @for $i from 1 through $grid-columns {
+
+      $selecta: ".row > .#{$size}-#{$i} > .form-control-feedback";
+      #{$selecta} {
+        right: floor(($grid-gutter-width / 2));
+      }
+    }
+  }
+}
