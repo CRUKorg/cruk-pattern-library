@@ -1,4 +1,4 @@
-.accordion {
+.collapsible-fieldset {
   > .panel-heading {
     > .panel-title {
       color: $brand-primary;
@@ -30,13 +30,13 @@
   }
 }
 
-.accordion-row {
+.collapsible-fieldset-row {
   border-top: 1px solid $panel-default-border;
 }
 
 /*
  * The style below is used to allow use to have panels within panels that don't get too padded. It's only been
- * tested with accordion behaviour
+ * tested with collapsible-fieldset behaviour
  */
 .panel .panel {
   border: none;
