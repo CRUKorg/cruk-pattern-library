@@ -37,6 +37,10 @@
 }
 
 .accordion-content {
+  .no-js & {
+    display: inherit;
+  }
+
   @extend .clearfix;
   padding: 2em;
   background-color: white;
