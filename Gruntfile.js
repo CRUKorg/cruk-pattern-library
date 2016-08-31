@@ -1,5 +1,6 @@
-module.exports = function(grunt) {
+var inliner = require('sass-inline-svg');
 
+module.exports = function(grunt) {
   grunt.initConfig({
     // Project configuration.
     pkg: grunt.file.readJSON('package.json'),
@@ -15,7 +16,12 @@ module.exports = function(grunt) {
           'docs/assets/scss',
           'docs/bower_components/bootstrap-sass/assets/stylesheets',
           'docs/bower_components/font-awesome/scss'
-        ]
+        ],
+        functions: {
+          svg: inliner('./', {
+            optimize: true
+          })
+        }
       },
       dist: {
         files: {

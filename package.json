@@ -23,7 +23,8 @@
     "grunt-parker": "^0.1.3",
     "grunt-postcss": "^0.5.1",
     "grunt-sass": "^1.0.0",
-    "jshint-stylish": "^2.2.0"
+    "jshint-stylish": "^2.2.0",
+    "sass-inline-svg": "^0.2.0"
   },
   "description": "CRUK Pattern library.",
   "bugs": {

@@ -1,0 +1,44 @@
+.accordion-header {
+  button {
+    width: 100%;
+    padding: 0.5em;
+    border-width: 0;
+    margin-bottom: 0;
+
+    background-color: $brand-primary;
+    color: white;
+    text-align: left;
+
+    border-radius: 0.142857143em;
+
+    font-family: $headings-font-family;
+
+    &:after {
+      content: svg('assets/icons/plus.svg');
+      float: right;
+    }
+
+    &[aria-expanded="true"] {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      &:after {
+        content: svg('assets/icons/minus.svg');
+      }
+    }
+  }
+}
+
+.accordion-image {
+  float: left;
+  width: 30%;
+  text-align: center;
+  margin-right: 2em;
+}
+
+.accordion-content {
+  @extend .clearfix;
+  padding: 2em;
+  border: 1px $brand-grey-light solid;
+  background-color: white;
+}

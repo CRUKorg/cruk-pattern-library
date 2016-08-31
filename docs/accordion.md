@@ -1,0 +1,21 @@
+---
+layout: page
+title: Accordion
+---
+
+The Accordion pattern is to be used for the purpose of displaying content which is useful for supporters but not deemed essential knowledge and thus is collapsed by default in order to conserve space & prioritise other content.
+
+Upon page load, the accordion will only show the accordion header, which can be clicked to reveal its supporting content. An accordion should contain no more than two paragraphs of text, though typically one will suffice. An optional image can also be used, which will appear to the left of the supporting text content.
+
+## Contents
+
+{% example html %}
+  <h2 class="accordion-header"><button data-target="#accordion-1" data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1">About this event</button></h2>
+  <div id="accordion-1" class="collapse accordion-content">
+    <div class="accordion-image">
+      <img src="{{ site.baseurl }}/assets/images/rfl.jpg" alt="A collection of pledges for Race for Life" />
+    </div>
+    <div class="accordion-summary">Accordions contain few lines of text, ideally 1 or 2 paragraphs, which can be revealed/dismissed by clicking the accordion header above. Accordion content should always have text, with an optional image on the left hand side.</div>
+  </div>
+{% endexample %}
+
