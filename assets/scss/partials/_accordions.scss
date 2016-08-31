@@ -1,30 +1,29 @@
-.accordion-header {
-  button {
-    width: 100%;
-    padding: 0.5em;
-    border-width: 0;
-    margin-bottom: 0;
+.accordion-header button {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 0;
 
-    background-color: $brand-primary;
-    color: white;
-    text-align: left;
+  font-family: $headings-font-family;
+  color: #fff;
+  text-align: left;
+  background-color: $brand-primary;
 
-    border-radius: 0.142857143em;
+  border-width: 0;
+  border-radius: 0.142857143em;
 
-    font-family: $headings-font-family;
 
-    &:after {
-      content: svg('assets/icons/plus.svg');
-      float: right;
-    }
+  &::after {
+    float: right;
 
-    &[aria-expanded="true"] {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
+    content: svg("assets/icons/plus.svg");
+  }
 
-      &:after {
-        content: svg('assets/icons/minus.svg');
-      }
+  &[aria-expanded="true"] {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &::after {
+      content: svg("assets/icons/minus.svg");
     }
   }
 }
@@ -32,8 +31,9 @@
 .accordion-image {
   float: left;
   width: 30%;
-  text-align: center;
   margin-right: 2em;
+
+  text-align: center;
 }
 
 .accordion-content {
@@ -43,5 +43,5 @@
 
   @extend .clearfix;
   padding: 2em;
-  background-color: white;
+  background-color: #fff;
 }

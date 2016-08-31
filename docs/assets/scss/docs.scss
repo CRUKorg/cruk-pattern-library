@@ -301,10 +301,11 @@ body.example form {
  */
 .accordion {
   .accordion-header {
-    margin-bottom: 0;
     padding-bottom: 0;
+    margin-bottom: 0;
     border-bottom-width: 0;
   }
+
   .accordion-content {
     border-top-width: 0;
   }
