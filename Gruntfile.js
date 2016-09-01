@@ -18,7 +18,7 @@ module.exports = function(grunt) {
           'docs/bower_components/font-awesome/scss'
         ],
         functions: {
-          svg: inliner('./', {
+          svg: inliner('./assets/icons', {
             optimize: true
           })
         }

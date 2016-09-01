@@ -15,7 +15,7 @@
   &::after {
     float: right;
 
-    content: svg("assets/icons/plus.svg");
+    content: svg("plus.svg");
   }
 
   &[aria-expanded="true"] {
@@ -23,7 +23,7 @@
     border-bottom-left-radius: 0;
 
     &::after {
-      content: svg("assets/icons/minus.svg");
+      content: svg("minus.svg");
     }
   }
 }
