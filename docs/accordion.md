@@ -15,33 +15,33 @@ Only one accordion should be open on a page at any time. When this accordion ful
 ## Example
 
 {% example html %}
-  <div class="accordion">
-    <h2 class="accordion-header"><button data-target="#accordion-1" data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1">About this event</button></h2>
-    <div id="accordion-1" class="collapse accordion-content">
-      <div class="accordion-image">
+  <div class="cr-accordion">
+    <h2 class="cr-accordion__header"><button data-target="#accordion-1" data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1">About this event</button></h2>
+    <div id="accordion-1" class="collapse cr-accordion__content">
+      <div class="cr-accordion__image">
         <img src="{{ site.baseurl }}/assets/images/rfl.jpg" alt="A collection of pledges for Race for Life" />
       </div>
-      <div class="accordion-summary">Accordions contain few lines of text, ideally 1 or 2 paragraphs, which can be revealed/dismissed by clicking the accordion header above. Accordion content should always have text, with an optional image on the left hand side.</div>
+      <div class="cr-accordion__summary">Accordions contain few lines of text, ideally 1 or 2 paragraphs, which can be revealed/dismissed by clicking the accordion header above. Accordion content should always have text, with an optional image on the left hand side.</div>
     </div>
   </div>
 
-  <div class="accordion">
-    <h2 class="accordion-header"><button data-target="#accordion-2" data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1">About this event #2</button></h2>
-    <div id="accordion-2" class="collapse accordion-content">
-      <div class="accordion-image">
+  <div class="cr-accordion">
+    <h2 class="cr-accordion__header"><button data-target="#accordion-2" data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1">About this event #2</button></h2>
+    <div id="accordion-2" class="collapse cr-accordion__content">
+      <div class="cr-accordion__image">
         <img src="{{ site.baseurl }}/assets/images/rfl.jpg" alt="A collection of pledges for Race for Life" />
       </div>
-      <div class="accordion-summary">Accordions contain few lines of text, ideally 1 or 2 paragraphs, which can be revealed/dismissed by clicking the accordion header above. Accordion content should always have text, with an optional image on the left hand side.</div>
+      <div class="cr-accordion__summary">Accordions contain few lines of text, ideally 1 or 2 paragraphs, which can be revealed/dismissed by clicking the accordion header above. Accordion content should always have text, with an optional image on the left hand side.</div>
     </div>
   </div>
 
-  <div class="accordion">
-      <h2 class="accordion-header"><button data-target="#accordion-3" data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1">About this event #3</button></h2>
-      <div id="accordion-3" class="collapse accordion-content">
-        <div class="accordion-image">
+  <div class="cr-accordion">
+      <h2 class="cr-accordion__header"><button data-target="#accordion-3" data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1">About this event #3</button></h2>
+      <div id="accordion-3" class="collapse cr-accordion__content">
+        <div class="cr-accordion__image">
           <img src="{{ site.baseurl }}/assets/images/rfl.jpg" alt="A collection of pledges for Race for Life" />
         </div>
-        <div class="accordion-summary">Accordions contain few lines of text, ideally 1 or 2 paragraphs, which can be revealed/dismissed by clicking the accordion header above. Accordion content should always have text, with an optional image on the left hand side.</div>
+        <div class="cr-accordion__summary">Accordions contain few lines of text, ideally 1 or 2 paragraphs, which can be revealed/dismissed by clicking the accordion header above. Accordion content should always have text, with an optional image on the left hand side.</div>
       </div>
     </div>
 {% endexample %}

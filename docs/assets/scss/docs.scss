@@ -299,14 +299,14 @@ body.example form {
  * Overrides for rendering Accordions correctly when viewed on the pattern library website.
  * These are required to override some more primer stuff.
  */
-.accordion {
-  .accordion-header {
+.cr-accordion {
+  .cr-accordion__header {
     padding-bottom: 0;
     margin-bottom: 0;
     border-bottom-width: 0;
   }
 
-  .accordion-content {
+  .cr-accordion__content {
     border-top-width: 0;
   }
 }

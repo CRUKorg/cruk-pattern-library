@@ -1,4 +1,4 @@
-.accordion-header button {
+.cr-accordion__header button {
   width: 100%;
   padding: 0.5em;
   margin-bottom: 0;
@@ -10,7 +10,6 @@
 
   border-width: 0;
   border-radius: 0.142857143em;
-
 
   &::after {
     float: right;
@@ -28,7 +27,7 @@
   }
 }
 
-.accordion-image {
+.cr-accordion__image {
   float: left;
   width: 30%;
   margin-right: 2em;
@@ -36,7 +35,7 @@
   text-align: center;
 }
 
-.accordion-content {
+.cr-accordion__content {
   .no-js & {
     display: inherit;
   }
