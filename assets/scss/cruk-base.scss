@@ -23,6 +23,7 @@
 @import "partials/forms";
 @import "bootstrap/buttons";
 
+
 // Components.
 @import "bootstrap/component-animations";
 @import "bootstrap/dropdowns";
@@ -44,7 +45,7 @@
 @import "bootstrap/list-group";
 @import "bootstrap/panels";
 @import "partials/panels";
-@import "partials/accordions";
+@import "partials/collapsible-fieldsets";
 @import "bootstrap/responsive-embed";
 @import "bootstrap/wells";
 @import "bootstrap/close";
@@ -67,6 +68,7 @@
  */
 @import "base/type";
 
+@import "partials/accordions";
 @import "partials/buttons";
 @import "partials/navbar";
 @import "partials/pattern-library";

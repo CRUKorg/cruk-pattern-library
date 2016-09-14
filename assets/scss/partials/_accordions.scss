@@ -1,52 +1,51 @@
-.accordion {
-  > .panel-heading {
-    > .panel-title {
-      color: $brand-primary;
-      text-decoration: none;
-      :hover {
-        text-decoration: none;
-      }
+.cr-accordion__header button {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 0;
 
-      h2 {
-        i {
-          color: $brand-tertiary;
-          padding-right: 10px;
-          font-size: 25px;
-        }
+  font-family: $headings-font-family;
+  color: #fff;
+  text-align: left;
+  background-color: $brand-primary;
 
-        .add-details {
-          font-family: $font-family-sans-serif;
-          font-weight: bold;
-          font-size: $font-size-base;
-          margin-top: 7px;
-        }
-      }
+  border-width: 0;
+  border-radius: 0.142857143em;
+
+  &::after {
+    float: right;
+
+    content: svg("plus.svg");
+  }
+
+  &[aria-expanded="true"] {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &::after {
+      content: svg("minus.svg");
     }
   }
+}
 
-  legend {
-    border-bottom: none;
-    margin-bottom: 0;
+.cr-accordion__image {
+  float: left;
+  width: 30%;
+  margin-right: 2em;
+
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
   }
 }
 
-.accordion-row {
-  border-top: 1px solid $panel-default-border;
-}
-
-/*
- * The style below is used to allow use to have panels within panels that don't get too padded. It's only been
- * tested with accordion behaviour
- */
-.panel .panel {
-  border: none;
-  box-shadow: none;
-  margin-bottom: 0;
-  .panel-body:nth-child(odd) {
-    padding: 0;
+.cr-accordion__content {
+  .no-js & {
+    display: inherit;
   }
-}
 
-html.js fieldset.collapsed {
-  height: auto !important;
+  @extend .clearfix;
+  padding: 2em;
+  background-color: #fff;
 }

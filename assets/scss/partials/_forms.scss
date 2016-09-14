@@ -307,8 +307,7 @@ $progress-bar-ball-border: 3px;
   &.done:after {
     border-color: $brand-tertiary;
     background-color: $brand-tertiary;
-    color: white;
-    content: "";
+    content: svg("checkmark.svg", (path: (fill: white)));
     font: normal normal normal 1rem/1 FontAwesome;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;

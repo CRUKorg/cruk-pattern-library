@@ -4,6 +4,7 @@
   /**
    * Define our global var.
    */
+  $('.no-js').removeClass('no-js').addClass('js');
   window.cruk_base = {};
   cruk_base.is_touch_device = 'ontouchstart' in document.documentElement;
 

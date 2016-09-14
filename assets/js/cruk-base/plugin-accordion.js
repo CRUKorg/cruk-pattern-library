@@ -1,27 +1,19 @@
-jQuery( document ).ready(function( $ ) {
-    'use strict';
+jQuery(document).ready(function($) {
+  'use strict';
 
-    var states = {
-        hide: {
-            icon: 'fa-chevron-circle-down',
-            text: 'Add details'
-        },
-        show: {
-            icon: 'fa-chevron-circle-up',
-            text: 'Hide details'
-        }
-    };
+  $(document).on('show.bs.collapse', '.cr-accordion .cr-accordion__content', function (e) {
+    // Find all accordions other than the just revealed one.
+    var $otherAccordions = $('.cr-accordion .collapse').not(e.target);
 
-    $('.accordion').on('show.bs.collapse', function (e) {
-        var target = $(e.currentTarget);
-        target.find('i.' + states.hide.icon).addClass(states.show.icon).removeClass(states.hide.icon);
-        target.find('.add-details').text(states.show.text);
+    // Collapse the other accordions.
+    $otherAccordions.collapse('hide');
+
+    // Wait until the accordion is fully revealed before scrolling to it so we can scroll to the correct position.
+    $(e.target).one('shown.bs.collapse', function(e) {
+      var $accordionHeader = $(e.target).siblings('.cr-accordion__header');
+      $('html, body').animate({
+        scrollTop: $accordionHeader.offset().top - parseInt($accordionHeader.css('font-size'), 10)
+      }, 'slow');
     });
-
-    $('.accordion').on('hide.bs.collapse', function (e) {
-        var target = $(e.currentTarget);
-        target.find('i.' + states.show.icon).addClass(states.hide.icon).removeClass(states.show.icon);
-        target.find('.add-details').text(states.hide.text);
-    });
-
+  });
 });
