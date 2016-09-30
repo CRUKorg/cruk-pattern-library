@@ -1,0 +1,64 @@
+// CRUK pager styles.
+.cr-simple-pager {
+  @include clearfix();
+  position: relative;
+  padding-left: 0px;
+  margin: 20px 0px;
+  text-align: center;
+  list-style: none;
+
+  &__previous {
+    float: left;
+  }
+
+  &__next {
+    float: right;
+  }
+
+  &__previous.disabled {
+    display: none;
+  }
+
+  &__link {
+    @include card-boxing;
+    display: inline-block;
+    height: 40px;
+    padding: 9px 14px;
+    color: white;
+    cursor: pointer;
+    background-color: $brand-primary;
+    line-height: 1.4rem;
+    
+    &:focus,
+    &:hover {
+      background-color: #6C5C99;
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  &__current {
+    @extend .text-center;
+
+    position: absolute;
+    left: 50%;
+    width: 130px;
+    margin-left: -65px;
+  }
+
+  &__indicator {
+    display: inline-block;
+    height: 40px;
+    padding: 9px 14px;
+    font-size: 1rem;
+    color: $text-color;
+    cursor: text;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .glyphicon {
+    font-size: 12px;
+  }
+}
