@@ -159,8 +159,6 @@ For bootstrap media classes lke <code>media-left</code> or <code>media-right</co
  </article>
 {% endexample %}
 
-
-
 #### In place supporting JavaScript
 
 This pattern is used in different ways, one of which is within an <abbr title="Single Page Application">SPA</abbr> where the user would enter a value into the combined search field and can alter and re-submit via that search field. When this happens if on a touch enabled device the magnifying glass icon changes into an X/clear icon. This is done with JavaScript.
