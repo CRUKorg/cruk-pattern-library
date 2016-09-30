@@ -24,13 +24,13 @@
   }
 
   &__spinner-item {
+    display: inline-block;
     margin: 0 2px;
     width: 16px;
     height: 16px;
     background-color: $brand-primary;
 
     border-radius: 100%;
-    display: inline-block;
     -webkit-animation: sk-bouncedelay 1.2s infinite ease-in-out both;
     animation: sk-bouncedelay 1.2s infinite ease-in-out both;
 
