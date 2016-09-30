@@ -21,7 +21,7 @@
 
 // CRUK Search pager styles.
 .cr-search-pager {
-  @include clearfix()
+  @include clearfix();
   position: relative;
   padding-left: 0px;
   text-align: center;
