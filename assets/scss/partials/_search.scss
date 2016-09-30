@@ -1,8 +1,8 @@
 // Custom mixin for search
 @mixin card-boxing {
+  background-color: white;
   border: 1px solid rgba(0,0,0,.06);
   border-radius: 3px;
-  background-color: white;
   box-shadow: 0 1px 4px rgba(0,0,0,.06);
 }
 
@@ -24,8 +24,8 @@
   @include clearfix();
   position: relative;
   padding-left: 0px;
-  text-align: center;
   margin: 20px 0px;
+  text-align: center;
   list-style: none;
 
   &__previous {
@@ -42,12 +42,12 @@
 
   &__link {
     @include card-boxing;
-    background-color: $brand-primary;
+    display: inline-block;
+    height: 40px;
+    padding: 9px 14px;
     color: white;
     cursor: pointer;
-    display: inline-block;
-    padding: 9px 14px;
-    height: 40px;
+    background-color: $brand-primary;
     line-height: 1.4rem;
     
     &:focus,
@@ -68,15 +68,15 @@
   }
 
   &__indicator {
-    padding: 9px 14px;
-    height: 40px;
-    border: 0;
     display: inline-block;
-    background-color: transparent;
-    box-shadow: none;
-    cursor: text;
-    color: $text-color;
+    height: 40px;
+    padding: 9px 14px;
     font-size: 1rem;
+    color: $text-color;
+    cursor: text;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
   }
 
   .glyphicon {
