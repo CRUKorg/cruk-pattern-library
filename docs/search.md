@@ -119,6 +119,18 @@ There are two colour variations, one for the within the masthead grey bar and th
 </div>
 {% endexample %}
 
+#### Search summary
+
+Search summary is the small text snippet that is placed above the search results.
+
+{% example html %}
+<div class="cr-search-summary">
+  <div class="cr-search-summary__info">
+    4,210 search results for <strong>cancer</strong>
+  </div>
+</div>
+{% endexample %}
+
 
 #### In place supporting JavaScript
 
