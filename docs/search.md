@@ -119,6 +119,7 @@ There are two colour variations, one for the within the masthead grey bar and th
 </div>
 {% endexample %}
 
+
 #### Search summary
 
 Search summary is the small text snippet that is placed above the search results.
@@ -130,6 +131,7 @@ Search summary is the small text snippet that is placed above the search results
   </div>
 </div>
 {% endexample %}
+
 
 #### Search result
 
@@ -158,8 +160,6 @@ For bootstrap media classes lke <code>media-left</code> or <code>media-right</co
    </div>
  </article>
 {% endexample %}
-
-
 
 #### In place supporting JavaScript
 
