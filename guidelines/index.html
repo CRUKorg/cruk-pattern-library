@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,17 +63,24 @@
   <a class="list-group-item " href="/cruk-pattern-library/forms/">
     Forms
   </a>
+  <a class="list-group-item " href="/cruk-pattern-library/dynamic-feedback/">
+  Dynamic Feedback
+  </a>
   <a class="list-group-item " href="/cruk-pattern-library/type/">
     Type
   </a>
   <a class="list-group-item " href="/cruk-pattern-library/search/">
     Search
   </a>
-  <!--
+  <a class="list-group-item " href="/cruk-pattern-library/pagination/">
+    Pagination
+  </a>
   <a class="list-group-item " href="/cruk-pattern-library/accordion/">
   Accordion
   </a>
-  -->
+  <a class="list-group-item " href="/cruk-pattern-library/loader/">
+  Loaders
+  </a>
   <a class="list-group-item " href="/cruk-pattern-library/pattern-library/">
     Pattern Library
   </a>
@@ -115,6 +122,7 @@
   <li><a href="#class-naming-conventions" id="markdown-toc-class-naming-conventions">Class naming conventions</a></li>
   <li><a href="#specificity-classes-vs-ids" id="markdown-toc-specificity-classes-vs-ids">Specificity (classes vs. ids)</a>    <ul>
       <li><a href="#css-specificity-guidelines" id="markdown-toc-css-specificity-guidelines">CSS Specificity guidelines</a></li>
+      <li><a href="#icons" id="markdown-toc-icons">Icons</a></li>
     </ul>
   </li>
 </ul>
@@ -332,6 +340,18 @@
   <li>When modifying an existing element for a specific use, try to use specific class names. Instead of <code class="highlighter-rouge">.listings-layout.bigger</code> use rules like <code class="highlighter-rouge">.listings-layout.listings-bigger</code>. Think about <code class="highlighter-rouge">ack/grep</code>ing your code in the future.</li>
   <li>The class names <code class="highlighter-rouge">disabled</code>, <code class="highlighter-rouge">mousedown</code>, <code class="highlighter-rouge">danger</code>, <code class="highlighter-rouge">hover</code>, <code class="highlighter-rouge">selected</code>, and <code class="highlighter-rouge">active</code> should <em>always</em> be namespaced by a class (<code class="highlighter-rouge">button.selected</code> is a good example).</li>
 </ul>
+
+<h3 id="icons">Icons</h3>
+
+<p>Icons should be exported as SVGs and stored in <code class="highlighter-rouge">&lt;repo-root&gt;/assets/icons</code>. These can be inlined by the helpful <a href="https://www.npmjs.com/package/sass-inline-svg"><code class="highlighter-rouge">sass-inline-svg</code></a> library.</p>
+
+<p>The <code class="highlighter-rouge">svg</code> mixin this provides accepts 2 parameters:
+ * Asset path e.g. <code class="highlighter-rouge">svg("plus.svg")</code>.
+   * This is relative to <code class="highlighter-rouge">&lt;repo-root&gt;/assets/icons</code>, so the above example will reference <code class="highlighter-rouge">&lt;repo-root&gt;/assets/icons/plus.svg</code>.
+ * Options (optional) - <code class="highlighter-rouge">svg("plus.svg", (path: (fill: $brand-primary)))</code>
+   * This is a sass-map where the keys are CSS selectors for the SVG document. The above example changes the fill of the whole <code class="highlighter-rouge">path</code> element to <code class="highlighter-rouge">$brand-primary</code>. This parameter will typically just be used to change the color of icons like so.</p>
+
+<p>The output of this function will be an inlined SVG, which typically then will be set as the <code class="highlighter-rouge">content</code> of a pseudo-element.</p>
 
     </div>
   </div>

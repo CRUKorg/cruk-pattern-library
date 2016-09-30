@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,17 +63,24 @@
   <a class="list-group-item " href="/cruk-pattern-library/forms/">
     Forms
   </a>
+  <a class="list-group-item " href="/cruk-pattern-library/dynamic-feedback/">
+  Dynamic Feedback
+  </a>
   <a class="list-group-item " href="/cruk-pattern-library/type/">
     Type
   </a>
   <a class="list-group-item " href="/cruk-pattern-library/search/">
     Search
   </a>
-  <!--
+  <a class="list-group-item " href="/cruk-pattern-library/pagination/">
+    Pagination
+  </a>
   <a class="list-group-item active" href="/cruk-pattern-library/accordion/">
   Accordion
   </a>
-  -->
+  <a class="list-group-item " href="/cruk-pattern-library/loader/">
+  Loaders
+  </a>
   <a class="list-group-item " href="/cruk-pattern-library/pattern-library/">
     Pattern Library
   </a>
@@ -85,20 +92,75 @@
       Accordion
     </h1>
     <div class="markdown-body">
-      <p>DOCUMENTATION TO FOLLOW. SORRY!</p>
+      <p>The Accordion pattern is to be used for the purpose of displaying content which is useful for supporters but not deemed essential knowledge and thus is collapsed by default in order to conserve space &amp; prioritise other content.</p>
 
-<h2 id="contents">Contents</h2>
+<p>Upon page load, the accordion will only show the accordion header, which can be clicked to reveal its supporting content. An accordion should contain no more than two paragraphs of text, though typically one will suffice. An optional image can also be used, which will appear to the left of the supporting text content.</p>
 
-<div class="docs-example clearfix"><div class="accordion collapsible panel panel-default">
-  <legend class="panel-heading">
-          <a href="#" class="panel-title" data-toggle="collapse" data-target="#edit-1 &gt; .collapse" aria-expanded="true"><span class="fieldset-legend-prefix element-invisible">Show</span><h2><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>Additional participant 1<span class="pull-right add-details">Add details</span></h2></a>
-  </legend>
-</div></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion collapsible panel panel-default"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;legend</span> <span class="na">class=</span><span class="s">"panel-heading"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"panel-title"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#edit-1 &gt; .collapse"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"fieldset-legend-prefix element-invisible"</span><span class="nt">&gt;</span>Show<span class="nt">&lt;/span&gt;&lt;h2&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-chevron-circle-down"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>Additional participant 1<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"pull-right add-details"</span><span class="nt">&gt;</span>Add details<span class="nt">&lt;/span&gt;&lt;/h2&gt;&lt;/a&gt;</span>
-  <span class="nt">&lt;/legend&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<p>The accordion content should have a white background with no border but will be used in practice on pages with non-white backgrounds so it can be distinguished from neighbouring content.</p>
+
+<h2 id="behaviour">Behaviour</h2>
+<p>Only one accordion should be open on a page at any time. When this accordion fully completes its transition from collapsed to expanded, the page will automatically scroll to position the accordion to the top of the page, if the page is large enough to do so.</p>
+
+<h2 id="example">Example</h2>
+
+<div class="docs-example clearfix"><div class="cr-accordion">
+    <h2 class="cr-accordion__header"><button data-target="#accordion-1" data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1">About this event</button></h2>
+    <div id="accordion-1" class="collapse cr-accordion__content">
+      <div class="cr-accordion__image">
+        <img src="/cruk-pattern-library/assets/images/rfl.jpg" alt="A collection of pledges for Race for Life" />
+      </div>
+      <div class="cr-accordion__summary">Accordions contain few lines of text, ideally 1 or 2 paragraphs, which can be revealed/dismissed by clicking the accordion header above. Accordion content should always have text, with an optional image on the left hand side.</div>
+    </div>
+  </div>
+
+  <div class="cr-accordion">
+    <h2 class="cr-accordion__header"><button data-target="#accordion-2" data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1">About this event #2</button></h2>
+    <div id="accordion-2" class="collapse cr-accordion__content">
+      <div class="cr-accordion__image">
+        <img src="/cruk-pattern-library/assets/images/rfl.jpg" alt="A collection of pledges for Race for Life" />
+      </div>
+      <div class="cr-accordion__summary">Accordions contain few lines of text, ideally 1 or 2 paragraphs, which can be revealed/dismissed by clicking the accordion header above. Accordion content should always have text, with an optional image on the left hand side.</div>
+    </div>
+  </div>
+
+  <div class="cr-accordion">
+      <h2 class="cr-accordion__header"><button data-target="#accordion-3" data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1">About this event #3</button></h2>
+      <div id="accordion-3" class="collapse cr-accordion__content">
+        <div class="cr-accordion__image">
+          <img src="/cruk-pattern-library/assets/images/rfl.jpg" alt="A collection of pledges for Race for Life" />
+        </div>
+        <div class="cr-accordion__summary">Accordions contain few lines of text, ideally 1 or 2 paragraphs, which can be revealed/dismissed by clicking the accordion header above. Accordion content should always have text, with an optional image on the left hand side.</div>
+      </div>
+    </div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-accordion"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"cr-accordion__header"</span><span class="nt">&gt;&lt;button</span> <span class="na">data-target=</span><span class="s">"#accordion-1"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"accordion-1"</span><span class="nt">&gt;</span>About this event<span class="nt">&lt;/button&gt;&lt;/h2&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"accordion-1"</span> <span class="na">class=</span><span class="s">"collapse cr-accordion__content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-accordion__image"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/cruk-pattern-library/assets/images/rfl.jpg"</span> <span class="na">alt=</span><span class="s">"A collection of pledges for Race for Life"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-accordion__summary"</span><span class="nt">&gt;</span>Accordions contain few lines of text, ideally 1 or 2 paragraphs, which can be revealed/dismissed by clicking the accordion header above. Accordion content should always have text, with an optional image on the left hand side.<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-accordion"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"cr-accordion__header"</span><span class="nt">&gt;&lt;button</span> <span class="na">data-target=</span><span class="s">"#accordion-2"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"accordion-1"</span><span class="nt">&gt;</span>About this event #2<span class="nt">&lt;/button&gt;&lt;/h2&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"accordion-2"</span> <span class="na">class=</span><span class="s">"collapse cr-accordion__content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-accordion__image"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/cruk-pattern-library/assets/images/rfl.jpg"</span> <span class="na">alt=</span><span class="s">"A collection of pledges for Race for Life"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-accordion__summary"</span><span class="nt">&gt;</span>Accordions contain few lines of text, ideally 1 or 2 paragraphs, which can be revealed/dismissed by clicking the accordion header above. Accordion content should always have text, with an optional image on the left hand side.<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-accordion"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"cr-accordion__header"</span><span class="nt">&gt;&lt;button</span> <span class="na">data-target=</span><span class="s">"#accordion-3"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"accordion-1"</span><span class="nt">&gt;</span>About this event #3<span class="nt">&lt;/button&gt;&lt;/h2&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"accordion-3"</span> <span class="na">class=</span><span class="s">"collapse cr-accordion__content"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-accordion__image"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/cruk-pattern-library/assets/images/rfl.jpg"</span> <span class="na">alt=</span><span class="s">"A collection of pledges for Race for Life"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-accordion__summary"</span><span class="nt">&gt;</span>Accordions contain few lines of text, ideally 1 or 2 paragraphs, which can be revealed/dismissed by clicking the accordion header above. Accordion content should always have text, with an optional image on the left hand side.<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 
     </div>

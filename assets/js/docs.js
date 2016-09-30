@@ -28,5 +28,8 @@ jQuery(function() {
     $('#search-field-combined-example').on('submit', function(){
       return false;
     });
+    
+    $('#inputExample1').crukInputDynamicSpin();
+    $('#inputExample2').crukInputDynamicSuccess();
   }
 });
