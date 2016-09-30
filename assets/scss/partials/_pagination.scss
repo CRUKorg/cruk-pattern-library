@@ -1,26 +1,5 @@
-// Custom mixin for search
-@mixin card-boxing {
-  background-color: white;
-  border: 1px solid rgba(0,0,0,.06);
-  border-radius: 3px;
-  box-shadow: 0 1px 4px rgba(0,0,0,.06);
-}
-
-
-// CRUK Search summary styles.
-.cr-search-summary {
-  @extend .alert;
-
-  padding: 0 3px;
-  margin: 20px 0;
-
-  &__info {
-    font-size: 1rem;
-  }
-}
-
-// CRUK Search pager styles.
-.cr-search-pager {
+// CRUK pager styles.
+.cr-simple-pager {
   @include clearfix();
   position: relative;
   padding-left: 0px;

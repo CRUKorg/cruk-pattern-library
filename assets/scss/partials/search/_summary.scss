@@ -1,0 +1,12 @@
+
+// CRUK Search summary styles.
+.cr-search-summary {
+  @extend .alert;
+
+  padding: 0 3px;
+  margin: 20px 0;
+
+  &__info {
+    font-size: 1rem;
+  }
+}
