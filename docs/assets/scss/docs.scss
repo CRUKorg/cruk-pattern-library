@@ -227,6 +227,10 @@ body.example form {
     max-width: 200px;
   }
 
+  // Override .cr-search-loading for display purposes on pattern library.
+  .cr-loader {
+    position: static;
+  }
 
   // Override Markdown styles to restore values from `_type.scss`
   ul,
