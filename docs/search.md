@@ -119,6 +119,7 @@ There are two colour variations, one for the within the masthead grey bar and th
 </div>
 {% endexample %}
 
+
 #### Search summary
 
 Search summary is the small text snippet that is placed above the search results.
@@ -129,6 +130,35 @@ Search summary is the small text snippet that is placed above the search results
     4,210 search results for <strong>cancer</strong>
   </div>
 </div>
+{% endexample %}
+
+
+#### Search result
+
+Search results use bootstrap <code>media</code> and <code>media-list</code> class styling.<br />
+For bootstrap media classes lke <code>media-left</code> or <code>media-right</code> just use the <code>cr-search-result</code> prefix <code>cr-search-result__media-left</code> 
+
+{% example html %}
+<article class="cr-search-result">
+  <div class="cr-search-result__media-body">
+    <h4 class="cr-search-result__title">
+      <a class="cr-search-result__link" href="http://www.cancerresearchuk.org/node/38191">Resurrecting stalled cancer drugs</a>
+    </h4>
+    <p class="cr-search-result__excerpt">
+      Developing new drugs is tough. But as illustrated by the results of an early stage trial of a new vaccine for brain tumours, our Clinical Development Partnersh…
+     </p>
+   </div>
+ </article>
+ <article class="cr-search-result">
+  <div class="cr-search-result__media-body">
+    <h4 class="cr-search-result__title">
+      <a class="cr-search-result__link" href="http://www.cancerresearchuk.org/node/28266">Progress in prostate cancer, skin cancer warning</a>
+    </h4>
+    <p class="cr-search-result__excerpt">
+      Transcript Kat: This is the <strong>Cancer</strong> Research UK podcast for September 2013. This month we’re discussing a huge genetic study looking at the cau…
+    </p>
+   </div>
+ </article>
 {% endexample %}
 
 #### In place supporting JavaScript
