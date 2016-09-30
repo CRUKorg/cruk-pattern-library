@@ -131,6 +131,48 @@ Search summary is the small text snippet that is placed above the search results
 </div>
 {% endexample %}
 
+#### Search Pagination
+
+Search pagination is can be found at the bottom of the search results page.<br>
+The previous button will not be visible on the first page of the results and has a <code>.disabled</code> class (second example below).
+
+{% example html %}
+<ul class="cr-search-pager">
+  <li class="cr-search-pager__previous">
+    <a class="cr-search-pager__link" href="#">
+      <span class="glyphicon glyphicon-chevron-left"></span> Prev
+    </a>
+  </li>
+  <li class="cr-search-pager__current">
+    <span class="cr-search-pager__indicator" href="#2">Page 2 of 421</span>
+  </li>
+  <li class="cr-search-pager__next">
+    <a class="cr-search-pager__link" href="#">
+      Next <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </li>
+</ul>
+<hr />
+<ul class="cr-search-pager">
+  <li class="cr-search-pager__previous disabled">
+    <a class="cr-search-pager__link" href="#">
+      <span class="glyphicon glyphicon-chevron-left"></span> Prev
+    </a>
+  </li>
+  <li class="cr-search-pager__current">
+    <span class="cr-search-pager__indicator" href="#1">Page 1 of 421</span>
+  </li>
+  <li class="cr-search-pager__next">
+    <a class="cr-search-pager__link" href="#">
+      Next <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </li>
+</ul>
+{% endexample %}
+
+
+
+
 
 #### In place supporting JavaScript
 
