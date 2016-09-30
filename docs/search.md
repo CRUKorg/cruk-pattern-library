@@ -131,20 +131,6 @@ Search summary is the small text snippet that is placed above the search results
 </div>
 {% endexample %}
 
-#### Loader
-
-Search loader appears briefly before results are retrieved from the elasticsearch.
-
-{% example html %}
-<div class="cr-loader">
-  <div class="cr-loader__spinner">
-    <div class="cr-loader__spinner-item cr-loader__spinner-item--bounce1"></div>
-    <div class="cr-loader__spinner-item cr-loader__spinner-item--bounce2"></div>
-    <div class="cr-loader__spinner-item cr-loader__spinner-item--bounce3"></div>
-  </div>
-</div>
-{% endexample %}
-
 #### In place supporting JavaScript
 
 This pattern is used in different ways, one of which is within an <abbr title="Single Page Application">SPA</abbr> where the user would enter a value into the combined search field and can alter and re-submit via that search field. When this happens if on a touch enabled device the magnifying glass icon changes into an X/clear icon. This is done with JavaScript.

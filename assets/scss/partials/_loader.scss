@@ -1,17 +1,5 @@
-// CRUK Search styles.
-.cr-search-summary {
-  @extend .alert;
-
-  padding: 0 3px;
-  margin: 20px 0;
-
-  &__info {
-    font-size: 1rem;
-  }
-}
-
-// CRUK Search loader styles
-.cr-loader {
+// CRUK loader styles
+.cr-simple-loader {
   position: absolute;
   top: 0;
   left: 50%;
