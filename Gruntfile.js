@@ -31,6 +31,18 @@ module.exports = function(grunt) {
       }
     },
 
+    bless: {
+        css: {
+            options: {
+                compress: true,
+                logCount: true
+            },
+            files: {
+                'docs/assets/css/ie/docs.css': 'docs/assets/css/docs.css'
+            }
+        }
+    },
+
     // Handle vendor prefixing.
     postcss: {
       options: {
@@ -165,9 +177,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-parker');
   grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-bless');
 
   // Generate and format the CSS.
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'copy', 'sass', 'jekyll', 'postcss', 'parker']);
+  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'copy', 'sass', 'bless', 'jekyll', 'postcss', 'parker']);
 
   // Publish to GitHub
   grunt.registerTask('publish', ['jekyll', 'postcss:docs', 'buildcontrol:pages']);
