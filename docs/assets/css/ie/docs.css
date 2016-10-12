@@ -1,4 +1,21 @@
 @import "docs.1.css";
+.fa-hand-stop-o:before,
+.fa-hand-paper-o:before {
+  content: "";
+}
+
+.fa-hand-scissors-o:before {
+  content: "";
+}
+
+.fa-hand-lizard-o:before {
+  content: "";
+}
+
+.fa-hand-spock-o:before {
+  content: "";
+}
+
 .fa-hand-pointer-o:before {
   content: "";
 }

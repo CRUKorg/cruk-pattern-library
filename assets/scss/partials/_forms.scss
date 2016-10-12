@@ -25,7 +25,8 @@ label {
 
 .form-control {
   @extend .form-control;
-
+  
+  padding: 7px 12px 5px;
   border-width: 2px;
   box-shadow: none;
   font-size: $form-font-size;
@@ -68,11 +69,16 @@ label {
 
   .cr-input-group__button {
     @extend .input-group-btn;
+
+    .btn {
+      padding: 6px 12px;
+    }
   }
 
   .cr-input-group__icon {
     font-size: $form-font-size;
   }
+  
 }
 
 /**
@@ -183,6 +189,11 @@ label {
   label {
     width: 100%;
     height: 100%;
+    margin-top: 1px;
+  }
+
+  input[type="checkbox"], input[type="radio"] {
+    margin-top: 3px;
   }
 }
 
