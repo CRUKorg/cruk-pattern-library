@@ -4260,6 +4260,7 @@ label .input-optional {
 .cr-search-input .cr-search-input__input,
 .radio,
 .checkbox {
+  padding: 7px 12px 5px;
   border-width: 2px;
   box-shadow: none;
   font-size: 16px;
@@ -4300,6 +4301,10 @@ label .input-optional {
   border: 0;
   background: transparent;
   height: 36px;
+}
+
+.cr-input-group .cr-input-group__button .btn {
+  padding: 6px 12px;
 }
 
 .cr-input-group .cr-input-group__icon {
@@ -4379,6 +4384,14 @@ label .input-optional {
 .checkbox label {
   width: 100%;
   height: 100%;
+  margin-top: 1px;
+}
+
+.radio input[type="checkbox"],
+.radio input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox input[type="radio"] {
+  margin-top: 3px;
 }
 
 .radio-selected,
@@ -11913,21 +11926,4 @@ button.close {
 .fa-hand-grab-o:before,
 .fa-hand-rock-o:before {
   content: "";
-}
-
-.fa-hand-stop-o:before,
-.fa-hand-paper-o:before {
-  content: "";
-}
-
-.fa-hand-scissors-o:before {
-  content: "";
-}
-
-.fa-hand-lizard-o:before {
-  content: "";
-}
-
-.fa-hand-spock-o:before {
-  content: "";
 }
