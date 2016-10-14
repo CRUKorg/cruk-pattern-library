@@ -10,10 +10,6 @@
     "Gemfile.lock",
     "Gruntfile.js"
   ],
-  "main": [
-    "assets/css/cruk-base.min.css",
-    "assets/js/cruk-base.min.js"
-  ],
   "dependencies": {
     "bootstrap-sass": "~3.3.6",
     "primer-markdown": "~2.5.1",
