@@ -17,7 +17,7 @@ The previous button will not be visible on the first page of the results and has
 <ul class="cr-simple-pager">
   <li class="cr-simple-pager__previous">
     <a class="cr-simple-pager__link" href="#">
-      <span class="glyphicon glyphicon-chevron-left"></span> Prev
+      <span class="cr-simple-pager__icon"></span> Prev
     </a>
   </li>
   <li class="cr-simple-pager__current">
@@ -25,7 +25,7 @@ The previous button will not be visible on the first page of the results and has
   </li>
   <li class="cr-simple-pager__next">
     <a class="cr-simple-pager__link" href="#">
-      Next <span class="glyphicon glyphicon-chevron-right"></span>
+      Next <span class="cr-simple-pager__icon"></span>
     </a>
   </li>
 </ul>
@@ -33,7 +33,7 @@ The previous button will not be visible on the first page of the results and has
 <ul class="cr-simple-pager">
   <li class="cr-simple-pager__previous disabled">
     <a class="cr-simple-pager__link" href="#">
-      <span class="glyphicon glyphicon-chevron-left"></span> Prev
+      <span class="cr-simple-pager__icon"></span> Prev
     </a>
   </li>
   <li class="cr-simple-pager__current">
@@ -41,7 +41,7 @@ The previous button will not be visible on the first page of the results and has
   </li>
   <li class="cr-simple-pager__next">
     <a class="cr-simple-pager__link" href="#">
-      Next <span class="glyphicon glyphicon-chevron-right"></span>
+      Next <span class="cr-simple-pager__icon"></span>
     </a>
   </li>
 </ul>
