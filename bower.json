@@ -17,7 +17,6 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.6",
     "primer-markdown": "~2.5.1",
-    "font-awesome": "fontawesome#^4.6.3",
     "jquery.inputmask": "^3.3.1",
     "spin.js": "^1.1.3"
   },
