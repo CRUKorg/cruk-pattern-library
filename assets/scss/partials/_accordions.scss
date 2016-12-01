@@ -1,28 +1,33 @@
 .cr-accordion__header button {
+  position: relative;
   width: 100%;
-  padding: 0.5em;
+  padding: 0.7em 0.7em 0.6em;
   margin-bottom: 0;
 
   font-family: $headings-font-family;
   color: #fff;
   text-align: left;
   background-color: $brand-primary;
+  line-height: 1;
 
   border-width: 0;
   border-radius: 0.142857143em;
 
-  &::after {
-    float: right;
+  &::before {
+    @extend .cr-i;
+    content: "\e900";
 
-    content: svg("plus.svg");
+    position: absolute;
+    top: 13px;
+    right: 0.7em;
   }
 
   &[aria-expanded="true"] {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 
-    &::after {
-      content: svg("minus.svg");
+    &::before {
+      content: "\e901";
     }
   }
 }

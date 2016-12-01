@@ -7,12 +7,31 @@
   text-align: center;
   list-style: none;
 
+  &__icon {
+    @extend .cr-i;
+
+    position: relative;
+    top: 1.5px;
+  }
+
   &__previous {
     float: left;
+
+    .cr-simple-pager__icon {
+      @extend .cr-i--chevron-left;
+
+      margin-right: 3px;
+    }
   }
 
   &__next {
     float: right;
+
+    .cr-simple-pager__icon {
+      @extend .cr-i--chevron-right;
+
+      margin-left: 3px;
+    }
   }
 
   &__previous.disabled {
@@ -28,7 +47,7 @@
     cursor: pointer;
     background-color: $brand-primary;
     line-height: 1.4rem;
-    
+
     &:focus,
     &:hover {
       background-color: #6C5C99;
