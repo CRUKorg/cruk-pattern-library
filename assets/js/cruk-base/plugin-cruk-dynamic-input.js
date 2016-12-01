@@ -26,7 +26,7 @@
 
             if (remove === false) {
                 if ($(this).crukInputDynamicState() === stateValue) {
-                    $(this).siblings('span.form-control-feedback').removeClass('fa').removeClass('fa-check');
+                    $(this).siblings('span.form-control-feedback').removeClass('cr-i').removeClass('cr-i--checkmark');
                     $(this).siblings('span.sr-only').text('');
                     $(this).data(dataKey, null);
                 }
@@ -37,7 +37,7 @@
 
                     // Now tick away!
 
-                    $(this).siblings('span.form-control-feedback').addClass('fa').addClass('fa-check');
+                    $(this).siblings('span.form-control-feedback').addClass('cr-i').addClass('cr-i--checkmark');
                     $(this).siblings('span.sr-only').text('(success)');
                     $(this).data(dataKey, stateValue);
                 }
