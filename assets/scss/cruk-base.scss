@@ -11,7 +11,7 @@
 // Reset and dependencies.
 @import "bootstrap/normalize";
 @import "bootstrap/print";
-@import "bootstrap/glyphicons";
+
 
 // Core CSS.
 @import "bootstrap/scaffolding";
@@ -60,19 +60,20 @@
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
 
-// Font Awesome
-@import "font-awesome";
-
 /**
  * CRUK Styles.
  */
 @import "base/type";
 
+@import "partials/animations";
 @import "partials/accordions";
 @import "partials/buttons";
 @import "partials/navbar";
+@import "partials/icons";
 @import "partials/pattern-library";
 @import "partials/pagination";
+@import "partials/progress-bar";
 @import "partials/loader";
+@import "partials/search/input";
 @import "partials/search/result";
 @import "partials/search/summary";

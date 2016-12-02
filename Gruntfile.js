@@ -98,6 +98,10 @@ module.exports = function(grunt) {
         options: {
           spawn: false
         }
+      },
+      fonts: {
+        files: ['assets/fonts/*'],
+        tasks: ['copy']
       }
     },
 
@@ -162,6 +166,12 @@ module.exports = function(grunt) {
       main: {
         src: 'assets/js/cruk-base.min.js',
         dest: 'docs/assets/js/cruk-base.min.js'
+      },
+      fonts: {
+        expand: true,
+        flatten: true,
+        src: 'assets/fonts/*',
+        dest: 'docs/assets/fonts/'
       }
     }
   });

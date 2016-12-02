@@ -40,7 +40,7 @@ Anywhere that a chance is presented to interact with search functionality you'll
         <label for="search-input" id="search-label">Search CancerResearchUK.org...</label>
         <input type="search" class="cr-input-group__input cr-search-input__input" id="search-input" placeholder="Search CancerResearchUK.org..." aria-describedby="search-label" autocomplete="off" autocorrect="off">
         <span class="cr-input-group__button cr-search-input__button">
-          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon" aria-hidden="true"></span></button>
         </span>
       </div>
     </form>
@@ -60,7 +60,7 @@ The combined search field (as with the Bootstrap input groups) can be displayed 
         <label for="search-input-2" id="search-label-2">Search...</label>
         <input type="search" class="cr-input-group__input cr-search-input__input" id="search-input-2" placeholder="Search..." aria-describedby="search-label-2" autocomplete="off" autocorrect="off">
         <span class="cr-input-group__button cr-search-input__button">
-          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon" aria-hidden="true"></span></button>
         </span>
       </div>
     </form>
@@ -74,7 +74,7 @@ The combined search field (as with the Bootstrap input groups) can be displayed 
         <label for="search-input-3" id="search-label-3">Search...</label>
         <input type="search" class="cr-input-group__input cr-search-input__input" id="search-input-3" placeholder="Search..." aria-describedby="search-label" autocomplete="off" autocorrect="off">
         <span class="cr-input-group__button cr-search-input__button">
-          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon" aria-hidden="true"></span></button>
         </span>
       </div>
     </form>
@@ -97,7 +97,7 @@ There are two colour variations, one for the within the masthead grey bar and th
         <label for="search-input-4" id="search-label-4">Search...</label>
         <input type="search" class="cr-input-group__input cr-search-input__input" id="search-input-4" placeholder="Search..." aria-describedby="search-label-2" autocomplete="off" autocorrect="off">
         <span class="cr-input-group__button cr-search-input__button">
-          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon" aria-hidden="true"></span></button>
         </span>
       </div>
     </form>
@@ -111,7 +111,7 @@ There are two colour variations, one for the within the masthead grey bar and th
         <label for="search-input-5" id="search-label-5">Search...</label>
         <input type="search" class="cr-input-group__input cr-search-input__input" id="search-input-5" placeholder="Search..." aria-describedby="search-label" autocomplete="off" autocorrect="off">
         <span class="cr-input-group__button cr-search-input__button">
-          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon" aria-hidden="true"></span></button>
         </span>
       </div>
     </form>
@@ -136,7 +136,7 @@ Search summary is the small text snippet that is placed above the search results
 #### Search result
 
 Search results use bootstrap <code>media</code> and <code>media-list</code> class styling.<br />
-For bootstrap media classes lke <code>media-left</code> or <code>media-right</code> just use the <code>cr-search-result</code> prefix <code>cr-search-result__media-left</code> 
+For bootstrap media classes lke <code>media-left</code> or <code>media-right</code> just use the <code>cr-search-result</code> prefix <code>cr-search-result__media-left</code>
 
 {% example html %}
 <article class="cr-search-result">

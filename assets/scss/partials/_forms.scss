@@ -25,7 +25,7 @@ label {
 
 .form-control {
   @extend .form-control;
-  
+
   padding: 7px 12px 5px;
   border-width: 2px;
   box-shadow: none;
@@ -78,7 +78,7 @@ label {
   .cr-input-group__icon {
     font-size: $form-font-size;
   }
-  
+
 }
 
 /**
@@ -128,51 +128,6 @@ label {
 
   .cr-input-group__icon {
     font-size: ceil(($form-font-size * 0.85));
-  }
-}
-
-/**
- * Search pattern.
- */
-
-.cr-search-input {
-  label {
-    @extend .sr-only;
-  }
-
-  .cr-search-input__input {
-    @extend .form-control;
-  }
-
-  .cr-search-input__button .btn {
-    border: 0;
-    background: transparent;
-
-    &:focus {
-      outline: none;
-    }
-
-    &:active {
-      box-shadow: none;
-    }
-  }
-
-  .cr-input-group__icon {
-    top: 3px;
-    color: $brand-grey-medium;
-    @include transition(color 100ms linear);
-  }
-
-  &.cr-input-group--focused .glyphicon-search {
-    color: $brand-primary;
-  }
-
-  &.cr-input-group--lg .cr-input-group__icon {
-    top: 4px;
-  }
-
-  &.cr-input-group--sm .cr-input-group__icon {
-    top: 1px;
   }
 }
 
@@ -244,96 +199,6 @@ label {
   }
 }
 
-/**
- * Progress bar
- */
-$progress-bar-icon-width: 20px;
-$progress-bar-icon-height: $progress-bar-icon-width;
-$progress-bar-bar-height: 3px;
-$progress-bar-ball-border: 3px;
-
-.cr-progress-bar {
-  // Stays hidden until revealed by JavaScript.
-  visibility: hidden;
-
-  text-align: center;
-  list-style: none;
-  overflow: hidden;
-  padding: 0;
-}
-
-.cr-progress-bar__step {
-  float: left;
-  position: relative;
-  font-family: $headings-font-family;
-
-  /* Remove the two outside <hr> elements */
-  &:first-child hr:first-child,
-  &:last-child hr:last-child {
-    display: none;
-  }
-}
-
-.cr-progress-bar__step__graphic {
-  hr {
-    margin: (($progress-bar-icon-height - $progress-bar-bar-height) / 2) 0 0 0;
-    width: 50%;
-    height: $progress-bar-bar-height;
-    display: inline-block;
-    border: none;
-    background-color: $brand-grey-light;
-    position: absolute;
-  }
-
-  hr:first-child {
-    left: 0;
-    margin-left: -$progress-bar-icon-width / 2;
-  }
-
-  &.done {
-    hr {
-      background-color: $brand-tertiary;
-    }
-  }
-
-  &.current {
-    hr:first-child {
-      background-color: $brand-tertiary;
-    }
-  }
-}
-
-.cr-progress-bar__step__graphic__icon {
-  &:after {
-    display: inline-block;
-    vertical-align: middle;
-    width: $progress-bar-icon-width;
-    height: $progress-bar-icon-height;
-    z-index: 50;
-    content: "";
-    border: $progress-bar-ball-border solid $brand-grey-light;
-    border-radius: ceil($progress-bar-icon-width / 2);
-  }
-
-  &.done:after {
-    border-color: $brand-tertiary;
-    background-color: $brand-tertiary;
-    content: svg("checkmark.svg", (path: (fill: white)));
-    font: normal normal normal 1rem/1 FontAwesome;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  &.current:after {
-    border-color: $brand-tertiary;
-  }
-}
-
-.cr-progress-bar__step__title {
-  padding-top: 0.5em;
-}
-
 .cr-form-page {
   .page-header {
     @extend .panel;
@@ -363,10 +228,10 @@ $feedback-ball-border: 3px;
 
 @include make-form-control-feedback-adjustment();
 
-.fa.form-control-feedback {
+.cr-i.form-control-feedback {
   &:before {
     position: relative;
-    top: 0.9rem;
+    top: 15px;
     color: #fff;
   }
 
@@ -378,19 +243,47 @@ $feedback-ball-border: 3px;
     border: $feedback-icon-width / 2 solid $brand-tertiary;
     border-radius: $feedback-icon-width / 2;
     position: absolute;
-    top: $feedback-icon-width / 2;
+    top: $feedback-icon-width / 2 + 1;
     left: $feedback-icon-width / 2;
     z-index: -1;
   }
 }
 
-.form-type-date-fields .fa.form-control-feedback {
+.form-type-date-fields .cr-i.form-control-feedback {
   right: -1.6em;
 
   @media (max-width: $screen-sm) {
     right: 1rem;
     top: -2.5rem;
   }
+}
+
+/**
+ * Bouncy ball input feedback style.
+ */
+.cr-has-feedback {
+  position: relative;
+  display: block;
+
+  &:after {
+    display: block;
+    position: absolute;
+    bottom: 2px;
+    right: 13px;
+    width: 13px;
+    height: 13px;
+    overflow: hidden;
+    content: ' ';
+    background-color: $brand-primary;
+    border-radius: 50%;
+    animation: cruk-bounce 0.75s ease-in-out infinite, cruk-brand 2.25s step-end infinite;
+    transition: opacity 0.2s ease-in;
+    opacity: 0;
+  }
+}
+
+.cr-has-feedback--active:after {
+  opacity: 1;
 }
 
 /*

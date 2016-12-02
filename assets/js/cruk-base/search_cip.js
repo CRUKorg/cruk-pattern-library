@@ -62,10 +62,10 @@
      * 1. The field is blank
      * 2. The input doesn't match the previous search
      */
-    if ((input_value === '' || this.isNewSearch(input_value)) && this.$icon.hasClass('glyphicon-remove')) {
+    if ((input_value === '' || this.isNewSearch(input_value)) && this.$icon.hasClass('cr-i--remove')) {
       var button_aria_label = this.submit_aria_label
       this.$icon.fadeOut('fast', function(){
-        $(this).removeClass('glyphicon-remove').addClass('glyphicon-search').fadeIn('fast').parent().attr('aria-label', button_aria_label)
+        $(this).removeClass('cr-i--remove').fadeIn('fast').parent().attr('aria-label', button_aria_label)
       })
     }
 
@@ -73,9 +73,9 @@
      * A valid search is being done but we've still got the search icon in
      * place so switch it for an 'x'.
      */
-    if (this.active && this.$icon.hasClass('glyphicon-search')) {
+    if (this.active && !this.$icon.hasClass('cr-i--remove')) {
       this.$icon.fadeOut('fast', function(){
-        $(this).removeClass('glyphicon-search').addClass('glyphicon-remove').fadeIn('fast').parent().attr('aria-label', 'Clear your current search')
+        $(this).addClass('cr-i--remove').fadeIn('fast').parent().attr('aria-label', 'Clear your current search')
       })
     }
   }
@@ -86,7 +86,7 @@
    * the textfield input.
    */
   SearchCIP.prototype.iconClick = function() {
-    if (this.$icon.hasClass('glyphicon-remove')) {
+    if (this.$icon.hasClass('cr-i--remove')) {
       this.last_search = null
       this.active = false
       this.$input.val('').focus()

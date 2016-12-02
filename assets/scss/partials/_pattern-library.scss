@@ -51,3 +51,14 @@ body.cr-pattern-library {
     background-color: $brand-grey-dark;
   }
 }
+
+.cr-pattern-library-icon-grid {
+  .cr-i {
+    @extend .cr-i--fw;
+  }
+
+  > div {
+    min-height: 25px;
+    margin: 5px 0;
+  }
+}
