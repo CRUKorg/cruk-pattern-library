@@ -276,7 +276,7 @@ $feedback-ball-border: 3px;
     content: ' ';
     background-color: $brand-primary;
     border-radius: 50%;
-    animation: cruk-bounce 0.75s ease-in-out infinite, cruk-brand 2.25s step-end infinite;
+    animation: cruk-input-bounce 0.75s ease-in-out infinite, cruk-brand 2.25s step-end infinite;
     transition: opacity 0.2s ease-in;
     opacity: 0;
   }
