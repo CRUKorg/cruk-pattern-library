@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>Alerts | CRUK Pattern Library</title>
+
+    <!--[if !IE]><!-->
+      <link rel="stylesheet" href="/cruk-pattern-library/assets/css/docs.css">
+    <!--<![endif]-->
+    
+    <!--[if gte IE 10]>
+      <link rel="stylesheet" href="/cruk-pattern-library/assets/css/docs.css">
+    <![endif]-->
+
+    <!--[if lte IE 9]>
+      <link rel="stylesheet" href="/cruk-pattern-library/assets/css/ie/docs.css">
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/cruk-pattern-library/assets/images/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/cruk-pattern-library/favicon.ico">
+
+    <script src="https://use.typekit.net/bgw6lhg.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+
+    <header class="masthead" role="banner">
+      <div class="container">
+        <a href="/cruk-pattern-library/" class="masthead-logo">
+          CRUK Pattern Library
+        </a>
+
+        <nav class="masthead-nav" role="navigaton" aria-label="Primary">
+          <a class="active" href="/cruk-pattern-library/">Docs</a>
+          <a href="https://github.com/CRUKorg/cruk-pattern-library" target="_blank">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row docs-layout">
+  <div class="col-sm-3">
+    <nav class="list-group docs-menu" role="navigation" aria-label="Secondary">
+  <a class="list-group-item " href="/cruk-pattern-library/">
+    Getting started
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/guidelines/">
+    Coding guidelines
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/browser-support/">
+    Browser Support
+  </a>
+</nav>
+
+<nav class="list-group docs-menu" role="navigation" aria-label="Secondary">
+  <a class="list-group-item " href="/cruk-pattern-library/colours/">
+    Brand Colours
+  </a>
+</nav>
+
+<nav class="list-group docs-menu" role="navigation" aria-label="Secondary">
+  <a class="list-group-item " href="/cruk-pattern-library/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/type/">
+    Type
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/icons/">
+    Icons
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/forms/">
+    Forms
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/dynamic-feedback/">
+    Dynamic Feedback
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/accordion/">
+    Accordion
+  </a>
+  <a class="list-group-item active" href="/cruk-pattern-library/alerts/">
+    Alerts
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/loader/">
+    Loaders
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/pagination/">
+    Pagination
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/progress-bar/">
+    Progress Bar
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/search/">
+    Search
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/animations/">
+    Animations
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/pattern-library/">
+    Pattern Library
+  </a>
+</nav>
+
+  </div>
+  <div class="col-sm-9" role="main">
+    <h1 class="page-title">
+      Alerts
+    </h1>
+    <div class="markdown-body">
+      <p>Hey, read this!</p>
+
+<p>We’re currently working through potential ideas for an alert style for different use cases, this page is due to grow!</p>
+
+<p>Alert text should use proper punctuation and be more than “Error”.</p>
+
+<p>When producing an alert the text alone should be able to convey clear meaning, don’t rely on colour of the alert to do this for you. This allows us to better cater to users that browse using a screen reader.</p>
+
+<h2 id="heads-up-alerts">Heads Up! Alerts</h2>
+
+<p>Conceptually meant to be slightly more laid back and to carry supplimental information rather than “You must read this” type alerts.</p>
+
+<h3 id="warning">Warning</h3>
+
+<div class="docs-example clearfix"><div class="cr-hu-alert cr-hu-alert--warning" role="alert">
+  <i class="cr-hu-alert__icon" aria-hidden="true"></i>
+  <div class="cr-hu-alert__text">
+    Seagull attacks are on the rise!
+  </div>
+</div>
+
+<div class="cr-hu-alert cr-hu-alert--info cr-hu-alert--dismissible" role="alert">
+  <i class="cr-hu-alert__icon" aria-hidden="true"></i>
+  <div class="cr-hu-alert__text">
+    Bears are shifty.
+  </div>
+  <button type="button" class="cr-hu-alert__dismiss" aria-label="Dismiss"></button>
+</div>
+
+<div class="cr-hu-alert cr-hu-alert--success cr-hu-alert--dismissible" role="alert">
+  <i class="cr-hu-alert__icon" aria-hidden="true"></i>
+  <div class="cr-hu-alert__text">
+    Good job, here's a little something for the effort.
+  </div>
+  <button type="button" class="cr-hu-alert__dismiss" aria-label="Dismiss"></button>
+</div>
+
+<div class="cr-hu-alert cr-hu-alert--error cr-hu-alert--dismissible" role="alert">
+  <i class="cr-hu-alert__icon" aria-hidden="true"></i>
+  <div class="cr-hu-alert__text">
+    Well you can't do that, I'm not sure why you think you could.
+  </div>
+  <button type="button" class="cr-hu-alert__dismiss" aria-label="Dismiss"></button>
+</div>
+
+<div class="cr-hu-alert cr-hu-alert--error" role="alert">
+  <i class="cr-hu-alert__icon" aria-hidden="true"></i>
+  <div class="cr-hu-alert__text">
+    We've got problems!
+    <ul>
+      <li>You left the iron on</li>
+      <li>You've not fed the cat for three days</li>
+    </ul>
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-hu-alert cr-hu-alert--warning"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"cr-hu-alert__icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-hu-alert__text"</span><span class="nt">&gt;</span>
+    Seagull attacks are on the rise!
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-hu-alert cr-hu-alert--info cr-hu-alert--dismissible"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"cr-hu-alert__icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-hu-alert__text"</span><span class="nt">&gt;</span>
+    Bears are shifty.
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"cr-hu-alert__dismiss"</span> <span class="na">aria-label=</span><span class="s">"Dismiss"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-hu-alert cr-hu-alert--success cr-hu-alert--dismissible"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"cr-hu-alert__icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-hu-alert__text"</span><span class="nt">&gt;</span>
+    Good job, here's a little something for the effort.
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"cr-hu-alert__dismiss"</span> <span class="na">aria-label=</span><span class="s">"Dismiss"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-hu-alert cr-hu-alert--error cr-hu-alert--dismissible"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"cr-hu-alert__icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-hu-alert__text"</span><span class="nt">&gt;</span>
+    Well you can't do that, I'm not sure why you think you could.
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"cr-hu-alert__dismiss"</span> <span class="na">aria-label=</span><span class="s">"Dismiss"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-hu-alert cr-hu-alert--error"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"cr-hu-alert__icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-hu-alert__text"</span><span class="nt">&gt;</span>
+    We've got problems!
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li&gt;</span>You left the iron on<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>You've not fed the cat for three days<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer" role="contentinfo">
+        <p><strong>Currently v0.0.5.</strong></p>
+        <small class="text-muted"><a href="http://www.cancerresearchuk.org">Cancer Research UK</a> is a registered charity in England and Wales (1089464), Scotland (SC041666) and the Isle of Man (1103). A company limited by guarantee. Registered company in England and Wales (4325234) and the Isle of Man (5713F). Registered address: Angel Building, 407 St John Street, London EC1V 4AD.</small>
+      </footer>
+    </div>
+
+    <script src="/cruk-pattern-library/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/cruk-pattern-library/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="/cruk-pattern-library/assets/js/cruk-base.min.js"></script>
+    <script src="/cruk-pattern-library/assets/js/anchor.min.js"></script>
+    <script src="/cruk-pattern-library/assets/js/docs.js"></script>
+  </body>
+</html>

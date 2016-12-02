@@ -70,26 +70,38 @@
   <a class="list-group-item " href="/cruk-pattern-library/scaffolding/">
     Scaffolding
   </a>
+  <a class="list-group-item " href="/cruk-pattern-library/type/">
+    Type
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/icons/">
+    Icons
+  </a>
   <a class="list-group-item active" href="/cruk-pattern-library/forms/">
     Forms
   </a>
   <a class="list-group-item " href="/cruk-pattern-library/dynamic-feedback/">
-  Dynamic Feedback
+    Dynamic Feedback
   </a>
-  <a class="list-group-item " href="/cruk-pattern-library/type/">
-    Type
+  <a class="list-group-item " href="/cruk-pattern-library/accordion/">
+    Accordion
   </a>
-  <a class="list-group-item " href="/cruk-pattern-library/search/">
-    Search
+  <a class="list-group-item " href="/cruk-pattern-library/alerts/">
+    Alerts
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/loader/">
+    Loaders
   </a>
   <a class="list-group-item " href="/cruk-pattern-library/pagination/">
     Pagination
   </a>
-  <a class="list-group-item " href="/cruk-pattern-library/accordion/">
-  Accordion
+  <a class="list-group-item " href="/cruk-pattern-library/progress-bar/">
+    Progress Bar
   </a>
-  <a class="list-group-item " href="/cruk-pattern-library/loader/">
-  Loaders
+  <a class="list-group-item " href="/cruk-pattern-library/search/">
+    Search
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/animations/">
+    Animations
   </a>
   <a class="list-group-item " href="/cruk-pattern-library/pattern-library/">
     Pattern Library
@@ -131,7 +143,6 @@
     </ul>
   </li>
   <li><a href="#restricting-form-item-widths" id="markdown-toc-restricting-form-item-widths">Restricting form item widths</a></li>
-  <li><a href="#progress-bar" id="markdown-toc-progress-bar">Progress bar</a></li>
   <li><a href="#date-of-birth" id="markdown-toc-date-of-birth">Date of birth</a></li>
 </ul>
 
@@ -506,63 +517,6 @@ to change when they are clicked</p>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/form&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<h2 id="progress-bar">Progress bar</h2>
-
-<p>Uses Javscript to calculate the number of steps and the width of each step required to fit the progress bar in the parent container.</p>
-
-<div class="docs-example clearfix"><form>
-  <div class="row">
-    <div class="col-xs-12">
-      <ol class="cr-progress-bar">
-        <li class="cr-progress-bar__step">
-          <div class="cr-progress-bar__step__graphic done">
-            <hr /><i class="cr-progress-bar__step__graphic__icon done"></i><hr />
-          </div>
-          <div class="cr-progress-bar__step__title">Details</div>
-        </li>
-        <li class="cr-progress-bar__step">
-          <div class="cr-progress-bar__step__graphic current">
-            <hr /><i class="cr-progress-bar__step__graphic__icon current"></i><hr />
-          </div>
-          <div class="cr-progress-bar__step__title">Fundraise</div>
-        </li>
-        <li class="cr-progress-bar__step">
-          <div class="cr-progress-bar__step__graphic">
-            <hr /><i class="cr-progress-bar__step__graphic__icon"></i><hr />
-          </div>
-          <div class="cr-progress-bar__step__title">Party</div>
-        </li>
-      </ol>
-    </div>
-  </div>
-</form></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"cr-progress-bar"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"cr-progress-bar__step"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-progress-bar__step__graphic done"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;hr&gt;&lt;i</span> <span class="na">class=</span><span class="s">"cr-progress-bar__step__graphic__icon done"</span><span class="nt">&gt;&lt;/i&gt;&lt;hr&gt;</span>
-          <span class="nt">&lt;/div&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-progress-bar__step__title"</span><span class="nt">&gt;</span>Details<span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"cr-progress-bar__step"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-progress-bar__step__graphic current"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;hr&gt;&lt;i</span> <span class="na">class=</span><span class="s">"cr-progress-bar__step__graphic__icon current"</span><span class="nt">&gt;&lt;/i&gt;&lt;hr&gt;</span>
-          <span class="nt">&lt;/div&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-progress-bar__step__title"</span><span class="nt">&gt;</span>Fundraise<span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"cr-progress-bar__step"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-progress-bar__step__graphic"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;hr&gt;&lt;i</span> <span class="na">class=</span><span class="s">"cr-progress-bar__step__graphic__icon"</span><span class="nt">&gt;&lt;/i&gt;&lt;hr&gt;</span>
-          <span class="nt">&lt;/div&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-progress-bar__step__title"</span><span class="nt">&gt;</span>Party<span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;/ol&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></div>
 
 <h2 id="date-of-birth">Date of birth</h2>
 

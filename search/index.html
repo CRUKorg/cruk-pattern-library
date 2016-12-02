@@ -70,26 +70,38 @@
   <a class="list-group-item " href="/cruk-pattern-library/scaffolding/">
     Scaffolding
   </a>
+  <a class="list-group-item " href="/cruk-pattern-library/type/">
+    Type
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/icons/">
+    Icons
+  </a>
   <a class="list-group-item " href="/cruk-pattern-library/forms/">
     Forms
   </a>
   <a class="list-group-item " href="/cruk-pattern-library/dynamic-feedback/">
-  Dynamic Feedback
+    Dynamic Feedback
   </a>
-  <a class="list-group-item " href="/cruk-pattern-library/type/">
-    Type
+  <a class="list-group-item " href="/cruk-pattern-library/accordion/">
+    Accordion
   </a>
-  <a class="list-group-item active" href="/cruk-pattern-library/search/">
-    Search
+  <a class="list-group-item " href="/cruk-pattern-library/alerts/">
+    Alerts
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/loader/">
+    Loaders
   </a>
   <a class="list-group-item " href="/cruk-pattern-library/pagination/">
     Pagination
   </a>
-  <a class="list-group-item " href="/cruk-pattern-library/accordion/">
-  Accordion
+  <a class="list-group-item " href="/cruk-pattern-library/progress-bar/">
+    Progress Bar
   </a>
-  <a class="list-group-item " href="/cruk-pattern-library/loader/">
-  Loaders
+  <a class="list-group-item active" href="/cruk-pattern-library/search/">
+    Search
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/animations/">
+    Animations
   </a>
   <a class="list-group-item " href="/cruk-pattern-library/pattern-library/">
     Pattern Library
@@ -129,14 +141,14 @@
 
 <p>Anywhere that a chance is presented to interact with search functionality you’ll likely want an input. The search input is a combination of two fields, the input and the submit button which is represented by an icon.</p>
 
-<div class="panel-group" id="rationale-224307000" role="tablist">
+<div class="panel-group" id="rationale-972287000" role="tablist">
           <div class="panel panel-default">
             <div class="panel-heading" role="tab">
               <h4 class="panel-title">
-                <a role="button" data-toggle="collapse" data-parent="rationale-224307000" href="#rationale-224307000-1">View pattern rationale</a>
+                <a role="button" data-toggle="collapse" data-parent="rationale-972287000" href="#rationale-972287000-1">View pattern rationale</a>
               </h4>
             </div>
-            <div id="rationale-224307000-1" class="panel-collapse collapse" role="tabpanel">
+            <div id="rationale-972287000-1" class="panel-collapse collapse" role="tabpanel">
               <div class="panel-body"><p>User testing has been conducted to check...</p>
 <ul>
   <li>That the absence of a text submit button isn't an issue (it's not). When a user has submitted the form/field if appropriate the search icon can change into an X which is only available on touch devices. This is because not one person used it on desktop.</li>
@@ -159,7 +171,7 @@
         <label for="search-input" id="search-label">Search CancerResearchUK.org...</label>
         <input type="search" class="cr-input-group__input cr-search-input__input" id="search-input" placeholder="Search CancerResearchUK.org..." aria-describedby="search-label" autocomplete="off" autocorrect="off" />
         <span class="cr-input-group__button cr-search-input__button">
-          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon" aria-hidden="true"></span></button>
         </span>
       </div>
     </form>
@@ -172,7 +184,7 @@
         <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"search-input"</span> <span class="na">id=</span><span class="s">"search-label"</span><span class="nt">&gt;</span>Search CancerResearchUK.org...<span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"cr-input-group__input cr-search-input__input"</span> <span class="na">id=</span><span class="s">"search-input"</span> <span class="na">placeholder=</span><span class="s">"Search CancerResearchUK.org..."</span> <span class="na">aria-describedby=</span><span class="s">"search-label"</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">autocorrect=</span><span class="s">"off"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"cr-input-group__button cr-search-input__button"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">aria-label=</span><span class="s">"Submit your search"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"cr-input-group__icon glyphicon glyphicon-search"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">aria-label=</span><span class="s">"Submit your search"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"cr-input-group__icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
         <span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/form&gt;</span>
@@ -190,7 +202,7 @@
         <label for="search-input-2" id="search-label-2">Search...</label>
         <input type="search" class="cr-input-group__input cr-search-input__input" id="search-input-2" placeholder="Search..." aria-describedby="search-label-2" autocomplete="off" autocorrect="off" />
         <span class="cr-input-group__button cr-search-input__button">
-          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon" aria-hidden="true"></span></button>
         </span>
       </div>
     </form>
@@ -204,7 +216,7 @@
         <label for="search-input-3" id="search-label-3">Search...</label>
         <input type="search" class="cr-input-group__input cr-search-input__input" id="search-input-3" placeholder="Search..." aria-describedby="search-label" autocomplete="off" autocorrect="off" />
         <span class="cr-input-group__button cr-search-input__button">
-          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon" aria-hidden="true"></span></button>
         </span>
       </div>
     </form>
@@ -217,7 +229,7 @@
         <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"search-input-2"</span> <span class="na">id=</span><span class="s">"search-label-2"</span><span class="nt">&gt;</span>Search...<span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"cr-input-group__input cr-search-input__input"</span> <span class="na">id=</span><span class="s">"search-input-2"</span> <span class="na">placeholder=</span><span class="s">"Search..."</span> <span class="na">aria-describedby=</span><span class="s">"search-label-2"</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">autocorrect=</span><span class="s">"off"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"cr-input-group__button cr-search-input__button"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">aria-label=</span><span class="s">"Submit your search"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"cr-input-group__icon glyphicon glyphicon-search"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">aria-label=</span><span class="s">"Submit your search"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"cr-input-group__icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
         <span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/form&gt;</span>
@@ -231,7 +243,7 @@
         <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"search-input-3"</span> <span class="na">id=</span><span class="s">"search-label-3"</span><span class="nt">&gt;</span>Search...<span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"cr-input-group__input cr-search-input__input"</span> <span class="na">id=</span><span class="s">"search-input-3"</span> <span class="na">placeholder=</span><span class="s">"Search..."</span> <span class="na">aria-describedby=</span><span class="s">"search-label"</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">autocorrect=</span><span class="s">"off"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"cr-input-group__button cr-search-input__button"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">aria-label=</span><span class="s">"Submit your search"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"cr-input-group__icon glyphicon glyphicon-search"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">aria-label=</span><span class="s">"Submit your search"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"cr-input-group__icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
         <span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/form&gt;</span>
@@ -251,7 +263,7 @@
         <label for="search-input-4" id="search-label-4">Search...</label>
         <input type="search" class="cr-input-group__input cr-search-input__input" id="search-input-4" placeholder="Search..." aria-describedby="search-label-2" autocomplete="off" autocorrect="off" />
         <span class="cr-input-group__button cr-search-input__button">
-          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon" aria-hidden="true"></span></button>
         </span>
       </div>
     </form>
@@ -265,7 +277,7 @@
         <label for="search-input-5" id="search-label-5">Search...</label>
         <input type="search" class="cr-input-group__input cr-search-input__input" id="search-input-5" placeholder="Search..." aria-describedby="search-label" autocomplete="off" autocorrect="off" />
         <span class="cr-input-group__button cr-search-input__button">
-          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon" aria-hidden="true"></span></button>
         </span>
       </div>
     </form>
@@ -278,7 +290,7 @@
         <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"search-input-4"</span> <span class="na">id=</span><span class="s">"search-label-4"</span><span class="nt">&gt;</span>Search...<span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"cr-input-group__input cr-search-input__input"</span> <span class="na">id=</span><span class="s">"search-input-4"</span> <span class="na">placeholder=</span><span class="s">"Search..."</span> <span class="na">aria-describedby=</span><span class="s">"search-label-2"</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">autocorrect=</span><span class="s">"off"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"cr-input-group__button cr-search-input__button"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">aria-label=</span><span class="s">"Submit your search"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"cr-input-group__icon glyphicon glyphicon-search"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">aria-label=</span><span class="s">"Submit your search"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"cr-input-group__icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
         <span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/form&gt;</span>
@@ -292,7 +304,7 @@
         <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"search-input-5"</span> <span class="na">id=</span><span class="s">"search-label-5"</span><span class="nt">&gt;</span>Search...<span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"cr-input-group__input cr-search-input__input"</span> <span class="na">id=</span><span class="s">"search-input-5"</span> <span class="na">placeholder=</span><span class="s">"Search..."</span> <span class="na">aria-describedby=</span><span class="s">"search-label"</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">autocorrect=</span><span class="s">"off"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"cr-input-group__button cr-search-input__button"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">aria-label=</span><span class="s">"Submit your search"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"cr-input-group__icon glyphicon glyphicon-search"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">aria-label=</span><span class="s">"Submit your search"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"cr-input-group__icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
         <span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/form&gt;</span>
