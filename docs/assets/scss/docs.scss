@@ -10,11 +10,6 @@
  */
 
 /**
- * Override the fonts path.
- */
-$cruk-base-icon-font-path: '../../bower_components/bootstrap-sass/assets/fonts/bootstrap/';
-
-/**
  * Import the CRUK pattern library.
  */
 
@@ -59,7 +54,6 @@ body.example form {
   border-bottom: 1px solid rgba(0,0,0,0.075);
 
   a {
-
     &:hover {
       text-decoration: none;
     }
