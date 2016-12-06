@@ -10,6 +10,10 @@
 
   .cr-search-input__input {
     @extend .form-control;
+
+    &::-ms-clear {
+      display: none;
+    }
   }
 
   .cr-search-input__button .btn {
