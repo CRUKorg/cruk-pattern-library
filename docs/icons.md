@@ -76,13 +76,7 @@ The CRUKIcons font is created via the <a href="https://icomoon.io/app">IcoMoon a
     <i class="cr-i cr-i--info" aria-hidden="true"></i> <span class="sr-only">example of</span> <code>.cr-i--info</code>
   </div>
   <div class="col-xs-12 col-sm-6 col-md-4">
-    <i class="cr-i cr-i--notification" aria-hidden="true"></i> <span class="sr-only">example of</span> <code>.cr-i--notification</code>
-  </div>
-  <div class="col-xs-12 col-sm-6 col-md-4">
     <i class="cr-i cr-i--warning" aria-hidden="true"></i> <span class="sr-only">example of</span> <code>.cr-i--warning</code>
-  </div>
-  <div class="col-xs-12 col-sm-6 col-md-4">
-    <i class="cr-i cr-i--warning2" aria-hidden="true"></i> <span class="sr-only">example of</span> <code>.cr-i--warning2</code>
   </div>
   <div class="col-xs-12 col-sm-6 col-md-4">
     <i class="cr-i cr-i--info" aria-hidden="true"></i> <span class="sr-only">example of</span> <code>.cr-i--info</code>
