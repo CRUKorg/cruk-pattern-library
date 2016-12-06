@@ -12,6 +12,10 @@
 
     position: relative;
     top: 1.5px;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      top: -0.5px;
+    }
   }
 
   &__previous {
