@@ -8717,8 +8717,8 @@ fieldset[disabled] .btn-default.focus {
 
 @font-face {
   font-family: 'CRUKIcons';
-  src: url("../fonts/CRUKIcons.eot?dh1wtv");
-  src: url("../fonts/CRUKIcons.eot?dh1wtv#iefix") format("embedded-opentype"),url("../fonts/CRUKIcons.ttf?dh1wtv") format("truetype"),url("../fonts/CRUKIcons.woff?dh1wtv") format("woff"),url("../fonts/CRUKIcons.svg?dh1wtv#CRUKIcons") format("svg");
+  src: url("../fonts/CRUKIcons.eot");
+  src: url("../fonts/CRUKIcons.eot#iefix") format("embedded-opentype"),url("../fonts/CRUKIcons.ttf") format("truetype"),url("../fonts/CRUKIcons.woff") format("woff"),url("../fonts/CRUKIcons.svg#CRUKIcons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -8984,6 +8984,12 @@ body.cr-pattern-library {
   top: 1.5px;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .cr-simple-pager__icon {
+    top: -0.5px;
+  }
+}
+
 .cr-simple-pager__previous {
   float: left;
 }
@@ -9178,6 +9184,10 @@ body.cr-pattern-library {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+}
+
+.cr-search-input .cr-search-input__input::-ms-clear {
+  display: none;
 }
 
 .cr-search-input .cr-search-input__button .btn {
