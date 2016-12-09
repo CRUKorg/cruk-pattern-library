@@ -29,8 +29,10 @@ Think of <a href="http://babich.biz/best-practices-for-microinteractions/">Micro
 
 ### Jiggle/shake
 
+<a class="anim-replay" href="#" data-target="#anim-jiggle" data-class="cr-animated-jiggle">Play</a>
+
 {% example html %}
-<div class="cr-hu-alert cr-hu-alert--warning cr-hu-alert--dismissible cr-animated-shake" role="alert">
+<div class="cr-hu-alert cr-hu-alert--warning cr-hu-alert--dismissible cr-animated-jiggle" role="alert" id="anim-jiggle">
   <i class="cr-hu-alert__icon" aria-hidden="true"></i>
   <div class="cr-hu-alert__text">
     Seagull attacks are on the rise!
@@ -41,8 +43,10 @@ Think of <a href="http://babich.biz/best-practices-for-microinteractions/">Micro
 
 ### Bounce
 
+<a class="anim-replay" href="#" data-target="#anim-bounce" data-class="cr-animated-bounce">Play</a>
+
 {% example html %}
-<div class="cr-hu-alert cr-hu-alert--warning cr-hu-alert--dismissible cr-animated-bounce" role="alert">
+<div class="cr-hu-alert cr-hu-alert--warning cr-hu-alert--dismissible cr-animated-bounce" role="alert" id="anim-bounce">
   <i class="cr-hu-alert__icon" aria-hidden="true"></i>
   <div class="cr-hu-alert__text">
     Seagull attacks are on the rise!

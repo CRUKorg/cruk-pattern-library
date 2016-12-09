@@ -91,7 +91,8 @@
   }
 }
 
-.cr-animated-shake {
+.cr-animated-shake,
+.cr-animated-jiggle {
   @extend .cr-animated;
   animation-name: cr-animated-shake;
   animation-duration: 0.7s;
