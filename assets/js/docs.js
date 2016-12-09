@@ -28,8 +28,23 @@ jQuery(function() {
     $('#search-field-combined-example').on('submit', function(){
       return false;
     });
-    
+
     $('#inputExample1').crukInputDynamicSpin();
     $('#inputExample2').crukInputDynamicSuccess();
+
+    $('.anim-replay').each(function() {
+      var target = $(this).attr('data-target');
+      var animClass = $(this).attr('data-class');
+
+      $(target).removeClass(animClass);
+    }).click(function(e) {
+      e.preventDefault();
+      var target = $(this).attr('data-target');
+      var animClass = $(this).attr('data-class');
+
+      $(target).addClass(animClass).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $(this).removeClass(animClass);
+      });
+    });
   }
 });
