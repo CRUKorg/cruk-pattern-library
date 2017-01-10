@@ -161,6 +161,39 @@ For bootstrap media classes lke <code>media-left</code> or <code>media-right</co
  </article>
 {% endexample %}
 
+## Autocomplete search box
+
+Here we have the markup and styling for the autocomplete field. Javascript logic is omitted and needs to be done seperately by projct implementing this field.
+There is an animated gif under the markup that shows autocomplete behaviour.
+
+{% example html %}
+<div class="cr-input-group cr-input-group--lg cr-search-input cr-input-group--focused">
+  <label for="search-input" id="search-label">Search...</label>
+  <input type="search" data-qa="query" id="search-input" class="cr-input-group__input cr-search-input__input" placeholder="Search..." value="can" aria-describedby="search-label" autocomplete="off" autocorrect="off" tabindex="1">
+  <span class="cr-input-group__button cr-search-input__button">
+    <button type="submit" class="btn" aria-label="Submit your search" data-qa="submit">
+      <span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span>
+    </button>
+  </span>
+  <ul class="cr-autocomplete">
+    <li class="cr-autocomplete__list-item">Cancer and blood calcium levels</li>
+    <li class="cr-autocomplete__list-item">Cancer and fever</li>
+    <li class="cr-autocomplete__list-item">Cancer and pain control</li>
+    <li class="cr-autocomplete__list-item">Cancer and sickness (nausea)</li>
+    <li class="cr-autocomplete__list-item">Cancer and your emotions</li>
+  </ul>
+</div>
+<div style="height:200px;width: 100%;">
+  &nbsp;
+</div>
+{% endexample %}
+
+{% example html %}
+<div class="autocomplete-animated-gif">
+  &nbsp;
+</div>
+{% endexample %}
+
 #### In place supporting JavaScript
 
 This pattern is used in different ways, one of which is within an <abbr title="Single Page Application">SPA</abbr> where the user would enter a value into the combined search field and can alter and re-submit via that search field. When this happens if on a touch enabled device the magnifying glass icon changes into an X/clear icon. This is done with JavaScript.
