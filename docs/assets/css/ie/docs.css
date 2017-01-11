@@ -9326,14 +9326,21 @@ body.cr-pattern-library {
   height: 360px;
 }
 
-form {
-  margin-bottom: 0;
-}
-
 .cr-autocomplete {
   position: absolute;
   top: 100%;
   left: -2px;
+}
+
+.cr-did-you-mean {
+  margin: 20px 0px 0px 0px;
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+.cr-did-you-mean__link {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .markdown-body {
