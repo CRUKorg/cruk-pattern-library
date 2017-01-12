@@ -194,6 +194,14 @@ There is an animated gif under the markup that shows autocomplete behaviour.
 </div>
 {% endexample %}
 
+## Did you mean suggestion text
+
+{% example html %}
+<p class="cr-did-you-mean">
+  Did you mean&nbsp;<a href="#t" class="cr-did-you-mean__link">bone cancer</a>?
+</p>
+{% endexample %}
+
 #### In place supporting JavaScript
 
 This pattern is used in different ways, one of which is within an <abbr title="Single Page Application">SPA</abbr> where the user would enter a value into the combined search field and can alter and re-submit via that search field. When this happens if on a touch enabled device the magnifying glass icon changes into an X/clear icon. This is done with JavaScript.
