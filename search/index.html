@@ -126,12 +126,9 @@
           <li><a href="#colour-variations" id="markdown-toc-colour-variations">Colour variations</a></li>
           <li><a href="#search-summary" id="markdown-toc-search-summary">Search summary</a></li>
           <li><a href="#search-result" id="markdown-toc-search-result">Search result</a></li>
+          <li><a href="#in-place-supporting-javascript" id="markdown-toc-in-place-supporting-javascript">In place supporting JavaScript</a></li>
         </ul>
       </li>
-    </ul>
-  </li>
-  <li><a href="#autocomplete-search-box" id="markdown-toc-autocomplete-search-box">Autocomplete search box</a>    <ul>
-      <li><a href="#in-place-supporting-javascript" id="markdown-toc-in-place-supporting-javascript">In place supporting JavaScript</a></li>
     </ul>
   </li>
 </ul>
@@ -144,14 +141,14 @@
 
 <p>Anywhere that a chance is presented to interact with search functionality you’ll likely want an input. The search input is a combination of two fields, the input and the submit button which is represented by an icon.</p>
 
-<div class="panel-group" id="rationale-580876000" role="tablist">
+<div class="panel-group" id="rationale-324250000" role="tablist">
           <div class="panel panel-default">
             <div class="panel-heading" role="tab">
               <h4 class="panel-title">
-                <a role="button" data-toggle="collapse" data-parent="rationale-580876000" href="#rationale-580876000-1">View pattern rationale</a>
+                <a role="button" data-toggle="collapse" data-parent="rationale-324250000" href="#rationale-324250000-1">View pattern rationale</a>
               </h4>
             </div>
-            <div id="rationale-580876000-1" class="panel-collapse collapse" role="tabpanel">
+            <div id="rationale-324250000-1" class="panel-collapse collapse" role="tabpanel">
               <div class="panel-body"><p>User testing has been conducted to check...</p>
 <ul>
   <li>That the absence of a text submit button isn't an issue (it's not). When a user has submitted the form/field if appropriate the search icon can change into an X which is only available on touch devices. This is because not one person used it on desktop.</li>
@@ -374,57 +371,6 @@ For bootstrap media classes lke <code>media-left</code> or <code>media-right</co
     <span class="nt">&lt;/p&gt;</span>
    <span class="nt">&lt;/div&gt;</span>
  <span class="nt">&lt;/article&gt;</span></code></pre></div>
-
-<h2 id="autocomplete-search-box">Autocomplete search box</h2>
-
-<p>Here we have the markup and styling for the autocomplete field. Javascript logic is omitted and needs to be done seperately by projct implementing this field.
-There is an animated gif under the markup that shows autocomplete behaviour.</p>
-
-<div class="docs-example clearfix"><div class="cr-input-group cr-input-group--lg cr-search-input cr-input-group--focused">
-  <label for="search-input" id="search-label">Search...</label>
-  <input type="search" data-qa="query" id="search-input" class="cr-input-group__input cr-search-input__input" placeholder="Search..." value="can" aria-describedby="search-label" autocomplete="off" autocorrect="off" tabindex="1" />
-  <span class="cr-input-group__button cr-search-input__button">
-    <button type="submit" class="btn" aria-label="Submit your search" data-qa="submit">
-      <span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span>
-    </button>
-  </span>
-  <ul class="cr-autocomplete">
-    <li class="cr-autocomplete__list-item">Cancer and blood calcium levels</li>
-    <li class="cr-autocomplete__list-item">Cancer and fever</li>
-    <li class="cr-autocomplete__list-item">Cancer and pain control</li>
-    <li class="cr-autocomplete__list-item">Cancer and sickness (nausea)</li>
-    <li class="cr-autocomplete__list-item">Cancer and your emotions</li>
-  </ul>
-</div>
-<div style="height:200px;width: 100%;">
-  &nbsp;
-</div></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-input-group cr-input-group--lg cr-search-input cr-input-group--focused"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"search-input"</span> <span class="na">id=</span><span class="s">"search-label"</span><span class="nt">&gt;</span>Search...<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">data-qa=</span><span class="s">"query"</span> <span class="na">id=</span><span class="s">"search-input"</span> <span class="na">class=</span><span class="s">"cr-input-group__input cr-search-input__input"</span> <span class="na">placeholder=</span><span class="s">"Search..."</span> <span class="na">value=</span><span class="s">"can"</span> <span class="na">aria-describedby=</span><span class="s">"search-label"</span> <span class="na">autocomplete=</span><span class="s">"off"</span> <span class="na">autocorrect=</span><span class="s">"off"</span> <span class="na">tabindex=</span><span class="s">"1"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"cr-input-group__button cr-search-input__button"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">aria-label=</span><span class="s">"Submit your search"</span> <span class="na">data-qa=</span><span class="s">"submit"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"cr-input-group__icon glyphicon glyphicon-search"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"cr-autocomplete"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"cr-autocomplete__list-item"</span><span class="nt">&gt;</span>Cancer and blood calcium levels<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"cr-autocomplete__list-item"</span><span class="nt">&gt;</span>Cancer and fever<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"cr-autocomplete__list-item"</span><span class="nt">&gt;</span>Cancer and pain control<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"cr-autocomplete__list-item"</span><span class="nt">&gt;</span>Cancer and sickness (nausea)<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"cr-autocomplete__list-item"</span><span class="nt">&gt;</span>Cancer and your emotions<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;/ul&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"height:200px;width: 100%;"</span><span class="nt">&gt;</span>
-  <span class="ni">&amp;nbsp;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<div class="docs-example clearfix"><div class="autocomplete-animated-gif">
-  &nbsp;
-</div></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"autocomplete-animated-gif"</span><span class="nt">&gt;</span>
-  <span class="ni">&amp;nbsp;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 <h4 id="in-place-supporting-javascript">In place supporting JavaScript</h4>
 
