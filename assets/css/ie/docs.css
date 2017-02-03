@@ -8397,7 +8397,8 @@ body {
 
 .cr-animated,
 .cr-animated-bounce,
-.cr-animated-shake {
+.cr-animated-shake,
+.cr-animated-jiggle {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -8464,7 +8465,8 @@ body {
   }
 }
 
-.cr-animated-shake {
+.cr-animated-shake,
+.cr-animated-jiggle {
   animation-name: cr-animated-shake;
   animation-duration: 0.7s;
 }
@@ -9275,6 +9277,70 @@ body.cr-pattern-library {
 
 .cr-search-summary__info {
   font-size: 1rem;
+}
+
+.cr-autocomplete {
+  z-index: 9999;
+  background-color: #fff;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  border: 2px solid #00b6ed;
+  border-top: 0 none;
+  border-radius: 0 0 4px 4px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.cr-autocomplete__list-item {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 30px 10px 12px;
+  position: relative;
+}
+
+.cr-autocomplete__list-item:hover,
+.cr-autocomplete__list-item:focus {
+  background: #f5f5f5;
+}
+
+.cr-autocomplete__list-item--selected {
+  background-color: #f5f5f5;
+}
+
+.cr-autocomplete__list-item--selected:after {
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  margin-top: -6.5px;
+  background-color: #ec008c;
+  border-radius: 50%;
+  content: " ";
+}
+
+.autocomplete-animated-gif {
+  background: transparent url("../images/autocomplete.gif") top left;
+  width: 600px;
+  height: 360px;
+}
+
+.cr-autocomplete {
+  position: absolute;
+  top: 100%;
+  left: -2px;
+}
+
+.cr-did-you-mean {
+  margin: 20px 0px 0px 0px;
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+.cr-did-you-mean__link {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .markdown-body {
