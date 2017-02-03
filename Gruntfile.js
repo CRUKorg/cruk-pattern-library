@@ -38,7 +38,7 @@ module.exports = function(grunt) {
                 logCount: true
             },
             files: {
-                'docs/assets/css/ie/docs.css': 'docs/assets/css/docs.css'
+                'docs/assets/css/docs-ie.css': 'docs/assets/css/docs.css'
             }
         }
     },
