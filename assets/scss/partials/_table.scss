@@ -1,0 +1,32 @@
+.cr-table {
+	width: 100%;
+	th {
+   background: $brand-primary;
+   color: #fff;
+ }
+
+ .cr-table__header {
+    th:first-child{
+      background: transparent;
+      border: transparent;
+    }
+  } 
+}
+
+.cr-table__row {
+  border-top: none;
+}
+
+.cr-table__body {
+	th {
+		width: 150px;
+   word-wrap: break-word;
+ }
+}
+.cr-table__cell {
+  background: #fff;
+  border: 2px solid $brand-grey-medium;
+  border-collapse: collapse;
+  vertical-align: middle;
+  font-size: 12px;
+}

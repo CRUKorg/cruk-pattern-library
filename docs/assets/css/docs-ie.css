@@ -8720,7 +8720,7 @@ fieldset[disabled] .btn-default.focus {
 @font-face {
   font-family: 'CRUKIcons';
   src: url("../fonts/CRUKIcons.eot");
-  src: url("../fonts/CRUKIcons.eot#iefix") format("embedded-opentype"),url("../fonts/CRUKIcons.woff2") format("woff2"),url("../fonts/CRUKIcons.woff") format("woff"),url("../fonts/CRUKIcons.ttf") format("truetype"),url("../fonts/CRUKIcons.svg#CRUKIcons") format("svg");
+  src: url("../fonts/CRUKIcons.eot#iefix") format("embedded-opentype"),url("../fonts/CRUKIcons.woff") format("woff"),url("../fonts/CRUKIcons.ttf") format("truetype"),url("../fonts/CRUKIcons.svg#CRUKIcons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
