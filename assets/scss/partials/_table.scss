@@ -34,13 +34,11 @@
 
 .cr-table--colrow-header
 {
-    th:first-child
-    {
-        border: transparent;
-        background: transparent;
-    }
-    tr:first-child
-    {
-        border-top: none;
-    }
+  th:first-child {
+    background: transparent;
+    border: transparent;
+  }
+  tr:first-child {
+    border-top: 0;
+  }
 }
