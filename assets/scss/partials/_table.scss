@@ -1,39 +1,28 @@
-.cr-table
-{
-    width: 100%;
-    &__cell
-    {
-        font-size: 12px;
-
-        border-collapse: collapse;
-
-        text-align: left;
-        vertical-align: middle;
-
-        border: 2px solid $brand-grey-medium;
-        background: #fff;
-        &--heading
-        {
-            font-weight: bold;
-
-            color: #fff;
-            background: $brand-primary;
-            &[scope=row]
-            {
-                width: 150px;
-
-                word-wrap: break-word;
-            }
-        }
-        &--number
-        {
-            text-align: right;
-        }
+.cr-table {
+  width: 100%;
+  &__cell {
+    font-size: 12px;
+    text-align: left;
+    vertical-align: middle;
+    border-collapse: collapse;
+    border: 2px solid $brand-grey-medium;
+    background: #fff;
+    &--heading {
+      font-weight: bold;
+      color: #fff;
+      background: $brand-primary;
+      &[scope=row] {
+        width: 150px;
+        word-wrap: break-word;
+      }
     }
+    &--number {
+      text-align: right;
+    }
+  }
 }
 
-.cr-table--colrow-header
-{
+.cr-table--colrow-header {
   th:first-child {
     background: transparent;
     border: transparent;
