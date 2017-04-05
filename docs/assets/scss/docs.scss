@@ -100,6 +100,10 @@ body.example form {
   }
 }
 
+// Added for CRUK table pattern
+.markdown-body table td {
+  border: 2px solid $brand-grey-medium;
+}
 
 
 //
