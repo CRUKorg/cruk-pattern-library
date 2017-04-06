@@ -1,14 +1,14 @@
 .cr-table {
   width: 100%;
-  
+
   &__cell {
     font-size: 12px;
     text-align: left;
     vertical-align: middle;
     border-collapse: collapse;
-    border: 2px solid $brand-grey-medium;
     background: #fff;
-
+    border: 2px solid $brand-grey-medium;
+    
     &--heading {
       font-weight: bold;
       color: #fff;
@@ -31,6 +31,7 @@
     background: transparent;
     border: transparent;
   }
+
   tr:first-child {
     border-top: 0;
   }
