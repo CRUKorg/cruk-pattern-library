@@ -8,21 +8,23 @@
     border-collapse: collapse;
     background: #fff;
     border: 2px solid $brand-grey-medium;
-    
+
     &--heading {
       font-weight: bold;
       color: #fff;
       background: $brand-primary;
-
-      &[scope=row] {
-        width: 150px;
-        word-wrap: break-word;
-      }
     }
 
     &--number {
       text-align: right;
     }
+  }
+}
+
+.cr-table {
+  &[scope=row] {
+    width: 150px;
+    word-wrap: break-word;
   }
 }
 
