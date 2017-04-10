@@ -8633,7 +8633,7 @@ fieldset[disabled] .btn-default.focus {
 @font-face {
   font-family: 'CRUKIcons';
   src: url("../fonts/CRUKIcons.eot");
-  src: url("../fonts/CRUKIcons.eot#iefix") format("embedded-opentype"),url("../fonts/CRUKIcons.woff2") format("woff2"),url("../fonts/CRUKIcons.woff") format("woff"),url("../fonts/CRUKIcons.ttf") format("truetype"),url("../fonts/CRUKIcons.svg#CRUKIcons") format("svg");
+  src: url("../fonts/CRUKIcons.eot#iefix") format("embedded-opentype"),url("../fonts/CRUKIcons.woff") format("woff"),url("../fonts/CRUKIcons.ttf") format("truetype"),url("../fonts/CRUKIcons.svg#CRUKIcons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -9240,6 +9240,43 @@ body.cr-pattern-library {
 .cr-did-you-mean__link {
   text-decoration: underline;
   font-weight: bold;
+}
+
+.cr-table {
+  width: 100%;
+}
+
+.cr-table__cell {
+  font-size: 12px;
+  text-align: left;
+  vertical-align: middle;
+  border-collapse: collapse;
+  background: #fff;
+  border: 2px solid #c8c9c7;
+}
+
+.cr-table__cell--heading {
+  font-weight: bold;
+  color: #fff;
+  background: #2e008b;
+}
+
+.cr-table__cell--number {
+  text-align: right;
+}
+
+.cr-table[scope=row] {
+  width: 150px;
+  word-wrap: break-word;
+}
+
+.cr-table--colrow-header th:first-child {
+  background: transparent;
+  border: transparent;
+}
+
+.cr-table--colrow-header tr:first-child {
+  border-top: 0;
 }
 
 .markdown-body {
@@ -10064,6 +10101,10 @@ body.example form:last-child {
     float: right;
     margin-top: .5rem;
   }
+}
+
+.markdown-body table td {
+  border: 2px solid #c8c9c7;
 }
 
 .panel-heading>h4 {

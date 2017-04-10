@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>Table | CRUK Pattern Library</title>
+
+    <!--[if !IE]><!-->
+      <link rel="stylesheet" href="/cruk-pattern-library/assets/css/docs.css">
+    <!--<![endif]-->
+
+    <!--[if gte IE 10]>
+      <link rel="stylesheet" href="/cruk-pattern-library/assets/css/docs.css">
+    <![endif]-->
+
+    <!--[if lte IE 9]>
+      <link rel="stylesheet" href="/cruk-pattern-library/assets/css/docs-ie.css">
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/cruk-pattern-library/assets/images/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/cruk-pattern-library/favicon.ico">
+
+    <script src="https://use.typekit.net/bgw6lhg.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+
+    <header class="masthead" role="banner">
+      <div class="container">
+        <a href="/cruk-pattern-library/" class="masthead-logo">
+          CRUK Pattern Library
+        </a>
+
+        <nav class="masthead-nav" role="navigaton" aria-label="Primary">
+          <a class="active" href="/cruk-pattern-library/">Docs</a>
+          <a href="https://github.com/CRUKorg/cruk-pattern-library" target="_blank">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row docs-layout">
+  <div class="col-sm-3">
+    <nav class="list-group docs-menu" role="navigation" aria-label="Secondary">
+  <a class="list-group-item " href="/cruk-pattern-library/">
+    Getting started
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/guidelines/">
+    Coding guidelines
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/browser-support/">
+    Browser Support
+  </a>
+</nav>
+
+<nav class="list-group docs-menu" role="navigation" aria-label="Secondary">
+  <a class="list-group-item " href="/cruk-pattern-library/colours/">
+    Brand Colours
+  </a>
+</nav>
+
+<nav class="list-group docs-menu" role="navigation" aria-label="Secondary">
+  <a class="list-group-item " href="/cruk-pattern-library/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/type/">
+    Type
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/icons/">
+    Icons
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/forms/">
+    Forms
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/dynamic-feedback/">
+    Dynamic Feedback
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/accordion/">
+    Accordion
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/alerts/">
+    Alerts
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/loader/">
+    Loaders
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/pagination/">
+    Pagination
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/progress-bar/">
+    Progress Bar
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/search/">
+    Search
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/animations/">
+    Animations
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/pattern-library/">
+    Pattern Library
+  </a>
+  <a class="list-group-item active" href="/cruk-pattern-library/table/">
+    Tables
+  </a>
+</nav>
+
+  </div>
+  <div class="col-sm-9" role="main">
+    <h1 class="page-title">
+      Table
+    </h1>
+    <div class="markdown-body">
+      <p>This pattern is to use to display table with tabular data arrangement with rows and columns.</p>
+
+<p>The table design with 2px borders.</p>
+
+<ul>
+  <li>Numbers, percentages and currency should always align right</li>
+  <li>Text should align left</li>
+  <li>Text with numbers align left</li>
+  <li>Titles at the top with option to be pinned</li>
+  <li>All cells vertically aligned to the middle</li>
+</ul>
+
+<div class="docs-example clearfix"><table class="cr-table cr-table--colrow-header">
+  <caption class="cr-table__caption">tabular data</caption>
+  <thead class="cr-table__header">
+    <tr class="cr-table__row">
+     <th class="cr-table__cell" scope="col"></th>
+     <th class="cr-table__cell cr-table__cell--heading" scope="col">England</th>
+     <th class="cr-table__cell cr-table__cell--heading" scope="col">Wales</th>
+     <th class="cr-table__cell cr-table__cell--heading" scope="col">Scotland</th>
+     <th class="cr-table__cell cr-table__cell--heading" scope="col">Northern Ireland</th>
+     <th class="cr-table__cell cr-table__cell--heading" scope="col">UK</th> 
+   </tr>
+ </thead>
+  <tbody class="cr-table__body">
+    <tr class="cr-table__row">
+      <td class="cr-table__cell cr-table__cell--heading" scope="row">Cases</td>
+      <td class="cr-table__cell cr-table__cell--number">150,832</td>
+      <td class="cr-table__cell cr-table__cell--number">9,850</td>
+      <td class="cr-table__cell cr-table__cell--number">15,668</td>
+      <td class="cr-table__cell cr-table__cell--number">4,486</td>
+      <td class="cr-table__cell cr-table__cell--number">180,836</td>
+    </tr>
+    <tr class="cr-table__row">
+      <td class="cr-table__cell cr-table__cell--heading" scope="row">Crude Rate</td>
+      <td class="cr-table__cell cr-table__cell--number">563.4</td>
+      <td class="cr-table__cell cr-table__cell--number">647.5</td>
+      <td class="cr-table__cell cr-table__cell--number">603.4</td>
+      <td class="cr-table__cell cr-table__cell--number">496.9</td>
+      <td class="cr-table__cell cr-table__cell--number">568.8</td>
+    </tr>
+    <tr class="cr-table__row">
+      <td class="cr-table__cell cr-table__cell--heading" scope="row">AS Rate</td>
+      <td class="cr-table__cell cr-table__cell--number">670.8</td>
+      <td class="cr-table__cell cr-table__cell--number">697.4</td>
+      <td class="cr-table__cell cr-table__cell--number">693.1</td>
+      <td class="cr-table__cell cr-table__cell--number">650.1</td>
+      <td class="cr-table__cell cr-table__cell--number">673.6</td>
+    </tr>
+    <tr class="cr-table__row">
+      <td class="cr-table__cell cr-table__cell--heading" scope="row">AS Rate - 95% LCL</td>
+      <td class="cr-table__cell cr-table__cell--number">667.4</td>
+      <td class="cr-table__cell cr-table__cell--number">683.6</td>
+      <td class="cr-table__cell cr-table__cell--number">682.3</td>
+      <td class="cr-table__cell cr-table__cell--number">631.1</td>
+      <td class="cr-table__cell cr-table__cell--number">670.5</td>
+    </tr>
+    <tr class="cr-table__row">
+      <td class="cr-table__cell cr-table__cell--heading" scope="row">AS Rate - 95% UCL</td>
+      <td class="cr-table__cell cr-table__cell--number">674.2</td>
+      <td class="cr-table__cell cr-table__cell--number">711.2</td>
+      <td class="cr-table__cell cr-table__cell--number">704.0</td>
+      <td class="cr-table__cell cr-table__cell--number">669.1</td>
+      <td class="cr-table__cell cr-table__cell--number">676.8</td>
+    </tr>
+    <tr class="cr-table__row">
+      <td class="cr-table__cell cr-table__cell--heading" scope="row">Cases</td>
+      <td class="cr-table__cell cr-table__cell--number">146,031</td>
+      <td class="cr-table__cell cr-table__cell--number">9,269</td>
+      <td class="cr-table__cell cr-table__cell--number">16,270</td>
+      <td class="cr-table__cell cr-table__cell--number">4,454</td>
+      <td class="cr-table__cell cr-table__cell--number">176,024</td>
+    </tr>
+    <tr class="cr-table__row">
+      <td class="cr-table__cell cr-table__cell--heading" scope="row">Crude Rate</td>
+      <td class="cr-table__cell cr-table__cell--number">530.2</td>
+      <td class="cr-table__cell cr-table__cell--number">590.1</td>
+      <td class="cr-table__cell cr-table__cell--number">591.4</td>
+      <td class="cr-table__cell cr-table__cell--number">474.9</td>
+      <td class="cr-table__cell cr-table__cell--number">536.6</td>
+    </tr>
+  </tbody>
+</table></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"cr-table cr-table--colrow-header"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;caption</span> <span class="na">class=</span><span class="s">"cr-table__caption"</span><span class="nt">&gt;</span>tabular data<span class="nt">&lt;/caption&gt;</span>
+  <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"cr-table__header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"cr-table__row"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"cr-table__cell"</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;&lt;/th&gt;</span>
+     <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--heading"</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>England<span class="nt">&lt;/th&gt;</span>
+     <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--heading"</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Wales<span class="nt">&lt;/th&gt;</span>
+     <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--heading"</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Scotland<span class="nt">&lt;/th&gt;</span>
+     <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--heading"</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Northern Ireland<span class="nt">&lt;/th&gt;</span>
+     <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--heading"</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>UK<span class="nt">&lt;/th&gt;</span> 
+   <span class="nt">&lt;/tr&gt;</span>
+ <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody</span> <span class="na">class=</span><span class="s">"cr-table__body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"cr-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--heading"</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>Cases<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>150,832<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>9,850<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>15,668<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>4,486<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>180,836<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"cr-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--heading"</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>Crude Rate<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>563.4<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>647.5<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>603.4<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>496.9<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>568.8<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"cr-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--heading"</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>AS Rate<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>670.8<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>697.4<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>693.1<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>650.1<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>673.6<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"cr-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--heading"</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>AS Rate - 95% LCL<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>667.4<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>683.6<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>682.3<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>631.1<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>670.5<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"cr-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--heading"</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>AS Rate - 95% UCL<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>674.2<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>711.2<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>704.0<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>669.1<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>676.8<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"cr-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--heading"</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>Cases<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>146,031<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>9,269<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>16,270<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>4,454<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>176,024<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"cr-table__row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--heading"</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>Crude Rate<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>530.2<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>590.1<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>591.4<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>474.9<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cr-table__cell cr-table__cell--number"</span><span class="nt">&gt;</span>536.6<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer" role="contentinfo">
+        <p><strong>Currently v1.1.0.</strong></p>
+        <small class="text-muted"><a href="http://www.cancerresearchuk.org">Cancer Research UK</a> is a registered charity in England and Wales (1089464), Scotland (SC041666) and the Isle of Man (1103). A company limited by guarantee. Registered company in England and Wales (4325234) and the Isle of Man (5713F). Registered address: Angel Building, 407 St John Street, London EC1V 4AD.</small>
+      </footer>
+    </div>
+
+    <script src="/cruk-pattern-library/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/cruk-pattern-library/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="/cruk-pattern-library/assets/js/cruk-base.min.js"></script>
+    <script src="/cruk-pattern-library/assets/js/anchor.min.js"></script>
+    <script src="/cruk-pattern-library/assets/js/docs.js"></script>
+  </body>
+</html>
