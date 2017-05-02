@@ -7322,6 +7322,35 @@ h1.page-header+article {
   border-top-right-radius: 0;
 }
 
+.panel-accordion {
+  border-color: #ddd;
+}
+
+.panel-accordion .panel-heading {
+  font-size: 1.1em;
+  font-family: "MuseoSans-700", "Arial", "Helvetica", sans-serif;
+  padding: 0px;
+  background-color: #f5f5f5;
+}
+
+.panel-accordion .panel-heading h3 {
+  margin: 0;
+}
+
+.panel-accordion .panel-heading h3 a {
+  color: #2e008b;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+@media screen and (min-width: 801px) {
+  .panel-accordion .panel-heading h3 a:hover {
+    color: #e40085;
+    text-decoration: underline;
+  }
+}
+
 .collapsible-fieldset>.panel-heading>.panel-title {
   color: #2e008b;
   text-decoration: none;
