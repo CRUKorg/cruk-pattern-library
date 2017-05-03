@@ -45,4 +45,3 @@ Only one accordion should be open on a page at any time. When this accordion ful
       </div>
     </div>
 {% endexample %}
-

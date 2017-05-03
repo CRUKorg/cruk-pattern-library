@@ -320,3 +320,11 @@ body.example form {
     border-top-width: 0;
   }
 }
+
+/*
+ * Overrides for rendering Colla[sable boxes] correctly when viewed on the pattern library website.
+ * These are required to override some more primer stuff.
+ */
+.cr-collbox .cr-collbox__heading h3 {
+  margin: 0;
+}
