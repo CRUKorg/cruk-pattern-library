@@ -85,6 +85,9 @@
   <a class="list-group-item active" href="/cruk-pattern-library/accordion/">
     Accordion
   </a>
+  <a class="list-group-item " href="/cruk-pattern-library/collapsable-box/">
+    Collapsable box
+  </a>
   <a class="list-group-item " href="/cruk-pattern-library/alerts/">
     Alerts
   </a>
@@ -126,7 +129,7 @@
 <h2 id="behaviour">Behaviour</h2>
 <p>Only one accordion should be open on a page at any time. When this accordion fully completes its transition from collapsed to expanded, the page will automatically scroll to position the accordion to the top of the page, if the page is large enough to do so.</p>
 
-<h2 id="example-for-acordion-with-blue-style">Example for acordion with blue style</h2>
+<h2 id="example">Example</h2>
 
 <div class="docs-example clearfix"><div class="cr-accordion">
     <h2 class="cr-accordion__header"><button data-target="#accordion-1" data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1">About this event</button></h2>
@@ -186,103 +189,6 @@
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cr-accordion__summary"</span><span class="nt">&gt;</span>Accordions contain few lines of text, ideally 1 or 2 paragraphs, which can be revealed/dismissed by clicking the accordion header above. Accordion content should always have text, with an optional image on the left hand side.<span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<h2 id="example-for-acordion-with-grey-style">Example for acordion with grey style</h2>
-
-<div class="docs-example clearfix"><div class="panel panel-default panel-accordion" xmlns="http://www.w3.org/1999/html">
-  <div class="panel-heading" id="heading-88074">
-    <div class="panel-title">
-      <h3>
-        <a role="button" data-toggle="collapse" data-parent="#accordion-88074" href="#collapse-88074" aria-expanded="false" aria-controls="collapse-88074" class="collapse-toggle collapsed">
-          Pain in the area of the cancer
-        </a>
-      </h3>
-    </div>
-  </div>
-  <div id="collapse-88074" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-88074" aria-expanded="false">
-    <div class="panel-body">
-      <p>You may have pain in the area of your&nbsp;cancer.&nbsp;Let your doctor or nurse know. Painkillers can help.</p>
-    </div>
-  </div>
-</div>
-<div class="panel panel-default panel-accordion" xmlns="http://www.w3.org/1999/html">
-    <div class="panel-heading" id="heading-88050">
-      <div class="panel-title">
-        <h3><a role="button" data-toggle="collapse" data-parent="#accordion-88050" href="#collapse-88050" aria-expanded="false" aria-controls="collapse-88050" class="collapse-toggle collapsed">
-          Increased risk of getting an infection </a></h3>
-      </div>
-    </div>
-    <div id="collapse-88050" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-88050">
-      <div class="panel-body">
-        <p>Signs of an infection include headaches, aching muscles, a cough, a sore throat, pain passing urine, or feeling cold and shivery.</p>
-        <div class="panel panel-important level-4" role="help"><div class="panel-body">Contact your treatment centre straight away if you have any of these signs or if your temperature goes above 38C. Severe infections can be life threatening.</div></div>
-        <p>Biological therapies can&nbsp;reduce&nbsp;the number of white blood cells in the blood. This increases your risk of infections. White blood cells help fight infections.</p>
-        <p>Your white blood cell level begins to fall after each treatment. It’s lowest about 7 to 14 days after your treatment. Then it gradually goes up again.</p>
-        <p>When the level is very low it is called neutropenia (pronounced new-troh-pee-nee-ah).</p>
-        <p>You have antibiotics if you develop an infection. You might have them as tablets or as injections into the bloodstream (intravenously). To have them into your bloodstream you need to go into hospital.</p>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default panel-accordion" xmlns="http://www.w3.org/1999/html">
-    <div class="panel-heading" id="heading-88058">
-      <div class="panel-title">
-        <h3><a role="button" data-toggle="collapse" data-parent="#accordion-88058" href="#collapse-88058" aria-expanded="false" aria-controls="collapse-88058" class="collapse-toggle collapsed">
-          Raised blood pressure (hypertension) </a></h3>
-      </div>
-    </div>
-    <div id="collapse-88058" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-88058" aria-expanded="false" style="height: 0px;">
-      <div class="panel-body">
-        <p>Tell your doctor or nurse if you have headaches, nose bleeds, blurred or double vision or shortness of breath. Your nurse checks your blood pressure regularly.&nbsp;</p>
-      </div>
-    </div>
-  </div></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-default panel-accordion"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/1999/html"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span> <span class="na">id=</span><span class="s">"heading-88074"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-title"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h3&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-parent=</span><span class="s">"#accordion-88074"</span> <span class="na">href=</span><span class="s">"#collapse-88074"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse-88074"</span> <span class="na">class=</span><span class="s">"collapse-toggle collapsed"</span><span class="nt">&gt;</span>
-          Pain in the area of the cancer
-        <span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/h3&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse-88074"</span> <span class="na">class=</span><span class="s">"panel-collapse collapse"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading-88074"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;p&gt;</span>You may have pain in the area of your<span class="ni">&amp;nbsp;</span>cancer.<span class="ni">&amp;nbsp;</span>Let your doctor or nurse know. Painkillers can help.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-default panel-accordion"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/1999/html"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span> <span class="na">id=</span><span class="s">"heading-88050"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-title"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h3&gt;&lt;a</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-parent=</span><span class="s">"#accordion-88050"</span> <span class="na">href=</span><span class="s">"#collapse-88050"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse-88050"</span> <span class="na">class=</span><span class="s">"collapse-toggle collapsed"</span><span class="nt">&gt;</span>
-          Increased risk of getting an infection <span class="nt">&lt;/a&gt;&lt;/h3&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse-88050"</span> <span class="na">class=</span><span class="s">"panel-collapse collapse"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading-88050"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p&gt;</span>Signs of an infection include headaches, aching muscles, a cough, a sore throat, pain passing urine, or feeling cold and shivery.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-important level-4"</span> <span class="na">role=</span><span class="s">"help"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>Contact your treatment centre straight away if you have any of these signs or if your temperature goes above 38C. Severe infections can be life threatening.<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-        <span class="nt">&lt;p&gt;</span>Biological therapies can<span class="ni">&amp;nbsp;</span>reduce<span class="ni">&amp;nbsp;</span>the number of white blood cells in the blood. This increases your risk of infections. White blood cells help fight infections.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;p&gt;</span>Your white blood cell level begins to fall after each treatment. It’s lowest about 7 to 14 days after your treatment. Then it gradually goes up again.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;p&gt;</span>When the level is very low it is called neutropenia (pronounced new-troh-pee-nee-ah).<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;p&gt;</span>You have antibiotics if you develop an infection. You might have them as tablets or as injections into the bloodstream (intravenously). To have them into your bloodstream you need to go into hospital.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-default panel-accordion"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/1999/html"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span> <span class="na">id=</span><span class="s">"heading-88058"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-title"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h3&gt;&lt;a</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-parent=</span><span class="s">"#accordion-88058"</span> <span class="na">href=</span><span class="s">"#collapse-88058"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse-88058"</span> <span class="na">class=</span><span class="s">"collapse-toggle collapsed"</span><span class="nt">&gt;</span>
-          Raised blood pressure (hypertension) <span class="nt">&lt;/a&gt;&lt;/h3&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse-88058"</span> <span class="na">class=</span><span class="s">"panel-collapse collapse"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby=</span><span class="s">"heading-88058"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">style=</span><span class="s">"height: 0px;"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p&gt;</span>Tell your doctor or nurse if you have headaches, nose bleeds, blurred or double vision or shortness of breath. Your nurse checks your blood pressure regularly.<span class="ni">&amp;nbsp;</span><span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 
     </div>
