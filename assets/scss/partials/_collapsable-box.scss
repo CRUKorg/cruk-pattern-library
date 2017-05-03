@@ -12,11 +12,11 @@
     a.collapse-toggle:before{
       @extend .cr-i;
       @extend .cr-i--minus;
-      padding-right: 0.5em;
+      padding-right: 0.56em;
       display: inline-block;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 20px;
-      vertical-align: middle;
+      vertical-align: bottom;
   }
   }
 
@@ -26,12 +26,15 @@
     background-color: #f5f5f5;
     h3 {
       margin: 0;
-      a {
+      a.collapse-toggle {
         color: #2e008b;
         text-decoration: none;
-        padding: 10px 15px;
-        display: block;
+        padding: 11px 15px 9px 15px;
+        display: inline-block;
         line-height: 20px;
+        font-size: 19px;
+        vertical-align: middle;
+        width: 100%;
 
       }
       .collapse-toggle:focus {
@@ -50,6 +53,10 @@
   &__body {
     @extend .panel-body;
     font-size: 14px;
+
+    p:last-child {
+      margin-bottom: 0px;
+    }
   }
 
   &__collapse {

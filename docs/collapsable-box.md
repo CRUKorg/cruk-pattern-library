@@ -11,12 +11,11 @@ By clicking anywhere on the box area we collapse or open the box. Each collapsab
 ## Example
 
 {% example html %}
-<div class="cr-collbox" xmlns="http://www.w3.org/1999/html">
+<div class="cr-collbox">
   <div class="cr-collbox__heading" id="heading-88074">
     <div class="cr-collbox__title">
       <h3>
-        <a role="button" data-toggle="collapse" data-parent="#accordion-88074" href="#collapse-88074" aria-expanded="false" aria-controls="collapse-88074" class="collapse-toggle collapsed">
-          Pain in the area of the cancer
+        <a role="button" data-toggle="collapse" data-parent="#accordion-88074" href="#collapse-88074" aria-expanded="false" aria-controls="collapse-88074" class="collapse-toggle collapsed">Pain in the area of the cancer
         </a>
       </h3>
     </div>
@@ -27,11 +26,10 @@ By clicking anywhere on the box area we collapse or open the box. Each collapsab
     </div>
   </div>
 </div>
-<div class="cr-collbox" xmlns="http://www.w3.org/1999/html">
+<div class="cr-collbox">
     <div class="cr-collbox__heading" id="heading-88050">
       <div class="cr-collbox__title">
-        <h3><a role="button" data-toggle="collapse" data-parent="#accordion-88050" href="#collapse-88050" aria-expanded="false" aria-controls="collapse-88050" class="collapse-toggle collapsed">
-          Increased risk of getting an infection </a></h3>
+        <h3><a role="button" data-toggle="collapse" data-parent="#accordion-88050" href="#collapse-88050" aria-expanded="false" aria-controls="collapse-88050" class="collapse-toggle collapsed">Increased risk of getting an infection </a></h3>
       </div>
     </div>
     <div id="collapse-88050" class="cr-collbox__collapse collapse" role="tabpanel" aria-labelledby="heading-88050">
@@ -44,11 +42,10 @@ By clicking anywhere on the box area we collapse or open the box. Each collapsab
       </div>
     </div>
   </div>
-  <div class="cr-collbox" xmlns="http://www.w3.org/1999/html">
+  <div class="cr-collbox">
     <div class="cr-collbox__heading" id="heading-88058">
       <div class="cr-collbox__title">
-        <h3><a role="button" data-toggle="collapse" data-parent="#accordion-88058" href="#collapse-88058" aria-expanded="false" aria-controls="collapse-88058" class="collapse-toggle collapsed">
-          Raised blood pressure (hypertension) </a></h3>
+        <h3><a role="button" data-toggle="collapse" data-parent="#accordion-88058" href="#collapse-88058" aria-expanded="false" aria-controls="collapse-88058" class="collapse-toggle collapsed">Raised blood pressure (hypertension) </a></h3>
       </div>
     </div>
     <div id="collapse-88058" class="cr-collbox__collapse collapse" role="tabpanel" aria-labelledby="heading-88058" aria-expanded="false" style="height: 0px;">
