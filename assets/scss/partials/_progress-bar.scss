@@ -1,0 +1,91 @@
+
+/**
+ * Progress bar
+ */
+
+$progress-bar-icon-width: 20px;
+$progress-bar-icon-height: $progress-bar-icon-width;
+$progress-bar-bar-height: 3px;
+$progress-bar-ball-border: 3px;
+
+.cr-progress-bar {
+  // Stays hidden until revealed by JavaScript.
+  visibility: hidden;
+
+  text-align: center;
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+.cr-progress-bar__step {
+  float: left;
+  position: relative;
+  font-family: $headings-font-family;
+
+  /* Remove the two outside <hr> elements */
+  &:first-child hr:first-child,
+  &:last-child hr:last-child {
+    display: none;
+  }
+}
+
+.cr-progress-bar__step__graphic {
+  hr {
+    margin: (($progress-bar-icon-height - $progress-bar-bar-height) / 2) 0 0 0;
+    width: 50%;
+    height: $progress-bar-bar-height;
+    display: inline-block;
+    border: none;
+    background-color: $brand-grey-light;
+    position: absolute;
+  }
+
+  hr:first-child {
+    left: 0;
+    margin-left: -$progress-bar-icon-width / 2;
+  }
+
+  &.done {
+    hr {
+      background-color: $brand-tertiary;
+    }
+  }
+
+  &.current {
+    hr:first-child {
+      background-color: $brand-tertiary;
+    }
+  }
+}
+
+.cr-progress-bar__step__graphic__icon {
+  &:after {
+    display: inline-block;
+    vertical-align: middle;
+    width: $progress-bar-icon-width;
+    height: $progress-bar-icon-height;
+    z-index: 50;
+    content: "";
+    border: $progress-bar-ball-border solid $brand-grey-light;
+    border-radius: ceil($progress-bar-icon-width / 2);
+  }
+
+  &.done:after {
+    border-color: $brand-tertiary;
+    background-color: $brand-tertiary;
+    content: svg("checkmark.svg", (path: (fill: white)));
+    font: normal normal normal 1rem/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  &.current:after {
+    border-color: $brand-tertiary;
+  }
+}
+
+.cr-progress-bar__step__title {
+  padding-top: 0.5em;
+}

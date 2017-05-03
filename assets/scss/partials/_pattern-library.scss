@@ -1,6 +1,6 @@
 
 body.cr-pattern-library {
-  background-color: white;
+  background-color: $body-bg;
 }
 
 /**
@@ -49,5 +49,16 @@ body.cr-pattern-library {
 
   &.cr-pattern-library-swatch--grey-dark .cr-pattern-library-swatch__colour {
     background-color: $brand-grey-dark;
+  }
+}
+
+.cr-pattern-library-icon-grid {
+  .cr-i {
+    @extend .cr-i--fw;
+  }
+
+  > div {
+    min-height: 25px;
+    margin: 5px 0;
   }
 }

@@ -40,7 +40,7 @@ Anywhere that a chance is presented to interact with search functionality you'll
         <label for="search-input" id="search-label">Search CancerResearchUK.org...</label>
         <input type="search" class="cr-input-group__input cr-search-input__input" id="search-input" placeholder="Search CancerResearchUK.org..." aria-describedby="search-label" autocomplete="off" autocorrect="off">
         <span class="cr-input-group__button cr-search-input__button">
-          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon" aria-hidden="true"></span></button>
         </span>
       </div>
     </form>
@@ -60,7 +60,7 @@ The combined search field (as with the Bootstrap input groups) can be displayed 
         <label for="search-input-2" id="search-label-2">Search...</label>
         <input type="search" class="cr-input-group__input cr-search-input__input" id="search-input-2" placeholder="Search..." aria-describedby="search-label-2" autocomplete="off" autocorrect="off">
         <span class="cr-input-group__button cr-search-input__button">
-          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon" aria-hidden="true"></span></button>
         </span>
       </div>
     </form>
@@ -74,7 +74,7 @@ The combined search field (as with the Bootstrap input groups) can be displayed 
         <label for="search-input-3" id="search-label-3">Search...</label>
         <input type="search" class="cr-input-group__input cr-search-input__input" id="search-input-3" placeholder="Search..." aria-describedby="search-label" autocomplete="off" autocorrect="off">
         <span class="cr-input-group__button cr-search-input__button">
-          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon" aria-hidden="true"></span></button>
         </span>
       </div>
     </form>
@@ -97,7 +97,7 @@ There are two colour variations, one for the within the masthead grey bar and th
         <label for="search-input-4" id="search-label-4">Search...</label>
         <input type="search" class="cr-input-group__input cr-search-input__input" id="search-input-4" placeholder="Search..." aria-describedby="search-label-2" autocomplete="off" autocorrect="off">
         <span class="cr-input-group__button cr-search-input__button">
-          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon" aria-hidden="true"></span></button>
         </span>
       </div>
     </form>
@@ -111,7 +111,7 @@ There are two colour variations, one for the within the masthead grey bar and th
         <label for="search-input-5" id="search-label-5">Search...</label>
         <input type="search" class="cr-input-group__input cr-search-input__input" id="search-input-5" placeholder="Search..." aria-describedby="search-label" autocomplete="off" autocorrect="off">
         <span class="cr-input-group__button cr-search-input__button">
-          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <button type="submit" class="btn" aria-label="Submit your search"><span class="cr-input-group__icon" aria-hidden="true"></span></button>
         </span>
       </div>
     </form>
@@ -119,6 +119,88 @@ There are two colour variations, one for the within the masthead grey bar and th
 </div>
 {% endexample %}
 
+
+#### Search summary
+
+Search summary is the small text snippet that is placed above the search results.
+
+{% example html %}
+<div class="cr-search-summary">
+  <div class="cr-search-summary__info">
+    4,210 search results for <strong>cancer</strong>
+  </div>
+</div>
+{% endexample %}
+
+
+#### Search result
+
+Search results use bootstrap <code>media</code> and <code>media-list</code> class styling.<br />
+For bootstrap media classes lke <code>media-left</code> or <code>media-right</code> just use the <code>cr-search-result</code> prefix <code>cr-search-result__media-left</code>
+
+{% example html %}
+<article class="cr-search-result">
+  <div class="cr-search-result__media-body">
+    <h4 class="cr-search-result__title">
+      <a class="cr-search-result__link" href="http://www.cancerresearchuk.org/node/38191">Resurrecting stalled cancer drugs</a>
+    </h4>
+    <p class="cr-search-result__excerpt">
+      Developing new drugs is tough. But as illustrated by the results of an early stage trial of a new vaccine for brain tumours, our Clinical Development Partnersh…
+     </p>
+   </div>
+ </article>
+ <article class="cr-search-result">
+  <div class="cr-search-result__media-body">
+    <h4 class="cr-search-result__title">
+      <a class="cr-search-result__link" href="http://www.cancerresearchuk.org/node/28266">Progress in prostate cancer, skin cancer warning</a>
+    </h4>
+    <p class="cr-search-result__excerpt">
+      Transcript Kat: This is the <strong>Cancer</strong> Research UK podcast for September 2013. This month we’re discussing a huge genetic study looking at the cau…
+    </p>
+   </div>
+ </article>
+{% endexample %}
+
+## Autocomplete search box
+
+Here we have the markup and styling for the autocomplete field. Javascript logic is omitted and needs to be done seperately by projct implementing this field.
+There is an animated gif under the markup that shows autocomplete behaviour.
+
+{% example html %}
+<div class="cr-input-group cr-input-group--lg cr-search-input cr-input-group--focused">
+  <label for="search-input" id="search-label">Search...</label>
+  <input type="search" data-qa="query" id="search-input" class="cr-input-group__input cr-search-input__input" placeholder="Search..." value="can" aria-describedby="search-label" autocomplete="off" autocorrect="off" tabindex="1">
+  <span class="cr-input-group__button cr-search-input__button">
+    <button type="submit" class="btn" aria-label="Submit your search" data-qa="submit">
+      <span class="cr-input-group__icon glyphicon glyphicon-search" aria-hidden="true"></span>
+    </button>
+  </span>
+  <ul class="cr-autocomplete">
+    <li class="cr-autocomplete__list-item">Cancer and blood calcium levels</li>
+    <li class="cr-autocomplete__list-item">Cancer and fever</li>
+    <li class="cr-autocomplete__list-item">Cancer and pain control</li>
+    <li class="cr-autocomplete__list-item">Cancer and sickness (nausea)</li>
+    <li class="cr-autocomplete__list-item">Cancer and your emotions</li>
+  </ul>
+</div>
+<div style="height:200px;width: 100%;">
+  &nbsp;
+</div>
+{% endexample %}
+
+{% example html %}
+<div class="autocomplete-animated-gif">
+  &nbsp;
+</div>
+{% endexample %}
+
+## Did you mean suggestion text
+
+{% example html %}
+<p class="cr-did-you-mean">
+  Did you mean&nbsp;<a href="#t" class="cr-did-you-mean__link">bone cancer</a>?
+</p>
+{% endexample %}
 
 #### In place supporting JavaScript
 

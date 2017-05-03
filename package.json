@@ -1,6 +1,6 @@
 {
   "name": "cruk-pattern-library",
-  "version": "0.0.3",
+  "version": "1.2.0",
   "homepage": "https://github.com/CRUKorg/cruk-pattern-library",
   "author": "heylookalive",
   "scss": "./assets/scss/cruk-base.scss",
@@ -13,6 +13,7 @@
     "autoprefixer-core": "~5.2.1",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^2.2.0",
+    "grunt-bless": "^1.0.2",
     "grunt-build-control": "^0.2.2",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
@@ -23,7 +24,8 @@
     "grunt-parker": "^0.1.3",
     "grunt-postcss": "^0.5.1",
     "grunt-sass": "^1.0.0",
-    "jshint-stylish": "^2.2.0"
+    "jshint-stylish": "^2.2.0",
+    "sass-inline-svg": "^0.2.0"
   },
   "description": "CRUK Pattern library.",
   "bugs": {

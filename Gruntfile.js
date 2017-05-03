@@ -1,5 +1,6 @@
-module.exports = function(grunt) {
+var inliner = require('sass-inline-svg');
 
+module.exports = function(grunt) {
   grunt.initConfig({
     // Project configuration.
     pkg: grunt.file.readJSON('package.json'),
@@ -14,8 +15,13 @@ module.exports = function(grunt) {
           'assets/scss',
           'docs/assets/scss',
           'docs/bower_components/bootstrap-sass/assets/stylesheets',
-          'docs/bower_components/bootstrap-sass/assets/stylesheets/bootstrap'
-        ]
+          'docs/bower_components/font-awesome/scss'
+        ],
+        functions: {
+          svg: inliner('./assets/icons', {
+            optimize: true
+          })
+        }
       },
       dist: {
         files: {
@@ -23,6 +29,18 @@ module.exports = function(grunt) {
           'docs/assets/css/docs.css': 'docs/assets/scss/docs.scss'
         }
       }
+    },
+
+    bless: {
+        css: {
+            options: {
+                compress: true,
+                logCount: true
+            },
+            files: {
+                'docs/assets/css/docs-ie.css': 'docs/assets/css/docs.css'
+            }
+        }
     },
 
     // Handle vendor prefixing.
@@ -75,11 +93,15 @@ module.exports = function(grunt) {
         tasks: ['sass', 'postcss', 'parker']
       },
       scripts: {
-        files: ['assets/js/cruk-base.js', 'assets/js/cruk-base/*.js'],
+        files: ['assets/js/cruk-base/*.js', 'assets/js/cruk-base.js'],
         tasks: ['jshint', 'concat', 'uglify', 'copy'],
         options: {
-          spawn: false,
+          spawn: false
         }
+      },
+      fonts: {
+        files: ['assets/fonts/*'],
+        tasks: ['copy']
       }
     },
 
@@ -119,7 +141,12 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['<%= watch.scripts.files %>'],
+        src: [
+          'docs/bower_components/jquery.inputmask/dist/jquery.inputmask.bundle.js',
+          'docs/bower_components/spin.js/spin.js',
+          'docs/bower_components/spin.js/jquery.spin.js',
+          '<%= watch.scripts.files %>'
+        ],
         dest: 'assets/js/cruk-base.min.js'
       }
     },
@@ -139,6 +166,12 @@ module.exports = function(grunt) {
       main: {
         src: 'assets/js/cruk-base.min.js',
         dest: 'docs/assets/js/cruk-base.min.js'
+      },
+      fonts: {
+        expand: true,
+        flatten: true,
+        src: 'assets/fonts/*',
+        dest: 'docs/assets/fonts/'
       }
     }
   });
@@ -154,9 +187,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-parker');
   grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-bless');
 
   // Generate and format the CSS.
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'copy', 'sass', 'jekyll', 'postcss', 'parker']);
+  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'copy', 'sass', 'bless', 'jekyll', 'postcss', 'parker']);
 
   // Publish to GitHub
   grunt.registerTask('publish', ['jekyll', 'postcss:docs', 'buildcontrol:pages']);

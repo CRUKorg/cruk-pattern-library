@@ -1,0 +1,67 @@
+
+/**
+ * Search pattern.
+ */
+
+.cr-search-input {
+  label {
+    @extend .sr-only;
+  }
+
+  .cr-search-input__input {
+    @extend .form-control;
+
+    &::-ms-clear {
+      display: none;
+    }
+  }
+
+  .cr-search-input__button .btn {
+    border: 0;
+    background: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  .cr-input-group__icon {
+    @extend .cr-i, .cr-i--search;
+
+    position: relative;
+    top: 2px;
+    font-size: 1.1em;
+    color: $brand-grey-medium;
+    @include transition(color 100ms linear);
+
+    &.cr-i--remove {
+      @extend .cr-i--remove;
+      top: 4px;
+    }
+  }
+
+  &.cr-input-group--focused .glyphicon-search {
+    color: $brand-primary;
+  }
+
+  &.cr-input-group--lg .cr-input-group__icon {
+    top: 3px;
+
+    &.cr-i--remove {
+      top: 4px;
+    }
+  }
+
+  &.cr-input-group--sm .cr-input-group__icon {
+    top: 0;
+    right: -3px;
+
+    &.cr-i--remove {
+      top: 1px;
+    }
+  }
+}

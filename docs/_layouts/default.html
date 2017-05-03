@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,17 @@
 
     <title>{{ page.title }} | {{ site.name }}</title>
 
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/docs.css">
+    <!--[if !IE]><!-->
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/docs.css">
+    <!--<![endif]-->
+
+    <!--[if gte IE 10]>
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/docs.css">
+    <![endif]-->
+
+    <!--[if lte IE 9]>
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/docs-ie.css">
+    <![endif]-->
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/assets/images/apple-touch-icon-precomposed.png">

@@ -1,4 +1,3 @@
-
 html {
   font-size: $font-size-base;
 }
@@ -6,3 +5,7 @@ html {
 body {
   font-size: 1rem;
 }
+
+/* Stop Firefox from putting annoying dotted focus lines around everything */
+*::-moz-focus-inner {border:0 !important;}
+*:focus {outline:none !important;}

@@ -10,11 +10,6 @@
  */
 
 /**
- * Override the fonts path.
- */
-$cruk-base-icon-font-path: '../../bower_components/bootstrap-sass/assets/fonts/bootstrap/';
-
-/**
  * Import the CRUK pattern library.
  */
 
@@ -59,7 +54,6 @@ body.example form {
   border-bottom: 1px solid rgba(0,0,0,0.075);
 
   a {
-
     &:hover {
       text-decoration: none;
     }
@@ -106,6 +100,10 @@ body.example form {
   }
 }
 
+// Added for CRUK table pattern
+.markdown-body table td {
+  border: 2px solid $brand-grey-medium;
+}
 
 
 //
@@ -183,7 +181,21 @@ body.example form {
   h3 {
     font-size: $font-size-h3;
   }
+
+  dl dt + dt {
+    margin-top: 0;
+  }
+
+  // Undo the h4 overriding from primer-markdown.
+  .cr-search-result__title {
+    font-size: 19px;
+    margin-top: 0px;
+    margin-bottom: 7px;
+    line-height: 1.1;
+  }
 }
+
+
 
 //
 // Examples
@@ -221,6 +233,10 @@ body.example form {
     max-width: 200px;
   }
 
+  // Override .cr-search-loading for display purposes on pattern library.
+  .cr-simple-loader {
+    position: static;
+  }
 
   // Override Markdown styles to restore values from `_type.scss`
   ul,
@@ -287,4 +303,28 @@ body.example form {
   width: 6rem;
   height: 6rem;
   border-radius: .25rem;
+}
+
+/*
+ * Overrides for rendering Accordions correctly when viewed on the pattern library website.
+ * These are required to override some more primer stuff.
+ */
+.cr-accordion {
+  .cr-accordion__header {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom-width: 0;
+  }
+
+  .cr-accordion__content {
+    border-top-width: 0;
+  }
+}
+
+/*
+ * Overrides for rendering Colla[sable boxes] correctly when viewed on the pattern library website.
+ * These are required to override some more primer stuff.
+ */
+.cr-collbox .cr-collbox__heading h3 {
+  margin: 0;
 }

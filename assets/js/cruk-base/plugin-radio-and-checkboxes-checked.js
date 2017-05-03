@@ -1,17 +1,14 @@
 jQuery( document ).ready(function( $ ) {
     'use strict';
     // First, apply to any pre-checked options
-    $('form').find('input[type=radio]:checked, input[type=checkbox]:checked').each(function() {
-        checkIt($(this));
-    });
+    $('form').find('input[type=radio]:checked, input[type=checkbox]:checked').each(checkIt);
 
     // Now set up listeners to ensure that any changes are also checked
-    $('form').on('change', 'input[type=radio], input[type=checkbox]', function() {
-        checkIt($(this));
-    });
+    $('form').on('change', 'input[type=radio], input[type=checkbox]', checkIt);
 
     // For a given jQuery input object, ensure that it's checked
-    function checkIt($input) {
+    function checkIt() {
+        var $input = $(this);
         var type = $input.attr('type');
         if (type === 'radio') {
             checkItRadio($input);
@@ -25,7 +22,7 @@ jQuery( document ).ready(function( $ ) {
 
         var name = $input.attr('name');
         var id = $input.attr('id');
-        $('input[name=' + name + ']').not('#' + id).parents('.radio').removeClass('radio-selected');
+        $('input[name="' + name + '"]').not('#' + id).parents('.radio').removeClass('radio-selected');
 
         // Now apply it to the current one
         $input.parents('.radio').addClass('radio-selected');

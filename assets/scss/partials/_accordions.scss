@@ -1,0 +1,56 @@
+.cr-accordion__header button {
+  position: relative;
+  width: 100%;
+  padding: 0.7em 0.7em 0.6em;
+  margin-bottom: 0;
+
+  font-family: $headings-font-family;
+  color: #fff;
+  text-align: left;
+  background-color: $brand-primary;
+  line-height: 1;
+
+  border-width: 0;
+  border-radius: 0.142857143em;
+
+  &::before {
+    @extend .cr-i;
+    content: "\e900";
+
+    position: absolute;
+    top: 13px;
+    right: 0.7em;
+  }
+
+  &[aria-expanded="true"] {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &::before {
+      content: "\e901";
+    }
+  }
+}
+
+.cr-accordion__image {
+  float: left;
+  width: 30%;
+  margin-right: 2em;
+
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.cr-accordion__content {
+  .no-js & {
+    display: inherit;
+  }
+
+  @extend .clearfix;
+  padding: 2em;
+  background-color: #fff;
+}

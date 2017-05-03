@@ -231,3 +231,15 @@ When styling a component, start with an element + class namespace (prefer class 
 * If you must use an id selector (`#selector`) make sure that you have no more than *one* in your rule declaration. A rule like `#header .search #quicksearch { ... }` is considered harmful.
 * When modifying an existing element for a specific use, try to use specific class names. Instead of `.listings-layout.bigger` use rules like `.listings-layout.listings-bigger`. Think about `ack/grep`ing your code in the future.
 * The class names `disabled`, `mousedown`, `danger`, `hover`, `selected`, and `active` should *always* be namespaced by a class (`button.selected` is a good example).
+
+### Icons
+
+Icons should be exported as SVGs and stored in `<repo-root>/assets/icons`. These can be inlined by the helpful [`sass-inline-svg`](https://www.npmjs.com/package/sass-inline-svg) library.
+
+The `svg` mixin this provides accepts 2 parameters:
+ * Asset path e.g. `svg("plus.svg")`.
+   * This is relative to `<repo-root>/assets/icons`, so the above example will reference `<repo-root>/assets/icons/plus.svg`.
+ * Options (optional) - `svg("plus.svg", (path: (fill: $brand-primary)))`
+   * This is a sass-map where the keys are CSS selectors for the SVG document. The above example changes the fill of the whole `path` element to `$brand-primary`. This parameter will typically just be used to change the color of icons like so.
+
+The output of this function will be an inlined SVG, which typically then will be set as the `content` of a pseudo-element.

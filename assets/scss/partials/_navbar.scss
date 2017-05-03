@@ -1,0 +1,20 @@
+.navbar {
+  background-color: #fff;
+  border: 0;
+}
+
+.navbar--tagline {
+  padding-right: 200px; /* Must match width of logo image. */
+  margin-top: 45px;
+  font-family: $headings-font-family-light;
+  font-size: 1.5rem;
+  color: $brand-primary;
+
+  @media (max-width: $screen-sm) {
+    display: none;
+  }
+}
+
+.navbar--tagline--last-word {
+  color: $brand-secondary;
+}
