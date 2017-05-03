@@ -1,0 +1,58 @@
+.cr-collbox {
+  @extend .panel;
+  @extend .panel-default;
+  border-color: #ddd;
+
+  &__title {
+    @extend .panel-title;
+    a.collapse-toggle.collapsed:before {
+      @extend .cr-i--plus;
+    }
+
+    a.collapse-toggle:before{
+      @extend .cr-i;
+      @extend .cr-i--minus;
+      padding-right: 0.5em;
+      display: inline-block;
+      font-size: 18px;
+      line-height: 20px;
+      vertical-align: middle;
+  }
+  }
+
+  &__heading {
+    font-size: 1.1em;
+    padding: 0px;
+    background-color: #f5f5f5;
+    h3 {
+      margin: 0;
+      a {
+        color: #2e008b;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        line-height: 20px;
+
+      }
+      .collapse-toggle:focus {
+        outline: 5px auto -webkit-focus-ring-color !important;
+        outline-offset: -2px;
+      }
+      @media screen and (min-width: 800px +1) {
+        a:hover {
+          color: #e40085;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__body {
+    @extend .panel-body;
+    font-size: 14px;
+  }
+
+  &__collapse {
+    @extend .panel-collapse;
+  }
+}
