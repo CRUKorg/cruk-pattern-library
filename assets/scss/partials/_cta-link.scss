@@ -2,9 +2,8 @@
   &__icon {
     @include chevron;
     color: $brand-secondary;
-    
-    &:before {
-     content: "\e911";
+    &::before {
+      content: "\e911";
     }
   }
 
