@@ -1,0 +1,11 @@
+.cr-cta-link {
+  &__icon {
+    @extend .cr-i;
+    @extend .cr-i--chevron-right;
+    color: $brand-secondary;
+  }
+  &__link {
+    font-weight: bold;
+    color: $brand-secondary;
+  }
+}
