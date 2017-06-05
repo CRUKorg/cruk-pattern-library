@@ -1,9 +1,13 @@
 .cr-cta-link {
   &__icon {
-    @extend .cr-i;
-    @extend .cr-i--chevron-right;
+    @include chevron;
     color: $brand-secondary;
+    
+    &:before {
+     content: "\e911";
+    }
   }
+
   &__link {
     font-weight: bold;
     color: $brand-secondary;
