@@ -6,3 +6,13 @@
   border-radius: 3px;
   box-shadow: 0 1px 4px rgba(0,0,0,.06);
 }
+
+@mixin chevron {
+  display: inline-block;
+  font: normal normal normal 14px/1 CRUKIcons;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  speak: none;
+}
