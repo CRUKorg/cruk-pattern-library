@@ -2,6 +2,8 @@
   &__icon {
     @include chevron;
     color: $brand-secondary;
+    position: relative;
+    top: -1px;
     &::before {
       padding-right: 8px;
       text-decoration: none;
