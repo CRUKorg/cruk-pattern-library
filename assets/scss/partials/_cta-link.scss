@@ -3,16 +3,16 @@
     @include chevron;
     color: $brand-secondary;
     &::before {
-      content: "\e911";
-      text-decoration: none;
       padding-right: 8px;
+      text-decoration: none;
       vertical-align: middle;
+      content: "\e911";
     }
   }
 
   &__link {
+    font-size: 14px;
     font-weight: bold;
     color: $brand-secondary;
-    font-size: 14px;
   }
 }
