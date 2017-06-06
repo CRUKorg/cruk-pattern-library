@@ -4,11 +4,15 @@
     color: $brand-secondary;
     &::before {
       content: "\e911";
+      text-decoration: none;
+      padding-right: 8px;
+      vertical-align: middle;
     }
   }
 
   &__link {
     font-weight: bold;
     color: $brand-secondary;
+    font-size: 14px;
   }
 }
