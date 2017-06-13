@@ -19,8 +19,8 @@
     color: $brand-secondary;
   }
 
-  &__text{
+  &__text {
+    display: block;
     padding-left: 20px;
-    display:block;
   }
 }
