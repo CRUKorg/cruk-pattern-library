@@ -4,6 +4,7 @@
     color: $brand-secondary;
     position: relative;
     top: -1px;
+    float: left;
     &::before {
       padding-right: 8px;
       text-decoration: none;
@@ -16,5 +17,10 @@
     font-size: 14px;
     font-weight: bold;
     color: $brand-secondary;
+  }
+
+  &__text{
+    padding-left: 20px;
+    display:block;
   }
 }
