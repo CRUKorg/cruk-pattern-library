@@ -21,7 +21,8 @@ The Pink CTA includes a right chevron at the beginning of link
 {% example html %}
 <div class="cr-cta-link" role="navigation">
   <a class="cr-cta-link__link" href="http://www.cancerresearchuk.org/about-cancer/breast-cancer/about">
-    <i class="cr-cta-link__icon" aria-hidden="true"></i>Find out about breast cancer
+    <i class="cr-cta-link__icon" aria-hidden="true"></i>
+    <span class="cr-cta-link__text">Find out about breast cancer</span>
   </a>
 </div>
 {% endexample %}
