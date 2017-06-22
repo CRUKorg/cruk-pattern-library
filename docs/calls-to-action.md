@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Calls to action
+title: Calls To Action
 ---
 
 
@@ -33,7 +33,7 @@ Print icon with call to action
 
 The Print icon with call to action includes a right icon at the beginning of the link.
 
-### Here's how it would be used
+How it would be used:
 {% example html %}
 <div class="cr-print-link">
   <a href="#" id="cr-print-link__link">
