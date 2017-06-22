@@ -99,4 +99,7 @@ The CRUKIcons font is created via the <a href="https://icomoon.io/app">IcoMoon a
   <div class="col-xs-12 col-sm-6 col-md-4">
     <i class="cr-i cr-i--radio-checked2" aria-hidden="true"></i> <span class="sr-only">example of</span> <code>.cr-i--radio-checked2</code>
   </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+    <i class="cr-i cr-i--print" aria-hidden="true"></i> <span class="sr-only">example of</span> <code>.cr-i--print</code>
+  </div>
 </div>
