@@ -3,7 +3,13 @@ layout: page
 title: Video
 ---
 
-This pattern is to use to display videos.
+This pattern is to use when adding video contnet on the site. 
+
+Youtube embed settings
+
+* Disable the suggested/related videos feature
+* Enable player controls
+* Enable the video title
 
 ## Contents
 
@@ -49,7 +55,6 @@ This pattern is to use to display videos.
         <p>Before most scans you have a small tube put into your vein, which connects to a drip containing the dye. Again, this helps to show up the inside of your body more clearly on the scan.</p>
         <p>During the scan the bed moves in and out of the scanner. You may find it a bit noisy.</p>
         <p>As the drip goes in you’ll probably get a metallic taste in your mouth, feel warm and you might think you are passing urine, you’re not. These feelings pass quickly.</p>
-
       </div>
     </div>
   </div>
