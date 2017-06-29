@@ -5,24 +5,24 @@
     padding-top: 30px; 
     height: 0;
     overflow: hidden;
-    border: 1px solid #000000;
+    border: 1px solid #000;
     background: black;
 
     iframe, object, embed {
-      left:0;
-      top:0;
-      height:100%;
-      width:100%;
-      position:absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
     }
-  } 
+  }
 }
 .cr-video-transcript {
-  background-color: #000000;
+  background-color: #000;
   @include clearfix;
- 
+
   &__heading {
-    background-color: #000000; 
+    background-color: #000; 
     border-color: black;
     padding: 10px 15px;
   }
@@ -43,26 +43,28 @@
 
   &__body {
     &--outer {
-      background: #000000;
+      background: #000;
       padding: 0 15px 15px;
       clear: both;
     }
 
     &--inner {
-      border-top-color: #000000;
+     
       max-height: 180px;
+      padding: 15px;
       overflow: auto;
       overflow-x: hidden;
-      padding: 15px;
+      background-color: #fff;
+      border-top-color: #000;
+      border-bottom-color: #000;
       border-radius: 4px;
-      background-color: #ffffff;
-      border-bottom-color: #000000;
     }
   }
 
   .collapse-toggle:not(.collapsed) {
     position: relative;
     top: 1px;
+
     &::before {
       @include chevron;
       padding-right: 5px;
@@ -78,6 +80,7 @@
   .collapsed {
     position: relative;
     top: 1px;
+
     &::before {
       @include chevron;
       padding-right: 5px;
