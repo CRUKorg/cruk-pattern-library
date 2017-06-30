@@ -23,7 +23,8 @@
     content: " ";
     display: table;
   }
-  &:after {
+
+  &::after {
     clear: both;
   }
 }
