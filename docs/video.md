@@ -22,10 +22,12 @@ Youtube embed settings
 {% example html %}
 
 <div class="cr-video">
+  <div class="cr-video__holder">
   <iframe width="640" height="360"
     src="https://www.youtube-nocookie.com/embed/tS4a6I4-Yjo?rel=0" 
     frameborder="0"
     allowfullscreen></iframe>
+    </div>
 </div>
 {% endexample %}
 
