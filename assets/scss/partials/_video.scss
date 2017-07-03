@@ -52,14 +52,32 @@
     }
 
     &--inner {
+      -webkit-overflow-scrolling: touch;
       max-height: 180px;
       padding: 15px;
-      overflow: auto;
       overflow-x: hidden;
+      overflow-y: scroll;
       background-color: #fff;
       border-top-color: #000;
       border-bottom-color: #000;
       border-radius: 4px;
+
+      ::-webkit-scrollbar {
+        background: transparent;
+        height: 10px;
+        overflow: visible;
+        width: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        -webkit-border-radius:5px;
+      }
+      ::-webkit-scrollbar-thumb:hover{
+        background-color: rgba(0, 0, 0, 0.6);   
+      }
+      ::-webkit-scrollbar-corner {
+        background: transparent;
+      }
     }
   }
 
