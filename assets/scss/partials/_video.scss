@@ -82,9 +82,18 @@
     }
   }
 
+  .collapse-toggle:hover {
+    text-decoration: none;
+  }
+
+  .collapse-toggle:hover span {
+    text-decoration: underline; 
+  }
+
   .collapse-toggle:not(.collapsed) {
     position: relative;
     top: 1px;
+
 
     &::before {
       @include chevron;
@@ -96,6 +105,9 @@
 
     span::after {
       content: "Hide Transcript";
+    }
+    span::focus{
+      text-decoration: underline;
     }
   }
 
@@ -116,6 +128,7 @@
     }
   }
 }
+
 
 
 
