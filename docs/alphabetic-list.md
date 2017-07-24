@@ -3,8 +3,6 @@ layout: page
 title: Alphabetic List
 ---
 
-
-
 This pattern is used for an alphabetic list of links, e.g. an A-Z Index.
 
 ## Contents

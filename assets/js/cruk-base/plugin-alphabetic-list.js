@@ -1,12 +1,12 @@
 jQuery(document).ready(function($) {
     'use strict';
 
-    $('.cr-filter-input .btn-reset').on('click', function() {
+    $(document).on('click', '.cr-filter-input .btn-reset', function() {
         $("input.cr-filter-input__input").val('');
         $('.cr-index__list-item, .cr-index__category').show();
     });
 
-    $('input.cr-filter-input__input').keyup(function() {
+    $(document).on('keyup', 'input.cr-filter-input__input', function() {
         var that = this,
             $allListElements = $('.cr-index__list-item, .cr-index__category');
         var $matchingListElements = $allListElements.filter(
