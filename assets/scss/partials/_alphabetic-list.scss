@@ -40,30 +40,6 @@
   }
 }
 
-//
-//.index-item {
-//  display: inline-block;
-//  width: 100%;
-//  .index-category {
-//    font-size: $font-size-h1;
-//    margin: 0;
-//    border-top: none;
-//    padding-top: 1em;
-//  }
-//
-//  .child-item-list {
-//    display: inline-block;
-//    font-weight: bold;
-//    margin-bottom: -3px;
-//
-//    .child-index-item {
-//      margin-bottom: 3px;
-//    }
-//  }
-//}
-
-
-
 .cr-index {
   @extend .list-unstyled;
   -moz-column-count: 3;
