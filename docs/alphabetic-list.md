@@ -20,7 +20,7 @@ Above long lists it is a good idea to include a quicksearch.
     <form>
       <div class="cr-input-group cr-filter-input">
         <label for="filter-input" id="filter-label">Start typing ...</label>
-        <input type="search" class="cr-input-group__input cr-filter-input__input" id="filter-input" placeholder="Start typing ..." aria-describedby="filter-label" autocomplete="off" autocorrect="off">
+        <input data-cr-filter-list="foo" type="search" class="cr-input-group__input cr-filter-input__input" id="filter-input" placeholder="Start typing ..." aria-describedby="filter-label" autocomplete="off" autocorrect="off">
         <span class="cr-input-group__button cr-filter-input__button">
           <button type="reset" class="btn btn-default btn-reset" aria-label="Reset filter">
             <span class="sr-only">Reset</span>
@@ -40,7 +40,7 @@ The list is separated by letter to allow for easy visual scanning.
 Flow is top-to-bottom, left-to-right.
 
 {% example html %}
-<ul class="cr-index">
+<ul class="cr-index" id="foo">
     <li class="cr-index__category">
         <h2 class="cr-index__category-label">A</h2>
         <ul class="cr-index__list">
