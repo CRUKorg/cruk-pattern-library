@@ -16,10 +16,9 @@ Above long lists it is a good idea to include a quicksearch.
 
 {% example html %}
 <div class="row">
-  <div class="col-md-6">
-    <form>
-      <div class="cr-input-group cr-filter-input">
-        <label for="filter-input" id="filter-label">Start typing ...</label>
+    <form class="cr-filter-form col-md-6">
+      <div role="search" class="cr-input-group cr-filter-input">
+        <label for="filter-input" id="filter-label">Filter list items</label>
         <input data-cr-filter-list="foo" type="search" class="cr-input-group__input cr-filter-input__input" id="filter-input" placeholder="Start typing ..." aria-describedby="filter-label" autocomplete="off" autocorrect="off">
         <span class="cr-input-group__button cr-filter-input__button">
           <button type="reset" class="btn btn-default btn-reset" aria-label="Reset filter">
@@ -29,7 +28,6 @@ Above long lists it is a good idea to include a quicksearch.
         </span>
       </div>
     </form>
-  </div>
 </div>
 {% endexample %}
 
@@ -68,7 +66,7 @@ Flow is top-to-bottom, left-to-right.
     <li class="cr-index__category">
         <h2 class="cr-index__category-label" aria-hidden="true">D</h2>
         <ul class="cr-index__list" aria-label="Links starting with the letter D">
-            <li class="cr-index__list-item"><a href="#">Dachshound</a></li>  
+            <li class="cr-index__list-item"><a href="#">Dachshund</a></li>  
             <li class="cr-index__list-item"><a href="#">Daikon</a></li>
             <li class="cr-index__list-item"><a href="#">Damn Daniel</a></li>
         </ul>

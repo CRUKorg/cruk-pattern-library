@@ -21,4 +21,8 @@ jQuery(document).ready(function ($) {
     $allListElements.hide();
     $matchingListElements.show();
   });
+
+  $(document).on('submit', 'form.cr-filter-form', function(e){
+    e.preventDefault();
+  });
 });
