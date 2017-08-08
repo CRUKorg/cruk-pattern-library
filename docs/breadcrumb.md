@@ -8,7 +8,7 @@ This pattern is used for a breadcrumb element.
 A breadcrumb trail should always include the highest level (home) link, as well as the current page link. Those
 can be hidden later if required, although that reduces usability.
 
-A breadcrumb trail should not be displayed if user is on the home page, or one level under... there should be at least
+A breadcrumb trail should not be output if user is on the home page, or one level under... there should be at least
 three items in every breadcrumb.
 
 ## Standard Breadcrumb
