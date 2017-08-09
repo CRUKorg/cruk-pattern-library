@@ -16,7 +16,7 @@ three items in every breadcrumb.
 Includes home link and current page, to make it clear "where we are".
 
 {% example html %}
-<nav id="breadcrumb" aria-label="You are here">
+<nav id="breadcrumb" aria-label="You are here" class="cr-breadcrumb">
     <ol itemscope itemtype="http://schema.org/BreadcrumbList">
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
             <a href="/" aria-level="1" itemprop="item">Home</a>
@@ -43,7 +43,7 @@ Includes home link and current page, to make it clear "where we are".
 Less usable, but reduces horizontal space usage on very deep pages.
 
 {% example html %}
-<nav id="breadcrumb" aria-label="You are here" class="breadcrumb--hide-current breadcrumb--hide-top">
+<nav id="breadcrumb" aria-label="You are here" class="cr-breadcrumb cr-breadcrumb--hide-current cr-breadcrumb--hide-top">
     <ol itemscope itemtype="http://schema.org/BreadcrumbList">
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
             <a href="/" aria-level="1" itemprop="item">Home</a>

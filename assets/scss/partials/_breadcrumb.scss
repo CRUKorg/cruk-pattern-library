@@ -1,8 +1,6 @@
-#breadcrumb {
+.cr-breadcrumb {
   ol {
     margin-top: 1em;
-    overflow-y: hidden;
-    overflow-x: auto;
     padding-left: 0;
     padding-right: 1em;
     margin-bottom: 1.5em;
@@ -78,10 +76,10 @@
     }
   }
 
-  &.breadcrumb--hide-current li:last-child {
+  &.cr-breadcrumb--hide-current li:last-child {
     @extend .sr-only;
   }
-  &.breadcrumb--hide-top li:first-child {
+  &.cr-breadcrumb--hide-top li:first-child {
     @extend .sr-only;
   }
 }
