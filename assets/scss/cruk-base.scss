@@ -65,22 +65,24 @@
  */
 @import "base/type";
 
-@import "partials/animations";
-@import "partials/alerts";
 @import "partials/accordions";
+@import "partials/alerts";
+@import "partials/alphabetic-list";
+@import "partials/animations";
+@import "partials/autocomplete";
 @import "partials/breadcrumb";
 @import "partials/buttons";
-@import "partials/navbar";
+@import "partials/collapsable-box";
+@import "partials/cta-link";
+@import "partials/didyoumean";
 @import "partials/icons";
-@import "partials/pattern-library";
-@import "partials/pagination";
-@import "partials/progress-bar";
 @import "partials/loader";
+@import "partials/navbar";
+@import "partials/pagination";
+@import "partials/pattern-library";
+@import "partials/progress-bar";
 @import "partials/search/input";
 @import "partials/search/result";
 @import "partials/search/summary";
-@import "partials/autocomplete";
-@import "partials/didyoumean";
 @import "partials/table";
-@import "partials/collapsable-box";
-@import "partials/cta-link";
+@import "partials/video";
