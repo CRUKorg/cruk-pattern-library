@@ -160,6 +160,7 @@ body.example form {
 }
 
 /**
+ * @TODO: Develop a more efficient reset. The example patterns should only have their own styles.
  * Override the styling from primer-markdown including the font which is hard
  * set :C
  */
@@ -176,6 +177,10 @@ body.example form {
 
   h2 {
     font-size: $font-size-h2;
+
+    margin: 0;
+    border: none;
+    padding-top: 1em;
   }
 
   h3 {
