@@ -38,7 +38,7 @@
           CRUK Pattern Library
         </a>
 
-        <nav class="masthead-nav" role="navigaton" aria-label="Primary">
+        <nav class="masthead-nav" role="navigation" aria-label="Primary">
           <a class="active" href="/cruk-pattern-library/">Docs</a>
           <a href="https://github.com/CRUKorg/cruk-pattern-library" target="_blank">GitHub</a>
         </nav>
@@ -118,6 +118,12 @@
   <a class="list-group-item " href="/cruk-pattern-library/calls-to-action/">
     Calls To Action
   </a>
+  <a class="list-group-item " href="/cruk-pattern-library/alphabetic-list/">
+    Alphabetic List
+  </a>
+  <a class="list-group-item " href="/cruk-pattern-library/video/">
+    Video
+  </a>
 </nav>
 
   </div>
@@ -138,7 +144,7 @@ three items in every breadcrumb.</p>
 
 <p>Includes home link and current page, to make it clear “where we are”.</p>
 
-<div class="docs-example clearfix"><nav id="breadcrumb" aria-label="You are here">
+<div class="docs-example clearfix"><nav id="breadcrumb" aria-label="You are here" class="cr-breadcrumb">
     <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
         <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
             <a href="/" aria-level="1" itemprop="item">Home</a>
@@ -158,7 +164,7 @@ three items in every breadcrumb.</p>
         </li>
     </ol>
 </nav></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">id=</span><span class="s">"breadcrumb"</span> <span class="na">aria-label=</span><span class="s">"You are here"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">id=</span><span class="s">"breadcrumb"</span> <span class="na">aria-label=</span><span class="s">"You are here"</span> <span class="na">class=</span><span class="s">"cr-breadcrumb"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;ol</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/BreadcrumbList"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li</span> <span class="na">itemprop=</span><span class="s">"itemListElement"</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/ListItem"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">aria-level=</span><span class="s">"1"</span> <span class="na">itemprop=</span><span class="s">"item"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
@@ -183,7 +189,7 @@ three items in every breadcrumb.</p>
 
 <p>Less usable, but reduces horizontal space usage on very deep pages.</p>
 
-<div class="docs-example clearfix"><nav id="breadcrumb" aria-label="You are here" class="breadcrumb--hide-current breadcrumb--hide-top">
+<div class="docs-example clearfix"><nav id="breadcrumb" aria-label="You are here" class="cr-breadcrumb cr-breadcrumb--hide-current cr-breadcrumb--hide-top">
     <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
         <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
             <a href="/" aria-level="1" itemprop="item">Home</a>
@@ -203,7 +209,7 @@ three items in every breadcrumb.</p>
         </li>
     </ol>
 </nav></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">id=</span><span class="s">"breadcrumb"</span> <span class="na">aria-label=</span><span class="s">"You are here"</span> <span class="na">class=</span><span class="s">"breadcrumb--hide-current breadcrumb--hide-top"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">id=</span><span class="s">"breadcrumb"</span> <span class="na">aria-label=</span><span class="s">"You are here"</span> <span class="na">class=</span><span class="s">"cr-breadcrumb cr-breadcrumb--hide-current cr-breadcrumb--hide-top"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;ol</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/BreadcrumbList"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li</span> <span class="na">itemprop=</span><span class="s">"itemListElement"</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/ListItem"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">aria-level=</span><span class="s">"1"</span> <span class="na">itemprop=</span><span class="s">"item"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
