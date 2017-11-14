@@ -1,0 +1,30 @@
+.cr-cta-link {
+  &__icon {
+    @include chevron;
+    color: $brand-secondary;
+    position: relative;
+    top: -1px;
+    float: left;
+    &::before {
+      padding-right: 8px;
+      text-decoration: none;
+      vertical-align: middle;
+      content: "\e911";
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: bold;
+    color: $brand-secondary;
+  }
+
+  &__text {
+    display: block;
+    padding-left: 20px;
+  }
+}
+
+.cr-i--print {
+  margin-right: 0.5em;
+}
