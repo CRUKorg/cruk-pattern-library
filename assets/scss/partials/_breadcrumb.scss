@@ -18,16 +18,18 @@
     border-top: 1px solid $brand-grey-medium;
     display: inline-block;
 
-    &:last-child {
-      a {
-        text-decoration: none;
-        color: #000;
-        background: $brand-grey-light;
-        cursor: default;
+    &:first-child a {
+      padding-left: 12px;
+    }
 
-        &:after {
-          border-left-color: $brand-grey-light;
-        }
+    &:last-child a {
+      text-decoration: none;
+      color: #000;
+      background: $brand-grey-light;
+      cursor: default;
+
+      &:after {
+        border-left-color: $brand-grey-light;
       }
     }
   }
@@ -79,8 +81,13 @@
   &.cr-breadcrumb--hide-current li:last-child {
     @extend .sr-only;
   }
-  &.cr-breadcrumb--hide-top li:first-child {
-    @extend .sr-only;
+  &.cr-breadcrumb--hide-top {
+    li:first-child {
+      @extend .sr-only;
+    }
+    li:nth-child(2) a {
+      padding-left: 12px;
+    }
   }
 }
 
