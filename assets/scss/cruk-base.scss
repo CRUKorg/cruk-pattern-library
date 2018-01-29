@@ -3,6 +3,7 @@
  */
 
 // @TODO: Establish a rhythm for line heights / margins / padding in all partials.
+// @TODO: Assess accessibility (color contrasts, etc)
 
 // Include Bootstrap.
 @import "bootstrap/variables";
@@ -16,6 +17,7 @@
 
 // Core CSS.
 @import "bootstrap/scaffolding";
+@import "partials/scaffolding";
 @import "bootstrap/type";
 @import "bootstrap/code";
 @import "bootstrap/grid";
