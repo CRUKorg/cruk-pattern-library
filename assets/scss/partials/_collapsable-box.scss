@@ -1,9 +1,9 @@
-@import "../base/variables";
+@import "../variables";
 
 .cr-collbox {
   @extend .panel;
   @extend .panel-default;
-  border-color: #ddd;
+  border-color: $brand-gray-light;
 
   &__title {
     @extend .panel-title;
@@ -16,28 +16,26 @@
       @extend .cr-i--minus;
       padding-right: 0.56em;
       display: inline-block;
-      font-size: 16px;
+      font-size: $font-size-large;
       line-height: 20px;
       vertical-align: bottom;
   }
   }
 
   &__heading {
-    font-size: 1.1em;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: $gray-5;
     h3 {
       margin: 0;
       a.collapse-toggle {
-        color: #2e008b;
+        color: $brand-primary;
         text-decoration: none;
         padding: 11px 15px 9px 15px;
         display: inline-block;
         line-height: 20px;
-        font-size: 19px;
+        font-size: 1.357rem;
         vertical-align: middle;
         width: 100%;
-
       }
       .collapse-toggle:focus {
         outline: 5px auto -webkit-focus-ring-color !important;
@@ -45,7 +43,7 @@
       }
       @media screen and (min-width: 800px +1) {
         a:hover {
-          color: #e40085;
+          color: $brand-secondary;
           text-decoration: underline;
         }
       }
@@ -54,7 +52,7 @@
 
   &__body {
     @extend .panel-body;
-    font-size: 14px;
+    font-size: $font-size;
 
     p:last-child {
       margin-bottom: 0;

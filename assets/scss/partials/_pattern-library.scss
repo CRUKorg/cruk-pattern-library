@@ -1,4 +1,4 @@
-@import "../base/variables";
+@import "../variables";
 
 body.cr-pattern-library {
   background-color: $body-bg;
@@ -40,16 +40,16 @@ body.cr-pattern-library {
     background-color: $brand-tertiary;
   }
 
-  &.cr-pattern-library-swatch--grey-light .cr-pattern-library-swatch__colour {
-    background-color: $brand-grey-light;
+  &.cr-pattern-library-swatch--gray-light .cr-pattern-library-swatch__colour {
+    background-color: $brand-gray-light;
   }
 
-  &.cr-pattern-library-swatch--grey-medium .cr-pattern-library-swatch__colour {
-    background-color: $brand-grey-medium;
+  &.cr-pattern-library-swatch--gray-medium .cr-pattern-library-swatch__colour {
+    background-color: $brand-gray-medium;
   }
 
-  &.cr-pattern-library-swatch--grey-dark .cr-pattern-library-swatch__colour {
-    background-color: $brand-grey-dark;
+  &.cr-pattern-library-swatch--gray-dark .cr-pattern-library-swatch__colour {
+    background-color: $brand-gray-dark;
   }
 }
 

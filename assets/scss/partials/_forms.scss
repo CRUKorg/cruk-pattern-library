@@ -1,7 +1,7 @@
-@import "../base/variables";
-@import "../mixins/forms";
+@import "../variables";
+
 @import "bootstrap/mixins/_vendor-prefixes.scss";
-@import "bootstrap/variables";
+@import "../mixins/forms";
 
 /**
  * Basic form styling.
@@ -13,7 +13,7 @@ label {
 
   .input-optional {
     font-weight: normal;
-    font-size: $font-size-base;
+    font-size: $font-size;
   }
 }
 
@@ -58,7 +58,7 @@ label {
   }
 
   &.cr-input-group--masthead {
-    border-color: #ebebeb;
+    border-color: $brand-gray-light;
   }
 
   &.cr-input-group--focused {
@@ -198,7 +198,7 @@ label {
   .col-sm-8 {
     .form-checkbox.error,
     .form-radio.error {
-      width: 1rem;
+      width: $font-size;
     }
   }
 }
@@ -236,7 +236,7 @@ $feedback-ball-border: 3px;
   &:before {
     position: relative;
     top: 15px;
-    color: #fff;
+    color: white;
   }
 
   &:after {
@@ -257,7 +257,7 @@ $feedback-ball-border: 3px;
   right: -1.6em;
 
   @media (max-width: $screen-sm) {
-    right: 1rem;
+    right: $font-size;
     top: -2.5rem;
   }
 }
@@ -315,9 +315,9 @@ $feedback-ball-border: 3px;
 }
 
 section.col-sm-12 .page-header {
-  background-color: #fff;
+  background-color: white;
   margin-bottom: 0;
-  border: 1px solid #ddd;
+  border: 1px solid $brand-gray-light;
   border-bottom: 0 none;
   text-align: center;
   border-top-left-radius: 4px;

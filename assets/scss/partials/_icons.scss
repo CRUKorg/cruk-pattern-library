@@ -1,4 +1,4 @@
-@import "../base/variables";
+@import "../variables";
 
 /**
  * The base .cr-i class is 100% copied from Font Awesome <3:
@@ -58,98 +58,98 @@
  */
 
 .cr-i--plus:before {
-  content: "\e900";
+  content: $icon-plus;
 }
 .cr-i--minus:before {
-  content: "\e901";
+  content: $icon-minus;
 }
 .cr-i--checkmark:before {
-  content: "\e902";
+  content: $icon-checkmark;
 }
 .cr-i--minus-2:before {
-  content: "\e903";
+  content: $icon-minus2;
 }
 .cr-i--plus-2:before {
-  content: "\e904";
+  content: $icon-plus2;
 }
 .cr-i--chevron-down:before {
-  content: "\e905";
+  content: $icon-chevron-down;
 }
 .cr-i--chevron-up:before {
-  content: "\e906";
+  content: $icon-chevron-up;
 }
 .cr-i--close:before {
-  content: "\e913";
+  content: $icon-close;
 }
 .cr-i--remove:before {
-  content: "\e913";
+  content: $icon-remove;
 }
 .cr-i--times:before {
-  content: "\e913";
+  content: $icon-times;
 }
 .cr-i--exclamation-circle:before {
-  content: "\e908";
+  content: $icon-exclamation-circle;
 }
 .cr-i--check-circle:before {
-  content: "\e909";
+  content: $icon-check-circle;
 }
 .cr-i--pencil-square:before {
-  content: "\e90a";
+  content: $icon-pencil-square;
 }
 .cr-i--credit-card:before {
-  content: "\e90b";
+  content: $icon-credit-card;
 }
 .cr-i--square:before {
-  content: "\e90c";
+  content: $icon-square;
 }
 .cr-i--eye:before {
-  content: "\e90d";
+  content: $icon-eye;
 }
 .cr-i--exclamation-triangle:before {
-  content: "\e90e";
+  content: $icon-exclamation-triangle;
 }
 .cr-i--warning:before {
-  content: "\e90e";
+  content: $icon-warning;
 }
 .cr-i--ticket:before {
-  content: "\e90f";
+  content: $icon-ticket;
 }
 .cr-i--search:before {
-  content: "\e910";
+  content: $icon-search;
 }
 .cr-i--chevron-right:before {
-  content: "\e911";
+  content: $icon-chevron-right;
 }
 .cr-i--chevron-left:before {
-  content: "\e912";
+  content: $icon-chevron-left;
 }
 .cr-i--link:before {
-  content: "\e9cb";
+  content: $icon-link;
 }
 .cr-i--warning2:before {
-  content: "\ea07";
+  content: $icon-warning2;
 }
 .cr-i--notification:before {
-  content: "\ea08";
+  content: $icon-notification;
 }
 .cr-i--info:before {
-  content: "\e908";
+  content: $icon-info;
 }
 .cr-i--checkbox-checked:before {
-  content: "\ea52";
+  content: $icon-checkbox-checked;
 }
 .cr-i--checkbox-unchecked:before {
-  content: "\ea53";
+  content: $icon-checkbox-unchecked;
 }
 .cr-i--radio-checked:before {
-  content: "\ea54";
+  content: $icon-radio-checked;
 }
 .cr-i--radio-checked2:before {
-  content: "\ea55";
+  content: $icon-radio-checked2;
 }
 .cr-i--radio-unchecked:before {
-  content: "\ea56";
+  content: $icon-radio-unchecked;
 }
 .cr-i--print:before {
-  content: "\e914";
+  content: $icon-print;
 }

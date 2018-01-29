@@ -1,4 +1,4 @@
-@import "../base/variables";
+@import "../variables";
 @import "bootstrap/mixins/_vendor-prefixes.scss";
 
 /**
@@ -36,8 +36,7 @@
 
     position: relative;
     top: 4px;
-    font-size: 1.1em;
-    color: $brand-grey-medium;
+    color: $brand-gray-medium;
     @include transition(color 100ms linear);
   }
 }

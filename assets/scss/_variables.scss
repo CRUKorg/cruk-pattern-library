@@ -25,31 +25,31 @@ $CERULEAN:         #00b6ed;
 $HOLLYWOOD_CERISE: #ec008c;
 $KINGFISHER_DAISY: #2e008b;
 $PALE_ROSE:        #ffe0ec;
-$RED:              #f00;
+$SCAMPI:           #6C5C99;
 $SUNGLOW:          #fdc02f;
 $SUSHI:            #8bc34a;
 $TROPICAL_BLUE:    #bfe8f6;
 
 // Brand Colors.
-$brand-primary: $KINGFISHER_DAISY;
-$brand-secondary: $HOLLYWOOD_CERISE;
+$brand-primary:         $KINGFISHER_DAISY;
+$brand-secondary:       $HOLLYWOOD_CERISE;
 $brand-secondary-light: lighten(desaturate(adjust-hue($brand-secondary, 0.0377), 14.4796), 10.3922);
-$brand-tertiary: $CERULEAN;
-$brand-grey-light: $gray-10;
-$brand-grey-medium: $gray-20;
-$brand-grey-dark: $gray-60;
+$brand-tertiary:        $CERULEAN;
+$brand-gray-light:      $gray-10;
+$brand-gray-medium:     $gray-20;
+$brand-gray-dark:       $gray-60;
 
-$brand-danger:  $BURNT_SIENNA;
-$brand-warning: $SUNGLOW;
-$brand-success: $SUSHI;
-$brand-info:    $CERULEAN;
+$brand-danger:          $BURNT_SIENNA;
+$brand-warning:         $SUNGLOW;
+$brand-success:         $SUSHI;
+$brand-info:            $CERULEAN;
 
 $body-bg:               $gray-5;
 $text-color:            $gray-80;
 $text-color-error:      $brand-danger;
 $link-color:            $brand-primary;
 $link-hover-color:      $brand-secondary;
-$disabled-grey:         $gray-40;
+$disabled-gray:         $gray-40;
 
 //== Typography
 //
@@ -66,7 +66,9 @@ $heading-weight-strong: 700;
 $heading-weight-light:  300;
 
 $font-size-base:  14px !default;
-$font-size-large: 1.14rem;
+$font-size:       1rem;
+$font-size-large: 1.143rem;
+$font-size-small: 0.8571rem;
 $font-size-h1:    2.1rem;
 $font-size-h2:    1.4rem;
 $font-size-h3:    1.4rem;
@@ -74,7 +76,7 @@ $font-size-h4:    1.16rem;
 $font-size-h5:    0.93rem;
 $font-size-h6:    0.93rem;
 
-// @TODO: Boostrap wants this in px for calculations, but we want this in rem please!
+// @TODO: Bootstrap wants this in px for calculations, but we want this in rem please!
 $font-size-large: 16px;
 
 //** Unit-less `line-height` for use in components like buttons.
@@ -136,3 +138,36 @@ $headings-font-weight:          $heading-weight-strong !default;
 
 $fa-font-path: "assets/fonts/font-awesome";
 $cr-icon-path: '../fonts';
+
+$icon-check-circle: "\e909";
+$icon-checkbox-checked: "\ea52";
+$icon-checkbox-unchecked: "\ea53";
+$icon-checkmark: "\e902";
+$icon-chevron-down: "\e905";
+$icon-chevron-left: "\e912";
+$icon-chevron-right: "\e911";
+$icon-chevron-up: "\e906";
+$icon-close: "\e913";
+$icon-credit-card: "\e90b";
+$icon-exclamation-circle: "\e908";
+$icon-exclamation-triangle: "\e90e";
+$icon-eye: "\e90d";
+$icon-info: "\e908";
+$icon-link: "\e9cb";
+$icon-minus2: "\e903";
+$icon-minus: "\e901";
+$icon-notification: "\ea08";
+$icon-pencil-square: "\e90a";
+$icon-plus2: "\e904";
+$icon-plus: "\e900";
+$icon-print: "\e914";
+$icon-radio-checked2: "\ea55";
+$icon-radio-checked: "\ea54";
+$icon-radio-unchecked: "\ea56";
+$icon-remove: "\e913";
+$icon-search: "\e910";
+$icon-square: "\e90c";
+$icon-ticket: "\e90f";
+$icon-times: "\e913";
+$icon-warning2: "\ea07";
+$icon-warning: "\e90e";

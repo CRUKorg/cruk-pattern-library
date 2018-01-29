@@ -1,4 +1,4 @@
-@import "../../base/variables";
+@import "../../variables";
 @import "../../mixins/display";
 
 // CRUK Search result styles.
@@ -33,7 +33,7 @@
   }
 
   &__excerpt {
-    font-size: 1rem;
+    font-size: $font-size;
 
     &:last-child {
       margin-bottom: 0;

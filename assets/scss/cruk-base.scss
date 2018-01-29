@@ -2,11 +2,12 @@
  * CRUK Base
  */
 
+// @TODO: Establish a rhythm for line heights / margins / padding in all partials.
+
 // Include Bootstrap.
 @import "bootstrap/variables";
-@import "base/variables";
+@import "variables";
 @import "bootstrap/mixins";
-@import "base/mixins";
 
 // Reset and dependencies.
 @import "bootstrap/normalize";
@@ -37,7 +38,6 @@
 @import "bootstrap/pager";
 @import "bootstrap/labels";
 @import "bootstrap/badges";
-//@import "bootstrap/jumbotron";
 @import "bootstrap/thumbnails";
 @import "bootstrap/alerts";
 @import "bootstrap/progress-bars";
@@ -54,7 +54,6 @@
 @import "bootstrap/modals";
 @import "bootstrap/tooltip";
 @import "bootstrap/popovers";
-//@import "bootstrap/carousel";
 
 // Utility classes.
 @import "bootstrap/utilities";

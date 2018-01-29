@@ -1,4 +1,4 @@
-@import "../base/variables";
+@import "../variables";
 
 .brand-primary {
   color: $brand-primary;
@@ -12,14 +12,14 @@
   color: $brand-tertiary;
 }
 
-.brand-grey-light {
-  color: $brand-grey-light;
+.brand-gray-light {
+  color: $brand-gray-light;
 }
 
-.brand-grey-medium {
-  color: $brand-grey-medium;
+.brand-gray-medium {
+  color: $brand-gray-medium;
 }
 
-.brand-grey-dark {
-  color: $brand-grey-dark;
+.brand-gray-dark {
+  color: $brand-gray-dark;
 }

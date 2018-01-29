@@ -102,3 +102,7 @@ This library follows [the Semantic Versioning guidelines](http://semver.org/).
 ## License
 
 Created by and copyright Cancer Research UK. Released under the [MIT license](LICENSE.md).
+
+## Roadmap
+
+@TODO: We need to refactor the JS to remove the dependency on jQuery. We should write in vanilla js.

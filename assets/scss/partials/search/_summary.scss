@@ -1,4 +1,4 @@
-@import "../../base/variables";
+@import "../../variables";
 
 // CRUK Search summary styles.
 .cr-search-summary {
@@ -8,6 +8,6 @@
   margin: 20px 0;
 
   &__info {
-    font-size: 1rem;
+    font-size: $font-size;
   }
 }

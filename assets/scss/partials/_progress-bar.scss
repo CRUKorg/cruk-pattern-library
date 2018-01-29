@@ -1,4 +1,4 @@
-@import "../base/variables";
+@import "../variables";
 
 /**
  * Progress bar
@@ -38,7 +38,7 @@ $progress-bar-ball-border: 3px;
     height: $progress-bar-bar-height;
     display: inline-block;
     border: none;
-    background-color: $brand-grey-light;
+    background-color: $brand-gray-light;
     position: absolute;
   }
 
@@ -68,7 +68,7 @@ $progress-bar-ball-border: 3px;
     height: $progress-bar-icon-height;
     z-index: 50;
     content: "";
-    border: $progress-bar-ball-border solid $brand-grey-light;
+    border: $progress-bar-ball-border solid $brand-gray-light;
     border-radius: ceil($progress-bar-icon-width / 2);
   }
 

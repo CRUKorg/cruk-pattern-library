@@ -1,4 +1,4 @@
-@import "../base/variables";
+@import "../variables";
 
 .cr-accordion__header button {
   position: relative;
@@ -7,7 +7,7 @@
   margin-bottom: 0;
 
   font-family: $font-family-headings;
-  color: #fff;
+  color: white;
   text-align: left;
   background-color: $brand-primary;
   line-height: 1;
@@ -17,7 +17,7 @@
 
   &::before {
     @extend .cr-i;
-    content: "\e900";
+    content: $icon-plus;
 
     position: absolute;
     top: 13px;
@@ -29,7 +29,7 @@
     border-bottom-left-radius: 0;
 
     &::before {
-      content: "\e901";
+      content: $icon-minus;
     }
   }
 }
@@ -54,5 +54,5 @@
 
   @extend .clearfix;
   padding: 2em;
-  background-color: #fff;
+  background-color: white;
 }

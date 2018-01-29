@@ -1,4 +1,4 @@
-@import "../base/variables";
+@import "../variables";
 @import "../mixins/display";
 
 // CRUK pager styles.
@@ -57,7 +57,7 @@
 
     &:focus,
     &:hover {
-      background-color: #6C5C99;
+      background-color: $SCAMPI;
       color: white;
       text-decoration: none;
     }
@@ -76,7 +76,7 @@
     display: inline-block;
     height: 40px;
     padding: 9px 14px;
-    font-size: 1rem;
+    font-size: $font-size;
     color: $text-color;
     cursor: text;
     background-color: transparent;
@@ -85,6 +85,6 @@
   }
 
   .glyphicon {
-    font-size: 12px;
+    font-size: $font-size-small;
   }
 }

@@ -1,4 +1,4 @@
-@import "../base/variables";
+@import "../variables";
 @import "../mixins/display";
 
 .cr-video {
@@ -8,8 +8,8 @@
     padding-top: 30px;
     height: 0;
     overflow: hidden;
-    border: 1px solid #000;
-    background: #000;
+    border: 1px solid black;
+    background: black;
 
     iframe,
     object,
@@ -24,12 +24,12 @@
 }
 
 .cr-video-transcript {
-  background-color: #000;
+  background-color: black;
   @include clearfix;
 
   &__heading {
-    background-color: #000;
-    border-color: #000;
+    background-color: black;
+    border-color: black;
     padding: 10px 15px;
   }
 
@@ -38,9 +38,9 @@
     margin-bottom: 0 !important;
 
     .collapse-toggle {
-      font-family: "MuseoSans-700","Arial","Helvetica",sans-serif;
+      font-family: $font-family-museo;
       font-size: 16.1px !important;
-      color: #e3e3e3;
+      color: $brand-gray-light;
     }
 
     .anchorjs-link {
@@ -52,7 +52,7 @@
     &--outer {
       padding: 0 15px 15px;
       clear: both;
-      background: #000;
+      background: black;
     }
 
     &--inner {
@@ -61,9 +61,9 @@
       padding: 15px;
       overflow-x: hidden;
       overflow-y: scroll;
-      background-color: #fff;
-      border-top-color: #000;
-      border-bottom-color: #000;
+      background-color: white;
+      border-top-color: black;
+      border-bottom-color: black;
       border-radius: 4px;
 
       ::-webkit-scrollbar {
@@ -103,7 +103,7 @@
       padding-right: 5px;
       font-size: initial;
       text-decoration: none;
-      content: "\e906";
+      content: $icon-chevron-up;
     }
 
     span::after {
@@ -123,7 +123,7 @@
       padding-right: 5px;
       font-size: initial;
       text-decoration: none;
-      content: "\e905";
+      content: $icon-chevron-down;
     }
 
     span::after {

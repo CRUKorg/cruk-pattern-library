@@ -1,4 +1,4 @@
-@import "../base/variables";
+@import "../variables";
 
 .collapsible-fieldset {
   > .panel-heading {
@@ -13,13 +13,13 @@
         i {
           color: $brand-tertiary;
           padding-right: 10px;
-          font-size: 25px;
+          font-size: 1.786rem;
         }
 
         .add-details {
           font-family: $font-family-sans-serif;
           font-weight: bold;
-          font-size: $font-size-base;
+          font-size: $font-size;
           margin-top: 7px;
         }
       }
