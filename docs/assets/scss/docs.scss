@@ -197,6 +197,18 @@ body.example form {
     margin-top: 0;
   }
 
+  li+li {
+    margin-top: 0;
+  }
+
+  hr {
+    height: 4px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: $brand-gray-light;
+    border: 0 none;
+  }
+
   // Undo the h4 overriding from primer-markdown.
   .cr-search-result__title {
     font-size: 19px;

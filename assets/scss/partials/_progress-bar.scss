@@ -23,6 +23,7 @@ $progress-bar-ball-border: 3px;
   float: left;
   position: relative;
   font-family: $font-family-headings;
+  font-weight: $heading-weight-strong;
 
   /* Remove the two outside <hr> elements */
   &:first-child hr:first-child,
