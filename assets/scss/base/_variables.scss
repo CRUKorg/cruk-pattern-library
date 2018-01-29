@@ -1,3 +1,5 @@
+@import "bootstrap/variables";
+
 //== Colors
 
 //## Grayscale.
@@ -47,6 +49,7 @@ $text-color:            $gray-80;
 $text-color-error:      $brand-danger;
 $link-color:            $brand-primary;
 $link-hover-color:      $brand-secondary;
+$disabled-grey:         $gray-40;
 
 //== Typography
 //
@@ -63,12 +66,16 @@ $heading-weight-strong: 700;
 $heading-weight-light:  300;
 
 $font-size-base:  14px !default;
+$font-size-large: 1.14rem;
 $font-size-h1:    2.1rem;
 $font-size-h2:    1.4rem;
 $font-size-h3:    1.4rem;
 $font-size-h4:    1.16rem;
 $font-size-h5:    0.93rem;
 $font-size-h6:    0.93rem;
+
+// @TODO: Boostrap wants this in px for calculations, but we want this in rem please!
+$font-size-large: 16px;
 
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base: 1.428571429; // 20/14
@@ -122,6 +129,8 @@ $gray-dark:                     $gray-80 !default;
 $gray:                          $gray-70 !default;
 $gray-light:                    $gray-50 !default;
 $gray-lighter:                  $gray-10 !default;
+$headings-font-family:          $font-family-headings !default;
+$headings-font-weight:          $heading-weight-strong !default;
 
 //== Iconography
 

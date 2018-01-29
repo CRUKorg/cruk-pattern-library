@@ -1,3 +1,5 @@
+@import "../base/variables";
+
 .cr-collbox {
   @extend .panel;
   @extend .panel-default;
@@ -22,7 +24,7 @@
 
   &__heading {
     font-size: 1.1em;
-    padding: 0px;
+    padding: 0;
     background-color: #f5f5f5;
     h3 {
       margin: 0;
@@ -55,7 +57,7 @@
     font-size: 14px;
 
     p:last-child {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
 

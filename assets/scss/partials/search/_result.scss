@@ -1,3 +1,6 @@
+@import "../../base/variables";
+@import "../../mixins/display";
+
 // CRUK Search result styles.
 .cr-search-results {
   @extend .media-list;

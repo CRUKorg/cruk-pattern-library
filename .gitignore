@@ -7,5 +7,4 @@ _site/
 node_modules/
 .vagrant
 .idea
-docs/bower_components
 .DS_Store

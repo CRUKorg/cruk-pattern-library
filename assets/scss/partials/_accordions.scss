@@ -1,10 +1,12 @@
+@import "../base/variables";
+
 .cr-accordion__header button {
   position: relative;
   width: 100%;
   padding: 0.7em 0.7em 0.6em;
   margin-bottom: 0;
 
-  font-family: $headings-font-family;
+  font-family: $font-family-headings;
   color: #fff;
   text-align: left;
   background-color: $brand-primary;

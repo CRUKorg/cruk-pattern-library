@@ -9,6 +9,12 @@
     "type": "git",
     "url": "git+https://github.com/CRUKorg/cruk-pattern-library.git"
   },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "jquery.inputmask": "^3.3.4",
+    "primer-markdown": "^3.7.5",
+    "spin.js": "^3.1.0"
+  },
   "devDependencies": {
     "autoprefixer-core": "~5.2.1",
     "grunt": "^0.4.5",
@@ -42,11 +48,5 @@
     "css",
     "cruk",
     "pattern-library"
-  ],
-  "dependencies": {
-    "bootstrap-sass": "^3.3.7",
-    "jquery.inputmask": "^3.3.4",
-    "primer-markdown": "^3.7.5",
-    "spin.js": "^3.1.0"
-  }
+  ]
 }

@@ -1,7 +1,8 @@
+@import "../base/variables";
 
 .btn {
   border-width: $btn-border-width;
-  font-family: $headings-font-family;
+  font-family: $font-family-headings;
   font-weight: normal;
   font-size: 16px;
   padding: 9px 12px;
@@ -40,14 +41,14 @@
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
-    background-color: $btn-default-bg-disabled;
-    border-color: $btn-default-bg-disabled;
+    background-color: $disabled-grey;
+    border-color: $disabled-grey;
 
     &:hover,
     &:focus,
     &.focus {
-      background-color: $btn-default-bg-disabled;
-      border-color: $btn-default-bg-disabled;
+      background-color: $disabled-grey;
+      border-color: $disabled-grey;
     }
   }
 }

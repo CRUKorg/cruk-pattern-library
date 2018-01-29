@@ -1,3 +1,4 @@
+@import "../base/variables";
 
 /**
  * Progress bar
@@ -21,7 +22,7 @@ $progress-bar-ball-border: 3px;
 .cr-progress-bar__step {
   float: left;
   position: relative;
-  font-family: $headings-font-family;
+  font-family: $font-family-headings;
 
   /* Remove the two outside <hr> elements */
   &:first-child hr:first-child,

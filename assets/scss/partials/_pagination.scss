@@ -1,9 +1,12 @@
+@import "../base/variables";
+@import "../mixins/display";
+
 // CRUK pager styles.
 .cr-simple-pager {
   @include clearfix();
   position: relative;
-  padding-left: 0px;
-  margin: 20px 0px;
+  padding-left: 0;
+  margin: 20px 0;
   text-align: center;
   list-style: none;
 

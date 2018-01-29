@@ -1,10 +1,14 @@
+@import "../base/variables";
+@import "../mixins/forms";
+@import "bootstrap/mixins/_vendor-prefixes.scss";
+@import "bootstrap/variables";
 
 /**
  * Basic form styling.
  */
 
 label {
-  font-size: $form-font-size;
+  font-size: $font-size-large;
   margin-bottom: 10px;
 
   .input-optional {
@@ -29,7 +33,7 @@ label {
   padding: 7px 12px 5px;
   border-width: 2px;
   box-shadow: none;
-  font-size: $form-font-size;
+  font-size: $font-size-large;
   @include transition(border-color 100ms linear);
 
   &:focus {
@@ -76,13 +80,13 @@ label {
   }
 
   .cr-input-group__icon {
-    font-size: $form-font-size;
+    font-size: $font-size-large;
   }
 
 }
 
 /**
- * Input groups sizing, we need to redfine as we've altered the names of
+ * Input groups sizing, we need to redefine as we've altered the names of
  * components, so the original Bootstrap definitions won't @extend over.
  */
 
@@ -101,24 +105,24 @@ label {
   .cr-input-group__input {
     height: $input-height-large - 4;
     padding: 11px 16px 9px;
-    font-size: ceil(($form-font-size * 1.25));
+    font-size: ceil(($font-size-large * 1.25));
     line-height: $line-height-large;
   }
 
   .cr-input-group__button > .btn {
     height: $input-height-large - 4;
-    font-size: ceil(($form-font-size * 1.25));
+    font-size: ceil(($font-size-large * 1.25));
   }
 
   .cr-input-group__icon {
-    font-size: ceil(($form-font-size * 1.25));
+    font-size: ceil(($font-size-large * 1.25));
   }
 }
 
 .cr-input-group--sm {
   .cr-input-group__input {
     height: $input-height-small - 4;
-    font-size: ceil(($form-font-size * 0.85));
+    font-size: ceil(($font-size-large * 0.85));
     line-height: $line-height-small;
   }
 
@@ -127,7 +131,7 @@ label {
   }
 
   .cr-input-group__icon {
-    font-size: ceil(($form-font-size * 0.85));
+    font-size: ceil(($font-size-large * 0.85));
   }
 }
 
@@ -294,11 +298,11 @@ $feedback-ball-border: 3px;
     margin-bottom: 0;
     border-style: solid solid none solid;
     border-width: 0 1px 0 1px;
-    border-radius: 0px;
+    border-radius: 0;
     padding-top: 5px;
 
     .col-sm-6.col-sm-offset-3 {
-      margin-left: 0%;
+      margin-left: 0;
       width: 100%;
     }
   }
@@ -313,9 +317,8 @@ $feedback-ball-border: 3px;
 section.col-sm-12 .page-header {
   background-color: #fff;
   margin-bottom: 0;
-  border-color: #ddd;
-  border-style: solid solid none solid;
-  border-width: 1px 1px 0 1px;
+  border: 1px solid #ddd;
+  border-bottom: 0 none;
   text-align: center;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
