@@ -10,3 +10,65 @@ body {
   font-size: $font-size;
   font-family: $font-family-base;
 }
+
+//
+// Typography
+//
+
+.lead {
+  margin-bottom: $line-height-computed;
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: $text-color;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 1.5rem;
+  }
+}
+
+//
+// Lists, Blockquotes & Such
+//
+
+ul,
+ol {
+  padding-left: 2em;
+
+  &.no-list {
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li > p {
+  margin-top: $spacer-3;
+}
+
+dl {
+  padding: 0;
+
+  dt {
+    padding: 0;
+    margin-top: $spacer-3;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  dt + dt {
+    margin-top: 0;
+  }
+
+  dd {
+    padding: 0 $spacer-3;
+    margin-bottom: $spacer-3;
+  }
+}

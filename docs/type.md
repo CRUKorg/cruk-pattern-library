@@ -65,10 +65,6 @@ Wrap `<blockquote>` around any <abbr title="HyperText Markup Language">HTML</abb
 
 ## Lists
 
-<div class="flash">
-  <strong>Heads up!</strong> The broken display of lists is <strong>intentional</strong> as Primer globally resets these elements for the time being. This will eventually be undone in the next major version.
-</div>
-
 ### Unordered list
 
 A list of items in which the order does *not* explicitly matter.
@@ -113,7 +109,7 @@ A list of items in which the order *does* explicitly matter.
 
 ### Description list
 
-A list of terms and their descriptions, for instance glossaries, displaying metadata and other othe key-value pairs, etc.
+A list of terms and their descriptions, for instance glossaries, displaying metadata and other key-value pairs, etc.
 
 {% example html %}
 <dl>

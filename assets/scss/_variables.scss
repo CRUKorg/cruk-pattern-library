@@ -44,7 +44,7 @@ $brand-warning:         $SUNGLOW;
 $brand-success:         $SUSHI;
 $brand-info:            $CERULEAN;
 
-$body-bg:               $gray-5;
+$body-bg:               white;
 $text-color:            $gray-80;
 $text-color-error:      $brand-danger;
 $link-color:            $brand-primary;
@@ -85,6 +85,10 @@ $line-height-base: 1.428571429; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 $line-height-computed: floor(($font-size-base * $line-height-base)); // ~20px
 
+// @TODO: Implement proper vertical rhythm.
+// See: https://github.com/primer/primer/blob/master/modules/primer-support/lib/variables/layout.scss
+$spacer-3: 16px;
+
 //== Buttons
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
@@ -99,7 +103,6 @@ $btn-default-border:             $brand-secondary;
 $btn-default-bg-focus:           $brand-secondary-light;
 $btn-default-bg-hover:           $brand-secondary-light;
 $btn-default-bg-active:          $brand-secondary-light;
-
 $btn-primary-color:              white;
 $btn-primary-bg:                 $brand-secondary;
 $btn-primary-border:             $brand-secondary;
@@ -111,7 +114,7 @@ $btn-primary-bg-active:          $brand-secondary-light;
 
 $input-bg:                       white;
 $input-color:                    $text-color;
-$input-color-placeholder:        $gray-40;
+$input-color-placeholder:        $gray-30;
 $input-border:                   $gray-20;
 $input-border-error:             $brand-danger;
 $input-border-focus:             $CERULEAN;

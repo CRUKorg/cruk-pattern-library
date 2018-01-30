@@ -1,0 +1,97 @@
+
+//
+// Site header
+//
+
+.masthead {
+  padding-top:    1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  background-color: white;
+  border-bottom: 1px solid rgba(0,0,0,0.075);
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .masthead-logo {
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 34em) {
+    text-align: left;
+
+    .masthead-logo {
+      float: left;
+    }
+  }
+}
+
+.masthead-nav {
+  margin-top: 1rem;
+  font-size: 1rem;
+
+  a {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 1.25rem;
+    }
+  }
+
+  .active {
+    font-weight: 600;
+  }
+
+  @media (max-width: 34em) {
+    padding-top: 1rem;
+    border-top: .075rem solid rgba(255, 255, 255, 0.25);
+  }
+
+  @media (min-width: 34em) {
+    float: right;
+    margin-top: .5rem;
+  }
+}
+
+
+//
+// Footer
+//
+
+.footer {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
+  line-height: 1.75;
+  color: $gray-50;
+  border-top: 1px solid $gray-10;
+
+  strong {
+    color: #333;
+  }
+}
+
+
+//
+// Side menu
+//
+
+.docs-menu {
+  margin-bottom: 1.5rem;
+  font-size: 14px;
+
+  @media (min-width: 34em) {
+    margin-right: 1rem;
+  }
+
+  .list-group-item.active {
+    border-left-width: 4px;
+    border-color: $list-group-border;
+    border-left-color: $list-group-active-border;
+  }
+}

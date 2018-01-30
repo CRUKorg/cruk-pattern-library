@@ -176,7 +176,6 @@ Previously we used [Sprockets](https://github.com/sstephenson/sprockets) to **re
 
 {% highlight scss %}
 // Imports
-@import "primer";
 @import "component";
 @import "another_component";
 
@@ -186,9 +185,9 @@ Previously we used [Sprockets](https://github.com/sstephenson/sprockets) to **re
 
 This is also how Primer's styles are to be included, should you need them.
 
-## Pixels vs. ems
+## Font size units
 
-Use `px` for `font-size`, because it offers absolute control over text. Additionally, unit-less `line-height` is preferred because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the `font-size`.
+Use `rem` for `font-size`, because it offers absolute control over text. Additionally, unit-less `line-height` is preferred because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the `font-size`.
 
 ## Class naming conventions
 

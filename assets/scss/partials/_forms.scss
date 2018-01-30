@@ -233,6 +233,7 @@ $feedback-ball-border: 3px;
 @include make-form-control-feedback-adjustment();
 
 .cr-i.form-control-feedback {
+  font-size: 13px;
   &:before {
     position: relative;
     top: 15px;

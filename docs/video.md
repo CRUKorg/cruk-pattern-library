@@ -3,7 +3,7 @@ layout: page
 title: Video
 ---
 
-This pattern is to use when adding video contnet on the site. 
+This pattern is to use when adding video content on the site.
 
 Youtube embed settings
 
@@ -14,7 +14,7 @@ Youtube embed settings
 ## Contents
 
 * Will be replaced with the ToC, excluding the "Contents" header
-{:toc} 
+{:toc}
 
 ## Video pattern
 
@@ -24,7 +24,7 @@ Youtube embed settings
 <div class="cr-video">
   <div class="cr-video__holder">
   <iframe width="640" height="360"
-    src="https://www.youtube-nocookie.com/embed/tS4a6I4-Yjo?rel=0" 
+    src="https://www.youtube-nocookie.com/embed/tS4a6I4-Yjo?rel=0"
     frameborder="0"
     allowfullscreen></iframe>
     </div>
