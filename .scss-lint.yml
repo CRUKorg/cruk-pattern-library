@@ -118,7 +118,7 @@ linters:
     convention: hyphenated_lowercase
 
   NestingDepth:
-    enabled: true
+    enabled: false
     max_depth: 3
 
   PlaceholderInExtend:
@@ -323,13 +323,13 @@ linters:
     enabled: true
 
   QualifyingElement:
-    enabled: true
+    enabled: false
     allow_element_with_attribute: false
     allow_element_with_class: false
     allow_element_with_id: false
 
   SelectorDepth:
-    enabled: true
+    enabled: false
     max_depth: 3
 
   SelectorFormat:
@@ -397,7 +397,7 @@ linters:
     enabled: false
 
   VendorPrefix:
-    enabled: true
+    enabled: false
     identifier_list: base
     additional_identifiers: []
     excluded_identifiers: []
