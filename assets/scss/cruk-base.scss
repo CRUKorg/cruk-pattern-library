@@ -2,11 +2,14 @@
  * CRUK Base
  */
 
+// @TODO: Establish a rhythm for line heights / margins / padding in all partials.
+// @TODO: Assess accessibility (color contrasts, etc)
+// @TODO: Don't @extend classes. Use mixins.
+
 // Include Bootstrap.
 @import "bootstrap/variables";
-@import "base/variables";
+@import "variables";
 @import "bootstrap/mixins";
-@import "base/mixins";
 
 // Reset and dependencies.
 @import "bootstrap/normalize";
@@ -15,6 +18,7 @@
 
 // Core CSS.
 @import "bootstrap/scaffolding";
+@import "partials/scaffolding";
 @import "bootstrap/type";
 @import "bootstrap/code";
 @import "bootstrap/grid";
@@ -37,7 +41,6 @@
 @import "bootstrap/pager";
 @import "bootstrap/labels";
 @import "bootstrap/badges";
-//@import "bootstrap/jumbotron";
 @import "bootstrap/thumbnails";
 @import "bootstrap/alerts";
 @import "bootstrap/progress-bars";
@@ -54,7 +57,6 @@
 @import "bootstrap/modals";
 @import "bootstrap/tooltip";
 @import "bootstrap/popovers";
-//@import "bootstrap/carousel";
 
 // Utility classes.
 @import "bootstrap/utilities";
@@ -63,8 +65,6 @@
 /**
  * CRUK Styles.
  */
-@import "base/type";
-
 @import "partials/accordions";
 @import "partials/alerts";
 @import "partials/alphabetic-list";
@@ -77,7 +77,6 @@
 @import "partials/didyoumean";
 @import "partials/icons";
 @import "partials/loader";
-@import "partials/navbar";
 @import "partials/pagination";
 @import "partials/pattern-library";
 @import "partials/progress-bar";

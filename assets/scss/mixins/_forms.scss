@@ -1,10 +1,12 @@
+@import "../variables";
+
 @mixin fieldset-no-border-bottom($border-color) {
   border-bottom: 0;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   margin-bottom: 0;
 
-  .panel-body:after {
+  .panel-body::after {
     border-bottom: 1px solid $border-color;
     content: "";
     display: block;
@@ -30,6 +32,7 @@
     @for $i from 1 through $grid-columns {
 
       $selecta: ".row > .#{$size}-#{$i} > .form-control-feedback";
+
       #{$selecta} {
         right: floor(($grid-gutter-width / 2));
       }

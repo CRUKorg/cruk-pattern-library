@@ -38,26 +38,26 @@ Whilst we match the Bootstrap variable names `primary`, `secondary` and our own 
 ### Greyscale
 
 <div class="row text-center">
-  <div class="col-xs-6 col-sm-3 cr-pattern-library-swatch cr-pattern-library-swatch--grey-light">
+  <div class="col-xs-6 col-sm-3 cr-pattern-library-swatch cr-pattern-library-swatch--gray-light">
     <div class="cr-pattern-library-swatch__colour">Light Grey</div>
 
-    <code>$brand-grey-light</code>
+    <code>$brand-gray-light</code>
     <code>#E3E3E3</code>
     <code>rgb(227, 227, 227)</code>
   </div>
 
-  <div class="col-xs-6 col-sm-3 cr-pattern-library-swatch cr-pattern-library-swatch--grey-medium">
+  <div class="col-xs-6 col-sm-3 cr-pattern-library-swatch cr-pattern-library-swatch--gray-medium">
     <div class="cr-pattern-library-swatch__colour">Medium Grey</div>
 
-    <code>$brand-grey-medium</code>
+    <code>$brand-gray-medium</code>
     <code>#C8C9C7</code>
     <code>rgb(200, 201, 199)</code>
   </div>
 
-  <div class="col-xs-6 col-sm-3 cr-pattern-library-swatch cr-pattern-library-swatch--grey-dark">
+  <div class="col-xs-6 col-sm-3 cr-pattern-library-swatch cr-pattern-library-swatch--gray-dark">
     <div class="cr-pattern-library-swatch__colour">Dark Grey</div>
 
-    <code>$brand-grey-dark</code>
+    <code>$brand-gray-dark</code>
     <code>#666</code>
     <code>rgb(102, 102, 102)</code>
   </div>

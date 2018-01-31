@@ -1,9 +1,10 @@
+@import "../variables";
 
 .btn {
   border-width: $btn-border-width;
-  font-family: $headings-font-family;
-  font-weight: normal;
-  font-size: 16px;
+  font-family: $font-family-headings;
+  font-weight: 700;
+  font-size: $font-size-large;
   padding: 9px 12px;
 }
 
@@ -13,11 +14,13 @@
     background-color: $btn-default-bg-focus;
     border-color: $btn-default-bg-focus;
   }
+
   &:hover,
   &.hover {
     background-color: $btn-default-bg-hover;
     border-color: $btn-default-bg-hover;
   }
+
   &:active,
   &.active,
   .open > &.dropdown-toggle {
@@ -32,22 +35,24 @@
     }
 
   }
+
   &:active,
   &.active,
   .open > &.dropdown-toggle {
     background-image: none;
   }
+
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
-    background-color: $btn-default-bg-disabled;
-    border-color: $btn-default-bg-disabled;
+    background-color: $disabled-gray;
+    border-color: $disabled-gray;
 
     &:hover,
     &:focus,
     &.focus {
-      background-color: $btn-default-bg-disabled;
-      border-color: $btn-default-bg-disabled;
+      background-color: $disabled-gray;
+      border-color: $disabled-gray;
     }
   }
 }

@@ -109,10 +109,12 @@ Make use of `<thead>`, `<tfoot>`, `<tbody>`, and `<th>` tags (and `scope` attrib
 
 ### Formatting
 
-* Use hex color codes `#000` unless using `rgba()` in raw CSS (SCSS' `rgba()` function is overloaded to accept hex colors as a param, e.g., `rgba(#000, .5)`).
+* Never use color codes in a declaration. All colors should be defined in the variables file.
+* Color variables should use hex color codes `#000` unless using `rgba()` in raw CSS (SCSS' `rgba()` function is overloaded to accept hex colors as a param, e.g., `rgba(#000, .5)`).
 * Use `//` for comment blocks (instead of `/* */`).
 * Avoid specifying units for zero values, e.g., `margin: 0;` instead of `margin: 0px;`.
 * Strive to limit use of shorthand declarations to instances where you must explicitly set all the available values.
+* In code, the word grey is always to be spelled "gray".
 
 ### Misc
 
@@ -174,7 +176,6 @@ Previously we used [Sprockets](https://github.com/sstephenson/sprockets) to **re
 
 {% highlight scss %}
 // Imports
-@import "primer";
 @import "component";
 @import "another_component";
 
@@ -184,9 +185,9 @@ Previously we used [Sprockets](https://github.com/sstephenson/sprockets) to **re
 
 This is also how Primer's styles are to be included, should you need them.
 
-## Pixels vs. ems
+## Font size units
 
-Use `px` for `font-size`, because it offers absolute control over text. Additionally, unit-less `line-height` is preferred because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the `font-size`.
+Use `rem` for `font-size`, because it offers absolute control over text. Additionally, unit-less `line-height` is preferred because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the `font-size`.
 
 ## Class naming conventions
 

@@ -46,9 +46,6 @@ Styling for common inline HTML5 elements.
 <p>The &lt;del&gt; element is used to mark up <del>deleted text</del>.</p>
 <p>The &lt;s&gt; element is used mark up <s>text that is to be treated as no longer accurate</s>.</p>
 <p>The &lt;ins&gt; element is used to mark up <ins>text that has been added</ins> to the document.</p>
-<p>The &lt;b&gt; element is used to visually render <b>text as bold</b>.</p>
-<p>The &lt;i&gt; element is used to visually render <i>text as italic</i>.</p>
-<p>The &lt;u&gt; element is used to visually render <u>text as underlined</u>.</p>
 <p>The &lt;small&gt; element is used to mark up <small>text as being less important</small>.</p>
 <p>The &lt;em&gt; element is used to mark up <em>emphasised text</em>.</p>
 <p>The &lt;strong&gt; element is used to mark up <strong>text as being more important</strong>.</p>
@@ -67,10 +64,6 @@ Wrap `<blockquote>` around any <abbr title="HyperText Markup Language">HTML</abb
 {% endexample %}
 
 ## Lists
-
-<div class="flash">
-  <strong>Heads up!</strong> The broken display of lists is <strong>intentional</strong> as Primer globally resets these elements for the time being. This will eventually be undone in the next major version.
-</div>
 
 ### Unordered list
 
@@ -116,7 +109,7 @@ A list of items in which the order *does* explicitly matter.
 
 ### Description list
 
-A list of terms and their descriptions, for instance glossaries, displaying metadata and other othe key-value pairs, etc.
+A list of terms and their descriptions, for instance glossaries, displaying metadata and other key-value pairs, etc.
 
 {% example html %}
 <dl>

@@ -47,7 +47,6 @@ If you have all those set up, now you can install the dependencies:
 
 ```bash
 $ npm install
-$ bower install
 ```
 
 ### Running locally
@@ -81,33 +80,6 @@ This takes the `_site` directory, generates it's own Git repository there, and p
 
 When compiling or watching the Sass files Grunt will automatically generate a [`.cruk-base-stats.md`](assets/css/cruk-base-stats.md) file. This is tracked in the Git repository to provide us historical and contextual information on the changes we introduce. For example, we'll know when the number of selectors or declarations rises sharply within a single change.
 
-### Bower usage
-
-We use Bower to bring in libraries, as we need the dependencies accessible to the documentation when published the library files are installed into `docs/bower_components`.
-
-
-## Updating
-
-Within `bower.json`, update to a new release by changing the version number that follows the `#` in the dependency URL.
-
-```json
-{
-  "name": "project",
-  "dependencies": {
-    "cruk-pattern-library": "x.x.x"
-  }
-}
-```
-
-To pull down the updated package, `cd` into `vendor/assets`, and run `bower install`.
-
-```
-$ cd vendor/assets
-$ bower install
-```
-
-Check in `bower.json` and all changes under `vendor/assets/bower_components`.
-
 ## Development
 
 Development happens in our primary branch, `master`. For stable versions, see the [releases page](https://github.com/CRUKorg/cruk-pattern-library/releases). `master` will always be up to date with the latest changes, including those which have yet to be released.
@@ -116,7 +88,7 @@ Development happens in our primary branch, `master`. For stable versions, see th
 
 When contributing changes, be sure to do the following steps when opening a pull request:
 
-1. Bump the version number in `bower.json` (it's purely placebo right now, but it's good habit) and `package.json`.
+1. Bump the version number in `package.json`.
 2. Run `grunt` and commit the changes. This compiles the SCSS to CSS so we can do basic analysis on the number of selectors, file size, etc.
 
 All HTML and CSS should conform to the [style guidelines](http://crukorg.github.io/cruk-pattern-library/guidelines).
@@ -130,3 +102,8 @@ This library follows [the Semantic Versioning guidelines](http://semver.org/).
 ## License
 
 Created by and copyright Cancer Research UK. Released under the [MIT license](LICENSE.md).
+
+## Roadmap
+
+@TODO: We need to refactor the JS to remove the dependency on jQuery. We should write in vanilla js.
+@TODO: Implement eslint instead of hound.
