@@ -106,3 +106,4 @@ Created by and copyright Cancer Research UK. Released under the [MIT license](LI
 ## Roadmap
 
 @TODO: We need to refactor the JS to remove the dependency on jQuery. We should write in vanilla js.
+@TODO: Implement eslint instead of hound.

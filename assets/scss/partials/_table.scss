@@ -8,13 +8,13 @@
     text-align: left;
     vertical-align: middle;
     border-collapse: collapse;
-    background: white;
+    background: $WHITE;
     border: 2px solid $brand-gray-medium;
     padding: 6px 13px;
 
     &--heading {
       font-weight: bold;
-      color: white;
+      color: $WHITE;
       background: $brand-primary;
     }
 
@@ -22,9 +22,7 @@
       text-align: right;
     }
   }
-}
 
-.cr-table {
   &[scope=row] {
     width: 150px;
     word-wrap: break-word;

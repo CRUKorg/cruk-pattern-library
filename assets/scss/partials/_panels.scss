@@ -2,7 +2,7 @@
 @import "../mixins/forms";
 
 // Fixup for a Drupalism (or at least, how we've set up cruk_bootstrap)
-h1.page-header {
+.page-header {
   +.panel.generic-content {
     border-top-left-radius: 0;
     border-top: 0;

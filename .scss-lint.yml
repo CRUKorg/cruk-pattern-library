@@ -39,7 +39,7 @@ linters:
     enabled: true
 
   ColorVariable:
-    enabled: false
+    enabled: true
 
   Comment:
     enabled: true
@@ -70,7 +70,7 @@ linters:
     enabled: false
 
   ExtendDirective:
-    enabled: true
+    enabled: false
 
   FinalNewline:
     enabled: true
@@ -128,7 +128,7 @@ linters:
     enabled: false
 
   PropertySortOrder:
-    enabled: true
+    enabled: false
     ignore_unspecified: true
     order:
       - position
@@ -333,7 +333,7 @@ linters:
     max_depth: 3
 
   SelectorFormat:
-    enabled: true
+    enabled: false
     convention: hyphenated_lowercase
 
   Shorthand:

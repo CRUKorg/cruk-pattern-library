@@ -34,11 +34,11 @@ $progress-bar-ball-border: 3px;
 
 .cr-progress-bar__step__graphic {
   hr {
-    margin: (($progress-bar-icon-height - $progress-bar-bar-height) / 2) 0 0 0;
+    margin: (($progress-bar-icon-height - $progress-bar-bar-height) / 2) 0 0;
     width: 50%;
     height: $progress-bar-bar-height;
     display: inline-block;
-    border: none;
+    border: 0;
     background-color: $brand-gray-light;
     position: absolute;
   }
@@ -62,7 +62,7 @@ $progress-bar-ball-border: 3px;
 }
 
 .cr-progress-bar__step__graphic__icon {
-  &:after {
+  &::after {
     display: inline-block;
     vertical-align: middle;
     width: $progress-bar-icon-width;
@@ -73,17 +73,17 @@ $progress-bar-ball-border: 3px;
     border-radius: ceil($progress-bar-icon-width / 2);
   }
 
-  &.done:after {
+  &.done::after {
     border-color: $brand-tertiary;
     background-color: $brand-tertiary;
-    content: svg("checkmark.svg", (path: (fill: white)));
+    content: svg("checkmark.svg", (path: (fill: $WHITE)));
     font: normal normal normal 1rem/1 FontAwesome;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  &.current:after {
+  &.current::after {
     border-color: $brand-tertiary;
   }
 }

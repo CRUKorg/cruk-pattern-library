@@ -7,7 +7,7 @@
   margin-bottom: 0;
 
   font-family: $font-family-headings;
-  color: white;
+  color: $WHITE;
   text-align: left;
   background-color: $brand-primary;
   line-height: 1;
@@ -54,5 +54,5 @@
 
   @extend .clearfix;
   padding: 2em;
-  background-color: white;
+  background-color: $WHITE;
 }

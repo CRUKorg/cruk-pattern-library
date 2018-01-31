@@ -26,11 +26,11 @@
 
     &:last-child a {
       text-decoration: none;
-      color: black;
+      color: $BLACK;
       background: $brand-gray-light;
       cursor: default;
 
-      &:after {
+      &::after {
         border-left-color: $brand-gray-light;
       }
     }
@@ -41,14 +41,14 @@
     display: inline-block;
     padding: 8px 10px 8px 20px;
     position: relative;
-    background-color: white;
+    background-color: $WHITE;
     text-decoration: underline;
     white-space: nowrap;
     font-size: 0.85rem;
     line-height: 18px;
 
-    &:after,
-    &:before {
+    &::after,
+    &::before {
       content: "";
       border-top: 18px solid transparent;
       border-bottom: 18px solid transparent;
@@ -59,12 +59,12 @@
       top: 50%;
     }
 
-    &:after {
-      border-left-color: white;
+    &::after {
+      border-left-color: $WHITE;
       z-index: 2;
     }
 
-    &:before {
+    &::before {
       border-left-color: $brand-gray-medium;
       right: -15px;
       z-index: 1;
@@ -74,7 +74,7 @@
       background: $brand-gray-light;
       color: $brand-secondary;
 
-      &:after {
+      &::after {
         border-left-color: $brand-gray-light;
       }
     }
@@ -83,10 +83,12 @@
   &.cr-breadcrumb--hide-current li:last-child {
     @extend .sr-only;
   }
+
   &.cr-breadcrumb--hide-top {
     li:first-child {
       @extend .sr-only;
     }
+
     li:nth-child(2) a {
       padding-left: 12px;
     }

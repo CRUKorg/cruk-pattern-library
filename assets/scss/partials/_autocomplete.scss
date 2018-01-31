@@ -3,7 +3,7 @@
 // Autocomplete styles.
 .cr-autocomplete {
   z-index: 9999;
-  background-color: white;
+  background-color: $WHITE;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -12,6 +12,9 @@
   border-radius: 0 0 4px 4px;
   overflow-x: hidden;
   overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  left: -2px;
 
   &__list-item {
     cursor: pointer;
@@ -20,14 +23,15 @@
     position: relative;
   }
 
-  &__list-item:hover,  &__list-item:focus{
+  &__list-item:hover,
+  &__list-item:focus {
     background: $gray-5;
   }
 
   &__list-item--selected {
     background-color: $gray-5;
 
-    &:after{
+    &::after {
       width: 13px;
       height: 13px;
       position: absolute;
@@ -35,14 +39,8 @@
       right: 13px;
       margin-top: -6.5px;
       background-color: $brand-secondary;
-      border-radius:50%;
-      content: " "
+      border-radius: 50%;
+      content: "";
     }
   }
-}
-
-.cr-autocomplete {
-  position: absolute;
-  top: 100%;
-  left: -2px;
 }

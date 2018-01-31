@@ -1,6 +1,6 @@
 @import "../variables";
 
-body.cr-pattern-library {
+.cr-pattern-library {
   background-color: $body-bg;
 }
 
@@ -15,7 +15,7 @@ body.cr-pattern-library {
     margin-bottom: 10px;
     border-radius: 50px;
     line-height: 100px;
-    color: white;
+    color: $WHITE;
   }
 
   code {

@@ -8,8 +8,8 @@
     padding-top: 30px;
     height: 0;
     overflow: hidden;
-    border: 1px solid black;
-    background: black;
+    border: 1px solid $BLACK;
+    background: $BLACK;
 
     iframe,
     object,
@@ -24,12 +24,12 @@
 }
 
 .cr-video-transcript {
-  background-color: black;
+  background-color: $BLACK;
   @include clearfix;
 
   &__heading {
-    background-color: black;
-    border-color: black;
+    background-color: $BLACK;
+    border-color: $BLACK;
     padding: 10px 15px;
   }
 
@@ -52,7 +52,7 @@
     &--outer {
       padding: 0 15px 15px;
       clear: both;
-      background: black;
+      background: $BLACK;
     }
 
     &--inner {
@@ -61,9 +61,9 @@
       padding: 15px;
       overflow-x: hidden;
       overflow-y: scroll;
-      background-color: white;
-      border-top-color: black;
-      border-bottom-color: black;
+      background-color: $WHITE;
+      border-top-color: $BLACK;
+      border-bottom-color: $BLACK;
       border-radius: 4px;
 
       ::-webkit-scrollbar {
@@ -72,13 +72,16 @@
         overflow: visible;
         width: 10px;
       }
+
       ::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.2);
-        -webkit-border-radius:5px;
+        background-color: rgba($BLACK, 0.2);
+        -webkit-border-radius: 5px;
       }
-      ::-webkit-scrollbar-thumb:hover{
-        background-color: rgba(0, 0, 0, 0.6);
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba($BLACK, 0.6);
       }
+
       ::-webkit-scrollbar-corner {
         background: transparent;
       }
@@ -87,10 +90,10 @@
 
   .collapse-toggle:hover {
     text-decoration: none;
-  }
 
-  .collapse-toggle:hover span {
-    text-decoration: underline;
+    span {
+      text-decoration: underline;
+    }
   }
 
   .collapse-toggle:not(.collapsed) {
@@ -109,7 +112,8 @@
     span::after {
       content: "Hide Transcript";
     }
-    span:focus{
+
+    span:focus {
       text-decoration: underline;
     }
   }

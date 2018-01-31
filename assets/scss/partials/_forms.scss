@@ -1,6 +1,6 @@
 @import "../variables";
 
-@import "bootstrap/mixins/_vendor-prefixes.scss";
+@import "bootstrap/mixins/vendor-prefixes";
 @import "../mixins/forms";
 
 /**
@@ -95,6 +95,7 @@ label {
 .cr-input-group--lg > .cr-input-group__button > .btn {
   @extend .input-lg;
 }
+
 .cr-input-group--sm > .cr-input-group__input,
 .cr-input-group--sm > .cr-input-group__addon,
 .cr-input-group--sm > .cr-input-group__button > .btn {
@@ -139,7 +140,8 @@ label {
  * Radio buttons and Checkboxes
  */
 
-.radio, .checkbox {
+.radio,
+.checkbox {
   @extend .form-control;
 
   height: auto;
@@ -151,12 +153,14 @@ label {
     margin-top: 1px;
   }
 
-  input[type="checkbox"], input[type="radio"] {
+  input[type="checkbox"],
+  input[type="radio"] {
     margin-top: 3px;
   }
 }
 
-.radio-selected, .checkbox-selected {
+.radio-selected,
+.checkbox-selected {
   border: 2px solid $brand-primary;
 
   label {
@@ -170,11 +174,11 @@ label {
 
 .error {
   color: $text-color-error;
-}
 
-.error.form-control {
-  border-color: $input-border-error;
-  color: $text-color;
+  &.form-control {
+    border-color: $input-border-error;
+    color: $text-color;
+  }
 }
 
 @media (min-width: $screen-sm-min) {
@@ -221,7 +225,7 @@ label {
  * forms, we want to ensure that panelyness is not in effect
  */
 form .panel-heading {
-  border: none;
+  border: 0;
   margin-bottom: 0;
 }
 
@@ -234,15 +238,16 @@ $feedback-ball-border: 3px;
 
 .cr-i.form-control-feedback {
   font-size: 13px;
-  &:before {
+
+  &::before {
     position: relative;
     top: 15px;
-    color: white;
+    color: $WHITE;
   }
 
-  &:after {
+  &::after {
     display: inline-block;
-    content: '';
+    content: "";
     width: $feedback-icon-width;
     height: $feedback-icon-height;
     border: $feedback-icon-width / 2 solid $brand-tertiary;
@@ -270,7 +275,7 @@ $feedback-ball-border: 3px;
   position: relative;
   display: block;
 
-  &:after {
+  &::after {
     display: block;
     position: absolute;
     bottom: 2px;
@@ -278,7 +283,7 @@ $feedback-ball-border: 3px;
     width: 13px;
     height: 13px;
     overflow: hidden;
-    content: ' ';
+    content: "";
     background-color: $brand-primary;
     border-radius: 50%;
     animation: cruk-input-bounce 0.75s ease-in-out infinite, cruk-brand 2.25s step-end infinite;
@@ -287,18 +292,19 @@ $feedback-ball-border: 3px;
   }
 }
 
-.cr-has-feedback--active:after {
+.cr-has-feedback--active::after {
   opacity: 1;
 }
 
 /*
  * Fundraise step progress bar and page header.
+ * @TODO: This doesn't belong here. What's a ".webform-client-form"?
  */
 .webform-client-form div {
   .progress-bar-fieldset {
     margin-bottom: 0;
-    border-style: solid solid none solid;
-    border-width: 0 1px 0 1px;
+    border-style: solid solid none;
+    border-width: 0 1px;
     border-radius: 0;
     padding-top: 5px;
 
@@ -309,14 +315,14 @@ $feedback-ball-border: 3px;
   }
 
   .webform-component-fieldset {
-    border-top: none;
+    border-top: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
 }
 
 section.col-sm-12 .page-header {
-  background-color: white;
+  background-color: $WHITE;
   margin-bottom: 0;
   border: 1px solid $brand-gray-light;
   border-bottom: 0 none;

@@ -14,11 +14,13 @@
     background-color: $btn-default-bg-focus;
     border-color: $btn-default-bg-focus;
   }
+
   &:hover,
   &.hover {
     background-color: $btn-default-bg-hover;
     border-color: $btn-default-bg-hover;
   }
+
   &:active,
   &.active,
   .open > &.dropdown-toggle {
@@ -33,11 +35,13 @@
     }
 
   }
+
   &:active,
   &.active,
   .open > &.dropdown-toggle {
     background-image: none;
   }
+
   &.disabled,
   &[disabled],
   fieldset[disabled] & {

@@ -2,22 +2,10 @@
 
 //== Colors
 
-//## Grayscale.
-$gray-5:  darken(#fff, 5%);     // #f2f2f2
-$gray-10: darken(#fff, 10.98%); // #E3E3E3
-$gray-20: darken(#fff, 21.57%); // #C8C8C8
-$gray-30: darken(#fff, 30%);    // #b3b3b3
-$gray-40: darken(#fff, 40%);    // #999
-$gray-50: darken(#fff, 50%);    // #808080
-$gray-60: darken(#fff, 60%);    // #666        // Lightest allowed text on white.
-$gray-70: darken(#fff, 70%);    // #4d4d4d
-$gray-80: darken(#fff, 80%);    // #333
-$gray-90: darken(#fff, 90%);    // #191919
-
 //## Color constants.
 // See: https://davidwalsh.name/sass-color-variables-dont-suck
 // Color names come from http://chir.ag/projects/name-that-color/.
-// No grayscale here please. Instead, use the gray variants above.
+// No grayscale here please. Instead, use the gray variants below.
 // Sort alphabetically.
 //
 $BURNT_SIENNA:     #ef5350;
@@ -25,10 +13,24 @@ $CERULEAN:         #00b6ed;
 $HOLLYWOOD_CERISE: #ec008c;
 $KINGFISHER_DAISY: #2e008b;
 $PALE_ROSE:        #ffe0ec;
-$SCAMPI:           #6C5C99;
+$SCAMPI:           #6c5c99;
 $SUNGLOW:          #fdc02f;
 $SUSHI:            #8bc34a;
 $TROPICAL_BLUE:    #bfe8f6;
+$WHITE:            #fff;
+$BLACK:            #000;
+
+//## Grayscale.
+$gray-5:  darken($WHITE, 5%);     // #f2f2f2
+$gray-10: darken($WHITE, 10.98%); // #E3E3E3
+$gray-20: darken($WHITE, 21.57%); // #C8C8C8
+$gray-30: darken($WHITE, 30%);    // #b3b3b3
+$gray-40: darken($WHITE, 40%);    // #999
+$gray-50: darken($WHITE, 50%);    // #808080
+$gray-60: darken($WHITE, 60%);    // #666        // Lightest allowed text on white.
+$gray-70: darken($WHITE, 70%);    // #4d4d4d
+$gray-80: darken($WHITE, 80%);    // #333
+$gray-90: darken($WHITE, 90%);    // #191919
 
 // Brand Colors.
 $brand-primary:         $KINGFISHER_DAISY;
@@ -44,7 +46,7 @@ $brand-warning:         $SUNGLOW;
 $brand-success:         $SUSHI;
 $brand-info:            $CERULEAN;
 
-$body-bg:               white;
+$body-bg:               $WHITE;
 $text-color:            $gray-80;
 $text-color-error:      $brand-danger;
 $link-color:            $brand-primary;
@@ -97,13 +99,13 @@ $btn-border-width: 0;
 
 $btn-font-weight:                bold;
 
-$btn-default-color:              white;
+$btn-default-color:              $WHITE;
 $btn-default-bg:                 $brand-secondary;
 $btn-default-border:             $brand-secondary;
 $btn-default-bg-focus:           $brand-secondary-light;
 $btn-default-bg-hover:           $brand-secondary-light;
 $btn-default-bg-active:          $brand-secondary-light;
-$btn-primary-color:              white;
+$btn-primary-color:              $WHITE;
 $btn-primary-bg:                 $brand-secondary;
 $btn-primary-border:             $brand-secondary;
 $btn-primary-bg-focus:           $brand-secondary-light;
@@ -112,7 +114,7 @@ $btn-primary-bg-active:          $brand-secondary-light;
 
 //== Forms
 
-$input-bg:                       white;
+$input-bg:                       $WHITE;
 $input-color:                    $text-color;
 $input-color-placeholder:        $gray-30;
 $input-border:                   $gray-20;
@@ -126,9 +128,9 @@ $input-group-addon-border-color: $gray-10;
 $list-group-active-color:       $text-color;
 $list-group-active-bg:          $list-group-bg;
 $list-group-active-border:      $brand-primary;
-$panel-bg:                      white;
-$panel-default-heading-bg:      white;
-$pre-bg:                        white;
+$panel-bg:                      $WHITE;
+$panel-default-heading-bg:      $WHITE;
+$pre-bg:                        $WHITE;
 $border-radius-base:            3px;
 $gray-darker:                   $gray-90;
 $gray-dark:                     $gray-80;
@@ -143,7 +145,7 @@ $input-height-large:            50px;
 //== Iconography
 
 $fa-font-path: "assets/fonts/font-awesome";
-$cr-icon-path: '../fonts';
+$cr-icon-path: "../fonts";
 
 $icon-check-circle: "\e909";
 $icon-checkbox-checked: "\ea52";

@@ -29,6 +29,10 @@
 
       margin-right: 3px;
     }
+
+    &.disabled {
+      display: none;
+    }
   }
 
   &__next {
@@ -41,16 +45,12 @@
     }
   }
 
-  &__previous.disabled {
-    display: none;
-  }
-
   &__link {
     @include card-boxing;
     display: inline-block;
     height: 40px;
     padding: 9px 14px;
-    color: white;
+    color: $WHITE;
     cursor: pointer;
     background-color: $brand-primary;
     line-height: 1.4rem;
@@ -58,7 +58,7 @@
     &:focus,
     &:hover {
       background-color: $SCAMPI;
-      color: white;
+      color: $WHITE;
       text-decoration: none;
     }
   }

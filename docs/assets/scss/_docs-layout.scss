@@ -4,12 +4,12 @@
 //
 
 .masthead {
-  padding-top:    1rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
   text-align: center;
-  background-color: white;
-  border-bottom: 1px solid rgba(0,0,0,0.075);
+  background-color: $WHITE;
+  border-bottom: 1px solid rgba($BLACK, 0.075);
 
   a {
     &:hover {
@@ -49,12 +49,12 @@
 
   @media (max-width: 34em) {
     padding-top: 1rem;
-    border-top: .075rem solid rgba(255, 255, 255, 0.25);
+    border-top: 0.075rem solid rgba($WHITE, 0.25);
   }
 
   @media (min-width: 34em) {
     float: right;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -72,7 +72,7 @@
   border-top: 1px solid $gray-10;
 
   strong {
-    color: #333;
+    color: $gray-80;
   }
 }
 

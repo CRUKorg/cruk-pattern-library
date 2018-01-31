@@ -109,7 +109,7 @@ Make use of `<thead>`, `<tfoot>`, `<tbody>`, and `<th>` tags (and `scope` attrib
 
 ### Formatting
 
-* Never use color codes in a declaration. All colors should be defined in the variables file. Declarations should use either a color variable, or the css keywords "black" and "white".
+* Never use color codes in a declaration. All colors should be defined in the variables file.
 * Color variables should use hex color codes `#000` unless using `rgba()` in raw CSS (SCSS' `rgba()` function is overloaded to accept hex colors as a param, e.g., `rgba(#000, .5)`).
 * Use `//` for comment blocks (instead of `/* */`).
 * Avoid specifying units for zero values, e.g., `margin: 0;` instead of `margin: 0px;`.

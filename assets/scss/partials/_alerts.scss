@@ -20,9 +20,9 @@
     width: 31px;
     height: 31px;
     text-align: center;
-    color: white;
+    color: $WHITE;
 
-    &:before {
+    &::before {
       position: relative;
       top: 6px;
       left: 0;
@@ -38,7 +38,8 @@
     display: inline-block;
   }
 
-  ul,ol {
+  ul,
+  ol {
     margin-top: 5px;
     margin-left: 25px;
   }
@@ -90,7 +91,7 @@
       @extend .cr-i--warning;
       background-color: $brand-warning;
 
-      &:before {
+      &::before {
         top: 5px;
       }
     }

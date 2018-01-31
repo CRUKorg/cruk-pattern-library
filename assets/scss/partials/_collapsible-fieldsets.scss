@@ -5,6 +5,7 @@
     > .panel-title {
       color: $brand-primary;
       text-decoration: none;
+
       :hover {
         text-decoration: none;
       }
@@ -27,7 +28,7 @@
   }
 
   legend {
-    border-bottom: none;
+    border-bottom: 0;
     margin-bottom: 0;
   }
 }
@@ -41,9 +42,10 @@
  * tested with collapsible-fieldset behaviour
  */
 .panel .panel {
-  border: none;
+  border: 0;
   box-shadow: none;
   margin-bottom: 0;
+
   .panel-body:nth-child(odd) {
     padding: 0;
   }
