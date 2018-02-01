@@ -67,6 +67,8 @@ The combined search field (as with the Bootstrap input groups) can be displayed 
   </div>
 </div>
 
+<hr>
+
 <div class="row">
   <div class="col-xs-4">
     <form role="search" action="#" id="search-field-combined-example-3">
@@ -103,6 +105,8 @@ There are two colour variations, one for the within the masthead grey bar and th
     </form>
   </div>
 </div>
+
+<hr>
 
 <div class="row">
   <div class="col-xs-4">

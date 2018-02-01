@@ -1,0 +1,65 @@
+// Taken from https://github.com/primer/primer/blob/master/modules/primer-markdown/lib/code.scss
+
+// stylelint-disable selector-max-type
+.markdown-body {
+  // Inline code snippets
+  code,
+  tt {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba($BLACK, 0.05);
+    border-radius: $border-radius-base;
+
+    br { display: none; }
+  }
+
+  del code { text-decoration: inherit; }
+
+  pre {
+    word-wrap: normal;
+
+    // Code tags within code blocks (<pre>s)
+    > code {
+      padding: 0;
+      margin: 0;
+      font-size: 100%;
+      word-break: normal;
+      white-space: pre;
+      background: transparent;
+      border: 0;
+    }
+  }
+
+  .highlight {
+    margin-bottom: $spacer-3;
+
+    pre {
+      margin-bottom: 0;
+      word-break: normal;
+    }
+  }
+
+  .highlight pre,
+  pre {
+    padding: $spacer-3;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: $WHITE;
+    border-radius: $border-radius-base;
+  }
+
+  pre code,
+  pre tt {
+    display: inline;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+  }
+}

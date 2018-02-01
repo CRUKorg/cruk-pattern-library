@@ -1,0 +1,41 @@
+//
+// Adding a few pretty styles to make our docs look even better.
+//
+
+// Markdown generated ToC. Hide the first child li because it's always going to be "Contents".
+#markdown-toc > li:first-child {
+  display: none;
+}
+
+// Give code examples a white background for readability.
+.docs-layout .markdown-body {
+  code,
+  pre,
+  .highlight pre {
+    background-color: $WHITE;
+  }
+}
+
+// First paragraph of each page should be large.
+.markdown-body > p:first-child {
+  @extend .lead;
+}
+
+// A nice style for our examples. Distinguish visually so people know it's an end-product example.
+.docs-example {
+  position: relative;
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid $pre-border-color;
+  border-radius: $border-radius-base;
+  background-color: $pre-bg;
+  overflow: scroll;
+  border-top: 3px solid $brand-primary;
+}
+
+// A custom gif used on the search page.
+.autocomplete-animated-gif {
+  background: transparent url("../images/autocomplete.gif") top left;
+  width: 600px;
+  height: 360px;
+}

@@ -43,7 +43,7 @@ It is important to note that instead of marking form elements as 'required' we a
 {% example html %}
 <form>
   <div class="form-group has-feedback">
-    <label for="input-id-1">Madatory field</label>
+    <label for="input-id-1">Mandatory field</label>
     <input placeholder="Useful example" class="form-control" type="text" id="input-id-1" name="input-id-1">
   </div>
 

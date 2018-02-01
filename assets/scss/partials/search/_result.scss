@@ -1,3 +1,6 @@
+@import "../../variables";
+@import "../../mixins/display";
+
 // CRUK Search result styles.
 .cr-search-results {
   @extend .media-list;
@@ -30,7 +33,7 @@
   }
 
   &__excerpt {
-    font-size: 1rem;
+    font-size: $font-size;
 
     &:last-child {
       margin-bottom: 0;

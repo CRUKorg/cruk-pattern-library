@@ -1,3 +1,5 @@
+@import "../variables";
+
 // Button variants
 //
 // Easily pump out default styles, as well as :hover, :focus, :active,
@@ -12,33 +14,37 @@
   &.focus {
     color: $color;
     background-color: lighten($background, 10%);
-        border-color: lighten($border, 25%);
+    border-color: lighten($border, 25%);
   }
+
   &:hover {
     color: $color;
     background-color: lighten($background, 10%);
-        border-color: lighten($border, 12%);
+    border-color: lighten($border, 12%);
   }
+
   &:active,
   &.active,
   .open > &.dropdown-toggle {
     color: $color;
     background-color: lighten($background, 10%);
-        border-color: lighten($border, 12%);
+    border-color: lighten($border, 12%);
 
     &:hover,
     &:focus,
     &.focus {
       color: $color;
       background-color: lighten($background, 17%);
-          border-color: lighten($border, 25%);
+      border-color: lighten($border, 25%);
     }
   }
+
   &:active,
   &.active,
   .open > &.dropdown-toggle {
     background-image: none;
   }
+
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
@@ -46,7 +52,7 @@
     &:focus,
     &.focus {
       background-color: $background;
-          border-color: $border;
+      border-color: $border;
     }
   }
 

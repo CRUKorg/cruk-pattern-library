@@ -1,3 +1,6 @@
+@import "../variables";
+@import "../mixins/display";
+
 .cr-video {
   &__holder {
     position: relative;
@@ -5,8 +8,8 @@
     padding-top: 30px;
     height: 0;
     overflow: hidden;
-    border: 1px solid #000;
-    background: #000;
+    border: 1px solid $BLACK;
+    background: $BLACK;
 
     iframe,
     object,
@@ -15,18 +18,18 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%; 
+      height: 100%;
     }
   }
 }
 
 .cr-video-transcript {
-  background-color: #000;
+  background-color: $BLACK;
   @include clearfix;
 
   &__heading {
-    background-color: #000;
-    border-color: #000;
+    background-color: $BLACK;
+    border-color: $BLACK;
     padding: 10px 15px;
   }
 
@@ -35,9 +38,9 @@
     margin-bottom: 0 !important;
 
     .collapse-toggle {
-      font-family: "MuseoSans-700","Arial","Helvetica",sans-serif;
+      font-family: $font-family-museo;
       font-size: 16.1px !important;
-      color: #e3e3e3;
+      color: $brand-gray-light;
     }
 
     .anchorjs-link {
@@ -49,7 +52,7 @@
     &--outer {
       padding: 0 15px 15px;
       clear: both;
-      background: #000;
+      background: $BLACK;
     }
 
     &--inner {
@@ -58,9 +61,9 @@
       padding: 15px;
       overflow-x: hidden;
       overflow-y: scroll;
-      background-color: #fff;
-      border-top-color: #000;
-      border-bottom-color: #000;
+      background-color: $WHITE;
+      border-top-color: $BLACK;
+      border-bottom-color: $BLACK;
       border-radius: 4px;
 
       ::-webkit-scrollbar {
@@ -69,13 +72,16 @@
         overflow: visible;
         width: 10px;
       }
+
       ::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.2);
-        -webkit-border-radius:5px;
+        background-color: rgba($BLACK, 0.2);
+        -webkit-border-radius: 5px;
       }
-      ::-webkit-scrollbar-thumb:hover{
-        background-color: rgba(0, 0, 0, 0.6);   
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba($BLACK, 0.6);
       }
+
       ::-webkit-scrollbar-corner {
         background: transparent;
       }
@@ -84,10 +90,10 @@
 
   .collapse-toggle:hover {
     text-decoration: none;
-  }
 
-  .collapse-toggle:hover span {
-    text-decoration: underline; 
+    span {
+      text-decoration: underline;
+    }
   }
 
   .collapse-toggle:not(.collapsed) {
@@ -100,13 +106,14 @@
       padding-right: 5px;
       font-size: initial;
       text-decoration: none;
-      content: "\e906";
+      content: $icon-chevron-up;
     }
 
     span::after {
       content: "Hide Transcript";
     }
-    span::focus{
+
+    span:focus {
       text-decoration: underline;
     }
   }
@@ -120,7 +127,7 @@
       padding-right: 5px;
       font-size: initial;
       text-decoration: none;
-      content: "\e905";
+      content: $icon-chevron-down;
     }
 
     span::after {

@@ -1,17 +1,20 @@
+@import "../variables";
+
 .cr-table {
   width: 100%;
 
   &__cell {
-    font-size: 12px;
+    font-size: $font-size-small;
     text-align: left;
     vertical-align: middle;
     border-collapse: collapse;
-    background: #fff;
-    border: 2px solid $brand-grey-medium;
+    background: $WHITE;
+    border: 2px solid $brand-gray-medium;
+    padding: 6px 13px;
 
     &--heading {
       font-weight: bold;
-      color: #fff;
+      color: $WHITE;
       background: $brand-primary;
     }
 
@@ -19,9 +22,7 @@
       text-align: right;
     }
   }
-}
 
-.cr-table {
   &[scope=row] {
     width: 150px;
     word-wrap: break-word;

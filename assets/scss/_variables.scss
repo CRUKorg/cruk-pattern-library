@@ -1,0 +1,181 @@
+@import "bootstrap/variables";
+
+//== Colors
+
+//## Color constants.
+// See: https://davidwalsh.name/sass-color-variables-dont-suck
+// Color names come from http://chir.ag/projects/name-that-color/.
+// No grayscale here please. Instead, use the gray variants below.
+// Sort alphabetically.
+//
+$BURNT_SIENNA:     #ef5350;
+$CERULEAN:         #00b6ed;
+$HOLLYWOOD_CERISE: #ec008c;
+$KINGFISHER_DAISY: #2e008b;
+$PALE_ROSE:        #ffe0ec;
+$SCAMPI:           #6c5c99;
+$SUNGLOW:          #fdc02f;
+$SUSHI:            #8bc34a;
+$TROPICAL_BLUE:    #bfe8f6;
+$WHITE:            #fff;
+$BLACK:            #000;
+
+//## Grayscale.
+$gray-5:  darken($WHITE, 5%);     // #f2f2f2
+$gray-10: darken($WHITE, 10.98%); // #E3E3E3
+$gray-20: darken($WHITE, 21.57%); // #C8C8C8
+$gray-30: darken($WHITE, 30%);    // #b3b3b3
+$gray-40: darken($WHITE, 40%);    // #999
+$gray-50: darken($WHITE, 50%);    // #808080
+$gray-60: darken($WHITE, 60%);    // #666        // Lightest allowed text on white.
+$gray-70: darken($WHITE, 70%);    // #4d4d4d
+$gray-80: darken($WHITE, 80%);    // #333
+$gray-90: darken($WHITE, 90%);    // #191919
+
+// Brand Colors.
+$brand-primary:         $KINGFISHER_DAISY;
+$brand-secondary:       $HOLLYWOOD_CERISE;
+$brand-secondary-light: lighten(desaturate(adjust-hue($brand-secondary, 0.0377), 14.4796), 10.3922);
+$brand-tertiary:        $CERULEAN;
+$brand-gray-light:      $gray-10;
+$brand-gray-medium:     $gray-20;
+$brand-gray-dark:       $gray-60;
+
+$brand-danger:          $BURNT_SIENNA;
+$brand-warning:         $SUNGLOW;
+$brand-success:         $SUSHI;
+$brand-info:            $CERULEAN;
+
+$body-bg:               $WHITE;
+$text-color:            $gray-80;
+$text-color-error:      $brand-danger;
+$link-color:            $brand-primary;
+$link-hover-color:      $brand-secondary;
+$disabled-gray:         $gray-40;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  Arial, Calibri, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-monospace:   Consolas, "Liberation Mono", Menlo, Courier, monospace;
+$font-family-museo:       'MuseoSans', 'museo-sans-rounded', 'Museo Sans', $font-family-sans-serif;
+
+$font-family-base:        $font-family-sans-serif;
+$font-family-headings:    $font-family-museo;
+
+$heading-weight-strong: 700;
+$heading-weight-light:  300;
+
+$font-size-base:  14px;
+$font-size:       1rem;
+$font-size-large: 1.143rem;
+$font-size-small: 0.8571rem;
+$font-size-h1:    2rem;
+$font-size-h2:    1.4rem;
+$font-size-h3:    1.4rem;
+$font-size-h4:    1.16rem;
+$font-size-h5:    0.93rem;
+$font-size-h6:    0.93rem;
+
+// @TODO: Bootstrap wants this in px for calculations, but we want this in rem please!
+$font-size-large: 16px;
+$font-size-small: 12px;
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base: 1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed: floor(($font-size-base * $line-height-base)); // ~20px
+
+// @TODO: Implement proper vertical rhythm.
+// See: https://github.com/primer/primer/blob/master/modules/primer-support/lib/variables/layout.scss
+$spacer-3: 16px;
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-border-width: 0;
+
+$btn-font-weight:                bold;
+
+$btn-default-color:              $WHITE;
+$btn-default-bg:                 $brand-secondary;
+$btn-default-border:             $brand-secondary;
+$btn-default-bg-focus:           $brand-secondary-light;
+$btn-default-bg-hover:           $brand-secondary-light;
+$btn-default-bg-active:          $brand-secondary-light;
+$btn-primary-color:              $WHITE;
+$btn-primary-bg:                 $brand-secondary;
+$btn-primary-border:             $brand-secondary;
+$btn-primary-bg-focus:           $brand-secondary-light;
+$btn-primary-bg-hover:           $brand-secondary-light;
+$btn-primary-bg-active:          $brand-secondary-light;
+
+//== Forms
+
+$input-bg:                       $WHITE;
+$input-color:                    $text-color;
+$input-color-placeholder:        $gray-30;
+$input-border:                   $gray-20;
+$input-border-error:             $brand-danger;
+$input-border-focus:             $CERULEAN;
+$input-group-addon-bg:           $gray-10;
+$input-group-addon-border-color: $gray-10;
+
+//== Assorted bootstrap overrides.
+
+$list-group-active-color:       $text-color;
+$list-group-active-bg:          $list-group-bg;
+$list-group-active-border:      $brand-primary;
+$panel-bg:                      $WHITE;
+$panel-default-heading-bg:      $WHITE;
+$pre-bg:                        $WHITE;
+$border-radius-base:            3px;
+$gray-darker:                   $gray-90;
+$gray-dark:                     $gray-80;
+$gray:                          $gray-70;
+$gray-light:                    $gray-50;
+$gray-lighter:                  $gray-10;
+$headings-font-family:          $font-family-headings;
+$headings-font-weight:          $heading-weight-strong;
+$input-height-base:             40px;
+$input-height-large:            50px;
+
+//== Iconography
+
+$fa-font-path: "assets/fonts/font-awesome";
+$cr-icon-path: "../fonts";
+
+$icon-check-circle: "\e909";
+$icon-checkbox-checked: "\ea52";
+$icon-checkbox-unchecked: "\ea53";
+$icon-checkmark: "\e902";
+$icon-chevron-down: "\e905";
+$icon-chevron-left: "\e912";
+$icon-chevron-right: "\e911";
+$icon-chevron-up: "\e906";
+$icon-close: "\e913";
+$icon-credit-card: "\e90b";
+$icon-exclamation-circle: "\e908";
+$icon-exclamation-triangle: "\e90e";
+$icon-eye: "\e90d";
+$icon-info: "\e908";
+$icon-link: "\e9cb";
+$icon-minus2: "\e903";
+$icon-minus: "\e901";
+$icon-notification: "\ea08";
+$icon-pencil-square: "\e90a";
+$icon-plus2: "\e904";
+$icon-plus: "\e900";
+$icon-print: "\e914";
+$icon-radio-checked2: "\ea55";
+$icon-radio-checked: "\ea54";
+$icon-radio-unchecked: "\ea56";
+$icon-remove: "\e913";
+$icon-search: "\e910";
+$icon-square: "\e90c";
+$icon-ticket: "\e90f";
+$icon-times: "\e913";
+$icon-warning2: "\ea07";
+$icon-warning: "\e90e";

@@ -13,7 +13,7 @@ When producing an alert the text alone should be able to convey clear meaning, d
 
 ## Heads Up! Alerts
 
-Conceptually meant to be slightly more laid back and to carry supplimental information rather than "You must read this" type alerts.
+Conceptually meant to be slightly more laid back and to carry supplemental information rather than "You must read this" type alerts.
 
 ### Warning
 

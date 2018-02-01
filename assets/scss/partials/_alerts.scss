@@ -1,3 +1,5 @@
+@import "../variables";
+@import "../mixins/display";
 
 .cr-hu-alert {
   @include card-boxing;
@@ -6,7 +8,7 @@
   margin-bottom: 20px;
   padding: 15px 15px 13px 52px;
   border-bottom: 2px solid;
-  font-size: 16px;
+  font-size: $font-size-large;
 
   .cr-hu-alert__icon {
     @extend .cr-i;
@@ -18,13 +20,13 @@
     width: 31px;
     height: 31px;
     text-align: center;
-    color: white;
+    color: $WHITE;
 
-    &:before {
+    &::before {
       position: relative;
       top: 6px;
       left: 0;
-      font-size: 19px;
+      font-size: 1.357rem;
 
       @media (min-width: $screen-sm-min) {
         left: 0.5px;
@@ -36,7 +38,8 @@
     display: inline-block;
   }
 
-  ul,ol {
+  ul,
+  ol {
     margin-top: 5px;
     margin-left: 25px;
   }
@@ -55,51 +58,51 @@
       text-align: center;
       background: none;
       border: 0;
-      color: #9e9e9e;
+      color: $gray-40;
 
       &:hover {
-        color: #757575;
+        color: $gray-50;
       }
     }
   }
 
   &.cr-hu-alert--info {
-    border-bottom-color: $brand-tertiary;
+    border-bottom-color: $brand-info;
 
     .cr-hu-alert__icon {
       @extend .cr-i--info;
-      background-color: $brand-tertiary;
+      background-color: $brand-info;
     }
   }
 
   &.cr-hu-alert--success {
-    border-bottom-color: #8bc34a;
+    border-bottom-color: $brand-success;
 
     .cr-hu-alert__icon {
       @extend .cr-i--checkmark;
-      background-color: #8bc34a;
+      background-color: $brand-success;
     }
   }
 
   &.cr-hu-alert--warning {
-    border-bottom-color: #fdc02f;
+    border-bottom-color: $brand-warning;
 
     .cr-hu-alert__icon {
       @extend .cr-i--warning;
-      background-color: #fdc02f;
+      background-color: $brand-warning;
 
-      &:before {
+      &::before {
         top: 5px;
       }
     }
   }
 
   &.cr-hu-alert--error {
-    border-bottom-color: #ef5350;
+    border-bottom-color: $brand-danger;
 
     .cr-hu-alert__icon {
       @extend .cr-i--times;
-      background-color: #ef5350;
+      background-color: $brand-danger;
     }
   }
 
