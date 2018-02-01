@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Collapsable box
+title: Collapsible box
 ---
 
-Collapsable box has the title section and the description text section that is collapsable.
+Collapsible box has the title section and the description text section that is collapsible.
 
 ## Behaviour
-By clicking anywhere on the box area we collapse or open the box. Each collapsable box on the screen can be collapsed or opened at any time.
+By clicking anywhere on the box area we collapse or open the box. Each collapsible box on the screen can be collapsed or opened at any time.
 
 ## Example
 

@@ -34,13 +34,8 @@ if [ ! -e /usr/bin/grunt ]; then
     npm install -g grunt-cli
 fi
 
-if [ ! -e /usr/bin/bower ]; then
-    npm install -g bower
-fi
-
 su - vagrant -c "cd /vagrant && bundle install"
 su - vagrant -c "cd /vagrant && npm install"
-su - vagrant -c "cd /vagrant && bower install"
 
 su - vagrant -c "cp /vagrant/provisioning/file/.bashrc /home/vagrant/.bashrc"
 

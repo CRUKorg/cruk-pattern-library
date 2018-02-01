@@ -14,8 +14,8 @@ module.exports = function(grunt) {
         includePaths: [
           'assets/scss',
           'docs/assets/scss',
-          'docs/bower_components/bootstrap-sass/assets/stylesheets',
-          'docs/bower_components/font-awesome/scss'
+          'node_modules/bootstrap-sass/assets/stylesheets',
+          'node_modules'
         ],
         functions: {
           svg: inliner('./assets/icons', {
@@ -142,9 +142,9 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-          'docs/bower_components/jquery.inputmask/dist/jquery.inputmask.bundle.js',
-          'docs/bower_components/spin.js/spin.js',
-          'docs/bower_components/spin.js/jquery.spin.js',
+          'node_modules/jquery.inputmask/dist/jquery.inputmask.bundle.js',
+          'node_modules/spin.js/spin.js',
+          'node_modules/spin.js/jquery.spin.js',
           '<%= watch.scripts.files %>'
         ],
         dest: 'assets/js/cruk-base.min.js'

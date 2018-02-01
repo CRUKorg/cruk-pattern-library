@@ -25,9 +25,9 @@ Then you just need to use the following javascript to attach the throbber.
 
 {% highlight javascript %}
 $('#inputExample1').on('blur', function() {
-  $(this).find('span.form-control-feedback').crukDynamicInputSpin();
+  $(this).find('span.form-control-feedback').crukInputDynamicSpin();
   // Do something that takes a long time...
-  $(this).find('span.form-control-feedback').crukDynamicInputSpin(false);
+  $(this).find('span.form-control-feedback').crukInputDynamicSpin(false);
 });
 {% endhighlight %}
 
@@ -69,7 +69,7 @@ To show that the field has been successfully evaluated, again, you'd set up your
 And then use the following jQuery plugin to mark the field as successfully entered
 
 {% highlight javascript %}
-$('#inputExample2').crukDynamicInputSuccess();
+$('#inputExample2').crukInputDynamicSuccess();
 {% endhighlight %}
 
-As with the Throbber, passing a false into the function will remove the element. It's also worth noting that if you're marking a success after the throbber, you don't need to clear the throbber first, the crukDynamicInputSuccess() function will do this for you!
+As with the Throbber, passing a false into the function will remove the element. It's also worth noting that if you're marking a success after the throbber, you don't need to clear the throbber first, the crukInputDynamicSuccess() function will do this for you!

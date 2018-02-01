@@ -1,10 +1,11 @@
+@import "../variables";
 
 // Custom mixin
 @mixin card-boxing {
-  background-color: white;
-  border: 1px solid rgba(0,0,0,.06);
+  background-color: $WHITE;
+  border: 1px solid rgba($BLACK, 0.06);
   border-radius: 3px;
-  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  box-shadow: 0 1px 4px rgba($BLACK, 0.06);
 }
 
 @mixin chevron {
@@ -19,7 +20,9 @@
 
 @mixin clearfix {
   zoom: 1;
-  &:before, &:after {
+
+  &::before,
+  &::after {
     display: table;
     content: " ";
   }

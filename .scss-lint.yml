@@ -39,7 +39,7 @@ linters:
     enabled: true
 
   ColorVariable:
-    enabled: false
+    enabled: true
 
   Comment:
     enabled: true
@@ -70,7 +70,7 @@ linters:
     enabled: false
 
   ExtendDirective:
-    enabled: true
+    enabled: false
 
   FinalNewline:
     enabled: true
@@ -88,7 +88,7 @@ linters:
     enabled: true
 
   IdSelector:
-    enabled: true
+    enabled: false
 
   ImportantRule:
     enabled: false
@@ -118,7 +118,7 @@ linters:
     convention: hyphenated_lowercase
 
   NestingDepth:
-    enabled: true
+    enabled: false
     max_depth: 3
 
   PlaceholderInExtend:
@@ -128,7 +128,7 @@ linters:
     enabled: false
 
   PropertySortOrder:
-    enabled: true
+    enabled: false
     ignore_unspecified: true
     order:
       - position
@@ -323,17 +323,17 @@ linters:
     enabled: true
 
   QualifyingElement:
-    enabled: true
+    enabled: false
     allow_element_with_attribute: false
     allow_element_with_class: false
     allow_element_with_id: false
 
   SelectorDepth:
-    enabled: true
+    enabled: false
     max_depth: 3
 
   SelectorFormat:
-    enabled: true
+    enabled: false
     convention: hyphenated_lowercase
 
   Shorthand:
@@ -397,7 +397,7 @@ linters:
     enabled: false
 
   VendorPrefix:
-    enabled: true
+    enabled: false
     identifier_list: base
     additional_identifiers: []
     excluded_identifiers: []

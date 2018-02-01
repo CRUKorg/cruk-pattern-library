@@ -5,7 +5,7 @@ title: Table
 
 This pattern is to use to display table with tabular data arrangement with rows and columns.
 
-The table design with 2px borders. 
+The table design with 2px borders.
 
 * Numbers, percentages and currency should always align right
 * Text should align left
@@ -16,7 +16,7 @@ The table design with 2px borders.
 
 {% example html %}
 <table class="cr-table cr-table--colrow-header">
-  <caption class="cr-table__caption">tabular data</caption>
+  <caption class="cr-table__caption">Statistical overview</caption>
   <thead class="cr-table__header">
     <tr class="cr-table__row">
      <th class="cr-table__cell" scope="col"></th>
@@ -24,7 +24,7 @@ The table design with 2px borders.
      <th class="cr-table__cell cr-table__cell--heading" scope="col">Wales</th>
      <th class="cr-table__cell cr-table__cell--heading" scope="col">Scotland</th>
      <th class="cr-table__cell cr-table__cell--heading" scope="col">Northern Ireland</th>
-     <th class="cr-table__cell cr-table__cell--heading" scope="col">UK</th> 
+     <th class="cr-table__cell cr-table__cell--heading" scope="col">UK</th>
    </tr>
  </thead>
   <tbody class="cr-table__body">

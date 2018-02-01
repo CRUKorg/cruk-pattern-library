@@ -1,3 +1,5 @@
+@import "../variables";
+
 .cr-breadcrumb {
   ol {
     margin-top: 1em;
@@ -13,9 +15,9 @@
     list-style: none;
     padding: 0;
     margin: 0 0 -1px;
-    border-bottom: 1px solid $brand-grey-medium;
-    border-left: 1px solid $brand-grey-medium;
-    border-top: 1px solid $brand-grey-medium;
+    border-bottom: 1px solid $brand-gray-medium;
+    border-left: 1px solid $brand-gray-medium;
+    border-top: 1px solid $brand-gray-medium;
     display: inline-block;
 
     &:first-child a {
@@ -24,29 +26,29 @@
 
     &:last-child a {
       text-decoration: none;
-      color: #000;
-      background: $brand-grey-light;
+      color: $BLACK;
+      background: $brand-gray-light;
       cursor: default;
 
-      &:after {
-        border-left-color: $brand-grey-light;
+      &::after {
+        border-left-color: $brand-gray-light;
       }
     }
   }
 
   a {
-    color: $brand-grey-dark;
+    color: $brand-gray-dark;
     display: inline-block;
     padding: 8px 10px 8px 20px;
     position: relative;
-    background-color: #FFF;
+    background-color: $WHITE;
     text-decoration: underline;
     white-space: nowrap;
     font-size: 0.85rem;
     line-height: 18px;
 
-    &:after,
-    &:before {
+    &::after,
+    &::before {
       content: "";
       border-top: 18px solid transparent;
       border-bottom: 18px solid transparent;
@@ -57,23 +59,23 @@
       top: 50%;
     }
 
-    &:after {
-      border-left-color: #FFF;
+    &::after {
+      border-left-color: $WHITE;
       z-index: 2;
     }
 
-    &:before {
-      border-left-color: $brand-grey-medium;
+    &::before {
+      border-left-color: $brand-gray-medium;
       right: -15px;
       z-index: 1;
     }
 
     &:hover {
-      background: $brand-grey-light;
+      background: $brand-gray-light;
       color: $brand-secondary;
 
-      &:after {
-        border-left-color: $brand-grey-light;
+      &::after {
+        border-left-color: $brand-gray-light;
       }
     }
   }
@@ -81,10 +83,12 @@
   &.cr-breadcrumb--hide-current li:last-child {
     @extend .sr-only;
   }
+
   &.cr-breadcrumb--hide-top {
     li:first-child {
       @extend .sr-only;
     }
+
     li:nth-child(2) a {
       padding-left: 12px;
     }

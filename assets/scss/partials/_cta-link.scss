@@ -1,3 +1,6 @@
+@import "../variables";
+@import "../mixins/display";
+
 .cr-cta-link {
   &__icon {
     @include chevron;
@@ -5,16 +8,17 @@
     position: relative;
     top: -1px;
     float: left;
+
     &::before {
       padding-right: 8px;
       text-decoration: none;
       vertical-align: middle;
-      content: "\e911";
+      content: $icon-chevron-right;
     }
   }
 
   &__link {
-    font-size: 14px;
+    font-size: $font-size;
     font-weight: bold;
     color: $brand-secondary;
   }
