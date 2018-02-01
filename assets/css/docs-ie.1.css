@@ -8976,7 +8976,6 @@ body {
 }
 
 .cr-index {
-  -moz-column-count: 3;
   column-count: 3;
   margin: 0;
   padding: 0;
@@ -9004,7 +9003,6 @@ body {
 
 @media screen and (max-width: 768px) {
   .cr-index {
-    -moz-column-count: 1;
     column-count: 1;
   }
 }
@@ -9192,6 +9190,10 @@ body {
   display: inline-block;
 }
 
+.cr-breadcrumb li:first-child a {
+  padding-left: 12px;
+}
+
 .cr-breadcrumb li:last-child a {
   text-decoration: none;
   color: #000;
@@ -9245,6 +9247,10 @@ body {
 
 .cr-breadcrumb a:hover:after {
   border-left-color: #e3e3e3;
+}
+
+.cr-breadcrumb.cr-breadcrumb--hide-top li:nth-child(2) a {
+  padding-left: 12px;
 }
 
 .btn {

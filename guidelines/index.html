@@ -85,8 +85,8 @@
   <a class="list-group-item " href="/cruk-pattern-library/accordion/">
     Accordion
   </a>
-  <a class="list-group-item " href="/cruk-pattern-library/collapsable-box/">
-    Collapsable box
+  <a class="list-group-item " href="/cruk-pattern-library/collapsible-box/">
+    Collapsible box
   </a>
   <a class="list-group-item " href="/cruk-pattern-library/alerts/">
     Alerts
@@ -158,7 +158,7 @@
       <li><a href="#including-scss-files" id="markdown-toc-including-scss-files">Including (S)CSS files</a></li>
     </ul>
   </li>
-  <li><a href="#pixels-vs-ems" id="markdown-toc-pixels-vs-ems">Pixels vs. ems</a></li>
+  <li><a href="#font-size-units" id="markdown-toc-font-size-units">Font size units</a></li>
   <li><a href="#class-naming-conventions" id="markdown-toc-class-naming-conventions">Class naming conventions</a></li>
   <li><a href="#specificity-classes-vs-ids" id="markdown-toc-specificity-classes-vs-ids">Specificity (classes vs. ids)</a>    <ul>
       <li><a href="#css-specificity-guidelines" id="markdown-toc-css-specificity-guidelines">CSS Specificity guidelines</a></li>
@@ -263,10 +263,12 @@
 <h3 id="formatting">Formatting</h3>
 
 <ul>
-  <li>Use hex color codes <code class="highlighter-rouge">#000</code> unless using <code class="highlighter-rouge">rgba()</code> in raw CSS (SCSS’ <code class="highlighter-rouge">rgba()</code> function is overloaded to accept hex colors as a param, e.g., <code class="highlighter-rouge">rgba(#000, .5)</code>).</li>
+  <li>Never use color codes in a declaration. All colors should be defined in the variables file.</li>
+  <li>Color variables should use hex color codes <code class="highlighter-rouge">#000</code> unless using <code class="highlighter-rouge">rgba()</code> in raw CSS (SCSS’ <code class="highlighter-rouge">rgba()</code> function is overloaded to accept hex colors as a param, e.g., <code class="highlighter-rouge">rgba(#000, .5)</code>).</li>
   <li>Use <code class="highlighter-rouge">//</code> for comment blocks (instead of <code class="highlighter-rouge">/* */</code>).</li>
   <li>Avoid specifying units for zero values, e.g., <code class="highlighter-rouge">margin: 0;</code> instead of <code class="highlighter-rouge">margin: 0px;</code>.</li>
   <li>Strive to limit use of shorthand declarations to instances where you must explicitly set all the available values.</li>
+  <li>In code, the word grey is always to be spelled “gray”.</li>
 </ul>
 
 <h3 id="misc">Misc</h3>
@@ -324,8 +326,7 @@
 <p>Previously we used <a href="https://github.com/sstephenson/sprockets">Sprockets</a> to <strong>require</strong> files in Primer and at GitHub. Nowadays, we use explicit lists of <strong>imports</strong> to control the cascade, specificity, and more.</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Imports
-</span><span class="k">@import</span> <span class="s2">"primer"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"component"</span><span class="p">;</span>
+</span><span class="k">@import</span> <span class="s2">"component"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"another_component"</span><span class="p">;</span>
 
 <span class="c1">// Rules
@@ -333,9 +334,9 @@
 
 <p>This is also how Primer’s styles are to be included, should you need them.</p>
 
-<h2 id="pixels-vs-ems">Pixels vs. ems</h2>
+<h2 id="font-size-units">Font size units</h2>
 
-<p>Use <code class="highlighter-rouge">px</code> for <code class="highlighter-rouge">font-size</code>, because it offers absolute control over text. Additionally, unit-less <code class="highlighter-rouge">line-height</code> is preferred because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the <code class="highlighter-rouge">font-size</code>.</p>
+<p>Use <code class="highlighter-rouge">rem</code> for <code class="highlighter-rouge">font-size</code>, because it offers absolute control over text. Additionally, unit-less <code class="highlighter-rouge">line-height</code> is preferred because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the <code class="highlighter-rouge">font-size</code>.</p>
 
 <h2 id="class-naming-conventions">Class naming conventions</h2>
 
@@ -399,13 +400,12 @@
 
 
       <footer class="footer" role="contentinfo">
-        <p><strong>Currently v1.2.0.</strong></p>
+        <p><strong>Currently v2.0.0.</strong></p>
         <small class="text-muted"><a href="http://www.cancerresearchuk.org">Cancer Research UK</a> is a registered charity in England and Wales (1089464), Scotland (SC041666) and the Isle of Man (1103). A company limited by guarantee. Registered company in England and Wales (4325234) and the Isle of Man (5713F). Registered address: Angel Building, 407 St John Street, London EC1V 4AD.</small>
       </footer>
     </div>
-
-    <script src="/cruk-pattern-library/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/cruk-pattern-library/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="/cruk-pattern-library/assets/js/cruk-base.min.js"></script>
     <script src="/cruk-pattern-library/assets/js/anchor.min.js"></script>
     <script src="/cruk-pattern-library/assets/js/docs.js"></script>

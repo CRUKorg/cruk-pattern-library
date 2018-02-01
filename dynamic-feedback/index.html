@@ -85,8 +85,8 @@
   <a class="list-group-item " href="/cruk-pattern-library/accordion/">
     Accordion
   </a>
-  <a class="list-group-item " href="/cruk-pattern-library/collapsable-box/">
-    Collapsable box
+  <a class="list-group-item " href="/cruk-pattern-library/collapsible-box/">
+    Collapsible box
   </a>
   <a class="list-group-item " href="/cruk-pattern-library/alerts/">
     Alerts
@@ -157,9 +157,9 @@ This will require a spot of javascript as well as just mark up in order to achie
 <p>Then you just need to use the following javascript to attach the throbber.</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="s1">'#inputExample1'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'blur'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'span.form-control-feedback'</span><span class="p">).</span><span class="nx">crukDynamicInputSpin</span><span class="p">();</span>
+  <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'span.form-control-feedback'</span><span class="p">).</span><span class="nx">crukInputDynamicSpin</span><span class="p">();</span>
   <span class="c1">// Do something that takes a long time...</span>
-  <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'span.form-control-feedback'</span><span class="p">).</span><span class="nx">crukDynamicInputSpin</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+  <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'span.form-control-feedback'</span><span class="p">).</span><span class="nx">crukInputDynamicSpin</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
 <span class="p">});</span></code></pre></figure>
 
 <h2 id="bouncy-ball">Bouncy ball</h2>
@@ -208,9 +208,9 @@ This will require a spot of javascript as well as just mark up in order to achie
 
 <p>And then use the following jQuery plugin to mark the field as successfully entered</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="s1">'#inputExample2'</span><span class="p">).</span><span class="nx">crukDynamicInputSuccess</span><span class="p">();</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="s1">'#inputExample2'</span><span class="p">).</span><span class="nx">crukInputDynamicSuccess</span><span class="p">();</span></code></pre></figure>
 
-<p>As with the Throbber, passing a false into the function will remove the element. It’s also worth noting that if you’re marking a success after the throbber, you don’t need to clear the throbber first, the crukDynamicInputSuccess() function will do this for you!</p>
+<p>As with the Throbber, passing a false into the function will remove the element. It’s also worth noting that if you’re marking a success after the throbber, you don’t need to clear the throbber first, the crukInputDynamicSuccess() function will do this for you!</p>
 
     </div>
   </div>
@@ -218,13 +218,12 @@ This will require a spot of javascript as well as just mark up in order to achie
 
 
       <footer class="footer" role="contentinfo">
-        <p><strong>Currently v1.2.0.</strong></p>
+        <p><strong>Currently v2.0.0.</strong></p>
         <small class="text-muted"><a href="http://www.cancerresearchuk.org">Cancer Research UK</a> is a registered charity in England and Wales (1089464), Scotland (SC041666) and the Isle of Man (1103). A company limited by guarantee. Registered company in England and Wales (4325234) and the Isle of Man (5713F). Registered address: Angel Building, 407 St John Street, London EC1V 4AD.</small>
       </footer>
     </div>
-
-    <script src="/cruk-pattern-library/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/cruk-pattern-library/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="/cruk-pattern-library/assets/js/cruk-base.min.js"></script>
     <script src="/cruk-pattern-library/assets/js/anchor.min.js"></script>
     <script src="/cruk-pattern-library/assets/js/docs.js"></script>
