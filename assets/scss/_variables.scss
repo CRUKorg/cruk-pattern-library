@@ -19,9 +19,9 @@ $SUSHI:            #8bc34a;
 $TROPICAL_BLUE:    #bfe8f6;
 $WHITE:            #fff;
 $BLACK:            #000;
-$ALABASTER:        #fafafa;
 
 //## Grayscale.
+$gray-2: darken($WHITE, 2%); // #fafafa
 $gray-5:  darken($WHITE, 5%);     // #f2f2f2
 $gray-10: darken($WHITE, 10.98%); // #E3E3E3
 $gray-20: darken($WHITE, 21.57%); // #C8C8C8
@@ -53,7 +53,7 @@ $text-color-error:      $brand-danger;
 $link-color:            $brand-primary;
 $link-hover-color:      $brand-secondary;
 $disabled-gray:         $gray-40;
-$gray_vlight:           $ALABASTER;
+$gray_vlight:           $gray-2;
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
