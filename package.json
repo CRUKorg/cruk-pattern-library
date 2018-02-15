@@ -11,8 +11,7 @@
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
-    "jquery.inputmask": "^3.3.4",
-    "spin.js": "^3.1.0"
+    "jquery.inputmask": "^3.3.4"
   },
   "devDependencies": {
     "autoprefixer-core": "~5.2.1",
@@ -23,7 +22,7 @@
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-uglify": "^2.2.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-jekyll": "^0.4.2",
     "grunt-parker": "^0.1.3",
