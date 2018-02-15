@@ -1,80 +1,40 @@
-@font-face {
-  font-family: "MuseoSans";
-  font-weight: 900;
-  src: url("/assets/fonts/museo/2D649C_9_0.eot");
-  src: url("/assets/fonts/museo/2D649C_9_0.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/museo/2D649C_9_0.woff2") format("woff2"), url("/assets/fonts/museo/2D649C_9_0.woff") format("woff"), url("/assets/fonts/museo/2D649C_9_0.ttf") format("truetype"), url("/assets/fonts/museo/2D649C_9_0.svg#wf") format("svg");
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+    url('#{$file-path}.woff') format('woff'),
+    url('#{$file-path}.woff2') format('woff2'),
+    url('#{$file-path}.ttf') format('truetype'),
+    url('#{$file-path}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+  // Chrome for Windows rendering fix: https://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+      font-family: $font-family;
+      src: url('#{$file-path}.svg##{$font-family}') format('svg');
+    }
+  }
 }
 
-@font-face {
-  font-family: "MuseoSans";
-  font-weight: 700;
-  src: url("/assets/fonts/museo/2D649C_0_0.eot");
-  src: url("/assets/fonts/museo/2D649C_0_0.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/museo/2D649C_0_0.woff2") format("woff2"), url("/assets/fonts/museo/2D649C_0_0.woff") format("woff"), url("/assets/fonts/museo/2D649C_0_0.ttf") format("truetype"), url("/assets/fonts/museo/2D649C_0_0.svg#wf") format("svg");
-}
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_9_0", 900, normal);
 
-@font-face {
-  font-family: "MuseoSans";
-  font-weight: 300;
-  src: url("/assets/fonts/museo/2D649C_1_0.eot");
-  src: url("/assets/fonts/museo/2D649C_1_0.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/museo/2D649C_1_0.woff2") format("woff2"), url("/assets/fonts/museo/2D649C_1_0.woff") format("woff"), url("/assets/fonts/museo/2D649C_1_0.ttf") format("truetype"), url("/assets/fonts/museo/2D649C_1_0.svg#wf") format("svg");
-}
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_0_0", 700, normal);
 
-@font-face {
-  font-family: "MuseoSans";
-  font-weight: 500;
-  src: url("/assets/fonts/museo/2D649C_3_0.eot");
-  src: url("/assets/fonts/museo/2D649C_3_0.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/museo/2D649C_3_0.woff2") format("woff2"), url("/assets/fonts/museo/2D649C_3_0.woff") format("woff"), url("/assets/fonts/museo/2D649C_3_0.ttf") format("truetype"), url("/assets/fonts/museo/2D649C_3_0.svg#wf") format("svg");
-}
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_1_0", 300, normal);
 
-@font-face {
-  font-family: "MuseoSans";
-  font-weight: 100;
-  src: url("/assets/fonts/museo/2D649C_4_0.eot");
-  src: url("/assets/fonts/museo/2D649C_4_0.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/museo/2D649C_4_0.woff2") format("woff2"), url("/assets/fonts/museo/2D649C_4_0.woff") format("woff"), url("/assets/fonts/museo/2D649C_4_0.ttf") format("truetype"), url("/assets/fonts/museo/2D649C_4_0.svg#wf") format("svg");
-}
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_3_0", 500, normal);
 
-@font-face {
-  font-family: "MuseoSans";
-  font-weight: 900;
-  font-style: italic;
-  src: url("/assets/fonts/museo/2D649C_2_0.eot");
-  src: url("/assets/fonts/museo/2D649C_2_0.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/museo/2D649C_2_0.woff2") format("woff2"), url("/assets/fonts/museo/2D649C_2_0.woff") format("woff"), url("/assets/fonts/museo/2D649C_2_0.ttf") format("truetype"), url("/assets/fonts/museo/2D649C_2_0.svg#wf") format("svg");
-}
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_4_0", 100, normal);
 
-@font-face {
-  font-family: "MuseoSans";
-  font-weight: 700;
-  font-style: italic;
-  src: url("/assets/fonts/museo/2D649C_5_0.eot");
-  src: url("/assets/fonts/museo/2D649C_5_0.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/museo/2D649C_5_0.woff2") format("woff2"), url("/assets/fonts/museo/2D649C_5_0.woff") format("woff"), url("/assets/fonts/museo/2D649C_5_0.ttf") format("truetype"), url("/assets/fonts/museo/2D649C_5_0.svg#wf") format("svg");
-}
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_2_0", 900, italic);
 
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_5_0", 700, italic);
 
-@font-face {
-  font-family: "MuseoSans";
-  font-weight: 500;
-  font-style: italic;
-  src: url("/assets/fonts/museo/2D649C_8_0.eot");
-  src: url("/assets/fonts/museo/2D649C_8_0.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/museo/2D649C_8_0.woff2") format("woff2"), url("/assets/fonts/museo/2D649C_8_0.woff") format("woff"), url("/assets/fonts/museo/2D649C_8_0.ttf") format("truetype"), url("/assets/fonts/museo/2D649C_8_0.svg#wf") format("svg");
-}
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_8_0", 500, italic);
 
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_6_0", 300, italic);
 
-@font-face {
-  font-family: "MuseoSans";
-  font-weight: 300;
-  font-style: italic;
-  src: url("/assets/fonts/museo/2D649C_6_0.eot");
-  src: url("/assets/fonts/museo/2D649C_6_0.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/museo/2D649C_6_0.woff2") format("woff2"), url("/assets/fonts/museo/2D649C_6_0.woff") format("woff"), url("/assets/fonts/museo/2D649C_6_0.ttf") format("truetype"), url("/assets/fonts/museo/2D649C_6_0.svg#wf") format("svg");
-}
-
-
-@font-face {
-  font-family: "MuseoSans";
-  font-weight: 100;
-  font-style: italic;
-  src: url("/assets/fonts/museo/2D649C_7_0.eot");
-  src: url("/assets/fonts/museo/2D649C_7_0.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/museo/2D649C_7_0.woff2") format("woff2"), url("/assets/fonts/museo/2D649C_7_0.woff") format("woff"), url("/assets/fonts/museo/2D649C_7_0.ttf") format("truetype"), url("/assets/fonts/museo/2D649C_7_0.svg#wf") format("svg");
-}
-
-
-
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_7_0", 100, italic);
