@@ -1,0 +1,19 @@
+a.cr-gdpr-explaination__title {
+  color: $brand-secondary;
+  text-decoration: none;
+
+  &:after {
+    padding-left: 2px;
+    font-size: 0.7rem;
+    font-family: 'Glyphicons Halflings';
+    content: "\e114";
+    color: $brand-secondary;
+  }
+  &.collapsed:after {
+    padding-left: 2px;
+    font-size: 0.7rem;
+    font-family: 'Glyphicons Halflings';
+    content: "\e080";
+    color: $brand-secondary;
+  }
+}

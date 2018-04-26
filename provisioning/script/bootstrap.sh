@@ -24,7 +24,7 @@ su - vagrant -c "rvm 2.3.1"
 su - vagrant -c "gem install bundler"
 
 if [ ! -e /usr/bin/nodejs ]; then
-    curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+    curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
     apt-get install -y nodejs
 
     update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10

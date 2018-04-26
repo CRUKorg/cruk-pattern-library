@@ -10,6 +10,10 @@ Vagrant.configure(2) do |config|
     # Configure cached packages to be shared between instances of the same base box.
     # More info on http://fgrehm.viewdocs.io/vagrant-cachier/usage
     config.cache.scope = :box
+    config.cache.enable :generic, {
+      "composer" => { :cache_dir => "/home/vagrant/.cache/composer" },
+      "npm" => { :cache_dir => "/root/.npm" },
+    }
   end
 
   # The most common configuration options are documented and commented below.
@@ -28,22 +32,40 @@ Vagrant.configure(2) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  config.vm.network "forwarded_port", guest: 4000, host: 4000
+  config.vm.network :forwarded_port, guest: 22, host: 2231
 
-  config.ssh.forward_agent = true
+    config.hostmanager.enabled = true
+    config.hostmanager.manage_host = true
+    config.hostmanager.ignore_private_ip = false
+    config.hostmanager.include_offline = true
+    config.vm.hostname = 'dev-pattern-library'
+    config.vm.network "private_network", ip: '192.168.56.168'
+    config.hostmanager.aliases = %w(pl.dev.cruk.org)
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
-  config.vm.network "public_network"
-  config.vm.hostname = 'pattern-library'
+  #config.vm.network "public_network"
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "./", "/home/vagrant/cruk-pattern-library",
-    owner: "vagrant", group: "vagrant"
+
+  if Vagrant.has_plugin?("vagrant-bindfs")
+      config.bindfs.default_options = {
+        force_user:   'vagrant',
+        force_group:  'vagrant',
+        perms:        'u=rwX:g=rD:o=rD'
+      }
+
+    config.vm.synced_folder "./", "/vagrant-nfs/cruk_events",
+      type: "nfs", nfs_export: true, nfs_udp: false, mount_options: ['actimeo=2']
+    config.bindfs.bind_folder "/vagrant-nfs/cruk_events", "/home/vagrant/cruk-pattern-library"
+  else
+    config.vm.synced_folder "./", "/home/vagrant/cruk-pattern-library",
+      owner: "vagrant", group: "vagrant"
+  end
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -54,7 +76,7 @@ Vagrant.configure(2) do |config|
     # vb.gui = true
 
     # Customize the amount of memory on the VM:
-    vb.memory = "2048"
+    vb.memory = "1024"
     vb.name = "pattern-library"
   end
 

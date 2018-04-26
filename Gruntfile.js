@@ -172,6 +172,13 @@ module.exports = function(grunt) {
         flatten: true,
         src: 'assets/fonts/*',
         dest: 'docs/assets/fonts/'
+      },
+      glyphicons: {
+        expand: true,
+        flatten: false,
+        cwd: 'node_modules/bootstrap-sass/assets/fonts',
+        src: '**/*',
+        dest: 'docs/assets/fonts/'
       }
     }
   });
