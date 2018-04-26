@@ -21,6 +21,7 @@ $WHITE:            #fff;
 $BLACK:            #000;
 
 //## Grayscale.
+$gray-2: darken($WHITE, 2%); // #fafafa
 $gray-5:  darken($WHITE, 5%);     // #f2f2f2
 $gray-10: darken($WHITE, 10.98%); // #E3E3E3
 $gray-20: darken($WHITE, 21.57%); // #C8C8C8
@@ -52,7 +53,7 @@ $text-color-error:      $brand-danger;
 $link-color:            $brand-primary;
 $link-hover-color:      $brand-secondary;
 $disabled-gray:         $gray-40;
-
+$gray_vlight:           $gray-2;
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
@@ -65,7 +66,9 @@ $font-family-base:        $font-family-sans-serif;
 $font-family-headings:    $font-family-museo;
 
 $heading-weight-strong: 700;
+$heading-weight-medium: 500;
 $heading-weight-light:  300;
+$heading-weight-vlight: 100;
 
 $font-size-base:  14px;
 $font-size:       1rem;
@@ -86,6 +89,9 @@ $font-size-small: 12px;
 $line-height-base: 1.428571429; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 $line-height-computed: floor(($font-size-base * $line-height-base)); // ~20px
+
+// links
+$cruk-blue-link-visited: $SCAMPI;
 
 // @TODO: Implement proper vertical rhythm.
 // See: https://github.com/primer/primer/blob/master/modules/primer-support/lib/variables/layout.scss

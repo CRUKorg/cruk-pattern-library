@@ -1,0 +1,40 @@
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+    src: url("#{$file-path}.eot");
+    src: url("#{$file-path}.eot?#iefix") format('embedded-opentype'),
+    url("#{$file-path}.woff") format('woff'),
+    url("#{$file-path}.woff2") format('woff2'),
+    url("#{$file-path}.ttf") format('truetype'),
+    url("#{$file-path}.svg##{$font-family}") format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+  // Chrome for Windows rendering fix: https://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+      font-family: $font-family;
+      src: url("#{$file-path}.svg##{$font-family}") format('svg');
+    }
+  }
+}
+
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_9_0", 900, normal);
+
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_0_0", 700, normal);
+
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_1_0", 300, normal);
+
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_3_0", 500, normal);
+
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_4_0", 100, normal);
+
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_2_0", 900, italic);
+
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_5_0", 700, italic);
+
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_8_0", 500, italic);
+
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_6_0", 300, italic);
+
+@include font-face("MuseoSans", "#{$cr-icon-path}/2D649C_7_0", 100, italic);
